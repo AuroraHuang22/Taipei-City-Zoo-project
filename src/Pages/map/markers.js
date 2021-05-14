@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
-import svg from "../../icons/like-02.svg";
-
-const position = [24.996, 121.585];
+import PavilionsMarkers from "./Markers/PavilionsMarker.js";
+import FacilitiesMarkers from "./Markers/FacilitiesMarkers.js";
+import {
+  firebaseAddData,
+  firebaseGetData,
+  firebaseAddFacilities,
+} from "../../Utils/Firebase.js";
+import facility from "../../Utils/facilities.json";
 
 function Markers() {
-  const iconPerson = new L.Icon({
-    iconUrl: svg,
-    iconSize: [15, 15],
-    iconAnchor: [7.5, 7.5],
-  });
-
-  return <Marker key={5} position={position} icon={iconPerson}></Marker>;
+  return (
+    <>
+      <PavilionsMarkers />
+      <FacilitiesMarkers />
+    </>
+  );
 }
 
-export default Markers;
+export { Markers };
