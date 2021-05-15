@@ -7,7 +7,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
-import { Markers } from "./Markers.js";
+import { Markers } from "./markers";
 
 const setBounds = [
   [25.000263, 121.57700905],
@@ -25,7 +25,7 @@ function ClickEvent() {
   return null;
 }
 
-function Map() {
+function Map(props) {
   return (
     <MapContainer
       center={position}
@@ -34,11 +34,8 @@ function Map() {
       maxBounds={setBounds}
       scrollWheelZoom={true}
       style={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        height: "100vh",
-        width: "60vw",
+        height: "90%",
+        width: "100%",
       }}
     >
       <ClickEvent />
@@ -46,7 +43,7 @@ function Map() {
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> , Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
         url="https://api.mapbox.com/styles/v1/aurorahuang/ckol9o1wg11vf19n1nl0o5x2m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
       />
-      <Markers />
+      <Markers facilities={props.facilities} />
     </MapContainer>
   );
 }

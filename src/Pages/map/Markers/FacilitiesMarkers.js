@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import { firebaseGetData } from "../../../Utils/Firebase.js";
+// import { firebaseGetData } from "../../../Utils/Firebase.js";
 import svg from "../../../Icons/like-02.svg";
 
-function FacilitiesMarkers() {
-  const [facilities, setfacilities] = useState([]);
+function FacilitiesMarkers(props) {
+  const [facilitiesData, setFacilitiesData] = useState([]);
   useEffect(() => {
-    firebaseGetData("Facilities").then((data) => {
-      setfacilities(data);
+    props.facilities.then((data) => {
+      setFacilitiesData(data);
     });
   }, []);
 
-  if (!facilities.length) {
+  if (!facilitiesData.length) {
     return null;
-  } else if (facilities.length) {
-    console.log(facilities);
-    return facilities.map((item, index) => (
+  } else if (facilitiesData.length) {
+    return facilitiesData.map((item) => (
       <Marker
         key={`fac${item.Index}`}
         position={[item.Geo[1], item.Geo[0]]}

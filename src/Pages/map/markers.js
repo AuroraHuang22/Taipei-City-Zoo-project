@@ -8,11 +8,11 @@ import {
 } from "../../Utils/Firebase.js";
 import facility from "../../Utils/facilities.json";
 
-function Markers() {
+function Markers(props) {
   return (
     <>
       <PavilionsMarkers />
-      <FacilitiesMarkers />
+      <FacilitiesMarkers facilities={props.facilities} />
     </>
   );
 }
