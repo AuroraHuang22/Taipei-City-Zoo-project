@@ -1,15 +1,14 @@
 import React from "react";
 import Map from "./Pages/map/";
-// import { createStore } from "redux";
-// import { Provider } from "react-redux";
-// import reducer from "./reducers";
+import store from "./Redux/store";
+import { Provider } from "react-redux";
 
 function App() {
   return (
     <>
-      {/* <Provider store={store}> */}
-      <Map />
-      {/* </Provider> */}
+      <Provider store={store}>
+        <Map />
+      </Provider>
     </>
   );
 }
