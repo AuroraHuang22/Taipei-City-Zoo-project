@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import L from "leaflet";
-import { useSelector } from "react-redux";
 import { Markers } from "./markers";
 
 const setBounds = [
@@ -29,8 +28,11 @@ function Map(props) {
       maxBounds={setBounds}
       scrollWheelZoom={true}
       style={{
-        height: "90%",
-        width: "100%",
+        height: "100vh",
+        width: "70vw",
+        position: "absolute",
+        top: 0,
+        right: 0,
       }}
     >
       <ClickEvent />
