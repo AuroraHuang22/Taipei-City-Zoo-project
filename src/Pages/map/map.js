@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMapEvents,
-} from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import L from "leaflet";
+import { useSelector } from "react-redux";
 import { Markers } from "./markers";
 
 const setBounds = [

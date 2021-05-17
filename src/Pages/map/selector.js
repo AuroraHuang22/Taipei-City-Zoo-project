@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { createStore } from "redux";
 
 const SelectorDiv = styled.div`
   display: flex;
@@ -23,18 +24,44 @@ const LableElement = styled.label`
   white-space: nowrap;
 `;
 
+// const initState = {
+//   showFacilities: [Object.entries(localStorage)],
+// };
+// const ADD_FACILITY = "ADD_FACILITY";
+
+// function addFacility(localstorageData) {
+//   let allData = localstorageData.map((data) => data[0]);
+//   return {
+//     type: ADD_FACILITY,
+//     data: allData,
+//   };
+// }
+
+// function reducer(state = initState, action) {
+//   switch (action.type) {
+//     case ADD_FACILITY:
+//       return {
+//         showFacilities: [...action.data],
+//       };
+//     default:
+//       return state;
+//   }
+// }
+
+// const store = createStore(reducer);
+
 const Selector = (props) => {
-  const [facilitiesData, setFacilitiesData] = useState([]);
+  const [getAllFacilities, setGetAllFacilities] = useState([]);
   const [showFacilities, setShowFacilities] = useState([]);
   let unShowFacilities = [];
 
   const findUnShowFacilities = (arr1, arr2) => {
     unShowFacilities = [];
     for (let i = 0; i < arr2.length; i++) {
-      var stra = arr2[i].Item;
-      var count = 0;
-      for (var j = 0; j < arr1.length; j++) {
-        var strb = arr1[j][0];
+      let stra = arr2[i].Item;
+      let count = 0;
+      for (let j = 0; j < arr1.length; j++) {
+        let strb = arr1[j][0];
         if (stra === strb) {
           count++;
         }
@@ -45,77 +72,88 @@ const Selector = (props) => {
     }
   };
 
-  const checkChange = (e) => {
+  const handleInputClick = (e) => {
     if (e.target.checked) {
       localStorage.setItem(e.target.id, e.target.id);
+      // let localData = Object.entries(localStorage);
+      // setShowFacilities(localData);
+      // store.dispatch(addFacility(localData));
     }
     if (!e.target.checked) {
       localStorage.removeItem(`${e.target.id}`);
+      // let localData = Object.entries(localStorage);
+      // setShowFacilities(localData);
+      // store.dispatch(addFacility(localData));
     }
     let localData = Object.entries(localStorage);
     setShowFacilities(localData);
+    // window.location.reload();
   };
 
   useEffect(() => {
     setShowFacilities(Object.entries(localStorage));
+  }, []);
+
+  useEffect(() => {
     props.facilities.then((data) => {
-      setFacilitiesData(data);
+      setGetAllFacilities(data);
     });
   }, []);
 
-  if (!facilitiesData.length) {
+  if (!getAllFacilities.length) {
     return null;
-  } else if (facilitiesData.length) {
-    const set = new Set();
-    const result = facilitiesData.filter((item) =>
-      !set.has(item.Item) ? set.add(item.Item) : false
+  }
+
+  const set = new Set();
+  const catalogs = getAllFacilities.filter((item) =>
+    !set.has(item.Item) ? set.add(item.Item) : false
+  );
+  findUnShowFacilities(showFacilities, catalogs);
+
+  if (showFacilities.length) {
+    let show = showFacilities.map((storeData) => (
+      <InputDivs key={storeData[0]}>
+        <InputElement
+          id={storeData[0]}
+          type="checkBox"
+          data-type="checkBox"
+          onChange={handleInputClick}
+          checked={true}
+        />
+        <LableElement htmlFor={storeData[0]}>{storeData[0]}</LableElement>
+      </InputDivs>
+    ));
+    let unShow = unShowFacilities.map((facilities) => (
+      <InputDivs key={facilities}>
+        <InputElement
+          id={facilities}
+          type="checkBox"
+          data-type="checkBox"
+          onChange={handleInputClick}
+          checked={false}
+        />
+        <LableElement htmlFor={facilities}>{facilities}</LableElement>
+      </InputDivs>
+    ));
+    return (
+      <SelectorDiv>
+        {show}
+        {unShow}
+      </SelectorDiv>
     );
-    findUnShowFacilities(showFacilities, result);
-    if (showFacilities.length) {
-      let show = showFacilities.map((storeData, index) => (
-        <InputDivs key={storeData[0]}>
-          <InputElement
-            id={storeData[0]}
-            type="checkBox"
-            data-type="checkBox"
-            onChange={checkChange}
-            checked={true}
-          />
-          <LableElement htmlFor={storeData[0]}>{storeData[0]}</LableElement>
-        </InputDivs>
-      ));
-      let unShow = unShowFacilities.map((facilities) => (
-        <InputDivs key={facilities}>
-          <InputElement
-            id={facilities}
-            type="checkBox"
-            data-type="checkBox"
-            onChange={checkChange}
-            checked={false}
-          />
-          <LableElement htmlFor={facilities}>{facilities}</LableElement>
-        </InputDivs>
-      ));
-      return (
-        <SelectorDiv>
-          {show}
-          {unShow}
-        </SelectorDiv>
-      );
-    } else {
-      let inputs = result.map((item) => (
-        <InputDivs key={item.Index}>
-          <InputElement
-            id={item.Item}
-            type="checkBox"
-            data-type="checkBox"
-            onChange={checkChange}
-          />
-          <LableElement htmlFor={item.Item}>{item.Item}</LableElement>
-        </InputDivs>
-      ));
-      return <SelectorDiv>{inputs}</SelectorDiv>;
-    }
+  } else {
+    let inputs = catalogs.map((item) => (
+      <InputDivs key={item.Index}>
+        <InputElement
+          id={item.Item}
+          type="checkBox"
+          data-type="checkBox"
+          onChange={handleInputClick}
+        />
+        <LableElement htmlFor={item.Item}>{item.Item}</LableElement>
+      </InputDivs>
+    ));
+    return <SelectorDiv>{inputs}</SelectorDiv>;
   }
 };
 

@@ -15,16 +15,7 @@ const Flexbox = styled.div`
   flex-direction: column;
 `;
 
-// click(e,animals)=>{
-//   animals
-//  setValue(!value)
-
-// }
-
-// onClick={(e)=>click(e,monkey)}
-
 function MapIndex() {
-  const [show, setShow] = useState([]);
   return (
     <div className="App" style={{ display: "flex", flexDirection: "row" }}>
       <Animals />
