@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
-import img from "../../Icons/223.png";
+import img from "../../icons/223.png";
 import Selector from "./selector";
 
 const AnimalsDiv = styled.div`
