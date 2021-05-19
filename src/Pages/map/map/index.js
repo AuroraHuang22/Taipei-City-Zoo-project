@@ -1,13 +1,7 @@
-import React, { useState } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  useMapEvents,
-  Marker,
-  Popup,
-} from "react-leaflet";
+import React from "react";
+import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import L from "leaflet";
-import { Markers } from "./markers";
+import { Markers } from "../map/Markers";
 import Routing from "./leafletRouteMaching";
 
 const setBounds = [
@@ -16,41 +10,53 @@ const setBounds = [
 ];
 const position = [24.996554, 121.583322];
 
+let positions = [];
+let newPositions = null;
+
 function Map(props) {
   function ClickEvent() {
     useMapEvents({
       click: (e) => {
         console.log(e.latlng);
+        positions.push([e.latlng.lat, e.latlng.lng]);
+        getPosition(positions);
       },
     });
     return null;
   }
 
-  function Findme() {
-    const [position, setPosition] = useState(null);
-    const map = useMapEvents({
-      click: () => {
-        map.locate();
-      },
-      locationfound(e) {
-        setPosition(e.latlng);
-        map.flyTo(e.latlng, map.getZoom());
-      },
-    });
-    return position === null ? null : (
-      <Marker
-        position={position}
-        icon={
-          new L.Icon({
-            iconUrl: require(`../../icons/like-02.svg`).default,
-            iconSize: [20, 20],
-            iconAnchor: [10, 10],
-          })
-        }
-      >
-        <Popup> You are here</Popup>
-      </Marker>
-    );
+  // function Findme() {
+  //   const [position, setPosition] = useState(null);
+  //   const map = useMapEvents({
+  //     click: () => {
+  //       map.locate();
+  //     },
+  //     locationfound(e) {
+  //       setPosition(e.latlng);
+  //       map.flyTo(e.latlng, map.getZoom());
+  //     },
+  //   });
+  //   return position === null ? null : (
+  //     <Marker
+  //       position={position}
+  //       icon={
+  //         new L.Icon({
+  //           iconUrl: require(`../../icons/like-02.svg`).default,
+  //           iconSize: [20, 20],
+  //           iconAnchor: [10, 10],
+  //         })
+  //       }
+  //     >
+  //       <Popup> You are here</Popup>
+  //     </Marker>
+  //   );
+  // }
+
+  function getPosition(arr) {
+    newPositions = positions.map((item) => L.latLng(item[0], item[1]));
+    let ob = {};
+    ob.mwaypoint = [...newPositions];
+    console.log(ob.mwaypoint);
   }
 
   return (

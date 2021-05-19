@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
-import { firebaseAddData, firebaseGetData } from "../../../Utils/Firebase.js";
+import { firebaseGetData } from "../../../../Utils/Firebase.js";
 
 function PavilionsMarkers() {
   const [pavilions, setPavilions] = useState([]);
@@ -20,7 +20,7 @@ function PavilionsMarkers() {
         position={item.Geo}
         icon={
           new L.Icon({
-            iconUrl: require(`../../../icons/${item.Name}.svg`).default,
+            iconUrl: require(`../../../../icons/${item.Name}.svg`).default,
             iconSize: [150, 90],
             iconAnchor: [75, 45],
           })

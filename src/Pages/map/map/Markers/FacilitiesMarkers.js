@@ -25,7 +25,7 @@ function FacilitiesMarkers(props) {
           position={[item.Geo[1], item.Geo[0]]}
           icon={
             new L.Icon({
-              iconUrl: require(`../../../icons/like-02.svg`).default,
+              iconUrl: require(`../../../../icons/like-02.svg`).default,
               iconSize: [20, 20],
               iconAnchor: [10, 10],
             })
