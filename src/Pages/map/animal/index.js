@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import styled from "styled-components";
-import img from "../../Icons/223.png";
+import img from "../../../icons/223.png";
 import Selector from "./selector";
+import AnimalsData from "./animalsData";
 
 const AnimalsDiv = styled.div`
   height: 100vh;
@@ -20,8 +21,9 @@ const AnimalsDiv = styled.div`
 const Animals = (prop) => {
   return (
     <AnimalsDiv>
-      <div className="imgdiv"></div>
-      <Selector facilities={prop.facilities} />
+      {/* <div className="imgdiv"></div> */}
+      <AnimalsData animal={prop.animal} />
+      {/* <Selector facilities={prop.facilities} /> */}
     </AnimalsDiv>
   );
 };

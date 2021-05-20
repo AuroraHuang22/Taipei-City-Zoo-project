@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
-import Map from "./map";
-import Animals from "./animals";
-import styled from "styled-components";
+import React from "react";
+import Map from "../map/map";
+import Animals from "./animal";
 import { firebaseGetData } from "../../Utils/Firebase";
+import animalsJson from "../../Utils/animals.json";
+import facilitiesJson from "../../Utils/facilities.json";
 
-const Flexbox = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 70vw;
-  display: flex;
-  flex-direction: column;
-`;
+// let FacilitiesData = firebaseGetData("Facilities");
+let AnimalsData = animalsJson;
+let Facilitiesjson = facilitiesJson;
 
 function MapIndex() {
   return (
     <div className="App" style={{ display: "flex", flexDirection: "row" }}>
-      <Animals facilities={firebaseGetData("Facilities")} />
-      <Map facilities={firebaseGetData("Facilities")} />
+      <Animals facilities={Facilitiesjson} animal={AnimalsData} />
+      <Map facilities={Facilitiesjson} />
     </div>
   );
 }
