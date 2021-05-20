@@ -5,7 +5,7 @@ import FacilitiesMarkers from "./FacilitiesMarkers.js";
 function Markers(props) {
   return (
     <>
-      <PavilionsMarkers />
+      {/* <PavilionsMarkers /> */}
       <FacilitiesMarkers facilities={props.facilities} />
     </>
   );

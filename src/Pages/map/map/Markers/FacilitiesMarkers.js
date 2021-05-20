@@ -5,12 +5,14 @@ import L from "leaflet";
 
 function FacilitiesMarkers(props) {
   const [facilitiesData, setFacilitiesData] = useState([]);
-  const store = useSelector((state) => state.showFacilities);
+  const store = useSelector((state) => state.selectorReducer.showFacilities);
 
   useEffect(() => {
-    props.facilities.then((data) => {
-      setFacilitiesData(data);
-    });
+    // props.facilities.then((data) => {
+    //   setFacilitiesData(data);
+    // });
+
+    setFacilitiesData(props.facilities);
   }, []);
 
   if (!facilitiesData.length) {
@@ -18,28 +20,30 @@ function FacilitiesMarkers(props) {
   }
 
   return facilitiesData.map((item) =>
-    store.map((fac) =>
-      item.Item === fac ? (
-        <Marker
-          key={`fac${item.Index}`}
-          position={[item.Geo[1], item.Geo[0]]}
-          icon={
-            new L.Icon({
-              iconUrl: require(`../../../../icons/like-02.svg`).default,
-              iconSize: [20, 20],
-              iconAnchor: [10, 10],
-            })
-          }
-        >
-          <Popup>
-            {item.Title}
-            <br />
-            <br />
-            {item.Summary}
-          </Popup>
-        </Marker>
-      ) : null
-    )
+    store
+      ? store.map((fac) =>
+          item.Item === fac ? (
+            <Marker
+              key={`fac${item.Index}`}
+              position={[item.Geo[1], item.Geo[0]]}
+              icon={
+                new L.Icon({
+                  iconUrl: require(`../../../../icons/like-02.svg`).default,
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 10],
+                })
+              }
+            >
+              <Popup>
+                {item.Title}
+                <br />
+                <br />
+                {item.Summary}
+              </Popup>
+            </Marker>
+          ) : null
+        )
+      : null
   );
 }
 

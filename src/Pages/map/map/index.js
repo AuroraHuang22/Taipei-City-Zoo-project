@@ -17,9 +17,10 @@ function Map(props) {
   function ClickEvent() {
     useMapEvents({
       click: (e) => {
-        console.log(e.latlng);
+        // console.log(e.latlng);
         positions.push([e.latlng.lat, e.latlng.lng]);
         getPosition(positions);
+        console.log(positions);
       },
     });
     return null;

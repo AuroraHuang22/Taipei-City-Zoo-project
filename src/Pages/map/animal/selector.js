@@ -38,9 +38,11 @@ const Selector = (props) => {
   };
 
   useEffect(() => {
-    props.facilities.then((data) => {
-      setGetAllFacilities(data);
-    });
+    // props.facilities.then((data) => {
+    //   setGetAllFacilities(data);
+    // });
+
+    setGetAllFacilities(props.facilities);
   }, []);
 
   if (!getAllFacilities.length) {
@@ -53,8 +55,8 @@ const Selector = (props) => {
 
   return (
     <SelectorDiv>
-      {catalogs.map((item) => (
-        <InputDivs key={item.Index}>
+      {catalogs.map((item, index) => (
+        <InputDivs key={`${item.Location}${index}`}>
           <InputElement
             id={item.Item}
             type="checkBox"

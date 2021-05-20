@@ -1,23 +1,27 @@
 import React from "react";
 import L from "leaflet";
+import { MapConsumer } from "react-leaflet";
+import { useSelector } from "react-redux";
 import "leaflet-routing-machine";
 import "lrm-graphhopper";
-import { MapConsumer } from "react-leaflet";
 
-function Routing(props) {
+function Routing() {
+  const store = useSelector((state) => state.AnimalsReducer.showAnimalsGeo);
+
   const newIcon = new L.Icon({
     iconUrl: require(`../../../icons/like-03.svg`).default,
     iconSize: [20, 20],
     iconAnchor: [10, 10],
   });
+  if (!store.length) {
+    return null;
+  }
+
   return (
     <MapConsumer>
       {(map) => {
         L.Routing.control({
-          waypoints: [
-            L.latLng(24.9957, 121.58440855),
-            L.latLng(24.994165022808907, 121.58671101380374),
-          ],
+          waypoints: store.map((item) => L.latLng(item[0], item[1])),
           router: L.Routing.graphHopper(
             "10db9b1c-434a-45d2-8dab-4cad12acc647",
             {

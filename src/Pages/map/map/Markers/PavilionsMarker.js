@@ -1,33 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { Marker } from "react-leaflet";
-import L from "leaflet";
-import { firebaseGetData } from "../../../../Utils/Firebase.js";
+// import React, { useState, useEffect } from "react";
+// import { Marker } from "react-leaflet";
+// import L from "leaflet";
+// import { firebaseGetData } from "../../../../Utils/Firebase.js";
 
-function PavilionsMarkers() {
-  const [pavilions, setPavilions] = useState([]);
-  useEffect(() => {
-    firebaseGetData("Pavilion").then((data) => {
-      setPavilions(data);
-    });
-  }, []);
+// let pavilionData = firebaseGetData("Pavilion");
 
-  if (!pavilions.length) {
-    return null;
-  } else if (pavilions.length) {
-    return pavilions.map((item, index) => (
-      <Marker
-        key={index}
-        position={item.Geo}
-        icon={
-          new L.Icon({
-            iconUrl: require(`../../../../icons/${item.Name}.svg`).default,
-            iconSize: [150, 90],
-            iconAnchor: [75, 45],
-          })
-        }
-      ></Marker>
-    ));
-  }
-}
+// function PavilionsMarkers() {
+//   const [pavilions, setPavilions] = useState([]);
+//   useEffect(() => {
+//     pavilionData.then((data) => {
+//       setPavilions(data);
+//     });
+//   }, []);
 
-export default PavilionsMarkers;
+//   if (!pavilions.length) {
+//     return null;
+//   } else if (pavilions.length) {
+//     return pavilions.map((item, index) => (
+//       <Marker
+//         key={index}
+//         position={item.Geo}
+//         icon={
+//           new L.Icon({
+//             iconUrl: require(`../../../../icons/${item.Name}.svg`).default,
+//             iconSize: [150, 90],
+//             iconAnchor: [75, 45],
+//           })
+//         }
+//       ></Marker>
+//     ));
+//   }
+// }
+
+// export default PavilionsMarkers;
