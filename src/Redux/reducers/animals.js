@@ -1,10 +1,11 @@
 const ADD_ANIMAL = "ADD_ANIMAL";
+const ADD_ROUTE = "ADD_ROUTE";
 const REMOVE_ANIMAL = "REMOVE_ANIMAL";
 const REMOVE_ALL_ANIMALS = "REMOVE_ALL_ANIMALS";
 
 const initState = {
   showAnimalsGeo: [],
-  // showAnimalsName: [],
+  visitRoute: [],
 };
 
 export default function AnimalsReducer(state = initState, action) {
@@ -12,6 +13,12 @@ export default function AnimalsReducer(state = initState, action) {
     case ADD_ANIMAL:
       return {
         showAnimalsGeo: [...state.showAnimalsGeo, action.geo],
+        visitRoute: [...state.visitRoute],
+      };
+    case ADD_ROUTE:
+      return {
+        showAnimalsGeo: [...state.showAnimalsGeo],
+        visitRoute: [...state.visitRoute, ...action.route],
       };
     case REMOVE_ANIMAL:
       let arr = state.showAnimalsGeo.map((fac) => fac);

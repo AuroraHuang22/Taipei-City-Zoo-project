@@ -57,7 +57,6 @@ function Map(props) {
     newPositions = positions.map((item) => L.latLng(item[0], item[1]));
     let ob = {};
     ob.mwaypoint = [...newPositions];
-    console.log(ob.mwaypoint);
   }
 
   return (

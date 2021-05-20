@@ -32,17 +32,52 @@ const AnimalContent = styled.div`
   border-radius: 10px;
 `;
 
+let pavilionsArray = [];
+
 const AnimalsData = (prop) => {
   const disPatch = useDispatch();
   const [animalsData, setAnimalsData] = useState(null);
+  let routeData = prop.route;
 
   const showMyGeo = (e) => {
+    pavilionsArray.push([
+      e.target.dataset.pavilion,
+      Number(e.target.dataset.index),
+    ]);
+
     disPatch(
       action.addAnimal([
         Number(e.target.dataset.lat),
         Number(e.target.dataset.lng),
       ])
     );
+  };
+
+  const submit = () => {
+    const set = new Set();
+    const pavilionsSort = pavilionsArray
+      .filter((item) => (!set.has(item[1]) ? set.add(item[1]) : false))
+      .sort((a, b) => a[1] - b[1]);
+
+    let found = pavilionsSort.indexOf(
+      pavilionsSort.find((index) => index[1] >= 4 && index[1] < 10)
+    );
+    if (found !== -1) {
+      pavilionsSort.splice({ found }, 0, ["列車站", 3.5]);
+    }
+
+    pavilionsSort[0][1] >= 10
+      ? pavilionsSort.sort((a, b) => b[1] - a[1])
+      : pavilionsSort.sort((a, b) => a[1] - b[1]);
+
+    let result = [];
+    routeData.forEach((item) =>
+      pavilionsSort.forEach((pav) =>
+        item.Location === pav[0] ? result.push(...item.Route) : null
+      )
+    );
+
+    disPatch(action.addRoute(result));
   };
 
   useEffect(() => {
@@ -62,6 +97,7 @@ const AnimalsData = (prop) => {
 
   return (
     <Container>
+      <button onClick={submit}>submit</button>
       {catalogs.map((item, index) => (
         <ItemBlock key={`${index}858`}>
           {item}
@@ -73,6 +109,8 @@ const AnimalsData = (prop) => {
                   onClick={showMyGeo}
                   data-lat={animal.Geo[1]}
                   data-lng={animal.Geo[0]}
+                  data-pavilion={animal.Location}
+                  data-index={animal.Index}
                 >
                   {animal.Name_Ch}
                 </AnimalContent>

@@ -22,7 +22,7 @@ const Animals = (prop) => {
   return (
     <AnimalsDiv>
       {/* <div className="imgdiv"></div> */}
-      <AnimalsData animal={prop.animal} />
+      <AnimalsData animal={prop.animal} route={prop.route} />
       {/* <Selector facilities={prop.facilities} /> */}
     </AnimalsDiv>
   );
