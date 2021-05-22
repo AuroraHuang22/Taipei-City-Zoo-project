@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import * as action from "../../../Redux/actions";
+import * as action from "../../../Redux/Action";
 
 const SelectorDiv = styled.div`
   display: flex;

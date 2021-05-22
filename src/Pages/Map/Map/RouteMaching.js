@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import L from "leaflet";
-import * as action from "../../../Redux/actions";
+import * as action from "../../../Redux/Action";
 import { MapConsumer } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
 import "leaflet-routing-machine";
