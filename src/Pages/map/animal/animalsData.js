@@ -12,6 +12,8 @@ const Container = styled.div`
 `;
 
 const ItemBlock = styled.div`
+  font-size: 10px;
+  font-weight: bold;
   border: 1px solid lightgray;
   margin: 5px 5px;
   padding: 3px 5px;
@@ -23,36 +25,85 @@ const AnimalsItemBlock = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  .popupDiv {
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    width: 50vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
 `;
 
 const AnimalContent = styled.div`
+  font-size: 8px;
+  font-weight: normal;
+  border: 1px solid lightgray;
+  margin: 5px 5px;
+  padding: 3px 5px;
+  border-radius: 10px;
+  background-color: #fff;
+`;
+
+const MoreAnimals = styled.div`
   border: 1px solid lightgray;
   margin: 5px 5px;
   padding: 3px 5px;
   border-radius: 10px;
 `;
 
+const PopopDiv = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 2.5%;
+  transform: translateY(-50%);
+  width: 20vw;
+  padding: 30px;
+  background-color: lightgray;
+  border-radius: 10px;
+  z-index: 100;
+`;
+
 let pavilionsArray = [];
 
 const AnimalsData = (prop) => {
-  const disPatch = useDispatch();
+  const [showItem, setShowItem] = useState(null);
   const [animalsData, setAnimalsData] = useState(null);
+  const [dispaly, setdisplay] = useState("none");
+
+  const disPatch = useDispatch();
   let routeData = prop.route;
 
   const showMyGeo = (e) => {
-    pavilionsArray.push([
-      e.target.dataset.pavilion,
-      Number(e.target.dataset.index),
-    ]);
-
-    disPatch(
-      action.addAnimal([
-        Number(e.target.dataset.lat),
-        Number(e.target.dataset.lng),
-      ])
-    );
+    if (e.target.style.backgroundColor !== "lightgrey") {
+      e.target.style.backgroundColor = "lightgrey";
+      pavilionsArray.push([
+        e.target.dataset.pavilion,
+        Number(e.target.dataset.index),
+      ]);
+      disPatch(
+        action.addAnimal([
+          Number(e.target.dataset.lat),
+          Number(e.target.dataset.lng),
+        ])
+      );
+    } else {
+      e.target.style.backgroundColor = "white";
+      let num = pavilionsArray.indexOf([
+        e.target.dataset.pavilion,
+        Number(e.target.dataset.index),
+      ]);
+      pavilionsArray.splice(num, 1);
+      disPatch(
+        action.removeAnimal([
+          Number(e.target.dataset.lat),
+          Number(e.target.dataset.lng),
+        ])
+      );
+    }
   };
-
   const submit = () => {
     const set = new Set();
     const pavilionsSort = pavilionsArray
@@ -77,11 +128,27 @@ const AnimalsData = (prop) => {
       )
     );
 
+    disPatch(action.addRecommend(pavilionsSort));
     disPatch(action.addRoute(result));
+  };
+  const showMoreAnimals = (e) => {
+    setdisplay("block");
+    setShowItem(e);
+    return null;
   };
 
   useEffect(() => {
     setAnimalsData(prop.animal);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
+    });
+
+    return window.removeEventListener("click", (e) => {
+      if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
+    });
   }, []);
 
   if (!animalsData) {
@@ -96,15 +163,50 @@ const AnimalsData = (prop) => {
     .map((item) => item.Location);
 
   return (
-    <Container>
-      <button onClick={submit}>submit</button>
-      {catalogs.map((item, index) => (
-        <ItemBlock key={`${index}858`}>
-          {item}
-          <AnimalsItemBlock key={`${index}88`}>
+    <>
+      <Container>
+        {catalogs.map((item, index) => (
+          <ItemBlock key={`${index}858`}>
+            {item}
+            <AnimalsItemBlock key={`${index}88`}>
+              {animalsData.map((animal) =>
+                item === animal.Location ? (
+                  animal.Favorite ? (
+                    <AnimalContent
+                      data-classname="animalBtn"
+                      key={animal.Name_Ch}
+                      onClick={showMyGeo}
+                      data-lat={animal.Geo[1]}
+                      data-lng={animal.Geo[0]}
+                      data-pavilion={animal.Location}
+                      data-index={animal.Index}
+                    >
+                      {animal.Name_Ch}
+                    </AnimalContent>
+                  ) : null
+                ) : null
+              )}
+              <MoreAnimals
+                data-classname="animalBtn"
+                onClick={() => {
+                  showMoreAnimals(item);
+                }}
+              >
+                {" "}
+                更多{" "}
+              </MoreAnimals>
+            </AnimalsItemBlock>
+          </ItemBlock>
+        ))}
+        <button onClick={submit}>submit</button>
+      </Container>
+      <PopopDiv style={{ display: dispaly }}>
+        {
+          <AnimalsItemBlock>
             {animalsData.map((animal) =>
-              item === animal.Location ? (
+              showItem === animal.Location && !animal.Favorite ? (
                 <AnimalContent
+                  data-classname="animalBtn"
                   key={animal.Name_Ch}
                   onClick={showMyGeo}
                   data-lat={animal.Geo[1]}
@@ -117,9 +219,9 @@ const AnimalsData = (prop) => {
               ) : null
             )}
           </AnimalsItemBlock>
-        </ItemBlock>
-      ))}
-    </Container>
+        }
+      </PopopDiv>
+    </>
   );
 };
 
