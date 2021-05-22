@@ -5,8 +5,9 @@ import Selector from "./selector";
 import AnimalsData from "./animalsData";
 
 const AnimalsDiv = styled.div`
-  height: 100vh;
-  width: 30vw;
+  height: 100%;
+  width: 28vw;
+  padding: 15px 5px;
   .imgdiv {
     background-image: url(${img});
     background-position: top left;
@@ -22,7 +23,7 @@ const Animals = (prop) => {
   return (
     <AnimalsDiv>
       {/* <div className="imgdiv"></div> */}
-      <AnimalsData animal={prop.animal} />
+      <AnimalsData animal={prop.animal} route={prop.route} />
       {/* <Selector facilities={prop.facilities} /> */}
     </AnimalsDiv>
   );
