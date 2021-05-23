@@ -55,6 +55,9 @@ export default function Header() {
           <a href="/member" className="select">
             探索護照
           </a>
+          <a href="/register" className="select">
+            登入
+          </a>
         </div>
       </Container>
     </HeaderDiv>
