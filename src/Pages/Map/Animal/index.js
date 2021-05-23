@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../../../icons/223.png";
-import Selector from "./selector";
-import AnimalsData from "./animalsData";
+import img from "../../../Icons/223.png";
+import AnimalsData from "./AnimalsData";
 
 const AnimalsDiv = styled.div`
-  height: 100%;
-  width: 28vw;
+  height: 80vh;
+  width: 30%;
   padding: 15px 5px;
+  position: relative;
+  overflow: scroll;
   .imgdiv {
     background-image: url(${img});
     background-position: top left;

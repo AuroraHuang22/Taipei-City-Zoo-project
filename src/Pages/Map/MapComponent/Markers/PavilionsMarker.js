@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
-import { firebaseGetData } from "../../../../Utils/Firebase.js";
+import { firebaseGetData } from "../../../../Utils/firebase.js";
 
 let pavilionData = firebaseGetData("Pavilion");
 
@@ -26,7 +26,7 @@ function PavilionsMarkers() {
         }}
         icon={
           new L.Icon({
-            iconUrl: require(`../../../../icons/${item.Name}.svg`).default,
+            iconUrl: require(`../../../../Icons/${item.Name}.svg`).default,
             iconSize: [150, 90],
             iconAnchor: [75, 45],
           })

@@ -38,10 +38,6 @@ const Selector = (props) => {
   };
 
   useEffect(() => {
-    // props.facilities.then((data) => {
-    //   setGetAllFacilities(data);
-    // });
-
     setGetAllFacilities(props.facilities);
   }, []);
 
