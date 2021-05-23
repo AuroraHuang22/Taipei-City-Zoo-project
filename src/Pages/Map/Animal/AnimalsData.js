@@ -5,7 +5,7 @@ import * as action from "../../../Redux/Action";
 
 const Container = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

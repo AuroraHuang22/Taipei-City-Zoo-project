@@ -9,7 +9,7 @@ import "lrm-graphhopper";
 let addedToMap = false;
 
 const newIcon = new L.Icon({
-  iconUrl: require(`../../../icons/like-03.svg`).default,
+  iconUrl: require(`../../../Icons/like-03.svg`).default,
   iconSize: [20, 20],
   iconAnchor: [10, 10],
 });

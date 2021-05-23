@@ -10,13 +10,19 @@ import L from "leaflet";
 import { useSelector } from "react-redux";
 import { Markers } from "./Markers";
 import Routing from "./RouteMaching";
-import MapComformation from "./MapComformation";
+import MapInformation from "./MapInformation";
+import styled from "styled-components";
 
 const setBounds = [
   [25.000263, 121.57700905],
   [24.99028, 121.5936458],
 ];
 const position = [24.99593183848819, 121.58535137127019];
+
+const Container = styled.div`
+  width: 70%;
+  position: relative;
+`;
 
 function Map(props) {
   const route = useSelector((state) => state.AnimalsReducer.visitRoute);
@@ -75,7 +81,7 @@ function Map(props) {
   };
 
   return (
-    <>
+    <Container>
       <MapContainer
         center={position}
         zoom={16}
@@ -83,11 +89,11 @@ function Map(props) {
         maxBounds={setBounds}
         scrollWheelZoom={true}
         style={{
-          height: "100vh",
-          width: "70vw",
-          position: "fixed",
-          top: 0,
-          right: 0,
+          height: "80vh",
+          width: "100%",
+          position: "absolute",
+          top: "5px",
+          left: 0,
         }}
         // whenCreated={(map) => leafletElement.addTo(map)}
       >
@@ -103,7 +109,7 @@ function Map(props) {
             position={[item[0], item[1]]}
             icon={
               new L.Icon({
-                iconUrl: require(`../../../icons/star.svg`).default,
+                iconUrl: require(`../../../Icons/star.svg`).default,
                 iconSize: [10, 10],
                 iconAnchor: [5, 5],
               })
@@ -111,10 +117,10 @@ function Map(props) {
           ></Marker>
         ))}
         <FitCenter />
-        <MapComformation></MapComformation>
+        <MapInformation></MapInformation>
         <Markers facilities={props.facilities} />
       </MapContainer>
-    </>
+    </Container>
   );
 }
 

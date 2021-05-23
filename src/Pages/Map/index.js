@@ -1,23 +1,27 @@
 import React from "react";
-import Map from "../map/map";
-import Animals from "./animal";
-// import { firebaseGetData } from "../../Utils/Firebase";
+import Map from "../Map/MapComponent";
+import Animals from "./Animal";
 import AnimalsJson from "../../Utils/animals.json";
 import FacilitiesJson from "../../Utils/facilities.json";
 import RouteJson from "../../Utils/route.json";
+import styled from "styled-components";
 
-// let FacilitiesData = firebaseGetData("Facilities");
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 80px 10px 0px;
+`;
 
 function MapIndex() {
   return (
-    <div className="App" style={{ display: "flex", flexDirection: "row" }}>
+    <Container>
       <Animals
         facilities={FacilitiesJson}
         animal={AnimalsJson}
         route={RouteJson}
       />
       <Map facilities={FacilitiesJson} />
-    </div>
+    </Container>
   );
 }
 

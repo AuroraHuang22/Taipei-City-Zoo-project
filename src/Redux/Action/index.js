@@ -6,6 +6,7 @@ const REMOVE_ALL_ANIMALS = "REMOVE_ALL_ANIMALS";
 const ADD_ROUTE = "ADD_ROUTE";
 const ADD_CONFORMATION = "ADD_CONFORMATION";
 const ADD_RECOMMEND = "ADD_RECOMMEND";
+const ADD_VISITED = "ADD_VISITED";
 
 export function addFacility(name) {
   return {
@@ -60,5 +61,12 @@ export function addRecommend(text) {
   return {
     type: ADD_RECOMMEND,
     text: text,
+  };
+}
+
+export function addVisited(name) {
+  return {
+    type: ADD_VISITED,
+    name: name,
   };
 }
