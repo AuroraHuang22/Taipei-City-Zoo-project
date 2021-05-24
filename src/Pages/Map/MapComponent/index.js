@@ -74,7 +74,7 @@ function Map(props) {
         16.8
       );
     } else if (route.length && center.length) {
-      map.setView([24.996554, 121.583322], 16.3);
+      map.setView([24.996554, 121.583322], 16.8);
     }
 
     return null;

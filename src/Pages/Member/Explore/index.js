@@ -118,7 +118,6 @@ export default function Explore() {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     transition: "all 0.1s",
-                    // opacity: 0.4,
                     filter: "grayscale(0%)",
                   }}
                   onClick={() => {

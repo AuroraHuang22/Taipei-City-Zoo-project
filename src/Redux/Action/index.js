@@ -7,6 +7,10 @@ const ADD_ROUTE = "ADD_ROUTE";
 const ADD_CONFORMATION = "ADD_CONFORMATION";
 const ADD_RECOMMEND = "ADD_RECOMMEND";
 const ADD_VISITED = "ADD_VISITED";
+const ADD_FILTERSEARCH = "ADD_FILTERSEARCH";
+const ADD_FILTERTYPE = "ADD_FILTERTYPE";
+const ADD_FILTERPLACE = "ADD_FILTERPLACE";
+const REMOVE_FILTER = "REMOVE_FILTER";
 
 export function addFacility(name) {
   return {
@@ -68,5 +72,32 @@ export function addVisited(name) {
   return {
     type: ADD_VISITED,
     name: name,
+  };
+}
+
+export function addFilterSearch(name) {
+  return {
+    type: ADD_FILTERSEARCH,
+    name: name,
+  };
+}
+
+export function addFilterType(name) {
+  return {
+    type: ADD_FILTERTYPE,
+    name: name,
+  };
+}
+
+export function addFilterPlace(name) {
+  return {
+    type: ADD_FILTERPLACE,
+    name: name,
+  };
+}
+
+export function removeFilter() {
+  return {
+    type: REMOVE_FILTER,
   };
 }
