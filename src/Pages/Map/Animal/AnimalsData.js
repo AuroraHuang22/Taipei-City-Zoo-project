@@ -165,6 +165,27 @@ const AnimalsData = (prop) => {
   return (
     <>
       <Container>
+        {
+          <ItemBlock>
+            收藏的動物
+            {animalsData.map((item) =>
+              item.Name_Ch === "大貓熊" ? (
+                <AnimalContent
+                  data-classname="animalBtn"
+                  key={item.Name_Ch}
+                  onClick={showMyGeo}
+                  data-lat={item.Geo[1]}
+                  data-lng={item.Geo[0]}
+                  data-pavilion={item.Location}
+                  data-index={item.Index}
+                >
+                  {item.Name_Ch}
+                </AnimalContent>
+              ) : null
+            )}
+          </ItemBlock>
+        }
+
         {catalogs.map((item, index) => (
           <ItemBlock key={`${index}858`}>
             {item}

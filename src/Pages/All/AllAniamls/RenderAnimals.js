@@ -1,24 +1,39 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import * as action from "../../../Redux/Action";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
-
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
-
+import DetailsPopup from "./DetailsPopup";
+import * as firestore from "../../../Utils/firebase";
+import firebase from "firebase";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px 40px;
+  padding: 20px 70px;
   border: 1px solid grey;
   justify-content: space-around;
 `;
 
+let uid = undefined;
+let firebaseFavoriateArray = [];
+let favoriatiesMember = [];
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    uid = user.uid;
+    console.log(uid);
+    firestore
+      .firebaseGetMemberData(uid)
+      .then((data) => (firebaseFavoriateArray = { ...data }))
+      .then((data) => (favoriatiesMember = firebaseFavoriateArray.favoriaties));
+  }
+});
+
 export default function ReaderAnimals() {
-  const [open, setOpen] = useState(false);
-  const closeModal = () => setOpen(false);
   const [popupAnimal, setPopupAnimal] = useState(null);
+
+  const disPatch = useDispatch();
 
   const { search } = useSelector((state) => state.FilterAnimals);
   const { type } = useSelector((state) => state.FilterAnimals);
@@ -72,6 +87,7 @@ export default function ReaderAnimals() {
               margin: "10px",
               borderRadius: "40px",
               overflow: "hidden",
+              backgroundColor: "grey",
               transition: "all 0.3s ease",
               transform: `rotate(${getRandomInt(index % 7) - 2}deg)`,
             }}
@@ -87,7 +103,7 @@ export default function ReaderAnimals() {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                filter: "grayscale(0%)",
+                filter: "grayscale(30%)",
                 cursor: "pointer",
               }}
             ></div>
@@ -102,7 +118,7 @@ export default function ReaderAnimals() {
                 lineHeight: "130px",
                 fontSize: "20px",
                 fontFamily: "Noto Sans TC",
-                fontWeight: "900",
+                fontWeight: "600",
                 color: "white",
                 letterSpacing: "4px",
                 whiteSpace: "normal",
@@ -132,91 +148,13 @@ export default function ReaderAnimals() {
               }}
               onClick={() => {
                 setPopupAnimal(item.Name_Ch);
-                setOpen((o) => !o);
+                disPatch(action.setOpen());
               }}
             ></div>
           </div>
         ))
       )}
-      <Popup
-        open={open}
-        closeOnDocumentClick
-        onClose={closeModal}
-        overlayStyle={{ background: "rgba(0, 0, 0, 0.7)" }}
-        contentStyle={{
-          margin: "auto",
-          boxSizing: "border-box",
-          background: "#fff",
-          width: "50%",
-          padding: "60px 20px",
-          borderRadius: "25px",
-        }}
-      >
-        <div className="modal">
-          <span
-            className="close"
-            onClick={closeModal}
-            style={{
-              display: "block",
-              position: "absolute",
-              top: "-30px",
-              right: "-30px",
-              fontSize: "40px",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            &times;
-          </span>
-          {animalsJson.map((item) =>
-            item.Name_Ch === popupAnimal ? (
-              <div key={item.Name_En} className="content">
-                {item.Name_Ch}
-                <br />
-                <div
-                  style={{
-                    color: "orange",
-                    fontSize: "40px",
-                    position: "absolute",
-                    top: "60px",
-                    right: "30px",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
-                  }}
-                  onClick={(e) => {
-                    e.target.style.color = "grey";
-                    localStorage.setItem("favoriate", [
-                      localStorage.getItem("favoriate"),
-                      item.Name_Ch,
-                    ]);
-                  }}
-                >
-                  ★
-                </div>
-                <br />
-                英文學名：{item.Name_Latin}
-                <br />
-                園區位置：{item.Location}
-                <br />
-                分類：{item.Phylum} -&gt; {item.Class} -&gt; {item.Order}
-                -&gt; {item.Family}
-                <br />
-                保育等級：{item.Conservation}
-                <br />
-                主要分佈：{item.Distribution}
-                <br />
-                生活習性：{item.Habitat}
-                <br />
-                外部特徵：{item.Feature}
-                <br />
-                行為：{item.Behavior}
-                <br />
-                飲食：{item.Diet}
-              </div>
-            ) : null
-          )}
-        </div>
-      </Popup>
+      <DetailsPopup showAnimals={showAnimals} popupAnimal={popupAnimal} />
     </Container>
   );
 }

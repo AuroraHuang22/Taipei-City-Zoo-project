@@ -2,11 +2,14 @@ const ADD_FILTERSEARCH = "ADD_FILTERSEARCH";
 const ADD_FILTERTYPE = "ADD_FILTERTYPE";
 const ADD_FILTERPLACE = "ADD_FILTERPLACE";
 const REMOVE_FILTER = "REMOVE_FILTER";
+const SET_POEN = "SET_POEN";
+const SET_CLOSE = "SET_CLOSE";
 
 const initState = {
   search: "",
   type: "",
   place: "",
+  open: false,
 };
 
 export default function FilterAnimals(state = initState, action) {
@@ -31,6 +34,16 @@ export default function FilterAnimals(state = initState, action) {
         search: "",
         type: "",
         place: "",
+      };
+    case SET_POEN:
+      return {
+        ...state,
+        open: true,
+      };
+    case SET_CLOSE:
+      return {
+        ...state,
+        open: false,
       };
     default:
       return state;

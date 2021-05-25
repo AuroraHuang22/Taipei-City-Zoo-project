@@ -8,10 +8,15 @@ import "lrm-graphhopper";
 
 let addedToMap = false;
 
-const newIcon = new L.Icon({
-  iconUrl: require(`../../../Icons/like-03.svg`).default,
-  iconSize: [20, 20],
-  iconAnchor: [10, 10],
+const newIconStart = new L.Icon({
+  iconUrl: require(`../../../Icons/入口.svg`).default,
+  iconSize: [120, 120],
+  iconAnchor: [60, 60],
+});
+const newIconEnd = new L.Icon({
+  iconUrl: require(`../../../Icons/出口.svg`).default,
+  iconSize: [120, 120],
+  iconAnchor: [60, 60],
 });
 
 const leafletElement = L.Routing.control({
@@ -21,9 +26,13 @@ const leafletElement = L.Routing.control({
     },
   }),
   createMarker: (iconindex, maps, total) => {
-    if (iconindex === 0 || iconindex === total - 1) {
+    if (iconindex === 0) {
       return L.marker(maps.latLng, {
-        icon: newIcon,
+        icon: newIconStart,
+      });
+    } else if (iconindex === total - 1) {
+      return L.marker(maps.latLng, {
+        icon: newIconEnd,
       });
     }
   },

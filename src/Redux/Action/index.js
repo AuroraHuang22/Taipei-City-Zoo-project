@@ -11,6 +11,10 @@ const ADD_FILTERSEARCH = "ADD_FILTERSEARCH";
 const ADD_FILTERTYPE = "ADD_FILTERTYPE";
 const ADD_FILTERPLACE = "ADD_FILTERPLACE";
 const REMOVE_FILTER = "REMOVE_FILTER";
+const SET_POEN = "SET_POEN";
+const SET_CLOSE = "SET_CLOSE";
+const ADD_FAVORIATE = "ADD_FAVORIATE";
+const REMOVE_FAVORIATE = "REMOVE_FAVORIATE";
 
 export function addFacility(name) {
   return {
@@ -99,5 +103,31 @@ export function addFilterPlace(name) {
 export function removeFilter() {
   return {
     type: REMOVE_FILTER,
+  };
+}
+
+export function setOpen() {
+  return {
+    type: SET_POEN,
+  };
+}
+
+export function setClose() {
+  return {
+    type: SET_CLOSE,
+  };
+}
+
+export function addFavoriate(name) {
+  return {
+    type: ADD_FAVORIATE,
+    name: name,
+  };
+}
+
+export function removeFavoriate(name) {
+  return {
+    type: REMOVE_FAVORIATE,
+    name: name,
   };
 }

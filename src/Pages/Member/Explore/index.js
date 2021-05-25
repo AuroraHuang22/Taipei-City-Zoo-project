@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
 import { useSelector, useDispatch } from "react-redux";
 import * as action from "../../../Redux/Action";
+import img from "../../../Icons/stamp-02.svg";
 
 const Container = styled.div`
   display: flex;
@@ -136,15 +137,17 @@ export default function Explore() {
                       key={`v${item.Name_Ch}`}
                       style={{
                         display: "inline-block",
-                        width: "150%",
-                        height: "150%",
+                        width: "130%",
+                        height: "120%",
+                        transform: "rotate(-15deg)",
                         position: "absolute",
-                        transform: "translate(-20%,-12%)",
-                        backgroundImage: `url("https://i.pinimg.com/originals/fb/a4/f0/fba4f0f5c46ec19eee1afadb840265a6.png")`,
+                        top: 0,
+                        left: "-5px",
+                        backgroundImage: `url(${img})`,
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
-                        opacity: 0.2,
+                        opacity: "0.6",
                       }}
                       onClick={() => {
                         console.log("看過");
@@ -166,7 +169,7 @@ export default function Explore() {
                       position: "relative",
                       height: "80px",
                       borderRadius: "50%",
-                      margin: "15px",
+                      margin: "15px 20px",
                       backgroundColor: "lightgray",
                     }}
                   >
@@ -208,15 +211,17 @@ export default function Explore() {
                       key={`v${item.Name_Ch}`}
                       style={{
                         display: "inline-block",
-                        width: "150%",
-                        height: "150%",
+                        width: "130%",
+                        height: "120%",
+                        transform: "rotate(-15deg)",
                         position: "absolute",
-                        transform: "translate(-20%,-12%)",
-                        backgroundImage: `url("https://i.pinimg.com/originals/fb/a4/f0/fba4f0f5c46ec19eee1afadb840265a6.png")`,
+                        top: 0,
+                        left: "-5px",
+                        backgroundImage: `url(${img})`,
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
-                        opacity: 0.2,
+                        opacity: "0.6",
                       }}
                       onClick={() => {
                         console.log("看過");

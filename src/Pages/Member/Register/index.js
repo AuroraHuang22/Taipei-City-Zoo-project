@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import firebase from "firebase";
+import * as firestore from "../../../Utils/firebase";
 
 const Container = styled.div`
   display: flex;
@@ -61,6 +62,13 @@ const RenderContainer = styled.div`
     cursor: pointer;
   }
 `;
+
+let uid = undefined;
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     uid = user.uid;
+//   }
+// });
 
 function Register() {
   const [title, setTitle] = useState("Sign In");
@@ -124,6 +132,13 @@ function Register() {
         >
           {state}
         </span>
+        <button
+          onClick={() => {
+            firebase.auth().signOut();
+          }}
+        >
+          signOut
+        </button>
       </RenderContainer>
     );
   };
@@ -135,6 +150,14 @@ function Register() {
       .then((userCredential) => {
         setMessage("註冊成功");
       })
+      .then(() =>
+        firebase.auth().onAuthStateChanged((user) => {
+          if (user) {
+            uid = user.uid;
+          }
+          firestore.firebaseCreateNewMemberStore(uid);
+        })
+      )
       .catch((error) => {
         setErrMessage(error.message);
       });
