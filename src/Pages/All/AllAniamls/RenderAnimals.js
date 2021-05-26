@@ -18,27 +18,26 @@ const Container = styled.div`
 let uid = undefined;
 let firebaseFavoriateArray = [];
 let favoriatiesMember = [];
+let visitedMember = [];
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     uid = user.uid;
-    console.log(uid);
     firestore
       .firebaseGetMemberData(uid)
       .then((data) => (firebaseFavoriateArray = { ...data }))
-      .then((data) => (favoriatiesMember = firebaseFavoriateArray.favoriaties));
+      .then((data) => (favoriatiesMember = firebaseFavoriateArray.favoriaties))
+      .then((data) => (visitedMember = firebaseFavoriateArray.isVisited));
   }
 });
 
 export default function ReaderAnimals() {
   const [popupAnimal, setPopupAnimal] = useState(null);
-
-  const disPatch = useDispatch();
-
   const { search } = useSelector((state) => state.FilterAnimals);
   const { type } = useSelector((state) => state.FilterAnimals);
   const { place } = useSelector((state) => state.FilterAnimals);
 
+  const disPatch = useDispatch();
   const animalsJson = AnimalsJson;
   let showAnimals = [];
 
@@ -154,7 +153,13 @@ export default function ReaderAnimals() {
           </div>
         ))
       )}
-      <DetailsPopup showAnimals={showAnimals} popupAnimal={popupAnimal} />
+      <DetailsPopup
+        uid={uid}
+        showAnimals={showAnimals}
+        popupAnimal={popupAnimal}
+        favoriatiesMember={favoriatiesMember}
+        visitedMember={visitedMember}
+      />
     </Container>
   );
 }

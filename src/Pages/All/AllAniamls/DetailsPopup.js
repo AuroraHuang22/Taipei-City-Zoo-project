@@ -1,31 +1,24 @@
 import * as action from "../../../Redux/Action";
 import { useSelector, useDispatch } from "react-redux";
-import firebase from "firebase";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import * as firestore from "../../../Utils/firebase";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import styled from "styled-components";
 
-let uid = undefined;
-let firebaseFavoriateArray = [];
-let favoriatiesMember = [];
-
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    uid = user.uid;
-    console.log(uid);
-    firestore
-      .firebaseGetMemberData(uid)
-      .then((data) => (firebaseFavoriateArray = { ...data }))
-      .then((data) => (favoriatiesMember = firebaseFavoriateArray.favoriaties));
-  }
-});
+const Start = styled.div``;
+const Visited = styled.div``;
 
 export default function DetailsPopup(props) {
   const [addfavoriate, setAddfavoriate] = useState("");
+  const [addvisited, setAddvisited] = useState("");
   const disPatch = useDispatch();
   const { open } = useSelector((state) => state.FilterAnimals);
   const closeModal = () => disPatch(action.setClose());
+
+  let uid = props.uid;
+  let favoriatiesMember = props.favoriatiesMember;
+  let visitedMember = props.visitedMember;
 
   return (
     <Popup
@@ -63,63 +56,6 @@ export default function DetailsPopup(props) {
             <div key={item.Name_En} className="content">
               {item.Name_Ch}
               <br />
-              <div
-                key={item.Name_Latin}
-                style={{
-                  color: "grey",
-                  fontSize: "40px",
-                  position: "absolute",
-                  top: "60px",
-                  right: "30px",
-                  cursor: "pointer",
-                  transition: "all 0.2s",
-                }}
-                onClick={(e) => {
-                  if (uid) {
-                    if (e.target.style.color !== "orange") {
-                      favoriatiesMember.push(item.Name_Ch);
-                      firestore.firebaseAddFavoriate(uid, favoriatiesMember);
-                      setAddfavoriate(`加${item.Name_Ch}`);
-                    }
-                  } else {
-                    alert("欲使用加入收藏功能,請先登入會員呦");
-                  }
-                }}
-              >
-                ★
-              </div>
-              {favoriatiesMember.length
-                ? favoriatiesMember.map((name) =>
-                    name === props.popupAnimal ? (
-                      <div
-                        key={`ya-${item.Name_Latin}`}
-                        style={{
-                          color: "orange",
-                          fontSize: "40px",
-                          position: "absolute",
-                          top: "60px",
-                          right: "30px",
-                          cursor: "pointer",
-                          transition: "all 0.2s",
-                        }}
-                        onClick={(e) => {
-                          if (e.target.style.color === "orange") {
-                            e.target.style.color = "grey";
-                            let index = favoriatiesMember.indexOf(item.Name_Ch);
-                            favoriatiesMember.splice(index, 1);
-                            firestore.firebaseAddFavoriate(
-                              uid,
-                              favoriatiesMember
-                            );
-                            setAddfavoriate(`${item.Name_Latin}`);
-                          }
-                        }}
-                      >
-                        ★
-                      </div>
-                    ) : null
-                  )
-                : null}
               <br />
               英文學名：{item.Name_Latin}
               <br />
@@ -139,6 +75,127 @@ export default function DetailsPopup(props) {
               行為：{item.Behavior}
               <br />
               飲食：{item.Diet}
+              <br />
+              <Start>
+                <div
+                  key={item.Name_Latin}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    color: "grey",
+                    fontSize: "40px",
+                    cursor: "pointer",
+                    transition: "all 0.2s",
+                  }}
+                  onClick={(e) => {
+                    if (uid) {
+                      if (e.target.style.color !== "orange") {
+                        favoriatiesMember.push(item.Name_Ch);
+                        firestore.firebaseAddFavoriate(uid, favoriatiesMember);
+                        setAddfavoriate(`加${item.Name_Ch}`);
+                      }
+                    } else {
+                      alert("欲使用加入收藏功能,請先登入會員呦");
+                    }
+                  }}
+                >
+                  ★
+                </div>
+                {favoriatiesMember.length
+                  ? favoriatiesMember.map((name) =>
+                      name === props.popupAnimal ? (
+                        <div
+                          key={`ya-${item.Name_Latin}`}
+                          style={{
+                            position: "absolute",
+                            bottom: 0,
+                            left: 0,
+                            color: "orange",
+                            fontSize: "40px",
+                            cursor: "pointer",
+                            transition: "all 0.2s",
+                          }}
+                          onClick={(e) => {
+                            if (e.target.style.color === "orange") {
+                              e.target.style.color = "grey";
+                              let index = favoriatiesMember.indexOf(
+                                item.Name_Ch
+                              );
+                              favoriatiesMember.splice(index, 1);
+                              firestore.firebaseAddFavoriate(
+                                uid,
+                                favoriatiesMember
+                              );
+                              setAddfavoriate(`${item.Name_Latin}`);
+                            }
+                          }}
+                        >
+                          ★
+                        </div>
+                      ) : null
+                    )
+                  : null}
+              </Start>
+              <Visited>
+                <div
+                  key={item.Name_Latin}
+                  style={{
+                    marginTop: "60px",
+                    position: "absolute",
+                    bottom: 0,
+                    right: 0,
+
+                    color: "grey",
+                    fontSize: "40px",
+                    cursor: "pointer",
+                    transition: "all 0.2s",
+                  }}
+                  onClick={(e) => {
+                    if (uid) {
+                      if (e.target.style.color !== "orange") {
+                        visitedMember.push(item.Name_Ch);
+                        firestore.firebaseAddVisited(uid, visitedMember);
+                        setAddvisited(`add-${item.Name_Latin}`);
+                      }
+                    } else {
+                      alert("欲使用加入收藏功能,請先登入會員呦");
+                    }
+                  }}
+                >
+                  ✓
+                </div>
+                {visitedMember.length
+                  ? visitedMember.map((name) =>
+                      name === props.popupAnimal ? (
+                        <div
+                          key={`ya-${item.Name_Latin}`}
+                          style={{
+                            marginTop: "60px",
+                            position: "absolute",
+                            bottom: 0,
+                            right: 0,
+                            color: "orange",
+                            fontSize: "40px",
+                            cursor: "pointer",
+                            transition: "all 0.2s",
+                          }}
+                          onClick={(e) => {
+                            if (e.target.style.color === "orange") {
+                              e.target.style.color = "grey";
+                              let index = visitedMember.indexOf(item.Name_Ch);
+                              visitedMember.splice(index, 1);
+                              firestore.firebaseAddVisited(uid, visitedMember);
+                              setAddvisited(`remo-${item.Name_Latin}`);
+                            }
+                          }}
+                        >
+                          ✓
+                        </div>
+                      ) : null
+                    )
+                  : null}
+              </Visited>
             </div>
           ) : null
         )}

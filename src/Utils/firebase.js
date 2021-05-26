@@ -111,7 +111,7 @@ const firebaseAddVisited = (uid, arr) => {
     .doc(uid)
     .set(
       {
-        isVisited: [arr],
+        isVisited: arr,
       },
       { merge: true }
     )
@@ -144,10 +144,18 @@ const firebaseGetMemberData = (uid) => {
     .then((doc) => {
       if (doc.exists) {
         return doc.data();
-      } else {
-        console.log("No such document!");
       }
     });
+};
+
+const getUserId = (callback) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      callback(user.uid);
+    } else {
+      callback(false);
+    }
+  });
 };
 
 export {
@@ -158,4 +166,5 @@ export {
   firebaseAddFacilities,
   firebaseAddAnimals,
   firebaseGetMemberData,
+  getUserId,
 };

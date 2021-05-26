@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import img from "../../../Icons/223.png";
 import AnimalsData from "./AnimalsData";
+import firebase from "firebase";
+
+import * as firestore from "../../../Utils/firebase";
 
 const AnimalsDiv = styled.div`
   height: 80vh;
@@ -21,10 +24,24 @@ const AnimalsDiv = styled.div`
 `;
 
 const Animals = (prop) => {
+  const [getUid, setGetUid] = useState("none");
+  // const [getFavoraite, setGetFavoraite] = useState({ favoriaties: [] });
+
+  useEffect(() => {
+    const unsubscribe = firestore.getUserId((uid) => {
+      setGetUid(uid);
+    });
+    return unsubscribe;
+  }, []);
+
+  if (getUid === "none") {
+    return null;
+  }
+
   return (
     <AnimalsDiv>
       {/* <div className="imgdiv"></div> */}
-      <AnimalsData animal={prop.animal} route={prop.route} />
+      <AnimalsData animal={prop.animal} route={prop.route} uid={getUid} />
       {/* <Selector facilities={prop.facilities} /> */}
     </AnimalsDiv>
   );
