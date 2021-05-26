@@ -18,3 +18,7 @@ code {
 .leaflet-routing-container {
   display: none;
 }
+
+.leaflet-container {
+  border-radius: 40px;
+}

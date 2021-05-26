@@ -49,8 +49,8 @@ export default function Header() {
           <a href="/map" className="select">
             遊園路線規劃
           </a>
-          <a href="/trafic" className="select">
-            交通資訊
+          <a href="/entrance" className="select">
+            入園資訊
           </a>
           <a href="/member" className="select">
             探索護照
