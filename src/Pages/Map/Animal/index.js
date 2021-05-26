@@ -25,7 +25,6 @@ const AnimalsDiv = styled.div`
 
 const Animals = (prop) => {
   const [getUid, setGetUid] = useState("none");
-  // const [getFavoraite, setGetFavoraite] = useState({ favoriaties: [] });
 
   useEffect(() => {
     const unsubscribe = firestore.getUserId((uid) => {

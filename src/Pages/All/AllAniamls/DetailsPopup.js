@@ -10,14 +10,14 @@ const Start = styled.div``;
 const Visited = styled.div``;
 
 export default function DetailsPopup(props) {
-  const [addfavoriate, setAddfavoriate] = useState("");
+  const [addfavorite, setAddfavorite] = useState("");
   const [addvisited, setAddvisited] = useState("");
   const disPatch = useDispatch();
   const { open } = useSelector((state) => state.FilterAnimals);
   const closeModal = () => disPatch(action.setClose());
 
   let uid = props.uid;
-  let favoriatiesMember = props.favoriatiesMember;
+  let favoritiesMember = props.favoritiesMember;
   let visitedMember = props.visitedMember;
 
   return (
@@ -91,9 +91,9 @@ export default function DetailsPopup(props) {
                   onClick={(e) => {
                     if (uid) {
                       if (e.target.style.color !== "orange") {
-                        favoriatiesMember.push(item.Name_Ch);
-                        firestore.firebaseAddFavoriate(uid, favoriatiesMember);
-                        setAddfavoriate(`加${item.Name_Ch}`);
+                        favoritiesMember.push(item.Name_Ch);
+                        firestore.firebaseAddFavoriate(uid, favoritiesMember);
+                        setAddfavorite(`加${item.Name_Ch}`);
                       }
                     } else {
                       alert("欲使用加入收藏功能,請先登入會員呦");
@@ -102,8 +102,8 @@ export default function DetailsPopup(props) {
                 >
                   ★
                 </div>
-                {favoriatiesMember.length
-                  ? favoriatiesMember.map((name) =>
+                {favoritiesMember.length
+                  ? favoritiesMember.map((name) =>
                       name === props.popupAnimal ? (
                         <div
                           key={`ya-${item.Name_Latin}`}
@@ -119,15 +119,15 @@ export default function DetailsPopup(props) {
                           onClick={(e) => {
                             if (e.target.style.color === "orange") {
                               e.target.style.color = "grey";
-                              let index = favoriatiesMember.indexOf(
+                              let index = favoritiesMember.indexOf(
                                 item.Name_Ch
                               );
-                              favoriatiesMember.splice(index, 1);
+                              favoritiesMember.splice(index, 1);
                               firestore.firebaseAddFavoriate(
                                 uid,
-                                favoriatiesMember
+                                favoritiesMember
                               );
-                              setAddfavoriate(`${item.Name_Latin}`);
+                              setAddfavorite(`${item.Name_Latin}`);
                             }
                           }}
                         >

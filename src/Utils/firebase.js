@@ -74,7 +74,7 @@ const firebaseCreateNewMemberStore = (uid) => {
     .doc(uid)
     .set(
       {
-        favoriaties: [],
+        favorities: [],
         isVisited: [],
         saved: [],
         uid: uid,
@@ -94,7 +94,7 @@ const firebaseAddFavoriate = (uid, arr) => {
     .doc(uid)
     .set(
       {
-        favoriaties: arr,
+        favorities: arr,
       },
       { merge: true }
     )

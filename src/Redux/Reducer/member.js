@@ -2,7 +2,7 @@ const ADD_FAVORIATE = "ADD_FAVORIATE";
 const REMOVE_FAVORIATE = "REMOVE_FAVORIATE";
 
 const initState = {
-  favoriaties: [],
+  favorities: [],
 };
 
 export default function Member(state = initState, action) {
@@ -10,15 +10,15 @@ export default function Member(state = initState, action) {
     case ADD_FAVORIATE:
       return {
         ...state,
-        favoriaties: [...state.favoriaties, action.name],
+        favorities: [...state.favorities, action.name],
       };
     case REMOVE_FAVORIATE:
-      let arr = state.favoriaties.map((name) => name);
+      let arr = state.favorities.map((name) => name);
       let index = arr.indexOf(action.name);
       arr.splice(index, 1);
       return {
         ...state,
-        favoriaties: [...arr],
+        favorities: [...arr],
       };
     default:
       return state;

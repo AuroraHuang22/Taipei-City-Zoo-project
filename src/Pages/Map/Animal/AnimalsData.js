@@ -72,7 +72,7 @@ let pavilionsArray = [];
 const AnimalsData = (prop) => {
   const [showItem, setShowItem] = useState(null);
   const [animalsData, setAnimalsData] = useState(null);
-  const [favoriaties, setFavoriaties] = useState("none");
+  const [favorities, setFavorities] = useState("none");
   const [dispaly, setdisplay] = useState("none");
   const disPatch = useDispatch();
   let routeData = prop.route;
@@ -144,9 +144,9 @@ const AnimalsData = (prop) => {
     if (uid) {
       firestore
         .firebaseGetMemberData(uid)
-        .then((data) => setFavoriaties(data.favoriaties));
+        .then((data) => setFavorities(data.favorities));
     } else {
-      setFavoriaties(false);
+      setFavorities(false);
     }
   }, []);
 
@@ -159,7 +159,7 @@ const AnimalsData = (prop) => {
     });
   }, []);
 
-  if (!animalsData || favoriaties === undefined || favoriaties === "none") {
+  if (!animalsData || favorities === undefined || favorities === "none") {
     return null;
   }
 
@@ -173,12 +173,12 @@ const AnimalsData = (prop) => {
   return (
     <>
       <Container>
-        {favoriaties ? (
+        {favorities ? (
           <ItemBlock>
             收藏的動物
             <AnimalsItemBlock>
               {animalsData.map((item) =>
-                favoriaties.map((name) =>
+                favorities.map((name) =>
                   item.Name_Ch === name ? (
                     <AnimalContent
                       data-classname="animalBtn"

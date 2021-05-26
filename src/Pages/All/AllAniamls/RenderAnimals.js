@@ -17,7 +17,7 @@ const Container = styled.div`
 
 let uid = undefined;
 let firebaseFavoriateArray = [];
-let favoriatiesMember = [];
+let favoritiesMember = [];
 let visitedMember = [];
 
 firebase.auth().onAuthStateChanged((user) => {
@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged((user) => {
     firestore
       .firebaseGetMemberData(uid)
       .then((data) => (firebaseFavoriateArray = { ...data }))
-      .then((data) => (favoriatiesMember = firebaseFavoriateArray.favoriaties))
+      .then((data) => (favoritiesMember = firebaseFavoriateArray.favorities))
       .then((data) => (visitedMember = firebaseFavoriateArray.isVisited));
   }
 });
@@ -157,7 +157,7 @@ export default function ReaderAnimals() {
         uid={uid}
         showAnimals={showAnimals}
         popupAnimal={popupAnimal}
-        favoriatiesMember={favoriatiesMember}
+        favoritiesMember={favoritiesMember}
         visitedMember={visitedMember}
       />
     </Container>

@@ -64,11 +64,6 @@ const RenderContainer = styled.div`
 `;
 
 let uid = undefined;
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     uid = user.uid;
-//   }
-// });
 
 function Register() {
   const [title, setTitle] = useState("Sign In");
