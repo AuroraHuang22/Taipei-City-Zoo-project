@@ -7,6 +7,7 @@ import Header from "./Utils/Header";
 import Footer from "./Utils/Footer";
 import Member from "./Pages/Member";
 import Register from "./Pages/Member/Register";
+import All from "./Pages/All";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/map" component={Map} />
           <Route path="/member" component={Member} />
           <Route path="/register" component={Register} />
+          <Route path="/all" component={All} />
         </Switch>
         <Footer />
       </Router>

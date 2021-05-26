@@ -7,6 +7,14 @@ const ADD_ROUTE = "ADD_ROUTE";
 const ADD_CONFORMATION = "ADD_CONFORMATION";
 const ADD_RECOMMEND = "ADD_RECOMMEND";
 const ADD_VISITED = "ADD_VISITED";
+const ADD_FILTERSEARCH = "ADD_FILTERSEARCH";
+const ADD_FILTERTYPE = "ADD_FILTERTYPE";
+const ADD_FILTERPLACE = "ADD_FILTERPLACE";
+const REMOVE_FILTER = "REMOVE_FILTER";
+const SET_POEN = "SET_POEN";
+const SET_CLOSE = "SET_CLOSE";
+const ADD_FAVORIATE = "ADD_FAVORIATE";
+const REMOVE_FAVORIATE = "REMOVE_FAVORIATE";
 
 export function addFacility(name) {
   return {
@@ -67,6 +75,59 @@ export function addRecommend(text) {
 export function addVisited(name) {
   return {
     type: ADD_VISITED,
+    name: name,
+  };
+}
+
+export function addFilterSearch(name) {
+  return {
+    type: ADD_FILTERSEARCH,
+    name: name,
+  };
+}
+
+export function addFilterType(name) {
+  return {
+    type: ADD_FILTERTYPE,
+    name: name,
+  };
+}
+
+export function addFilterPlace(name) {
+  return {
+    type: ADD_FILTERPLACE,
+    name: name,
+  };
+}
+
+export function removeFilter() {
+  return {
+    type: REMOVE_FILTER,
+  };
+}
+
+export function setOpen() {
+  return {
+    type: SET_POEN,
+  };
+}
+
+export function setClose() {
+  return {
+    type: SET_CLOSE,
+  };
+}
+
+export function addFavoriate(name) {
+  return {
+    type: ADD_FAVORIATE,
+    name: name,
+  };
+}
+
+export function removeFavoriate(name) {
+  return {
+    type: REMOVE_FAVORIATE,
     name: name,
   };
 }

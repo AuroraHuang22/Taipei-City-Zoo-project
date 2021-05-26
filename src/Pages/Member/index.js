@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import MemberInfo from "./MemberInfo";
 import Explore from "./Explore";
 import Saved from "./Saved";
+import * as firestore from "../../Utils/firebase";
 
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter as Switch,
   Route,
   Link,
   useRouteMatch,
-  useParams,
 } from "react-router-dom";
 
 const Container = styled.div`
@@ -40,27 +39,49 @@ const Selector = styled.div`
   margin: 10px;
 `;
 
-function MapIndex() {
+export default function MapIndex() {
+  const [getUid, setGetUid] = useState("none");
   let match = useRouteMatch();
+
+  useEffect(() => {
+    const unsubscribe = firestore.getUserId((uid) => {
+      setGetUid(uid);
+    });
+    return unsubscribe;
+  }, []);
+
+  if (getUid === "none") {
+    return null;
+  }
+  console.log(getUid);
+
   return (
     <Container>
-      <MemberInfo />
-      <Main>
-        <Switch>
-          <Route exact path={`${match.path}`}>
-            <Link to={`${match.url}/saved`}>
-              <Selector>儲存行程</Selector>
-            </Link>
-            <Link to={`${match.url}/explore`}>
-              <Selector>探險護照</Selector>
-            </Link>
-          </Route>
-          <Route path={`${match.path}/explore`} component={Explore} />
-          <Route path={`${match.path}/saved`} component={Saved} />
-        </Switch>
-      </Main>
+      <MemberInfo uid={getUid} />
+      {getUid ? (
+        <Main>
+          <Switch>
+            <Route exact path={`${match.path}`}>
+              <Link to={`${match.url}/saved`}>
+                <Selector>儲存行程</Selector>
+              </Link>
+              <Link to={`${match.url}/explore`}>
+                <Selector>探險護照</Selector>
+              </Link>
+            </Route>
+            <Route path={`${match.path}/explore`}>
+              <Explore uid={getUid} />
+            </Route>
+            <Route path={`${match.path}/saved`}>
+              <Saved uid={getUid} />
+            </Route>
+          </Switch>
+        </Main>
+      ) : (
+        <Main>
+          <div>請登入會員</div>
+        </Main>
+      )}
     </Container>
   );
 }
-
-export default MapIndex;

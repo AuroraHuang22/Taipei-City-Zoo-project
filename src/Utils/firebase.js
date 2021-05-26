@@ -69,14 +69,52 @@ const firebaseAddFacilities = (data) => {
   });
 };
 
-const firebaseAddData = () => {
-  db.collection("city")
-    .doc("LA")
-    .set({
-      name: "Los Angeles",
-      state: "CA",
-      country: "USA",
+const firebaseCreateNewMemberStore = (uid) => {
+  db.collection("Users")
+    .doc(uid)
+    .set(
+      {
+        favorities: [],
+        isVisited: [],
+        saved: [],
+        uid: uid,
+      },
+      { merge: true }
+    )
+    .then(() => {
+      console.log("Document successfully written!");
     })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+};
+
+const firebaseAddFavoriate = (uid, arr) => {
+  db.collection("Users")
+    .doc(uid)
+    .set(
+      {
+        favorities: arr,
+      },
+      { merge: true }
+    )
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+};
+
+const firebaseAddVisited = (uid, arr) => {
+  db.collection("Users")
+    .doc(uid)
+    .set(
+      {
+        isVisited: arr,
+      },
+      { merge: true }
+    )
     .then(() => {
       console.log("Document successfully written!");
     })
@@ -98,9 +136,35 @@ const firebaseGetData = (collection) => {
     });
 };
 
+const firebaseGetMemberData = (uid) => {
+  return db
+    .collection("Users")
+    .doc(uid)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        return doc.data();
+      }
+    });
+};
+
+const getUserId = (callback) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      callback(user.uid);
+    } else {
+      callback(false);
+    }
+  });
+};
+
 export {
-  firebaseAddData,
+  firebaseCreateNewMemberStore,
+  firebaseAddFavoriate,
+  firebaseAddVisited,
   firebaseGetData,
   firebaseAddFacilities,
   firebaseAddAnimals,
+  firebaseGetMemberData,
+  getUserId,
 };

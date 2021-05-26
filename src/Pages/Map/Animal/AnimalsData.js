@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as action from "../../../Redux/Action";
+import * as firestore from "../../../Utils/firebase";
 
 const Container = styled.div`
   width: 100%;
@@ -71,10 +72,11 @@ let pavilionsArray = [];
 const AnimalsData = (prop) => {
   const [showItem, setShowItem] = useState(null);
   const [animalsData, setAnimalsData] = useState(null);
+  const [favorities, setFavorities] = useState("none");
   const [dispaly, setdisplay] = useState("none");
-
   const disPatch = useDispatch();
   let routeData = prop.route;
+  let uid = prop.uid;
 
   const showMyGeo = (e) => {
     if (e.target.style.backgroundColor !== "lightgrey") {
@@ -139,19 +141,25 @@ const AnimalsData = (prop) => {
 
   useEffect(() => {
     setAnimalsData(prop.animal);
+    if (uid) {
+      firestore
+        .firebaseGetMemberData(uid)
+        .then((data) => setFavorities(data.favorities));
+    } else {
+      setFavorities(false);
+    }
   }, []);
 
   useEffect(() => {
     window.addEventListener("click", (e) => {
       if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
     });
-
     return window.removeEventListener("click", (e) => {
       if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
     });
   }, []);
 
-  if (!animalsData) {
+  if (!animalsData || favorities === undefined || favorities === "none") {
     return null;
   }
 
@@ -165,6 +173,30 @@ const AnimalsData = (prop) => {
   return (
     <>
       <Container>
+        {favorities ? (
+          <ItemBlock>
+            收藏的動物
+            <AnimalsItemBlock>
+              {animalsData.map((item) =>
+                favorities.map((name) =>
+                  item.Name_Ch === name ? (
+                    <AnimalContent
+                      data-classname="animalBtn"
+                      key={item.Name_Ch}
+                      onClick={showMyGeo}
+                      data-lat={item.Geo[1]}
+                      data-lng={item.Geo[0]}
+                      data-pavilion={item.Location}
+                      data-index={item.Index}
+                    >
+                      {item.Name_Ch}
+                    </AnimalContent>
+                  ) : null
+                )
+              )}
+            </AnimalsItemBlock>
+          </ItemBlock>
+        ) : null}
         {catalogs.map((item, index) => (
           <ItemBlock key={`${index}858`}>
             {item}

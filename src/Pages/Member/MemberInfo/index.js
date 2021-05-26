@@ -14,7 +14,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
 const Photo = styled.div`
   width: 100px;
   height: 100px;
@@ -25,7 +24,6 @@ const Photo = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
 `;
-
 const Level = styled.div`
   width: 30vw;
 `;
@@ -61,7 +59,7 @@ const LevelBar = () => {
   );
 };
 
-function MapIndex() {
+function MemberInfo(props) {
   return (
     <Container>
       <Photo />
@@ -94,8 +92,9 @@ function MapIndex() {
         </LevelText>
         <LevelBar />
       </Level>
+      <button>SignIn</button>
     </Container>
   );
 }
 
-export default MapIndex;
+export default MemberInfo;
