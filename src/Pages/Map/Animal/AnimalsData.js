@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
 import * as firestore from "../../../Utils/firebase";
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -74,7 +73,12 @@ const AnimalsData = (prop) => {
   const [animalsData, setAnimalsData] = useState(null);
   const [favorities, setFavorities] = useState("none");
   const [dispaly, setdisplay] = useState("none");
+  const [dispalyContainer, setDispalyContainer] = useState("block");
   const disPatch = useDispatch();
+  const displayStore = useSelector(
+    (state) => state.AnimalsReducer.displayforAnimalSelect
+  );
+
   let routeData = prop.route;
   let uid = prop.uid;
 
@@ -86,10 +90,10 @@ const AnimalsData = (prop) => {
         Number(e.target.dataset.index),
       ]);
       disPatch(
-        action.addAnimal([
-          Number(e.target.dataset.lat),
-          Number(e.target.dataset.lng),
-        ])
+        action.addAnimal(
+          [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
+          e.target.dataset.num
+        )
       );
     } else {
       e.target.style.backgroundColor = "white";
@@ -99,39 +103,45 @@ const AnimalsData = (prop) => {
       ]);
       pavilionsArray.splice(num, 1);
       disPatch(
-        action.removeAnimal([
-          Number(e.target.dataset.lat),
-          Number(e.target.dataset.lng),
-        ])
+        action.removeAnimal(
+          [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
+          e.target.dataset.num
+        )
       );
     }
   };
   const submit = () => {
-    const set = new Set();
-    const pavilionsSort = pavilionsArray
-      .filter((item) => (!set.has(item[1]) ? set.add(item[1]) : false))
-      .sort((a, b) => a[1] - b[1]);
+    if (pavilionsArray.length) {
+      const set = new Set();
+      const pavilionsSort = pavilionsArray
+        .filter((item) => (!set.has(item[1]) ? set.add(item[1]) : false))
+        .sort((a, b) => a[1] - b[1]);
 
-    let found = pavilionsSort.indexOf(
-      pavilionsSort.find((index) => index[1] >= 4 && index[1] < 10)
-    );
-    if (found !== -1) {
-      pavilionsSort.splice({ found }, 0, ["列車站", 3.5]);
+      let found = pavilionsSort.indexOf(
+        pavilionsSort.find((index) => index[1] >= 4 && index[1] < 10)
+      );
+      if (found !== -1) {
+        pavilionsSort.splice({ found }, 0, ["列車站", 3.5]);
+      }
+
+      pavilionsSort[0][1] >= 10
+        ? pavilionsSort.sort((a, b) => b[1] - a[1])
+        : pavilionsSort.sort((a, b) => a[1] - b[1]);
+
+      let result = [];
+      routeData.forEach((item) =>
+        pavilionsSort.forEach((pav) =>
+          item.Location === pav[0] ? result.push(...item.Route) : null
+        )
+      );
+
+      disPatch(action.addRecommend(pavilionsSort));
+      disPatch(action.addRoute(result));
+      disPatch(action.gotoNextStep());
+      setDispalyContainer("none");
+    } else {
+      alert("請先選擇至少一種想看的動物喔！");
     }
-
-    pavilionsSort[0][1] >= 10
-      ? pavilionsSort.sort((a, b) => b[1] - a[1])
-      : pavilionsSort.sort((a, b) => a[1] - b[1]);
-
-    let result = [];
-    routeData.forEach((item) =>
-      pavilionsSort.forEach((pav) =>
-        item.Location === pav[0] ? result.push(...item.Route) : null
-      )
-    );
-
-    disPatch(action.addRecommend(pavilionsSort));
-    disPatch(action.addRoute(result));
   };
   const showMoreAnimals = (e) => {
     setdisplay("block");
@@ -149,6 +159,13 @@ const AnimalsData = (prop) => {
       setFavorities(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (displayStore) {
+      console.log("block");
+      setDispalyContainer("block");
+    }
+  }, [displayStore]);
 
   useEffect(() => {
     window.addEventListener("click", (e) => {
@@ -172,66 +189,71 @@ const AnimalsData = (prop) => {
 
   return (
     <>
-      <Container>
-        {favorities ? (
-          <ItemBlock>
-            收藏的動物
-            <AnimalsItemBlock>
-              {animalsData.map((item) =>
-                favorities.map((name) =>
-                  item.Name_Ch === name ? (
-                    <AnimalContent
-                      data-classname="animalBtn"
-                      key={item.Name_Ch}
-                      onClick={showMyGeo}
-                      data-lat={item.Geo[1]}
-                      data-lng={item.Geo[0]}
-                      data-pavilion={item.Location}
-                      data-index={item.Index}
-                    >
-                      {item.Name_Ch}
-                    </AnimalContent>
+      <div style={{ display: dispalyContainer }}>
+        <h3>這次想造訪哪些動物呢？</h3>
+        <Container>
+          {favorities ? (
+            <ItemBlock>
+              收藏的動物
+              <AnimalsItemBlock>
+                {animalsData.map((item) =>
+                  favorities.map((name) =>
+                    item.Name_Ch === name ? (
+                      <AnimalContent
+                        data-classname="animalBtn"
+                        key={item.Name_Ch}
+                        onClick={showMyGeo}
+                        data-num={item.CID}
+                        data-lat={item.Geo[1]}
+                        data-lng={item.Geo[0]}
+                        data-pavilion={item.Location}
+                        data-index={item.Index}
+                      >
+                        {item.Name_Ch}
+                      </AnimalContent>
+                    ) : null
+                  )
+                )}
+              </AnimalsItemBlock>
+            </ItemBlock>
+          ) : null}
+          {catalogs.map((item, index) => (
+            <ItemBlock key={`${index}858`}>
+              {item}
+              <AnimalsItemBlock key={`${index}88`}>
+                {animalsData.map((animal) =>
+                  item === animal.Location ? (
+                    animal.Favorite ? (
+                      <AnimalContent
+                        data-classname="animalBtn"
+                        key={animal.Name_Ch}
+                        onClick={showMyGeo}
+                        data-num={animal.CID}
+                        data-lat={animal.Geo[1]}
+                        data-lng={animal.Geo[0]}
+                        data-pavilion={animal.Location}
+                        data-index={animal.Index}
+                      >
+                        {animal.Name_Ch}
+                      </AnimalContent>
+                    ) : null
                   ) : null
-                )
-              )}
-            </AnimalsItemBlock>
-          </ItemBlock>
-        ) : null}
-        {catalogs.map((item, index) => (
-          <ItemBlock key={`${index}858`}>
-            {item}
-            <AnimalsItemBlock key={`${index}88`}>
-              {animalsData.map((animal) =>
-                item === animal.Location ? (
-                  animal.Favorite ? (
-                    <AnimalContent
-                      data-classname="animalBtn"
-                      key={animal.Name_Ch}
-                      onClick={showMyGeo}
-                      data-lat={animal.Geo[1]}
-                      data-lng={animal.Geo[0]}
-                      data-pavilion={animal.Location}
-                      data-index={animal.Index}
-                    >
-                      {animal.Name_Ch}
-                    </AnimalContent>
-                  ) : null
-                ) : null
-              )}
-              <MoreAnimals
-                data-classname="animalBtn"
-                onClick={() => {
-                  showMoreAnimals(item);
-                }}
-              >
-                {" "}
-                更多{" "}
-              </MoreAnimals>
-            </AnimalsItemBlock>
-          </ItemBlock>
-        ))}
-        <button onClick={submit}>submit</button>
-      </Container>
+                )}
+                <MoreAnimals
+                  data-classname="animalBtn"
+                  onClick={() => {
+                    showMoreAnimals(item);
+                  }}
+                >
+                  {" "}
+                  更多{" "}
+                </MoreAnimals>
+              </AnimalsItemBlock>
+            </ItemBlock>
+          ))}
+          <button onClick={submit}>下一步</button>
+        </Container>
+      </div>
       <PopopDiv style={{ display: dispaly }}>
         {
           <AnimalsItemBlock>
@@ -241,6 +263,7 @@ const AnimalsData = (prop) => {
                   data-classname="animalBtn"
                   key={animal.Name_Ch}
                   onClick={showMyGeo}
+                  data-num={animal.CID}
                   data-lat={animal.Geo[1]}
                   data-lng={animal.Geo[0]}
                   data-pavilion={animal.Location}

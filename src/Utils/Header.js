@@ -37,7 +37,7 @@ const Container = styled.div`
 
 export default function Header() {
   return (
-    <HeaderDiv>
+    <HeaderDiv id="header">
       <Container>
         <a href="/" className="logo">
           Logo

@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
-import { useSelector, useDispatch } from "react-redux";
-import * as action from "../../../Redux/Action";
 import img from "../../../Icons/stamp-02.svg";
 import * as firestore from "../../../Utils/firebase";
-import firebase from "firebase";
 
 const Container = styled.div`
   display: flex;
@@ -21,6 +18,15 @@ const Render = styled.div`
   padding: 20px 50px;
 `;
 
+const ItemBlock = styled.div`
+  font-size: 10px;
+  font-weight: bold;
+  border: 1px solid lightgray;
+  margin: 5px 5px;
+  padding: 3px 5px;
+  border-radius: 10px;
+`;
+
 const animalsJson = AnimalsJson;
 const set = new Set();
 const catalogs = animalsJson
@@ -28,7 +34,6 @@ const catalogs = animalsJson
   .map((item) => item.Location);
 
 export default function Explore(props) {
-  const disPatch = useDispatch();
   const [getVisited, setGetVisited] = useState("none");
   let uid = props.uid;
 
@@ -46,92 +51,76 @@ export default function Explore(props) {
     return null;
   }
 
+  let ablock = [];
+  catalogs.forEach((catalogs1) =>
+    animalsJson.forEach((animalsJson1) =>
+      getVisited.forEach((getVisited1) => {
+        if (
+          animalsJson1.Name_Ch === getVisited1 &&
+          animalsJson1.Location === catalogs1
+        ) {
+          ablock.push([
+            animalsJson1.Name_Ch,
+            animalsJson1.Location,
+            animalsJson1.Pic01_URL,
+          ]);
+        }
+      })
+    )
+  );
+  console.log(ablock);
+
+  let a = ablock.filter((item) => item[1] === "新光特展館(大貓熊館)");
+
+  console.log(a);
+
   return (
     <Container>
       <Render>
         {getVisited.length ? (
-          animalsJson.map((item) =>
-            getVisited.map((name) =>
-              item.Name_Ch === name ? (
-                <div
-                  key={item.Name_Ch}
-                  style={{
-                    display: "inline-block",
-                    width: "80px",
-                    position: "relative",
-                    height: "80px",
-                    borderRadius: "50%",
-                    margin: "15px",
-                    backgroundColor: "lightgray",
-                  }}
-                >
+          catalogs.map((item, index) => (
+            <ItemBlock key={`${index}858`}>
+              {item}
+              {ablock.map((ele) =>
+                ele[1] === item ? (
                   <div
+                    key={ele[0]}
                     style={{
                       display: "inline-block",
                       width: "80px",
+                      position: "relative",
                       height: "80px",
-                      position: "absolute",
                       borderRadius: "50%",
-                      lineHeight: "80px",
-                      fontSize: "8px",
-                      whiteSpace: "normal",
-                      textAlign: "center",
+                      margin: "15px",
+                      backgroundColor: "lightgray",
                     }}
                   >
-                    {item.Name_Ch}
+                    <div
+                      style={{
+                        display: "inline-block",
+                        width: "100%",
+                        height: "100%",
+                        position: "absolute",
+                        borderRadius: "50%",
+                        backgroundImage: `url(${ele[2]})`,
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        transition: "all 0.1s",
+                        filter: "grayscale(0%)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.opacity = 0.4;
+                      }}
+                      onMouseOut={(e) => {
+                        e.target.style.opacity = 1;
+                      }}
+                    ></div>
                   </div>
-                  <div
-                    style={{
-                      display: "inline-block",
-                      width: "100%",
-                      height: "100%",
-                      position: "absolute",
-                      borderRadius: "50%",
-                      backgroundImage: `url(${item.Pic01_URL})`,
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover",
-                      transition: "all 0.1s",
-                      filter: "grayscale(0%)",
-                    }}
-                    onClick={() => {
-                      disPatch(action.addVisited(item.Name_Ch));
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.opacity = 0.4;
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.opacity = 1;
-                    }}
-                  ></div>
-                  {/* {isVisited.map((name) =>
-            name === item.Name_Ch ? (
-              <div
-                key={`v${item.Name_Ch}`}
-                style={{
-                  display: "inline-block",
-                  width: "130%",
-                  height: "120%",
-                  transform: "rotate(-15deg)",
-                  position: "absolute",
-                  top: 0,
-                  left: "-5px",
-                  backgroundImage: `url(${img})`,
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                  opacity: "0.6",
-                }}
-                onClick={() => {
-                  console.log("看過");
-                }}
-              ></div>
-            ) : null
-          )} */}
-                </div>
-              ) : null
-            )
-          )
+                ) : null
+              )}
+            </ItemBlock>
+          ))
         ) : (
           <div>
             糟糕 護照還沒有任何紀錄！

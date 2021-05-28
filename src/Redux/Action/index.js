@@ -15,6 +15,10 @@ const SET_POEN = "SET_POEN";
 const SET_CLOSE = "SET_CLOSE";
 const ADD_FAVORIATE = "ADD_FAVORIATE";
 const REMOVE_FAVORIATE = "REMOVE_FAVORIATE";
+const REMOVE_ROUTE = "REMOVE_ROUTE";
+
+const GO_TO_NEXTSTEP = "GO_TO_NEXTSTEP";
+const BACK_TO_SELECT_ANIMAL = "BACK_TO_SELECT_ANIMAL";
 
 export function addFacility(name) {
   return {
@@ -31,10 +35,11 @@ export function removeFacility(name) {
 }
 // 加動物錨點＆區域
 
-export function addAnimal(geo) {
+export function addAnimal(geo, num) {
   return {
     type: ADD_ANIMAL,
     geo: geo,
+    num: num,
   };
 }
 
@@ -45,10 +50,11 @@ export function addRoute(arr) {
   };
 }
 
-export function removeAnimal(geo) {
+export function removeAnimal(geo, num) {
   return {
     type: REMOVE_ANIMAL,
     geo: geo,
+    num: num,
   };
 }
 
@@ -129,5 +135,23 @@ export function removeFavoriate(name) {
   return {
     type: REMOVE_FAVORIATE,
     name: name,
+  };
+}
+
+export function backToSelectAnimal() {
+  return {
+    type: BACK_TO_SELECT_ANIMAL,
+  };
+}
+
+export function gotoNextStep() {
+  return {
+    type: GO_TO_NEXTSTEP,
+  };
+}
+
+export function removeRoute() {
+  return {
+    type: REMOVE_ROUTE,
   };
 }

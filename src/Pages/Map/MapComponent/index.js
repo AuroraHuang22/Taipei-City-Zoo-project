@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  MapContainer,
-  TileLayer,
-  useMapEvents,
-  useMap,
-  Marker,
-} from "react-leaflet";
-import L from "leaflet";
+import { MapContainer, TileLayer, useMapEvents, useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { Markers } from "./Markers";
 import Routing from "./RouteMaching";
@@ -17,17 +10,22 @@ const setBounds = [
   [25.000263, 121.57700905],
   [24.99028, 121.5936458],
 ];
-const position = [24.99593183848819, 121.58535137127019];
+const position = [24.995737380116395, 121.58388671931453];
 
 const Container = styled.div`
-  width: 70%;
+  display: flex;
+  overflow: "hidden";
+  justify-content: center;
+  align-items: center;
+
+  width: 1260px;
+  height: 900px;
   position: relative;
 `;
 
-function Map(props) {
+const Map = React.forwardRef((props, ref) => {
   const route = useSelector((state) => state.AnimalsReducer.visitRoute);
-
-  const center = useSelector((state) => state.AnimalsReducer.showAnimalsGeo);
+  const center = useSelector((state) => state.AnimalsReducer.showAnimals);
 
   function ClickEvent() {
     useMapEvents({
@@ -38,50 +36,26 @@ function Map(props) {
     return null;
   }
 
-  // function Findme() {
-  //   const [position, setPosition] = useState(null);
-  //   const map = useMapEvents({
-  //     click: () => {
-  //       map.locate();
-  //     },
-  //     locationfound(e) {
-  //       setPosition(e.latlng);
-  //       map.flyTo(e.latlng, map.getZoom());
-  //     },
-  //   });
-  //   return position === null ? null : (
-  //     <Marker
-  //       position={position}
-  //       icon={
-  //         new L.Icon({
-  //           iconUrl: require(`../../icons/like-02.svg`).default,
-  //           iconSize: [20, 20],
-  //           iconAnchor: [10, 10],
-  //         })
-  //       }
-  //     >
-  //       <Popup> You are here</Popup>
-  //     </Marker>
-  //   );
-  // }
-
   const FitCenter = (animateRef) => {
     const map = useMap();
 
-    if (!route.length && center.length) {
+    if (!route.length && center.geo.length) {
       map.setView(
-        [center[center.length - 1][0], center[center.length - 1][1]],
+        [
+          center.geo[center.geo.length - 1][0],
+          center.geo[center.geo.length - 1][1],
+        ],
         16.8
       );
-    } else if (route.length && center.length) {
-      map.setView([24.996554, 121.583322], 16.8);
+    } else if (route.length && center.geo.length) {
+      map.setView([24.995457487742257, 121.58546700607988], 16.5);
     }
 
     return null;
   };
 
   return (
-    <Container>
+    <Container id="mapDD" ref={ref}>
       <MapContainer
         center={position}
         zoom={16}
@@ -89,13 +63,10 @@ function Map(props) {
         maxBounds={setBounds}
         scrollWheelZoom={true}
         style={{
-          height: "80vh",
+          fontSize: "5px",
+          height: "90%",
           width: "100%",
-          position: "absolute",
-          top: "5px",
-          left: 0,
         }}
-        // whenCreated={(map) => leafletElement.addTo(map)}
       >
         <ClickEvent />
         <TileLayer
@@ -103,25 +74,12 @@ function Map(props) {
           url="https://api.mapbox.com/styles/v1/aurorahuang/ckol9o1wg11vf19n1nl0o5x2m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
         />
         <Routing />
-        {center.map((item) => (
-          <Marker
-            key={item[0]}
-            position={[item[0], item[1]]}
-            icon={
-              new L.Icon({
-                iconUrl: require(`../../../Icons/star.svg`).default,
-                iconSize: [10, 10],
-                iconAnchor: [5, 5],
-              })
-            }
-          ></Marker>
-        ))}
         <FitCenter />
-        <MapInformation></MapInformation>
+        <MapInformation />
         <Markers facilities={props.facilities} />
       </MapContainer>
     </Container>
   );
-}
+});
 
 export default Map;
