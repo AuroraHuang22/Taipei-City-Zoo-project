@@ -41,6 +41,7 @@ const Selector = styled.div`
 
 export default function MapIndex() {
   const [getUid, setGetUid] = useState("none");
+
   let match = useRouteMatch();
 
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function MapIndex() {
   if (getUid === "none") {
     return null;
   }
+
   console.log(getUid);
 
   return (

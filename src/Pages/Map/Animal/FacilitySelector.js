@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
 
 const SelectorDiv = styled.div`
   display: flex;
+  margin-top: 20px;
   flex-direction: row;
   flex-wrap: wrap;
 `;
@@ -25,8 +26,13 @@ const LableElement = styled.label`
 `;
 
 const Selector = (props) => {
-  const disPatch = useDispatch();
   const [getAllFacilities, setGetAllFacilities] = useState([]);
+  const [displayDiv, setDisplayDiv] = useState("none");
+  const disPatch = useDispatch();
+
+  const displayStore = useSelector(
+    (state) => state.AnimalsReducer.disPlayforFacility
+  );
 
   const handleInputClick = (e) => {
     if (e.target.checked) {
@@ -36,6 +42,18 @@ const Selector = (props) => {
       disPatch(action.removeFacility(e.target.id));
     }
   };
+
+  const backToSelect = () => {
+    setDisplayDiv("none");
+    disPatch(action.backToSelectAnimal());
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    if (displayStore) {
+      setDisplayDiv("block");
+    }
+  }, [displayStore]);
 
   useEffect(() => {
     setGetAllFacilities(props.facilities);
@@ -50,19 +68,23 @@ const Selector = (props) => {
   );
 
   return (
-    <SelectorDiv>
-      {catalogs.map((item, index) => (
-        <InputDivs key={`${item.Location}${index}`}>
-          <InputElement
-            id={item.Item}
-            type="checkBox"
-            data-type="checkBox"
-            onChange={handleInputClick}
-          />
-          <LableElement htmlFor={item.Item}>{item.Item}</LableElement>
-        </InputDivs>
-      ))}
-    </SelectorDiv>
+    <div style={{ display: displayDiv }}>
+      <h3>地圖上要顯示哪些設施呢？</h3>
+      <SelectorDiv>
+        {catalogs.map((item, index) => (
+          <InputDivs key={`${item.Location}${index}`}>
+            <InputElement
+              id={item.Item}
+              type="checkBox"
+              data-type="checkBox"
+              onChange={handleInputClick}
+            />
+            <LableElement htmlFor={item.Item}>{item.Item}</LableElement>
+          </InputDivs>
+        ))}
+      </SelectorDiv>
+      <button onClick={backToSelect}>重新選擇動物</button>
+    </div>
   );
 };
 

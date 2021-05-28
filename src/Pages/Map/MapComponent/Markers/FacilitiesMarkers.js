@@ -5,7 +5,7 @@ import L from "leaflet";
 
 function FacilitiesMarkers(props) {
   const [facilitiesData, setFacilitiesData] = useState([]);
-  const store = useSelector((state) => state.selectorReducer.showFacilities);
+  const store = useSelector((state) => state.SelectorReducer.showFacilities);
 
   useEffect(() => {
     setFacilitiesData(props.facilities);

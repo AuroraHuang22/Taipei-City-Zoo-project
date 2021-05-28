@@ -19,7 +19,7 @@ const Container = styled.div`
 
 export default function Footer() {
   return (
-    <FooterDiv>
+    <FooterDiv id="footer">
       <Container>
         <div className="footer-info"></div>
       </Container>

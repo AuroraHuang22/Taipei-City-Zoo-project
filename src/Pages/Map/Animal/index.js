@@ -2,16 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import img from "../../../Icons/223.png";
 import AnimalsData from "./AnimalsData";
-import firebase from "firebase";
+import FacilitySelector from "./FacilitySelector";
 
 import * as firestore from "../../../Utils/firebase";
 
 const AnimalsDiv = styled.div`
-  height: 80vh;
-  width: 30%;
   padding: 15px 5px;
   position: relative;
-  overflow: scroll;
   .imgdiv {
     background-image: url(${img});
     background-position: top left;
@@ -38,10 +35,10 @@ const Animals = (prop) => {
   }
 
   return (
-    <AnimalsDiv>
+    <AnimalsDiv id="animalDiv">
       {/* <div className="imgdiv"></div> */}
       <AnimalsData animal={prop.animal} route={prop.route} uid={getUid} />
-      {/* <Selector facilities={prop.facilities} /> */}
+      <FacilitySelector facilities={prop.facilities} />
     </AnimalsDiv>
   );
 };

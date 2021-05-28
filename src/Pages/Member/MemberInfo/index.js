@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
-import { useSelector } from "react-redux";
+import * as firestore from "../../../Utils/firebase";
 
 const Container = styled.div`
   width: 100%;
@@ -31,35 +31,46 @@ const LevelText = styled.div`
   padding: 10px 10px 10px 0px;
 `;
 
-const LevelBar = () => {
-  const visitedStore = useSelector(
-    (state) => state.ExploreReducer.visitedAnimals
-  );
+function MemberInfo(props) {
+  const [getVisited, setGetVisited] = useState("none");
+  let uid = props.uid;
 
-  let bar = ((100 / AnimalsJson.length) * visitedStore.length).toFixed(1);
-
-  return (
-    <div
-      style={{
-        width: "100%",
-        backgroundColor: "lightgrey",
-        height: "8px",
-        borderRadius: "10px",
-      }}
-    >
+  const LevelBar = () => {
+    let bar = ((100 / AnimalsJson.length) * getVisited.length).toFixed(1);
+    return (
       <div
         style={{
-          width: `${bar}%`,
-          backgroundColor: "grey",
+          width: "100%",
+          backgroundColor: "lightgrey",
           height: "8px",
           borderRadius: "10px",
         }}
-      ></div>
-    </div>
-  );
-};
+      >
+        <div
+          style={{
+            width: `${bar}%`,
+            backgroundColor: "grey",
+            height: "8px",
+            borderRadius: "10px",
+          }}
+        ></div>
+      </div>
+    );
+  };
 
-function MemberInfo(props) {
+  useEffect(() => {
+    if (uid) {
+      firestore
+        .firebaseGetMemberData(uid)
+        .then((data) => setGetVisited(data.isVisited));
+    } else {
+      setGetVisited(false);
+    }
+  }, []);
+
+  if (getVisited === "none") {
+    return null;
+  }
   return (
     <Container>
       <Photo />

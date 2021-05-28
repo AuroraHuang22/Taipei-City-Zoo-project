@@ -22,3 +22,21 @@ code {
 .leaflet-container {
   border-radius: 40px;
 }
+
+.leaflet-marker-icon.my-div-icon {
+  color: rgb(211, 100, 27);
+  white-space: nowrap;
+}
+
+@media print {
+  @page {
+    size: 1200px 1200px;
+    margin: 10px;
+  }
+  .leaflet-control-zoom {
+    display: none;
+  }
+  #mapDD {
+    height: 1100px;
+  }
+}
