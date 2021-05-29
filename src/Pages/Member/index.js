@@ -19,14 +19,19 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Main = styled.div`
+  position: relative;
   display: flex;
   box-sizing: border-box;
-  max-height: 65vh;
+  height: 100%;
+  max-height: 70vh;
   overflow-y: scroll;
   margin: 0 auto;
   width: 100%;
+  max-width: 1480px;
   padding: 30px;
   justify-content: center;
+  border-radius: 25px;
+  border: 1px solid lightgrey;
 `;
 const Selector = styled.div`
   display: flex;
@@ -55,13 +60,11 @@ export default function MapIndex() {
     return null;
   }
 
-  console.log(getUid);
-
   return (
     <Container>
       <MemberInfo uid={getUid} />
-      {getUid ? (
-        <Main>
+      <Main>
+        {getUid ? (
           <Switch>
             <Route exact path={`${match.path}`}>
               <Link to={`${match.url}/saved`}>
@@ -78,12 +81,10 @@ export default function MapIndex() {
               <Saved uid={getUid} />
             </Route>
           </Switch>
-        </Main>
-      ) : (
-        <Main>
+        ) : (
           <div>請登入會員</div>
-        </Main>
-      )}
+        )}
+      </Main>
     </Container>
   );
 }

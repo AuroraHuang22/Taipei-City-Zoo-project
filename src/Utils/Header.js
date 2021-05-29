@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import * as action from "../Redux/Action";
+import * as firestore from "../Utils/firebase";
+import LoginPopup from "../Utils/LoginPopup";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
 
 const HeaderDiv = styled.div`
   position: fixed;
@@ -36,28 +46,54 @@ const Container = styled.div`
 `;
 
 export default function Header() {
+  const [getUid, setUid] = useState("none");
+  const disPatch = useDispatch();
+  firestore.getUserId((data) => setUid(data));
+
+  if (getUid === "none") {
+    return null;
+  }
+
   return (
     <HeaderDiv id="header">
       <Container>
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           Logo
-        </a>
+        </Link>
         <div className="nav-bar">
-          <a href="/all" className="select">
+          <Link to="/all" className="select">
             動物總覽
-          </a>
+          </Link>
           <a href="/map" className="select">
             遊園路線規劃
           </a>
-          <a href="/entrance" className="select">
-            入園資訊
-          </a>
-          <a href="/member" className="select">
+          <Link to="/member" className="select">
             探索護照
-          </a>
-          <a href="/register" className="select">
-            登入
-          </a>
+          </Link>
+          <Link to="/entrance" className="select">
+            入園資訊
+          </Link>
+          {getUid ? (
+            <div
+              className="select"
+              onClick={() => {
+                firestore.signOut();
+              }}
+            >
+              登出
+            </div>
+          ) : (
+            <div
+              className="select"
+              onClick={() => {
+                disPatch(action.setLoginOpen());
+              }}
+            >
+              登入
+            </div>
+          )}
+
+          <LoginPopup />
         </div>
       </Container>
     </HeaderDiv>

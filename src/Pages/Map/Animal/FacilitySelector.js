@@ -46,7 +46,7 @@ const Selector = (props) => {
   const backToSelect = () => {
     setDisplayDiv("none");
     disPatch(action.backToSelectAnimal());
-    window.location.reload();
+    window.location.href = "/map";
   };
 
   useEffect(() => {
