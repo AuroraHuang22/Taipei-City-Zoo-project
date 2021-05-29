@@ -66,18 +66,25 @@ const PopopDiv = styled.div`
   z-index: 100;
 `;
 
-let pavilionsArray = [];
+let flag = false;
 
 const AnimalsData = (prop) => {
   const [showItem, setShowItem] = useState(null);
   const [animalsData, setAnimalsData] = useState(null);
   const [favorities, setFavorities] = useState("none");
+  const [savedData, setSaveData] = useState("none");
   const [dispaly, setdisplay] = useState("none");
   const [dispalyContainer, setDispalyContainer] = useState("block");
   const disPatch = useDispatch();
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.displayforAnimalSelect
   );
+  const animalsNum = useSelector(
+    (state) => state.AnimalsReducer.showAnimals.num
+  );
+
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let idValue = params.get("id");
 
   let routeData = prop.route;
   let uid = prop.uid;
@@ -85,10 +92,6 @@ const AnimalsData = (prop) => {
   const showMyGeo = (e) => {
     if (e.target.style.backgroundColor !== "lightgrey") {
       e.target.style.backgroundColor = "lightgrey";
-      pavilionsArray.push([
-        e.target.dataset.pavilion,
-        Number(e.target.dataset.index),
-      ]);
       disPatch(
         action.addAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
@@ -97,11 +100,6 @@ const AnimalsData = (prop) => {
       );
     } else {
       e.target.style.backgroundColor = "white";
-      let num = pavilionsArray.indexOf([
-        e.target.dataset.pavilion,
-        Number(e.target.dataset.index),
-      ]);
-      pavilionsArray.splice(num, 1);
       disPatch(
         action.removeAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
@@ -111,6 +109,15 @@ const AnimalsData = (prop) => {
     }
   };
   const submit = () => {
+    let pavilionsArray = [];
+    animalsData.forEach((item) => {
+      animalsNum.forEach((num) => {
+        if (item.CID === Number(num)) {
+          pavilionsArray.push([item.Location, item.Index]);
+        }
+      });
+    });
+
     if (pavilionsArray.length) {
       const set = new Set();
       const pavilionsSort = pavilionsArray
@@ -134,7 +141,6 @@ const AnimalsData = (prop) => {
           item.Location === pav[0] ? result.push(...item.Route) : null
         )
       );
-
       disPatch(action.addRecommend(pavilionsSort));
       disPatch(action.addRoute(result));
       disPatch(action.gotoNextStep());
@@ -161,6 +167,10 @@ const AnimalsData = (prop) => {
   }, []);
 
   useEffect(() => {
+    return firestore.firebaseGetSavedData(uid, (data) => setSaveData(data));
+  }, []);
+
+  useEffect(() => {
     if (displayStore) {
       console.log("block");
       setDispalyContainer("block");
@@ -175,6 +185,35 @@ const AnimalsData = (prop) => {
       if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
     });
   }, []);
+
+  useEffect(() => {
+    if (idValue) {
+      if (savedData === "none" || savedData.length === 0) {
+        return null;
+      }
+      let geoArray = [];
+      savedData[idValue - 1].geo.forEach((item) => {
+        let arr1 = item.split(",");
+        geoArray.push([Number(arr1[0]), Number(arr1[1])]);
+      });
+      let numArray = [];
+      savedData[idValue - 1].num.forEach((item) => {
+        numArray.push(Number(item));
+      });
+
+      disPatch(action.removeAllAnimal());
+      geoArray.forEach((item, index) =>
+        disPatch(action.addAnimal(item, numArray[index]))
+      );
+      flag = true;
+    }
+  }, [savedData]);
+
+  useEffect(() => {
+    if (flag) {
+      submit();
+    }
+  }, [flag]);
 
   if (!animalsData || favorities === undefined || favorities === "none") {
     return null;

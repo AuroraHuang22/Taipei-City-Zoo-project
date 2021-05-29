@@ -16,9 +16,36 @@ const SET_CLOSE = "SET_CLOSE";
 const ADD_FAVORIATE = "ADD_FAVORIATE";
 const REMOVE_FAVORIATE = "REMOVE_FAVORIATE";
 const REMOVE_ROUTE = "REMOVE_ROUTE";
-
 const GO_TO_NEXTSTEP = "GO_TO_NEXTSTEP";
 const BACK_TO_SELECT_ANIMAL = "BACK_TO_SELECT_ANIMAL";
+const SET_LOGIN_POEN = "SET_LOGIN_POEN";
+const SET_LOGIN_CLOSE = "SET_LOGIN_CLOSE";
+const SET_LOGIN = "SET_LOGIN";
+const SET_LOGOUT = "SET_LOGOUT";
+
+export function setLoginOpen() {
+  return {
+    type: SET_LOGIN_POEN,
+  };
+}
+
+export function setLoginClose() {
+  return {
+    type: SET_LOGIN_CLOSE,
+  };
+}
+
+export function setLogin() {
+  return {
+    type: SET_LOGIN,
+  };
+}
+
+export function setLogout() {
+  return {
+    type: SET_LOGOUT,
+  };
+}
 
 export function addFacility(name) {
   return {

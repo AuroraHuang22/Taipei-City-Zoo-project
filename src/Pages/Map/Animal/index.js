@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import img from "../../../Icons/223.png";
 import AnimalsData from "./AnimalsData";
 import FacilitySelector from "./FacilitySelector";
-
-import * as firestore from "../../../Utils/firebase";
 
 const AnimalsDiv = styled.div`
   padding: 15px 5px;
@@ -21,23 +19,10 @@ const AnimalsDiv = styled.div`
 `;
 
 const Animals = (prop) => {
-  const [getUid, setGetUid] = useState("none");
-
-  useEffect(() => {
-    const unsubscribe = firestore.getUserId((uid) => {
-      setGetUid(uid);
-    });
-    return unsubscribe;
-  }, []);
-
-  if (getUid === "none") {
-    return null;
-  }
-
   return (
     <AnimalsDiv id="animalDiv">
       {/* <div className="imgdiv"></div> */}
-      <AnimalsData animal={prop.animal} route={prop.route} uid={getUid} />
+      <AnimalsData animal={prop.animal} route={prop.route} uid={prop.uid} />
       <FacilitySelector facilities={prop.facilities} />
     </AnimalsDiv>
   );

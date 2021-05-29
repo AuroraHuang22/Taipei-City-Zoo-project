@@ -16,8 +16,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/map" component={Map} />
-          <Route path="/member" component={Member} />
+          <Route exact path="/map" component={Map} />
+          <Route exact path="/member" component={Member} />
           <Route path="/register" component={Register} />
           <Route path="/all" component={All} />
           <Route path="/entrance" component={entrance} />

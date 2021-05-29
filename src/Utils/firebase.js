@@ -1,3 +1,4 @@
+import { queryByRole } from "@testing-library/dom";
 import firebase from "firebase";
 
 const firebaseConfig = {
@@ -10,7 +11,7 @@ const firebaseConfig = {
   measurementId: "G-6SSVE3J0KN",
 };
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
+let db = firebase.firestore();
 
 const firebaseAddAnimals = (data) => {
   data.forEach((item) => {
@@ -76,7 +77,6 @@ const firebaseCreateNewMemberStore = (uid) => {
       {
         favorities: [],
         isVisited: [],
-        saved: [],
         uid: uid,
       },
       { merge: true }
@@ -123,6 +123,26 @@ const firebaseAddVisited = (uid, arr) => {
     });
 };
 
+const firebaseAddSaved = (uid, geo, num) => {
+  db.collection("Users")
+    .doc(uid)
+    .collection("saved")
+    .doc()
+    .set(
+      {
+        geo: geo,
+        num: num,
+      },
+      { merge: true }
+    )
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+};
+
 const firebaseGetData = (collection) => {
   return db
     .collection(collection)
@@ -148,6 +168,35 @@ const firebaseGetMemberData = (uid) => {
     });
 };
 
+const firebaseGetSavedData = (uid, callback) => {
+  let arr = [];
+  return db
+    .collection("Users")
+    .doc(uid)
+    .collection("saved")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        arr.push(doc.data());
+      });
+      callback(arr);
+    });
+};
+const firebaseGetSavedId = (uid, callback) => {
+  let arr = [];
+  return db
+    .collection("Users")
+    .doc(uid)
+    .collection("saved")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        arr.push(doc.id);
+      });
+      callback(arr);
+    });
+};
+
 const getUserId = (callback) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -156,6 +205,24 @@ const getUserId = (callback) => {
       callback(false);
     }
   });
+};
+
+const firebaseDeleteDoc = (uid, doc) => {
+  db.collection("Users")
+    .doc(uid)
+    .collection("saved")
+    .doc(doc)
+    .delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+    })
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+};
+
+const signOut = () => {
+  return firebase.auth().signOut();
 };
 
 export {
@@ -167,4 +234,9 @@ export {
   firebaseAddAnimals,
   firebaseGetMemberData,
   getUserId,
+  firebaseAddSaved,
+  firebaseGetSavedData,
+  firebaseGetSavedId,
+  firebaseDeleteDoc,
+  signOut,
 };
