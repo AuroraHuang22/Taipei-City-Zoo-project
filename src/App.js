@@ -8,7 +8,7 @@ import Footer from "./Utils/Footer";
 import Member from "./Pages/Member";
 import Register from "./Pages/Member/Register";
 import All from "./Pages/All";
-import entrance from "./Pages/Entrance";
+import Entrance from "./Pages/Entrance";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/member" component={Member} />
           <Route path="/register" component={Register} />
           <Route path="/all" component={All} />
-          <Route path="/entrance" component={entrance} />
+          <Route path="/entrance" component={Entrance} />
         </Switch>
         <Footer />
       </Router>

@@ -5,7 +5,7 @@ const SET_LOGOUT = "SET_LOGOUT";
 
 const initState = {
   open: false,
-  login: true,
+  login: "login",
 };
 
 export default function Login(state = initState, action) {
@@ -23,12 +23,12 @@ export default function Login(state = initState, action) {
     case SET_LOGIN:
       return {
         ...state,
-        login: true,
+        login: "login",
       };
     case SET_LOGOUT:
       return {
         ...state,
-        login: false,
+        login: "logout",
       };
     default:
       return state;

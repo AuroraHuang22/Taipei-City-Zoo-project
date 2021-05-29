@@ -45,44 +45,49 @@ export default function Saved(prop) {
     return firestore.firebaseGetSavedId(uid, (data) => setSaveId(data));
   }, [remove]);
 
-  if (savedData === "none" || savedData.length === 0) {
+  if (savedData === "none") {
     return null;
   }
-
   return (
     <Container>
-      {savedData.map((item, index) => (
-        <div className="itemBlock" key={`item${index}`}>
-          <div className="contentBlock">
-            儲存行程 {index + 1}
-            {animalsjson.map((ele) =>
-              item.num.map((na) =>
-                ele.CID === Number(na) ? (
-                  <div className="content" key={`span${index}`}>
-                    {ele.Name_Ch}
-                  </div>
-                ) : null
-              )
-            )}
+      {savedData.length ? (
+        savedData.map((item, index) => (
+          <div className="itemBlock" key={`item${index}`}>
+            <div className="contentBlock">
+              儲存行程 {index + 1}
+              {animalsjson.map((ele) =>
+                item.num.map((na) =>
+                  ele.CID === Number(na) ? (
+                    <div className="content" key={`span${index}`}>
+                      {ele.Name_Ch}
+                    </div>
+                  ) : null
+                )
+              )}
+            </div>
+            <button
+              data-index={index}
+              onClick={(e) => {
+                window.location.href = `/map?id=${index + 1}`;
+              }}
+            >
+              go to map
+            </button>
+            <button
+              onClick={(e) => {
+                firestore.firebaseDeleteDoc(uid, savedId[index]);
+                setRemove(savedId[index]);
+              }}
+            >
+              delete
+            </button>
           </div>
-          <button
-            data-index={index}
-            onClick={(e) => {
-              window.location.href = `/map?id=${index + 1}`;
-            }}
-          >
-            go to map
-          </button>
-          <button
-            onClick={(e) => {
-              firestore.firebaseDeleteDoc(uid, savedId[index]);
-              setRemove(savedId[index]);
-            }}
-          >
-            delete
-          </button>
-        </div>
-      ))}
+        ))
+      ) : (
+        <h4>
+          還沒有儲存行程的紀錄喔,只要在路線規劃印出地圖,地圖資料就會自動儲存到這裡囉！
+        </h4>
+      )}
     </Container>
   );
 }

@@ -48,7 +48,9 @@ function MapIndex() {
       }
     },
     onAfterPrint: () => {
-      alert("已將行程儲存至探索護照");
+      if (getUid) {
+        alert("已將行程儲存至探索護照");
+      }
     },
     content: () => componentRef.current,
   });

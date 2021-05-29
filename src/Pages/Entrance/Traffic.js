@@ -57,7 +57,6 @@ export default function Traffic() {
       }
     });
   });
-  console.log(parks);
   function ClickEvent() {
     useMapEvents({
       click: (e) => {
