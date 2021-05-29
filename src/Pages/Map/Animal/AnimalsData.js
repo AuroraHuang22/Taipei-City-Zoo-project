@@ -167,7 +167,9 @@ const AnimalsData = (prop) => {
   }, []);
 
   useEffect(() => {
-    return firestore.firebaseGetSavedData(uid, (data) => setSaveData(data));
+    if (uid) {
+      return firestore.firebaseGetSavedData(uid, (data) => setSaveData(data));
+    }
   }, []);
 
   useEffect(() => {

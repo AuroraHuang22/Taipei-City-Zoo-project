@@ -1,4 +1,3 @@
-import { queryByRole } from "@testing-library/dom";
 import firebase from "firebase";
 
 const firebaseConfig = {

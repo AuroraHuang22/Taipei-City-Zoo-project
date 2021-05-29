@@ -2,7 +2,7 @@ import * as action from "../Redux/Action";
 import { useSelector, useDispatch } from "react-redux";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import firebase from "firebase";
 import * as firestore from "../Utils/firebase";
@@ -12,11 +12,11 @@ const RenderContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 30%;
+  /* width: 30%;
   margin: auto;
   height: 60%;
   border: 1px solid grey;
-  border-radius: 25px;
+  border-radius: 25px; */
 
   .inputDiv {
     display: flex;
@@ -61,14 +61,26 @@ const RenderContainer = styled.div`
 export default function DetailsPopup() {
   const disPatch = useDispatch();
   const { open } = useSelector((state) => state.Login);
+  const { login } = useSelector((state) => state.Login);
   const closeModal = () => disPatch(action.setLoginClose());
+
   const [title, setTitle] = useState("Sign In");
+  //   const [status, setStatus] = useState("");
   const [text, setText] = useState("Don't have account?");
   const [state, setState] = useState("Sign Up");
   const [message, setMessage] = useState("");
-  const [errMessage, setErrMessage] = useState("");
+  //   const [errMessage, setErrMessage] = useState("");
+
   let inputEmail = "";
   let inputPassword = "";
+
+  useEffect(() => {
+    setMessage("");
+  }, [state]);
+
+  useEffect(() => {
+    setMessage("");
+  }, [open]);
 
   const RenderDiv = () => {
     return (
@@ -92,7 +104,6 @@ export default function DetailsPopup() {
         </div>
         <div className="inputDiv">
           <span className="success">{message}</span>
-          <span className="faild">{errMessage}</span>
         </div>
 
         <button
@@ -134,7 +145,7 @@ export default function DetailsPopup() {
       .auth()
       .createUserWithEmailAndPassword(inputEmail, inputPassword)
       .then((userCredential) => {
-        setMessage("註冊成功");
+        setMessage("成功加入會員");
       })
       .then(() =>
         firebase.auth().onAuthStateChanged((user) => {
@@ -142,10 +153,13 @@ export default function DetailsPopup() {
             uid = user.uid;
           }
           firestore.firebaseCreateNewMemberStore(uid);
+          setTimeout(() => {
+            closeModal();
+          }, 1500);
         })
       )
       .catch((error) => {
-        setErrMessage(error.message);
+        setMessage(error.message);
       });
   };
 
@@ -155,10 +169,12 @@ export default function DetailsPopup() {
       .signInWithEmailAndPassword(inputEmail, inputPassword)
       .then((userCredential) => {
         setMessage("登入成功");
-        closeModal();
+        setTimeout(() => {
+          closeModal();
+        }, 1500);
       })
       .catch((error) => {
-        setErrMessage(error.message);
+        setMessage(error.message);
       });
   };
 
@@ -177,7 +193,7 @@ export default function DetailsPopup() {
         borderRadius: "25px",
       }}
     >
-      <RenderDiv />
+      {login === "login" ? <RenderDiv /> : <h2>你已成功登出</h2>}
     </Popup>
   );
 }

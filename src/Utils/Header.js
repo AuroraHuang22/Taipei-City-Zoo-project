@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as action from "../Redux/Action";
@@ -40,15 +40,20 @@ const Container = styled.div`
     padding: 20px;
   }
   .select {
+    cursor: pointer;
     padding: 10px;
     margin-right: 20px;
+    text-decoration: none;
   }
 `;
 
 export default function Header() {
   const [getUid, setUid] = useState("none");
   const disPatch = useDispatch();
-  firestore.getUserId((data) => setUid(data));
+
+  useEffect(() => {
+    firestore.getUserId((data) => setUid(data));
+  }, []);
 
   if (getUid === "none") {
     return null;
@@ -67,9 +72,9 @@ export default function Header() {
           <a href="/map" className="select">
             遊園路線規劃
           </a>
-          <Link to="/member" className="select">
+          <a href="/member" className="select">
             探索護照
-          </Link>
+          </a>
           <Link to="/entrance" className="select">
             入園資訊
           </Link>
@@ -78,6 +83,8 @@ export default function Header() {
               className="select"
               onClick={() => {
                 firestore.signOut();
+                disPatch(action.setLogout());
+                disPatch(action.setLoginOpen());
               }}
             >
               登出
@@ -86,6 +93,7 @@ export default function Header() {
             <div
               className="select"
               onClick={() => {
+                disPatch(action.setLogin());
                 disPatch(action.setLoginOpen());
               }}
             >
