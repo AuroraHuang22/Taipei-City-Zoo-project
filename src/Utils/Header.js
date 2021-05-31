@@ -13,37 +13,80 @@ import {
 
 const HeaderDiv = styled.div`
   position: fixed;
+  display: flex;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: white;
-  border-bottom: 1px solid lightslategrey;
   z-index: 220;
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
-const Container = styled.div`
+const main = styled.div`
+  text-decoration: none;
+  color: #f09a8f;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 18px;
+  a {
+    display: inline-block;
+    color: #f09a8f;
+    text-decoration: none;
+  }
+`;
+const Container = styled(main)`
+  position: relative;
   display: flex;
   width: 100%;
   max-width: 1400px;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   .logo {
-    padding: 30px;
-    margin-right: auto;
+    width: 35px;
+    height: 35px;
+    background-image: url(/Imgs/logo-09.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
   .nav-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-basis: 1;
-    padding: 20px;
+    align-items: center;
   }
   .select {
     cursor: pointer;
     padding: 10px;
     margin-right: 20px;
-    text-decoration: none;
+  }
+  .signBox {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+  }
+  .signup {
+    cursor: pointer;
+    padding: 1px 12px;
+    color: #a7a6d1;
+    border: 1px solid #a7a6d1;
+    border-radius: 20px;
+    margin-right: 8px;
+  }
+  .signin {
+    cursor: pointer;
+    color: #a7a6d1;
+    border-radius: 20px;
+  }
+  .signout {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    color: #a7a6d1;
+    border-radius: 20px;
   }
 `;
 
@@ -62,36 +105,46 @@ export default function Header() {
   return (
     <HeaderDiv id="header">
       <Container>
-        <Link to="/" className="logo">
-          Logo
-        </Link>
         <div className="nav-bar">
-          <Link to="/all" className="select">
+          <Link to="/" className="select">
             動物總覽
           </Link>
           <a href="/map" className="select">
             遊園路線規劃
           </a>
+          <Link to="/" className="select logo" />
           <a href="/member" className="select">
             探索護照
           </a>
           <Link to="/entrance" className="select">
             入園資訊
           </Link>
-          {getUid ? (
+          <LoginPopup />
+        </div>
+        {getUid ? (
+          <div
+            className="signout"
+            onClick={() => {
+              firestore.signOut();
+              disPatch(action.setLogout());
+              disPatch(action.setLoginOpen());
+            }}
+          >
+            登出
+          </div>
+        ) : (
+          <div className="signBox">
             <div
-              className="select"
+              className="signup"
               onClick={() => {
-                firestore.signOut();
-                disPatch(action.setLogout());
+                disPatch(action.setLogin());
                 disPatch(action.setLoginOpen());
               }}
             >
-              登出
+              註冊
             </div>
-          ) : (
             <div
-              className="select"
+              className="signin"
               onClick={() => {
                 disPatch(action.setLogin());
                 disPatch(action.setLoginOpen());
@@ -99,10 +152,8 @@ export default function Header() {
             >
               登入
             </div>
-          )}
-
-          <LoginPopup />
-        </div>
+          </div>
+        )}
       </Container>
     </HeaderDiv>
   );

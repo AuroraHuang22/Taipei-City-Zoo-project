@@ -89,22 +89,25 @@ function MemberInfo(props) {
     return null;
   }
   let blocksFilter = [];
-  catalogs.forEach((catalogs1) =>
-    animalsJson.forEach((animalsJson1) =>
-      getVisited.forEach((getVisited1) => {
-        if (
-          animalsJson1.Name_Ch === getVisited1 &&
-          animalsJson1.Location === catalogs1
-        ) {
-          blocksFilter.push([
-            animalsJson1.Name_Ch,
-            animalsJson1.Location,
-            animalsJson1.Pic01_URL,
-          ]);
-        }
-      })
-    )
-  );
+
+  if (getVisited) {
+    catalogs.forEach((catalogs1) =>
+      animalsJson.forEach((animalsJson1) =>
+        getVisited.forEach((getVisited1) => {
+          if (
+            animalsJson1.Name_Ch === getVisited1 &&
+            animalsJson1.Location === catalogs1
+          ) {
+            blocksFilter.push([
+              animalsJson1.Name_Ch,
+              animalsJson1.Location,
+              animalsJson1.Pic01_URL,
+            ]);
+          }
+        })
+      )
+    );
+  }
 
   let arr = [];
   let arr1 = [];
