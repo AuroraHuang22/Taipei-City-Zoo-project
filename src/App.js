@@ -16,10 +16,10 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/" component={All} />
           <Route exact path="/map" component={Map} />
           <Route exact path="/member" component={Member} />
           <Route path="/register" component={Register} />
-          <Route path="/all" component={All} />
           <Route path="/entrance" component={Entrance} />
         </Switch>
         <Footer />

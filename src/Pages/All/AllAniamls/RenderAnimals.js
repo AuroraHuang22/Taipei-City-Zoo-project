@@ -6,13 +6,63 @@ import AnimalsJson from "../../../Utils/animals.json";
 import DetailsPopup from "./DetailsPopup";
 import * as firestore from "../../../Utils/firebase";
 import firebase from "firebase";
+
 const Container = styled.div`
   display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px 70px;
-  border: 1px solid grey;
-  justify-content: space-around;
+  padding: 100px 50px;
+  box-sizing: border-box;
+
+  .background {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .background:hover .img {
+    border: 3px solid #f09a8f;
+  }
+  .background:hover .text {
+    background-color: #f09a8f;
+    color: #f2f2f2;
+    font-weight: 600;
+  }
+  .img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(30%);
+    border: 3px solid #a5a4a3;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease;
+  }
+  .text {
+    position: absolute;
+    min-width: 120px;
+    text-align: center;
+    bottom: 0;
+    background-color: #f2f2f2;
+    padding: 3px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #a5a4a3;
+    transition: all 0.3s ease;
+  }
 `;
 
 let uid = undefined;
@@ -66,9 +116,6 @@ export default function ReaderAnimals() {
     );
   }
 
-  function getRandomInt(max) {
-    return Math.random() * max;
-  }
   return (
     <Container>
       {showAnimals.length === 0 ? (
@@ -78,78 +125,18 @@ export default function ReaderAnimals() {
           <div
             className="background"
             key={item.Name_Ch}
-            style={{
-              display: "inline-block",
-              width: "240px",
-              position: "relative",
-              height: "240px",
-              margin: "10px",
-              borderRadius: "40px",
-              overflow: "hidden",
-              backgroundColor: "grey",
-              transition: "all 0.3s ease",
-              transform: `rotate(${getRandomInt(index % 7) - 2}deg)`,
+            onClick={() => {
+              setPopupAnimal(item.Name_Ch);
+              disPatch(action.setOpen());
             }}
           >
             <div
               className="img"
               style={{
-                display: "inline-block",
-                width: "100%",
-                height: "100%",
-                position: "absolute",
                 backgroundImage: `url(${item.Pic01_URL})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                filter: "grayscale(30%)",
-                cursor: "pointer",
               }}
             ></div>
-            <div
-              className="text"
-              style={{
-                display: "inline-block",
-                width: "100%",
-                height: "100px",
-                position: "absolute",
-                bottom: 0,
-                lineHeight: "130px",
-                fontSize: "20px",
-                fontFamily: "Noto Sans TC",
-                fontWeight: "600",
-                color: "white",
-                letterSpacing: "4px",
-                whiteSpace: "normal",
-                textAlign: "left",
-                paddingLeft: "10px",
-                background:
-                  "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))",
-              }}
-            >
-              {item.Name_Ch}
-            </div>
-            <div
-              style={{
-                display: "inline-block",
-                width: "100%",
-                height: "100%",
-                position: "absolute",
-                cursor: "pointer",
-              }}
-              onMouseEnter={(e) => {
-                e.target.parentNode.style.transform = "scale(1)";
-              }}
-              onMouseOut={(e) => {
-                e.target.parentNode.style.transform = `rotate(${
-                  getRandomInt(index % 7) - 2
-                }deg)`;
-              }}
-              onClick={() => {
-                setPopupAnimal(item.Name_Ch);
-                disPatch(action.setOpen());
-              }}
-            ></div>
+            <div className="text">{item.Name_Ch}</div>
           </div>
         ))
       )}
