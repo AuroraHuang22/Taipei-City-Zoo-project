@@ -6,11 +6,13 @@ import L from "leaflet";
 import { MapContainer, TileLayer, useMapEvents, Marker } from "react-leaflet";
 
 const Container = styled.div`
+  box-sizing: border-box;
   display: flex;
   position: relative;
   flex-direction: column;
   margin-top: 80px;
   width: 100%;
+  padding: 0px 60px;
   justify-content: center;
   border-radius: 40px;
 `;
@@ -138,9 +140,6 @@ export default function Traffic() {
         style={{
           height: "80vh",
           width: "100%",
-          position: "absolute",
-          top: "0",
-          left: 0,
         }}
       >
         <TileLayer
@@ -168,9 +167,9 @@ export default function Traffic() {
             position={item.EntrancecoordInfo}
             icon={
               new L.Icon({
-                iconUrl: require(`../../Icons/like-02.svg`).default,
-                iconSize: [10, 10],
-                iconAnchor: [5, 5],
+                iconUrl: require(`../../Icons/park.png`).default,
+                iconSize: [20, 20],
+                iconAnchor: [10, 10],
               })
             }
           ></Marker>

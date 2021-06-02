@@ -47,11 +47,22 @@ const FilterContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     .flex {
+      position: relative;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       margin: 8px 0px;
       align-items: center;
+    }
+    .first::before {
+      content: "New!";
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      font-weight: 600;
+      color: yellow;
     }
   }
   select {
@@ -63,12 +74,17 @@ const FilterContainer = styled.div`
     outline: none;
     border: none;
     border-radius: 25px;
-    margin-right: 15px;
     background-color: #f2f2f2;
     color: #a5a4a3;
     letter-spacing: 2px;
     font-size: 10px;
     font-weight: 500;
+  }
+  .place {
+    padding: 3px;
+    border: 1px solid #f8f8c2;
+    border-radius: 25px;
+    margin-right: 15px;
   }
   option {
     border: none;
@@ -122,6 +138,10 @@ export default function Filter() {
   const type = AnimalsJson.filter((item) =>
     !set.has(item.Class) ? set.add(item.Class) : false
   ).map((item) => item.Class);
+  useEffect(() => {
+    disPatch(action.addFilterPlace("熱帶雨林室內館(穿山甲館)"));
+  }, []);
+
   return (
     <FilterContainer>
       <img className="filterBg" src="/Imgs/filter-bg-07.svg" alt="filterBg" />
@@ -130,23 +150,30 @@ export default function Filter() {
           <img className="draw" src="Imgs/hippo-08.svg" alt="draw" />
         </div>
         <div className="filterBlock">
-          <div className="flex">
-            <select
-              onChange={(e) => {
-                if (e.target.value !== "以園區搜尋") {
-                  disPatch(action.addFilterPlace(e.target.value));
-                } else {
-                  disPatch(action.addFilterPlace(""));
-                }
-              }}
-            >
-              <option defaultValue="">以園區搜尋</option>
-              {place.map((item) => (
-                <option key={item} value={item}>
-                  {item}
+          <div className="flex first">
+            <div className="place">
+              <select
+                onChange={(e) => {
+                  if (e.target.value !== "全部動物") {
+                    disPatch(action.addFilterPlace(e.target.value));
+                  } else {
+                    disPatch(action.addFilterPlace(""));
+                  }
+                }}
+              >
+                <option defaultValue="熱帶雨林室內館(穿山甲館)">
+                  熱帶雨林室內館(穿山甲館)
                 </option>
-              ))}
-            </select>
+                {place.map((item) =>
+                  item !== "熱帶雨林室內館(穿山甲館)" ? (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ) : null
+                )}
+                <option value="全部動物">全部動物</option>
+              </select>
+            </div>
             <select
               onChange={(e) => {
                 if (e.target.value !== "以綱搜尋") {

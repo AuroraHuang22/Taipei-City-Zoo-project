@@ -48,7 +48,7 @@
     "Diet": "主要以魚維生，野外的國王企鵝特別喜歡吃小型的燈籠魚科(Myctophidae)的魚類，也會吃頭足類(cephalopods)如魷魚(Moroteuthis)。",
     "Crisis": "",
     "Code": "KingPenguin",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/PenguinHouse/KingPenguin/KingPenguin_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PenguinHouse/KingPenguin/KingPenguin_Pic01.jpg",
     "CID": 2
   },
   {
@@ -100,7 +100,7 @@
     "Diet": "草食性。以草、樹葉、樹根和其他灌木為食。",
     "Crisis": "",
     "Code": "Addax",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Addax/Addax_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Addax/Addax_Pic01.jpg",
     "CID": 4
   },
   {
@@ -126,7 +126,7 @@
     "Diet": "草食性。以草、 樹皮、樹葉為食。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/WildAss/WildAss_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/WildAss/WildAss_Pic01.jpg",
     "CID": 5
   },
   {
@@ -152,7 +152,7 @@
     "Diet": "草食性。以沙漠中的植物為食。",
     "Crisis": "",
     "Code": "Camel-D",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-D/Camel-D_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-D/Camel-D_Pic01.jpg",
     "CID": 13
   },
   {
@@ -178,7 +178,7 @@
     "Diet": "草食性，以沙漠中的植物為食，也會吃一般動物難以下嚥的高鹽分植物；飢餓狀態下會吃肉。",
     "Crisis": "",
     "Code": "Camel-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-B/Camel-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-B/Camel-B_Pic01.jpg",
     "CID": 6
   },
   {
@@ -204,7 +204,7 @@
     "Diet": "雜食性;以植食性為主，樹葉、樹皮、果實(如無花果、紅毛丹等) ，其餘另有含豐富礦物質的土壤、昆蟲、小型脊椎動物或鳥蛋等。",
     "Crisis": "棲地喪失、違法獵捕、森林大火、棲地破碎化、當地人動對於該物種的不了解、氣候變遷",
     "Code": "Orangutan",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Orangutan/Orangutan_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Orangutan/Orangutan_Pic01.jpg",
     "CID": 7
   },
   {
@@ -230,7 +230,7 @@
     "Diet": "雜食性;主要食物為葉子和水果，其餘另有花、嫩芽及昆蟲等。",
     "Crisis": "棲地喪失、違法獵捕、森林大火、棲地破碎化",
     "Code": "Siamang",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Siamang/Siamang_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Siamang/Siamang_Pic01.jpg",
     "CID": 8
   },
   {
@@ -256,7 +256,7 @@
     "Diet": "雜食性；主要吃水果，偶爾吃小型的動物，如青蛙、蜥蜴、幼鳥、蝸牛及昆蟲。",
     "Crisis": "棲地喪失、違法獵捕、森林大火、棲地破碎化",
     "Code": "GreatHorbill",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/GreatHorbill/GreatHorbill_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/GreatHorbill/GreatHorbill_Pic01.jpg",
     "CID": 9
   },
   {
@@ -282,7 +282,7 @@
     "Diet": "草食性，包括草，樹葉，樹皮，灌木，野香蕉樹葉及樹心，甘蔗，水果。",
     "Crisis": "棲息地的喪失、棲地破碎化",
     "Code": "AsianElephant",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AsianElephant/AsianElephant_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AsianElephant/AsianElephant_Pic01.jpg",
     "CID": 10
   },
   {
@@ -308,7 +308,7 @@
     "Diet": "肉食性;中大型哺乳動物:水牛、鹿、熊、豬等;偶爾也吃小型哺乳動物：山羌和鳥。",
     "Crisis": "棲地喪失、違法獵捕、森林大火、棲地破碎化",
     "Code": "Tiger",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic01.jpg",
     "CID": 11
   },
   {
@@ -334,7 +334,7 @@
     "Diet": "肉食性：小至中型有蹄類動物。",
     "Crisis": "棲地喪失、獵物減少、棲地破碎化、違法獵捕",
     "Code": "Leopard",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Leopard/Leopard_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Leopard/Leopard_Pic01.jpg",
     "CID": 12
   },
   {
@@ -360,7 +360,7 @@
     "Diet": "雜食性：水果，棕櫚、椰子樹心，無脊椎動物(例如：馬陸、蚯蚓、甲蟲幼蟲、白蟻等)，小型哺乳類及鳥類。",
     "Crisis": "棲息地的喪失、棲地破碎化、非法捕獵、非法圈養",
     "Code": "SunBear",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/SunBear/SunBear_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/SunBear/SunBear_Pic01.jpg",
     "CID": 14
   },
   {
@@ -386,7 +386,7 @@
     "Diet": "草食性，如植物的嫩枝芽、樹葉、水果、草及水生植物。食性很廣，能吃將近一百種的植物。",
     "Crisis": "棲地喪失、獵物減少、棲地破碎化、違法獵捕",
     "Code": "Tapir",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tapir/Tapir_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tapir/Tapir_Pic01.jpg",
     "CID": 15
   },
   {
@@ -412,7 +412,7 @@
     "Diet": "幾乎完全是植物性，覓食各類的水生植物、藻類及水草。食物大致從水面獲得，也會在牧場及積水的田野覓食。",
     "Crisis": "無",
     "Code": "Swan",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Swan/Swan_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Swan/Swan_Pic01.jpg",
     "CID": 16
   },
   {
@@ -438,7 +438,7 @@
     "Diet": "水果、樹葉，花及昆蟲",
     "Crisis": "",
     "Code": "SpiderMonkey-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/SpiderMonkey-B/SpiderMonkey-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/SpiderMonkey-B/SpiderMonkey-B_Pic01.jpg",
     "CID": 17
   },
   {
@@ -464,7 +464,7 @@
     "Diet": "雜食性，以水果、草莓、堅果、花、花苞、種子、昆蟲及小型脊椎動物為食,沒有食物時也會喝花蜜。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw//iTAP/03_Animals/RainForest/Black-capped%20Squirrel%20Monkey/Black-capped%20Squirrel%20Monkey_1.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw//iTAP/03_Animals/RainForest/Black-capped%20Squirrel%20Monkey/Black-capped%20Squirrel%20Monkey_1.jpg",
     "CID": 18
   },
   {
@@ -490,7 +490,7 @@
     "Diet": "以水果為主食，也會吃堅果、種子、花及花苞、樹葉、昆蟲、蜘蛛及鳥蛋。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://blog.xuite.net/hwlib2007/twblog/589169462/cover600.jpg",
+    "Pic01_URL": "https://blog.xuite.net/hwlib2007/twblog/589169462/cover600.jpg",
     "CID": 19
   },
   {
@@ -542,7 +542,7 @@
     "Diet": "以水果和堅果為主食，也吃樹葉、小昆蟲、鳥蛋和蜂蜜。",
     "Crisis": "",
     "Code": "AtelesGeoffroyi",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AtelesGeoffroyi/AtelesGeoffroyi_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AtelesGeoffroyi/AtelesGeoffroyi_Pic01.jpg",
     "CID": 21
   },
   {
@@ -646,7 +646,7 @@
     "Diet": "雜食性，吃水果、漿果、堅果、種子、花及花苞、樹葉、樹皮、昆蟲、蜘蛛、小型脊椎動物及鳥蛋等，棲息在海邊的個體還會吃蟹及貝類。",
     "Crisis": "",
     "Code": "CebusCapucinus",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/CebusCapucinus/CebusCapucinus_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/CebusCapucinus/CebusCapucinus_Pic01.jpg",
     "CID": 25
   },
   {
@@ -672,7 +672,7 @@
     "Diet": "主食為果實，但在乾季食物較少時，也會吃葉子、花朵、樹皮，或是白蟻。",
     "Crisis": "棕蜘蛛猴是歐洲動物園暨水族館協會域外計畫（EAZA Ex-situ Programe, EEP）的物種之一，牠們的族群狀態被IUCN列為極危（CR），目前在野外的數量不明，全球的域外族群則不到200隻，因此亟需更多的保育機構一同參與族群管理計畫，以擴大域外族群，成為未來再引入計畫的保險族群。",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AtelesHybridus/AtelesHybridus_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AtelesHybridus/AtelesHybridus_Pic01.jpg",
     "CID": 26
   },
   {
@@ -698,7 +698,7 @@
     "Diet": "鼠類、蛇、蛙、魚等脊椎動物，以及淡水蟹蝦、蝸牛、大型昆蟲等無脊椎動物，但主要以甲殼類與昆蟲為主。",
     "Crisis": "溪流生態的破壞及河川污染、捕獸夾、野犬",
     "Code": "Mongoose",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Mongoose/Mongoose_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Mongoose/Mongoose_Pic01.jpg",
     "CID": 27
   },
   {
@@ -854,7 +854,7 @@
     "Diet": "雜食，以果實、昆蟲、鳥蛋和小鳥等為食",
     "Crisis": "目前除了被捕捉販售當成寵物，棲息環境也遭到長年戰亂的嚴重破壞，因此整個族群前途堪慮。",
     "Code": "",
-    "Pic01_URL": "http://5b0988e595225.cdn.sohucs.com/images/20180917/42fa4c9b737344468bb042d4a52b6aa8.jpeg",
+    "Pic01_URL": "https://5b0988e595225.cdn.sohucs.com/images/20180917/42fa4c9b737344468bb042d4a52b6aa8.jpeg",
     "CID": 33
   },
   {
@@ -906,7 +906,7 @@
     "Diet": "昆蟲或蜘蛛",
     "Crisis": "象徵著生物多樣性的風貌，然而也代表著一個小區域的開發破壞，就可能造成一個獨特箭毒蛙物種的消失。",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/GoldenPoisonFrog/GoldenPoisonFrog_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/GoldenPoisonFrog/GoldenPoisonFrog_Pic01.jpg",
     "CID": 35
   },
   {
@@ -958,7 +958,7 @@
     "Diet": "昆蟲或蜘蛛",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BlackAndGreenPoisonDartFrog/BlackAndGreenPoisonDartFrog_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BlackAndGreenPoisonDartFrog/BlackAndGreenPoisonDartFrog_Pic01.jpg",
     "CID": 37
   },
   {
@@ -984,7 +984,7 @@
     "Diet": "昆蟲或蜘蛛",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BluePoisonDartFrog/BluePoisonDartFrog%20_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BluePoisonDartFrog/BluePoisonDartFrog%20_Pic01.jpg",
     "CID": 38
   },
   {
@@ -1114,7 +1114,7 @@
     "Diet": "雜食性",
     "Crisis": "1. 近年因過度捕撈\n2. 森林砍伐、工業開發造成流域水質汙染\n3. 水利大壩建設，使其無法向上游遷移繁殖等原因，嚴重影響族群繁殖。",
     "Code": "",
-    "Pic01_URL": "http://upload.wikimedia.org/wikipedia/commons/5/5f/Probarbus_jullieni.jpg",
+    "Pic01_URL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Probarbus_jullieni.jpg",
     "CID": 43
   },
   {
@@ -1400,7 +1400,7 @@
     "Diet": "雜食性：以水果為主，也吃樹葉，以及少許昆蟲、蛋、小型脊椎動物。",
     "Crisis": "棲息地的喪失、棲地破碎化、非法圈養",
     "Code": "Gibbon",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Gibbon/Gibbon_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Gibbon/Gibbon_Pic01.jpg",
     "CID": 54
   },
   {
@@ -1426,7 +1426,7 @@
     "Diet": "肉食性。以鳥類、哺乳動物、爬蟲、魚類、昆蟲、甲殼動物等。",
     "Crisis": "人類活動如狩獵、伐木和木材採伐、捕魚和過度利用水生資源，被製作成手工藝品、珠飾等。",
     "Code": "Tomistoma-schlegelii",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Tomistoma-schlegelii/Tomistoma-schlegelii_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Tomistoma-schlegelii/Tomistoma-schlegelii_Pic01.jpg",
     "CID": 55
   },
   {
@@ -1452,7 +1452,7 @@
     "Diet": "捕食水中無脊椎動物、甲殼類、魚類、兩生爬蟲類及水域附近的水禽、嚙齒類。",
     "Crisis": "1. 水獺在水域生態系中，位於食物鏈最高階的消費者；一旦水域受到重金屬或化學物質污染，牠們通常是最先消失的物種，為水域環境良好與否的重要指標。\n2. 早期因皮毛遭獵捕，後因河川汙染、棲地遭破壞等因素而導致數量驟減。",
     "Code": "Otter-O",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Otter-O/Otter-O_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Otter-O/Otter-O_Pic01.jpg",
     "CID": 56
   },
   {
@@ -1504,7 +1504,7 @@
     "Diet": "雜食性，以水果和無脊椎動物為主食，包含棕櫚樹、雞蛋、甲蟲幼蟲、蝎子、蜈蚣、蜘蛛、螞蟻、白蟻、蜥蜴、小型哺乳動物、囓齒動物等。",
     "Crisis": "",
     "Code": "Coati",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Coati/Coati_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Coati/Coati_Pic01.jpg",
     "CID": 58
   },
   {
@@ -1530,7 +1530,7 @@
     "Diet": "草食性。",
     "Crisis": "",
     "Code": "Donkey",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Donkey/Donkey_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Donkey/Donkey_Pic01.jpg",
     "CID": 59
   },
   {
@@ -1556,7 +1556,7 @@
     "Diet": "植食性。以草為主食，也吃嫩樹葉。",
     "Crisis": "",
     "Code": "Pony",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Pony/Pony_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Pony/Pony_Pic01.jpg",
     "CID": 60
   },
   {
@@ -1608,7 +1608,7 @@
     "Diet": "肉食性。以節肢動物、蜥蜴、小型哺乳類動物及蛋為主要食物。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw//iTAP/03_Animals/ChildrenArea/meerkat/meerkat_1.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw//iTAP/03_Animals/ChildrenArea/meerkat/meerkat_1.jpg",
     "CID": 62
   },
   {
@@ -1686,7 +1686,7 @@
     "Diet": "雜食性，特別愛攝食蜂蜜及水果，這是食肉目中少見的。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/Kinkajou/Kinkajou%20_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/Kinkajou/Kinkajou%20_Pic01.jpg",
     "CID": 65
   },
   {
@@ -1972,7 +1972,7 @@
     "Diet": "以活的兩棲類、魚、蚯蚓、昆蟲等為食。",
     "Crisis": "為滿足寵物市場需求衍生的盜獵行為，造成野生族群持續下降。",
     "Code": "Lizard-CC",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-CC/Lizard-CC_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-CC/Lizard-CC_Pic01.jpg",
     "CID": 76
   },
   {
@@ -1998,7 +1998,7 @@
     "Diet": "為雜食性，以昆蟲、葉菜為食。",
     "Crisis": "",
     "Code": "Dragon-CB",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Dragon-CB/Dragon-CB_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Dragon-CB/Dragon-CB_Pic01.jpg",
     "CID": 77
   },
   {
@@ -2024,7 +2024,7 @@
     "Diet": "哺乳動物、爬蟲類、兩棲類",
     "Crisis": "",
     "Code": "Snake-CK",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-CK/Snake-CK_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-CK/Snake-CK_Pic01.jpg",
     "CID": 78
   },
   {
@@ -2050,7 +2050,7 @@
     "Diet": "節肢動物、環節動物、軟體動物、植物節肢動物、環節動物、軟體動物、植物",
     "Crisis": "面臨棲息地減少與路殺問題。",
     "Code": "Turtle-CB",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-CB/Turtle-CB_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-CB/Turtle-CB_Pic01.jpg",
     "CID": 79
   },
   {
@@ -2102,7 +2102,7 @@
     "Diet": "雜食性。",
     "Crisis": "",
     "Code": "Lizard-SP",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-SP/Lizard-SP_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-SP/Lizard-SP_Pic01.jpg",
     "CID": 81
   },
   {
@@ -2128,7 +2128,7 @@
     "Diet": "植物性",
     "Crisis": "人類大量捕捉及棲息地受破壞，現在野外的族群銳減。",
     "Code": "Tortoise-IS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-IS/Tortoise-IS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-IS/Tortoise-IS_Pic01.jpg",
     "CID": 82
   },
   {
@@ -2154,7 +2154,7 @@
     "Diet": "哺乳類、爬蟲類、兩棲類、鳥類",
     "Crisis": "因臺灣人對毒蛇的恐懼與誤解，常見到毒蛇隨即主動殺死蛇類，對野生蛇類造成威脅。",
     "Code": "Viper-HP",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic01.jpg",
     "CID": 83
   },
   {
@@ -2180,7 +2180,7 @@
     "Diet": "善於鑽土捕食藏在地下的蟾蜍類，也會捕食其他爬蟲類，偶爾也會捕食小型哺乳類或鳥類。",
     "Crisis": "",
     "Code": "Snake-WH",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-WH/Snake-WH_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-WH/Snake-WH_Pic01.jpg",
     "CID": 84
   },
   {
@@ -2206,7 +2206,7 @@
     "Diet": "雜食性偏植食性。",
     "Crisis": "",
     "Code": "Tortoise-AB",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-AB/Tortoise-AB_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-AB/Tortoise-AB_Pic01.jpg",
     "CID": 85
   },
   {
@@ -2232,7 +2232,7 @@
     "Diet": "植食性。",
     "Crisis": "因人為保育的成果，目前有穩定的野生族群，面臨的生存威脅減少。",
     "Code": "Tortoise-AG",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-AG/Tortoise-AG_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-AG/Tortoise-AG_Pic01.jpg",
     "CID": 86
   },
   {
@@ -2284,7 +2284,7 @@
     "Diet": "果實、節肢動物、環節動物、軟體動物。",
     "Crisis": "臺灣的食蛇龜族群深受亞洲龜類貿易危害，野生個體面臨嚴重的盜獵威脅。",
     "Code": "Turtle-YB",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-YB/Turtle-YB_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-YB/Turtle-YB_Pic01.jpg",
     "CID": 88
   },
   {
@@ -2310,7 +2310,7 @@
     "Diet": "節肢動物、小型爬蟲類、小型鳥類",
     "Crisis": "為外來種，威脅本土動物生存，",
     "Code": "Chameleon",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Chameleon/Chameleon_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Chameleon/Chameleon_Pic01.jpg",
     "CID": 89
   },
   {
@@ -2336,7 +2336,7 @@
     "Diet": "爬蟲類、鳥類、哺乳類",
     "Crisis": "",
     "Code": "Boa-R",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Boa-R/Boa-R_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Boa-R/Boa-R_Pic01.jpg",
     "CID": 90
   },
   {
@@ -2388,7 +2388,7 @@
     "Diet": "小型哺乳類。",
     "Crisis": "",
     "Code": "Python-Bal",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-Bal/Python-Bal_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-Bal/Python-Bal_Pic01.jpg",
     "CID": 92
   },
   {
@@ -2414,7 +2414,7 @@
     "Diet": "節肢動物、環節動物、軟體動物",
     "Crisis": "",
     "Code": "Skink-O",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-O/Skink-O_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-O/Skink-O_Pic01.jpg",
     "CID": 93
   },
   {
@@ -2440,7 +2440,7 @@
     "Diet": "植物、魚類、兩棲類",
     "Crisis": "野生族群均面臨獵捕的壓力。",
     "Code": "Turtle-CS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-CS/Turtle-CS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-CS/Turtle-CS_Pic01.jpg",
     "CID": 94
   },
   {
@@ -2466,7 +2466,7 @@
     "Diet": "無脊椎動物",
     "Crisis": "",
     "Code": "Lizard-ST",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-ST/Lizard-ST_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-ST/Lizard-ST_Pic01.jpg",
     "CID": 95
   },
   {
@@ -2492,7 +2492,7 @@
     "Diet": "植食性",
     "Crisis": "",
     "Code": "Skink-M",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-M/Skink-M_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-M/Skink-M_Pic01.jpg",
     "CID": 96
   },
   {
@@ -2518,7 +2518,7 @@
     "Diet": "節肢動物、爬蟲類、鳥類、鳥蛋、哺乳類",
     "Crisis": "",
     "Code": "Gila",
-    "Pic01_URL": "http://farm8.staticflickr.com/7136/13738556584_7a89b16a5a_b.jpg",
+    "Pic01_URL": "https://farm8.staticflickr.com/7136/13738556584_7a89b16a5a_b.jpg",
     "CID": 97
   },
   {
@@ -2544,7 +2544,7 @@
     "Diet": "節肢動物、環節動物、魚類、兩棲類、爬蟲類、鳥類、植物",
     "Crisis": "為外來種，威脅本土動物生存，",
     "Code": "Dragon-GW",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Dragon-GW/Dragon-GW_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Dragon-GW/Dragon-GW_Pic01.jpg",
     "CID": 98
   },
   {
@@ -2570,7 +2570,7 @@
     "Diet": "幼體雜食性，成體為草食",
     "Crisis": "為外來種，威脅本土動物生存，",
     "Code": "Iguana",
-    "Pic01_URL": "http://www.zoo.gov.tw/upload/201901/15/201901151111503042.JPG",
+    "Pic01_URL": "https://www.zoo.gov.tw/upload/201901/15/201901151111503042.JPG",
     "CID": 99
   },
   {
@@ -2596,7 +2596,7 @@
     "Diet": "以小型節肢動物為主食",
     "Crisis": "",
     "Code": "Frog-ET",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Frog-ET/Frog-ET_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Frog-ET/Frog-ET_Pic01.jpg",
     "CID": 100
   },
   {
@@ -2622,7 +2622,7 @@
     "Diet": "食性很廣，蛙類、鳥類、各種小型哺乳動物及鳥蛋等。",
     "Crisis": "",
     "Code": "Snake-TB",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-TB/Snake-TB_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-TB/Snake-TB_Pic01.jpg",
     "CID": 101
   },
   {
@@ -2648,7 +2648,7 @@
     "Diet": "爬蟲類、鳥類、哺乳類",
     "Crisis": "面臨棲地減少與皮革利用的獵捕壓力。",
     "Code": "Python-Bur",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-Bur/Python-Bur_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-Bur/Python-Bur_Pic01.jpg",
     "CID": 102
   },
   {
@@ -2674,7 +2674,7 @@
     "Diet": "植食性。",
     "Crisis": "面臨為滿足寵物市場的盜獵威脅。",
     "Code": "Tortoise-BS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-BS/Tortoise-BS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-BS/Tortoise-BS_Pic01.jpg",
     "CID": 103
   },
   {
@@ -2700,7 +2700,7 @@
     "Diet": "植物、魚類、軟體動物、節肢動物",
     "Crisis": "野生族群因寵物用途遭大規模捕捉。",
     "Code": "Turtle-P",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-P/Turtle-P_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-P/Turtle-P_Pic01.jpg",
     "CID": 104
   },
   {
@@ -2726,7 +2726,7 @@
     "Diet": "節肢動物、軟體動物、魚類、兩棲類、爬蟲類、植物",
     "Crisis": "",
     "Code": "Basilisk",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Basilisk/Basilisk_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Basilisk/Basilisk_Pic01.jpg",
     "CID": 105
   },
   {
@@ -2752,7 +2752,7 @@
     "Diet": "魚類、節肢動物、蛙類、鳥類等。",
     "Crisis": "面臨棲息地縮減的威脅",
     "Code": "Turtle-AS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-AS/Turtle-AS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Turtle-AS/Turtle-AS_Pic01.jpg",
     "CID": 106
   },
   {
@@ -2778,7 +2778,7 @@
     "Diet": "鳥類、哺乳類",
     "Crisis": "",
     "Code": "Python-R",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-R/Python-R_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-R/Python-R_Pic01.jpg",
     "CID": 107
   },
   {
@@ -2804,7 +2804,7 @@
     "Diet": "植食性。會從食物中攝取所需水分。",
     "Crisis": "",
     "Code": "Totoise-AP",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Totoise-AP/Totoise-AP_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Totoise-AP/Totoise-AP_Pic01.jpg",
     "CID": 108
   },
   {
@@ -3038,7 +3038,7 @@
     "Diet": "雜食性",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "https://s.yimg.com/uu/api/res/1.2/Oh5vFgThSG.oDeWUnqm_jw--~B/aD01MzE7dz04MDA7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/zh_hant_tw/News/Reuters/20171222000054M.jpg",
+    "Pic01_URL": "https://s.yimg.com/uu/api/res/1.2/Oh5vFgThSG.oDeWUnqm_jw--~B/aD01MzE7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/zh_hant_tw/News/Reuters/20171222000054M.jpg",
     "CID": 117
   },
   {
@@ -3090,7 +3090,7 @@
     "Diet": "幼蟲取食腐木組織，成蟲取食樹汁及腐熟水果，成蟲喜歡在殼斗科樹上吸食樹汁",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://p1-news.yamedia.tw/MzkyNDI5bmV3cw==/0024ff07d07898a4.jpg",
+    "Pic01_URL": "https://p1-news.yamedia.tw/MzkyNDI5bmV3cw==/0024ff07d07898a4.jpg",
     "CID": 119
   },
   {
@@ -3116,7 +3116,7 @@
     "Diet": "植食性，主要取食火筒樹",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://farm6.staticflickr.com/5532/10372733745_7f34dbbc37_o.jpg",
+    "Pic01_URL": "https://farm6.staticflickr.com/5532/10372733745_7f34dbbc37_o.jpg",
     "CID": 120
   },
   {
@@ -3402,7 +3402,7 @@
     "Diet": "",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://kite.biodiv.tw/files/kite/imagecache/w1024/images/7/img_9340_1024x683_2.jpg",
+    "Pic01_URL": "https://kite.biodiv.tw/files/kite/imagecache/w1024/images/7/img_9340_1024x683_2.jpg",
     "CID": 131
   },
   {
@@ -3428,7 +3428,7 @@
     "Diet": "取食旋花科的植物葉片。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://p1-news.yamedia.tw/MzUxMjExbmV3cw==/f304fceaeda9efbe.jpg",
+    "Pic01_URL": "https://p1-news.yamedia.tw/MzUxMjExbmV3cw==/f304fceaeda9efbe.jpg",
     "CID": 132
   },
   {
@@ -3662,7 +3662,7 @@
     "Diet": "幼蟲食草為白花菜科的銳葉山柑、小刺山柑、多花山柑及魚木。",
     "Crisis": "",
     "Code": "",
-    "Pic01_URL": "http://g.udn.com.tw/upfiles/B_RO/rosa2010/PSN_PHOTO/142/f_9083142_1.jpg",
+    "Pic01_URL": "https://g.udn.com.tw/upfiles/B_RO/rosa2010/PSN_PHOTO/142/f_9083142_1.jpg",
     "CID": 141
   },
   {
@@ -4104,7 +4104,7 @@
     "Diet": "",
     "Crisis": "",
     "Code": "Sheep-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Sheep-B/Sheep-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Sheep-B/Sheep-B_Pic01.jpg",
     "CID": 158
   },
   {
@@ -4130,7 +4130,7 @@
     "Diet": "草食性。",
     "Crisis": "",
     "Code": "Rhino-W",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Rhino-W/Rhino-W_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Rhino-W/Rhino-W_Pic01.jpg",
     "CID": 159
   },
   {
@@ -4156,7 +4156,7 @@
     "Diet": "種子、樹葉、花粉等，以水果為主食。",
     "Crisis": "",
     "Code": "Lemur-R",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-R/Lemur-R_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-R/Lemur-R_Pic01.jpg",
     "CID": 160
   },
   {
@@ -4182,7 +4182,7 @@
     "Diet": "草食性。喜歡吃樹葉及多汁的果實，也會吃草及樹根。",
     "Crisis": "",
     "Code": "Eland",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Eland/Eland_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Eland/Eland_Pic01.jpg",
     "CID": 161
   },
   {
@@ -4208,7 +4208,7 @@
     "Diet": "雜食性，吃多種植物的各個部份(水果、種子、塊莖、樹根、葉、花)，以及一些無脊椎動物、爬蟲類、鳥、小型哺乳動物等，以取食方便、供應充足為主要的考量因素。",
     "Crisis": "",
     "Code": "Baboon",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Baboon/Baboon_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Baboon/Baboon_Pic01.jpg",
     "CID": 162
   },
   {
@@ -4260,7 +4260,7 @@
     "Diet": "草食性，以草、樹芽、樹皮、樹枝、根及果實，因季節變化而不同。",
     "Crisis": "",
     "Code": "Elephant-AF",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Elephant-AF/Elephant-AF_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Elephant-AF/Elephant-AF_Pic01.jpg",
     "CID": 164
   },
   {
@@ -4286,7 +4286,7 @@
     "Diet": "肉食性，以羚羊、長頸鹿、水牛及斑馬等中大型草食動物為捕食對象，有時也會搶奪其他肉食動物的獵物或是吃腐肉，成獅一餐可吃下40kg的肉。",
     "Crisis": "",
     "Code": "Lion",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lion/Lion_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lion/Lion_Pic01.jpg",
     "CID": 165
   },
   {
@@ -4312,7 +4312,7 @@
     "Diet": "以草食為主，也吃嫩葉。",
     "Crisis": "",
     "Code": "Zebra-C",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-C/Zebra-C_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-C/Zebra-C_Pic01.jpg",
     "CID": 166
   },
   {
@@ -4338,7 +4338,7 @@
     "Diet": "雜食性動物，食物包括草、野莓、水果、豆類及種子，有時候也會吃蕈類、螞蟻、蚱蜢、蜥蝪及鳥蛋。",
     "Crisis": "",
     "Code": "Monkey-P",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Monkey-P/Monkey-P_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Monkey-P/Monkey-P_Pic01.jpg",
     "CID": 167
   },
   {
@@ -4364,7 +4364,7 @@
     "Diet": "以草為主，也吃嫩葉、樹皮及果實，可以吃非常堅韌的草。",
     "Crisis": "",
     "Code": "Zebra-G",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-G/Zebra-G_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-G/Zebra-G_Pic01.jpg",
     "CID": 168
   },
   {
@@ -4442,7 +4442,7 @@
     "Diet": "雜食性；昆蟲部份以白蟻為主，偶爾會捕食幼小的偶蹄動物、狒狒及猴子。",
     "Crisis": "",
     "Code": "Chimp",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Chimp/Chimp_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Chimp/Chimp_Pic01.jpg",
     "CID": 171
   },
   {
@@ -4494,7 +4494,7 @@
     "Diet": "水果、樹葉、花、樹皮、樹枝及昆蟲（多為蜈蚣及節足動物類）。",
     "Crisis": "",
     "Code": "Lemur-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-B/Lemur-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-B/Lemur-B_Pic01.jpg",
     "CID": 173
   },
   {
@@ -4520,7 +4520,7 @@
     "Diet": "雜食性，以植物的花、葉、種子、草為主。",
     "Crisis": "",
     "Code": "Ostrich",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Ostrich/Ostrich_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Ostrich/Ostrich_Pic01.jpg",
     "CID": 174
   },
   {
@@ -4546,7 +4546,7 @@
     "Diet": "以水果為主食，也會吃樹葉等，偶爾會吃昆蟲。",
     "Crisis": "",
     "Code": "Lemur-RT",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-RT/Lemur-RT_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-RT/Lemur-RT_Pic01.jpg",
     "CID": 175
   },
   {
@@ -4572,7 +4572,7 @@
     "Diet": "草食性，樹葉、嫩芽及掉落的果實。在本園則餵食粒狀料、草料、乾草、青牧草。",
     "Crisis": "",
     "Code": "Hippo-P",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo-P/Hippo-P_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo-P/Hippo-P_Pic01.jpg",
     "CID": 176
   },
   {
@@ -4624,7 +4624,7 @@
     "Diet": "草食性，食用各種草及植物。",
     "Crisis": "",
     "Code": "Hippo",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo/Hippo_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo/Hippo_Pic01.jpg",
     "CID": 178
   },
   {
@@ -4702,7 +4702,7 @@
     "Diet": "喜食蛇類，亦會捕食小型哺乳動物、鳥類及蜥蜴等。",
     "Crisis": "",
     "Code": "Eagle-CS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Eagle-CS/Eagle-CS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Eagle-CS/Eagle-CS_Pic01.jpg",
     "CID": 181
   },
   {
@@ -4728,7 +4728,7 @@
     "Diet": "食物相對複雜，會覓食水生無脊椎動物，也會覓食水生植物的種子、藻類、矽藻及腐葉。有時會吸入泥土，來萃取有機物質。",
     "Crisis": "",
     "Code": "Flamigo-G",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-G/Flamigo-G_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-G/Flamigo-G_Pic01.jpg",
     "CID": 182
   },
   {
@@ -4754,7 +4754,7 @@
     "Diet": "吃果實（如無花果、橘子等）、昆蟲（如毛毛蟲、白蟻、雛鳥及鳥蛋）。在圈養的狀況下，會獵捕吃掉飛入其籠內的小鳥。通常呈小群在樹冠層覓食。",
     "Crisis": "幼鳥有被獵捕當成寵物，族群狀況是有必要加以監控的，目前在受保護的地區內，族群量是穩定的",
     "Code": "Toucan",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Toucan/Toucan_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Toucan/Toucan_Pic01.jpg",
     "CID": 183
   },
   {
@@ -4780,7 +4780,7 @@
     "Diet": "1.果實，包括無花果等。會取食掉落地面的果實，但有時也會掛在樹上、低矮的枝條及灌叢覓食。也會吃硬及綠的果實。\n2.偶而會吃葉子及一些無脊椎動物及脊椎動物。\n3.單獨、成對或成小於6隻的群覓食，在河邊喝水。",
     "Crisis": "由於棲地持續喪失及過度捕獵影響，族群正快速消失中。",
     "Code": "Curassow",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Curassow/Curassow_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Curassow/Curassow_Pic01.jpg",
     "CID": 184
   },
   {
@@ -4806,7 +4806,7 @@
     "Diet": "雜食，以昆蟲、水生無脊椎動物、魚、兩棲類及囓齒類為食，也會吃蘆葦、草及其他植物。",
     "Crisis": "",
     "Code": "Tancho",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Tancho/Tancho_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Tancho/Tancho_Pic01.jpg",
     "CID": 185
   },
   {
@@ -4858,7 +4858,7 @@
     "Diet": "在樹上及地面吃果實穀類及昆蟲,也常常飛到牛隻身上啄食昆蟲。",
     "Crisis": "",
     "Code": "Myna-W",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Myna-W/Myna-W_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Myna-W/Myna-W_Pic01.jpg",
     "CID": 187
   },
   {
@@ -4910,7 +4910,7 @@
     "Diet": "食物包括種子、果實、堅果、漿果。可能也會吃昆蟲及其幼蟲。",
     "Crisis": "",
     "Code": "Cockatoo-W",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Cockatoo-W/Cockatoo-W_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Cockatoo-W/Cockatoo-W_Pic01.jpg",
     "CID": 189
   },
   {
@@ -4962,7 +4962,7 @@
     "Diet": "以吃魚維生，平均一天的吃魚量估計在1公斤。",
     "Crisis": "",
     "Code": "Pelican-W",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pelican-W/Pelican-W_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pelican-W/Pelican-W_Pic01.jpg",
     "CID": 191
   },
   {
@@ -4988,7 +4988,7 @@
     "Diet": "主要在樹上覓食果實，也會吃種子、漿果及小蝸牛。",
     "Crisis": "",
     "Code": "Pigeon-AW",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-AW/Pigeon-AW_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-AW/Pigeon-AW_Pic01.jpg",
     "CID": 192
   },
   {
@@ -5014,7 +5014,7 @@
     "Diet": "竹子、種子、芽、塊莖、、漿果。、昆蟲、爬蟲類。",
     "Crisis": "在許多地方的族群都數以萬計，但有下降的趨勢。造成數量下降的原因來自伐木、抓活鳥交易及過度獵捕食用。金雞肉在飯店被視為昂貴的美食。已知有幾個保護區禁止獵捕及砍伐森林。",
     "Code": "Fowl-GJ",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Fowl-GJ/Fowl-GJ_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Fowl-GJ/Fowl-GJ_Pic01.jpg",
     "CID": 193
   },
   {
@@ -5040,7 +5040,7 @@
     "Diet": "覓食莎草類的種子及草類的嫩芽，會吃昆蟲，包括蝗蟲、蟋蟀等，及其他小型動物如青蛙、蜥蜴等。在草原及農耕地覓食。",
     "Crisis": "",
     "Code": "Crane-GC",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-GC/Crane-GC_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-GC/Crane-GC_Pic01.jpg",
     "CID": 194
   },
   {
@@ -5066,7 +5066,7 @@
     "Diet": "1.雜食性。\n2.在非繁殖期，較偏愛吃植物性材料。根、根莖、塊莖、莖、芽鞘、葉子、漿果及濕地中挺水植物的種子、草、作物、堅果、豆類及穀類等都是食物。\n 3.在夏天較常吃動物性物質，主要是無脊椎動物，包括蠕蟲、蝸牛、昆蟲及其他節肢動物，也吃青蛙、蛇、蜥蜴、魚及囓齒類。在陸地及水裡探測及挑起食物吃。",
     "Crisis": "",
     "Code": "Crane-C",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-C/Crane-C_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-C/Crane-C_Pic01.jpg",
     "CID": 195
   },
   {
@@ -5092,7 +5092,7 @@
     "Diet": "種子（包括堅果）、芽鞘、葉子及無脊椎動物",
     "Crisis": "在台灣面臨人類獵食捕殺的壓力，是老饕喜歡吃的野味。",
     "Code": "Patridge",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Patridge/Patridge_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Patridge/Patridge_Pic01.jpg",
     "CID": 196
   },
   {
@@ -5118,7 +5118,7 @@
     "Diet": "果實、種子、堅果、嫩芽及花朵等都會吃。",
     "Crisis": "目前折衷鸚鵡所面臨的危機，主要來自於棲息地遭受大規模的森林開發。讓我們衷心的祝福這種美麗的鳥兒，能夠永遠快樂的生活在這地球上。",
     "Code": "Parrot-E",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parrot-E/Parrot-E_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parrot-E/Parrot-E_Pic01.jpg",
     "CID": 197
   },
   {
@@ -5144,7 +5144,7 @@
     "Diet": "主要以死亡動物的屍體為食，也會取食魚類、昆蟲、爬蟲類、小型哺乳類等。",
     "Crisis": "",
     "Code": "Stork-M",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Stork-M/Stork-M_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Stork-M/Stork-M_Pic01.jpg",
     "CID": 198
   },
   {
@@ -5170,7 +5170,7 @@
     "Diet": "塊莖、穀類、昆蟲（蝗蟲）、無脊椎動物（蝸牛、甲殼類）、魚、青蛙、蛇。",
     "Crisis": "",
     "Code": "Crane-S",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-S/Crane-S_Pic02.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-S/Crane-S_Pic02.jpg",
     "CID": 199
   },
   {
@@ -5196,7 +5196,7 @@
     "Diet": "會偷襲稻田，會覓食穀粒及松子。草本植物、竹子及各種植物的嫩葉也會吃。也會摘取莓類吃。主要在地面上覓食。",
     "Crisis": "",
     "Code": "Dove-OT",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-OT/Dove-OT_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-OT/Dove-OT_Pic01.jpg",
     "CID": 200
   },
   {
@@ -5222,7 +5222,7 @@
     "Diet": "食物主要是葉子及竹子的嫩芽、葉子及芽鞘和杜鵑的花。也會吃一些蜘蛛及各類昆蟲。",
     "Crisis": "",
     "Code": "Pheasnat-G",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasnat-G/Pheasnat-G_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasnat-G/Pheasnat-G_Pic01.jpg",
     "CID": 201
   },
   {
@@ -5248,7 +5248,7 @@
     "Diet": "水草、魚、蝦、昆蟲。",
     "Crisis": "",
     "Code": "Moorhen",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Moorhen/Moorhen_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Moorhen/Moorhen_Pic01.jpg",
     "CID": 202
   },
   {
@@ -5274,7 +5274,7 @@
     "Diet": "以草本植物的種子為食物，會吃作物的種子如稻子等。",
     "Crisis": "",
     "Code": "Dove-RT",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-RT/Dove-RT_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-RT/Dove-RT_Pic01.jpg",
     "CID": 203
   },
   {
@@ -5300,7 +5300,7 @@
     "Diet": "果實、堅果、種子、花瓣及穀類。",
     "Crisis": "",
     "Code": "Parakeet-R",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parakeet-R/Parakeet-R_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parakeet-R/Parakeet-R_Pic01.jpg",
     "CID": 204
   },
   {
@@ -5326,7 +5326,7 @@
     "Diet": "主食為甲殼類，特別愛吃招潮蟹，也會吃螺、雙貝類、昆蟲及小魚。",
     "Crisis": "",
     "Code": "Ibis-S",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Ibis-S/Ibis-S_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Ibis-S/Ibis-S_Pic01.jpg",
     "CID": 205
   },
   {
@@ -5352,7 +5352,7 @@
     "Diet": "以昆蟲、橡實、堅果、種子、水生植物的嫩葉為食物。",
     "Crisis": "在20世紀初就已經瀕臨絕種，美國政府在1913年將其列為永久禁獵的物種，經過很長的時間族群數量才因為復育方式正確而漸漸增加。",
     "Code": "Duck-W",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Duck-W/Duck-W_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Duck-W/Duck-W_Pic01.jpg",
     "CID": 206
   },
   {
@@ -5378,7 +5378,7 @@
     "Diet": "嫩葉、樹葉及昆蟲。",
     "Crisis": "",
     "Code": "Goose-E",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Goose-E/Goose-E_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Goose-E/Goose-E_Pic01.jpg",
     "CID": 207
   },
   {
@@ -5508,7 +5508,7 @@
     "Diet": "以水生無脊椎動物為食。總是在水與泥地的介面上覓食，時常整個脖子都埋入水中，以穩定而幾乎直線的方式覓食前進。",
     "Crisis": "",
     "Code": "Flamigo-C",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-C/Flamigo-C_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-C/Flamigo-C_Pic01.jpg",
     "CID": 212
   },
   {
@@ -5560,7 +5560,7 @@
     "Diet": "果實、漿果及種子。",
     "Crisis": "",
     "Code": "Turaco-V",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Turaco-V/Turaco-V_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Turaco-V/Turaco-V_Pic01.jpg",
     "CID": 214
   },
   {
@@ -5586,7 +5586,7 @@
     "Diet": "溪蟹、蛙類、蛇、鼠及蜥蜴。",
     "Crisis": "",
     "Code": "Owl-TF",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-TF/Owl-TF_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-TF/Owl-TF_Pic01.jpg",
     "CID": 215
   },
   {
@@ -5612,7 +5612,7 @@
     "Diet": "主食是果實和果仁，牠們會到河岸吃泥土，幫助排除食用未成熟的種子或果實而累積的毒素",
     "Crisis": "",
     "Code": "Macaw-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-B/Macaw-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-B/Macaw-B_Pic01.jpg",
     "CID": 216
   },
   {
@@ -5742,7 +5742,7 @@
     "Diet": "在鄰近大陸的低地森林的海岸覓食，吃各類的果實及漿果。幾乎完全在樹上覓食。",
     "Crisis": "",
     "Code": "Pigeon-PI",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-PI/Pigeon-PI_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-PI/Pigeon-PI_Pic01.jpg",
     "CID": 221
   },
   {
@@ -5794,7 +5794,7 @@
     "Diet": "1.會覓食昆蟲（包括蝗蟲及蒼蠅）及其他的無脊椎動物（軟體動物、馬陸、甲殼類）及魚類、兩生類、爬蟲類等。也會吃種子、草類的嫩芽及作物（小米、玉米及稻子）。通常直接從表面啄取食物，很少用挖掘。有時會用腳踏地驚嚇無脊椎的獵物。\n 2.在乾旱時，常會出現在成群家畜附近覓食，因為該處的無脊椎動物較豐富。",
     "Crisis": "",
     "Code": "Crane-BC",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-BC/Crane-BC_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-BC/Crane-BC_Pic01.jpg",
     "CID": 223
   },
   {
@@ -5898,7 +5898,7 @@
     "Diet": "各種野生及栽培的果實，會吃花及芽，也會吃蝸牛及白蟻。",
     "Crisis": "因外來種的引進，產生雜交後代，造成特有亞種的種源逐漸消失。",
     "Code": "Touraco",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Touraco/Touraco_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Touraco/Touraco_Pic01.jpg",
     "CID": 227
   },
   {
@@ -5924,7 +5924,7 @@
     "Diet": "種子、果實、無脊椎動物",
     "Crisis": "",
     "Code": "Pigeon-N",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-N/Pigeon-N_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-N/Pigeon-N_Pic01.jpg",
     "CID": 228
   },
   {
@@ -5950,7 +5950,7 @@
     "Diet": "魚、兩生類、各類昆蟲、蜘蛛、螃蟹、蝦、軟體動物、小型爬蟲類及小鼠。",
     "Crisis": "",
     "Code": "Heron-S",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Heron-S/Heron-S_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Heron-S/Heron-S_Pic01.jpg",
     "CID": 229
   },
   {
@@ -5976,7 +5976,7 @@
     "Diet": "雜食性，會吃水生植物各部位及種子，在春夏時會吃各類陸生及水生的無脊椎動物。",
     "Crisis": "",
     "Code": "Mallard",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Mallard/Mallard_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Mallard/Mallard_Pic01.jpg",
     "CID": 230
   },
   {
@@ -6002,7 +6002,7 @@
     "Diet": "覓食種子、堅果、漿果、果實及樹梢可生產的植物性物質。",
     "Crisis": "",
     "Code": "Macaw-G",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-G/Macaw-G_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-G/Macaw-G_Pic01.jpg",
     "CID": 231
   },
   {
@@ -6028,7 +6028,7 @@
     "Diet": "覓食掉落的果實、漿果及種子。在森林底層覓食，會形成2-10隻的小群活動。以水果、植物種子、軟體動物、無脊椎動物、螃蟹為食。",
     "Crisis": "",
     "Code": "Pigeon-VC",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-VC/Pigeon-VC_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-VC/Pigeon-VC_Pic01.jpg",
     "CID": 232
   },
   {
@@ -6054,7 +6054,7 @@
     "Diet": "主要以掉落的果實及種子為食物，也會吃一些昆蟲、白蟻及蝸牛。通常單獨或成對在地面覓食。",
     "Crisis": "",
     "Code": "Dove-E",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-E/Dove-E_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-E/Dove-E_Pic01.jpg",
     "CID": 233
   },
   {
@@ -6080,7 +6080,7 @@
     "Diet": "水果、昆蟲",
     "Crisis": "",
     "Code": "Barbet-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Barbet-B/Barbet-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Barbet-B/Barbet-B_Pic01.jpg",
     "CID": 234
   },
   {
@@ -6106,7 +6106,7 @@
     "Diet": "果實、兩棲類、小型哺乳動物。",
     "Crisis": "",
     "Code": "Magqie",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Magqie/Magqie_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Magqie/Magqie_Pic01.jpg",
     "CID": 235
   },
   {
@@ -6132,7 +6132,7 @@
     "Diet": "不僅掠食野兔及飛鼠、森鼠等較小型之哺乳類，而且也捕食蜥蜴、蝙蝠、鳥類、魚類、兩生類及昆蟲等。",
     "Crisis": "",
     "Code": "Owl-BW",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-BW/Owl-BW_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-BW/Owl-BW_Pic01.jpg",
     "CID": 236
   },
   {
@@ -6158,7 +6158,7 @@
     "Diet": "種子及樹葉；也會吃少量的昆蟲及其他無脊椎動物。",
     "Crisis": "",
     "Code": "Pegeon-C",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pegeon-C/Pegeon-C_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pegeon-C/Pegeon-C_Pic01.jpg",
     "CID": 237
   },
   {
@@ -6184,7 +6184,7 @@
     "Diet": "1. 主要是草類的種子及其他植物性物質。也會吃昆蟲，特別是在夏天時會吃甲蟲、蠕蟲、蜥蜴及其他脊椎動物。當覓食時，行走緩慢。\n2. 遷移時期間，在中途停留處及渡冬區會聚集形成大量的群，在農耕地覓食，會造成穀類及豆類的損失。",
     "Crisis": "",
     "Code": "Crane-D",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-D/Crane-D_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-D/Crane-D_Pic01.jpg",
     "CID": 238
   },
   {
@@ -6210,7 +6210,7 @@
     "Diet": "食物隨季節及地域有所不同。秋天的食物包括橡樹的果實及栽種的穀類；而春天的食物包括昆蟲、蝸牛、小魚及水生植物。",
     "Crisis": "",
     "Code": "Duck-M",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Duck-M/Duck-M_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Duck-M/Duck-M_Pic01.jpg",
     "CID": 239
   },
   {
@@ -6236,7 +6236,7 @@
     "Diet": "以植物嫩芽、漿果、種子及昆蟲為主。",
     "Crisis": "由於混種的綠野雞在東爪哇被視為吉祥鳥，常被誘捕當寵物，因此其野外基因多樣性有保存的危機。",
     "Code": "Pheasant-R",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasant-R/Pheasant-R_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasant-R/Pheasant-R_Pic01.jpg",
     "CID": 240
   },
   {
@@ -6262,7 +6262,7 @@
     "Diet": "雜食性。",
     "Crisis": "",
     "Code": "Peafowl",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Peafowl/Peafowl_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Peafowl/Peafowl_Pic01.jpg",
     "CID": 241
   },
   {
@@ -6288,7 +6288,7 @@
     "Diet": "覓食漿果、掉落的果實、蛆及昆蟲。在地面覓食，通常形成2-10隻的小群活動。",
     "Crisis": "",
     "Code": "Pigeon-WC",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-WC/Pigeon-WC_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-WC/Pigeon-WC_Pic01.jpg",
     "CID": 242
   },
   {
@@ -6314,7 +6314,7 @@
     "Diet": "漿果、花芽、嫩葉、昆蟲（白蟻）、無脊椎動物（蚯蚓）。",
     "Crisis": "",
     "Code": "Pheasant-S",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasant-S/Pheasant-S_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasant-S/Pheasant-S_Pic01.jpg",
     "CID": 243
   },
   {
@@ -6340,7 +6340,7 @@
     "Diet": "1. 食物包括果實、漿果、種子、堅果、花朵及葉芽。有時也會至作物區覓食，造成相當的破壞。\n2. 本種會與橙翅亞馬遜鸚哥成小群在樹頂覓食。常可見到在棕梠樹上覓食種子。",
     "Crisis": "",
     "Code": "Parrot-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parrot-B/Parrot-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parrot-B/Parrot-B_Pic01.jpg",
     "CID": 244
   },
   {
@@ -6444,7 +6444,7 @@
     "Diet": "牠們吃樹幹,樹枝,落葉樹的根,水生植物像蓮花的嫩芽等.牠們會把這些樹枝固定在水面上,做為冬季的食物。",
     "Crisis": "牠們因有厚皮毛和肛門腺體，被人類大量獵捕作為藥用或油膏，或因阻斷人類要利用的水路而遭殺害。其族群因人類利用溼地，水污染及建設水力電廠而大量減少。",
     "Code": "Beaver",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Beaver/Beaver_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Beaver/Beaver_Pic01.jpg",
     "CID": 248
   },
   {
@@ -6470,7 +6470,7 @@
     "Diet": "肉食性動物。",
     "Crisis": "人類活動及棲地碎化",
     "Code": "Wolf",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Wolf/Wolf_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Wolf/Wolf_Pic01.jpg",
     "CID": 249
   },
   {
@@ -6496,7 +6496,7 @@
     "Diet": "果實、葉子、花、蜂蜜、昆蟲，雜食性、偏重植食性",
     "Crisis": "棲地大量遭到破壞、陷阱及盜獵。在中國、日本、南韓，常被利用做藥用",
     "Code": "Bear-B",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Bear-B/Bear-B_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Bear-B/Bear-B_Pic01.jpg",
     "CID": 250
   },
   {
@@ -6548,7 +6548,7 @@
     "Diet": "1.幼龜時，肉食性傾向強；長成後則草肉食皆可。\n2.雜食性，主要吃小魚、甲殼類及軟體動物如螃蟹、蝦、螺、蜆貝、蛙、蝌蚪、水生植物等。",
     "Crisis": "1. 赤耳龜藉寵物飼養風，引進到全世界各地，引進臺灣也超過20 年，並且因放生及棄養等因素，在野外已經有繁殖族群。\n2. 其對水質要求度不高又是雜食性，因此對臺灣本土的水生植物、無脊椎動物、淡水魚、蛙類與龜鱉類等整體生態造成嚴重的威脅，加上壽命很長對環境影響的時間更是非常久！",
     "Code": "Slider-RE",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Slider-RE/Slider-RE_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Slider-RE/Slider-RE_Pic01.jpg",
     "CID": 252
   },
   {
@@ -6574,7 +6574,7 @@
     "Diet": "植食性。吃草，嫩莖。冬天以青苔和地底下掘出的乾草為食。",
     "Crisis": "美洲野牛曾經遍佈美洲大陸的三分之一，卻因人類在美洲西部的開拓墾荒、開礦而遭到浩劫。1890年美國政府緊急立法禁止獵殺野牛，並劃定保護區保護美洲野牛和印地安族群文化。",
     "Code": "Bison",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Bison/Bison_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Bison/Bison_Pic01.jpg",
     "CID": 253
   },
   {
@@ -6600,7 +6600,7 @@
     "Diet": "植食性。主要為禾本科、豆科、菊科、莎草科植物的莖葉。",
     "Crisis": "1. 保育類野生動物名錄為I(瀕臨絕種野生動物) ；屬IUCN列為瀕臨物種(EN)，原產於蒙古西部靠近阿爾泰山科布多盆地、中國新疆準噶爾盆地東部一帶，為野外滅絕動物。\n2. 經動物園等域外保育專家努力，再引入圈養保育之個體後，目前野外已有穩定野生之個體，其保育狀態自野外滅絕至極危至2011年改為瀕危，是野外滅絕動物在動物園及保護區中繁殖最典型成功範例，成為動物保護史上重要里程碑。",
     "Code": "Horse-MW",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Horse-MW/Horse-MW_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Horse-MW/Horse-MW_Pic01.jpg",
     "CID": 254
   },
   {
@@ -6626,7 +6626,7 @@
     "Diet": "肉食性。在野外捕食鳥類及野兔等囓齒類動物",
     "Crisis": "棲地破壞；盜獵及誘捕；因為美麗的皮毛而被人類大量的捕殺，也因侵擾人類家畜而遭到獵殺，在歐洲多數地區已絕跡。不過目前德國、奧地利、瑞典等國家都正積極地進行復育工作。",
     "Code": "Lynx",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Lynx/Lynx_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/TemperateZoneAnimalArea/Lynx/Lynx_Pic01.jpg",
     "CID": 255
   },
   {
@@ -6678,7 +6678,7 @@
     "Diet": "雜食性。喜歡多汁的果實，也吃昆蟲、蝸牛、小型脊椎動物。",
     "Crisis": "1. 白鼻心為山產店的主要山產之一，目前民間飼養的數量相當多，寵物市場中也充斥著大量人工飼養繁殖的個體。\n2. 野生族群除了受到獵捕壓力外，繁殖場逃逸或不當放生的個體，亦會影響野生族群的種源，使得保育野生族群的工作更加困難。",
     "Code": "Civet-MP",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Civet-MP/Civet-MP_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Civet-MP/Civet-MP_Pic01.jpg",
     "CID": 257
   },
   {
@@ -6704,7 +6704,7 @@
     "Diet": "專食螞蟻及白蟻",
     "Crisis": "1. 民間傳說其麟片是珍貴進補中藥材，穿山甲被大量非法獵捕；而牠們主要活動在淺山1000公尺之內的地區，正是土地開發破壞最嚴重的地帶，造成淪為稀有動物的下場。\n2. 目前台灣最大威脅是野狗攻擊及捕獸夾。",
     "Code": "Pangolin",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Pangolin/Pangolin_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Pangolin/Pangolin_Pic01.jpg",
     "CID": 258
   },
   {
@@ -6756,7 +6756,7 @@
     "Diet": "肉食性，以鳥類、靈長類、小型哺乳動物為主。",
     "Crisis": "大樹是雲豹生存的關鍵，台灣過去在海拔一千公尺以上有很多闊葉樹，但森林被大量砍伐，雲豹失去賴以生存環境，因此在野外滅絕。",
     "Code": "CloudedLeopard",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic01.jpg",
     "CID": 260
   },
   {
@@ -6782,7 +6782,7 @@
     "Diet": "草食性，喜食嫩葉及嫩芽。",
     "Crisis": "",
     "Code": "Serow",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Serow/Serow_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Serow/Serow_Pic01.jpg",
     "CID": 261
   },
   {
@@ -6808,7 +6808,7 @@
     "Diet": "雜食性，主要以植物為食，吃嫩葉、塊根、昆蟲等",
     "Crisis": "臺灣野豬面臨棲地減少及基因汙染等問題，由於野外的野豬與家豬雜交導致純種野豬的數量越來越少。臺北市立動物園致力於保存純種野豬，在圈養環境下保留純種野豬族群。",
     "Code": "Boar",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Boar/Boar_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Boar/Boar_Pic01.jpg",
     "CID": 262
   },
   {
@@ -6860,7 +6860,7 @@
     "Diet": "以植物的果實及嫩芽為主，偶爾也會吃昆蟲、小型的哺乳類，食物種類會隨著季節而改變。",
     "Crisis": "1. 由於人類的開發行為或遊憩場域不斷擴張，使得原來是獼猴的棲息地及活動範圍，開始與人類重疊，而人類佔地為王，導致許多的人猴衝突出現。\n2. 臺灣獼猴面臨的主要問題是棲息地被人類占用、人類不當互動(餵食)導致人猴衝突的衍生，而人類開始使用捕獸鋏、非法陷阱，使野生臺灣獼猴受到嚴重的威脅。",
     "Code": "Macaque",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Macaque/Macaque_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Macaque/Macaque_Pic01.jpg",
     "CID": 264
   },
   {
@@ -6886,7 +6886,7 @@
     "Diet": "獵捕昆蟲、鳥類和小型哺乳動物為食。",
     "Crisis": "",
     "Code": "Owl-CS",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic01.jpg",
     "CID": 265
   },
   {
@@ -6912,7 +6912,7 @@
     "Diet": "肉食性，包含水中無脊椎動物、甲殼類、魚類、兩生爬蟲類及水域附近的水禽、嚙齒類。",
     "Crisis": "1. 人為開發速度加快、濕地遭到破壞與污染、水路截斷、流浪狗攻擊和路殺等原因，致使水獺的生存受到威脅。\n2. 金門地區目前粗估不到200隻，這些都與上述不當的人為活動有關。",
     "Code": "Otter-E",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Otter-E/Otter-E_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Otter-E/Otter-E_Pic01.jpg",
     "CID": 266
   },
   {
@@ -6938,7 +6938,7 @@
     "Diet": "雜食性。食物包括小型脊椎動物、昆蟲、蚯蚓、果實。",
     "Crisis": "流浪犬貓進入山林，散播狂犬病毒，鼬獾對於該病毒感受性高，易受感染。",
     "Code": "Badger",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Badger/Badger_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Badger/Badger_Pic01.jpg",
     "CID": 267
   },
   {
@@ -6964,7 +6964,7 @@
     "Diet": "雜食性，主要捕食小型哺乳類、爬蟲類及昆蟲類，會吃果實、嫩草。",
     "Crisis": "",
     "Code": "Civet-SI",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Civet-SI/Civet-SI_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Civet-SI/Civet-SI_Pic01.jpg",
     "CID": 268
   },
   {
@@ -6990,7 +6990,7 @@
     "Diet": "草食性，喜食灌木、蕨類植物的葉子，尤其是嫩葉及嫩芽。",
     "Crisis": "",
     "Code": "Muntjac",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Muntjac/Muntjac_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Muntjac/Muntjac_Pic01.jpg",
     "CID": 269
   },
   {
@@ -7042,7 +7042,7 @@
     "Diet": "草食性，以吃草為主，對水的需求不大。",
     "Crisis": "",
     "Code": "Kangaroo-G",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Kangaroo-G/Kangaroo-G_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Kangaroo-G/Kangaroo-G_Pic01.jpg",
     "CID": 271
   },
   {
@@ -7068,7 +7068,7 @@
     "Diet": "主要吃掉落在地面的水果，也會吃種子、昆蟲、小動物或腐肉。",
     "Crisis": "",
     "Code": "Cassowary",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Cassowary/Cassowary_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Cassowary/Cassowary_Pic01.jpg",
     "CID": 272
   },
   {
@@ -7094,7 +7094,7 @@
     "Diet": "食性，吃水果、種子、花、芽、昆蟲甚至樹皮，會吞小石頭幫助消化。",
     "Crisis": "",
     "Code": "Emu",
-    "Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Emu/Emu_Pic01.jpg",
+    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Emu/Emu_Pic01.jpg",
     "CID": 273
   }
 ]
