@@ -106,7 +106,7 @@ export default function Header() {
     <HeaderDiv id="header">
       <Container>
         <div className="nav-bar">
-          <Link to="/" className="select">
+          <Link to="/all" className="select">
             動物總覽
           </Link>
           <a href="/map" className="select">

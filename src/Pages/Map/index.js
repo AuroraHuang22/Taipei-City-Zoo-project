@@ -28,30 +28,11 @@ function MapIndex() {
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
   );
-  const animalsStore = useSelector((state) => state.AnimalsReducer.showAnimals);
 
   const handlePrint = useReactToPrint({
     removeAfterPrint: true,
     documentTitle: "安心上Zoo",
     copyStyles: true,
-    onBeforePrint: () => {
-      if (getUid) {
-        let geoarray = [];
-        animalsStore.geo.forEach((element) => {
-          geoarray.push(`${element[0]},${element[1]}`);
-        });
-        let numarray = [];
-        animalsStore.num.forEach((element) => {
-          numarray.push(element);
-        });
-        firestore.firebaseAddSaved(getUid, geoarray, numarray);
-      }
-    },
-    onAfterPrint: () => {
-      if (getUid) {
-        alert("已將行程儲存至探索護照");
-      }
-    },
     content: () => componentRef.current,
   });
 

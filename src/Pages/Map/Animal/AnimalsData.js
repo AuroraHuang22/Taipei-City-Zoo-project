@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
 import * as firestore from "../../../Utils/firebase";
+import { ToastContainer, toast, Flip, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
   width: 100%;
@@ -89,6 +91,20 @@ const AnimalsData = (prop) => {
   let routeData = prop.route;
   let uid = prop.uid;
 
+  let alertMes = (message) =>
+    toast(message, {
+      autoClose: 2500,
+      position: toast.POSITION.TOP_CENTER,
+      hideProgressBar: true,
+      style: {
+        opacity: 0.9,
+        backgroundColor: "#faf9d7",
+        color: "#827b60",
+        fontWeight: 400,
+      },
+      transition: Bounce,
+    });
+
   const showMyGeo = (e) => {
     if (e.target.style.backgroundColor !== "lightgrey") {
       e.target.style.backgroundColor = "lightgrey";
@@ -146,7 +162,7 @@ const AnimalsData = (prop) => {
       disPatch(action.gotoNextStep());
       setDispalyContainer("none");
     } else {
-      alert("請先選擇至少一種想看的動物喔！");
+      alertMes("請先選擇至少一種想看的動物喔！");
     }
   };
   const showMoreAnimals = (e) => {
@@ -317,6 +333,7 @@ const AnimalsData = (prop) => {
           </AnimalsItemBlock>
         }
       </PopopDiv>
+      <ToastContainer />;
     </>
   );
 };

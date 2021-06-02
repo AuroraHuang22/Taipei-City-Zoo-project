@@ -10,7 +10,7 @@ const Container = styled.div`
   max-width: 1480px;
   padding: 160px 0px 300px;
   justify-content: center;
-
+  margin: 0 auto;
   .hero {
     box-sizing: border-box;
     width: 100%;

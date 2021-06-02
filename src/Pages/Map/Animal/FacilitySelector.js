@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import * as firestore from "../../../Utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
+import { ToastContainer, toast, Flip, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SelectorDiv = styled.div`
   display: flex;
@@ -28,7 +31,23 @@ const LableElement = styled.label`
 const Selector = (props) => {
   const [getAllFacilities, setGetAllFacilities] = useState([]);
   const [displayDiv, setDisplayDiv] = useState("none");
+  const animalsStore = useSelector((state) => state.AnimalsReducer.showAnimals);
   const disPatch = useDispatch();
+  const uid = props.uid;
+
+  let success = (message) =>
+    toast.success(message, {
+      autoClose: 1500,
+      position: toast.POSITION.TOP_CENTER,
+      hideProgressBar: true,
+      style: {
+        opacity: 0.9,
+        backgroundColor: "#e5f7e0",
+        color: "#4f6e59",
+        fontWeight: 400,
+      },
+      transition: Flip,
+    });
 
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
@@ -47,6 +66,19 @@ const Selector = (props) => {
     setDisplayDiv("none");
     disPatch(action.backToSelectAnimal());
     window.location.href = "/map";
+  };
+
+  const printMap = () => {
+    let geoarray = [];
+    animalsStore.geo.forEach((element) => {
+      geoarray.push(`${element[0]},${element[1]}`);
+    });
+    let numarray = [];
+    animalsStore.num.forEach((element) => {
+      numarray.push(element);
+    });
+    firestore.firebaseAddSaved(uid, geoarray, numarray);
+    success("已將行程儲存至探索護照");
   };
 
   useEffect(() => {
@@ -84,6 +116,7 @@ const Selector = (props) => {
         ))}
       </SelectorDiv>
       <button onClick={backToSelect}>重新選擇動物</button>
+      {uid ? <button onClick={printMap}>儲存行程</button> : null}
     </div>
   );
 };

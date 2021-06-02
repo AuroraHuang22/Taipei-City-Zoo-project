@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Landing from "../Landing";
 import Conservation from "./Conservation";
 import AllAnimalas from "./AllAniamls";
 
@@ -17,7 +16,6 @@ const Background = styled.div`
 function All() {
   return (
     <Background>
-      <Landing />
       {/* <Conservation /> */}
       <AllAnimalas />
     </Background>
