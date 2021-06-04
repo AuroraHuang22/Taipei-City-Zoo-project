@@ -135,6 +135,12 @@ export default function Filter() {
     !set.has(item.Location) ? set.add(item.Location) : false
   ).map((item) => item.Location);
 
+  const conservation = AnimalsJson.filter((item) =>
+    !set.has(item.Conservation) ? set.add(item.Conservation) : false
+  ).map((item) => item.Conservation);
+
+  console.log(conservation);
+
   const type = AnimalsJson.filter((item) =>
     !set.has(item.Class) ? set.add(item.Class) : false
   ).map((item) => item.Class);
