@@ -196,7 +196,7 @@ export default function Traffic() {
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> , Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-            url="https://api.mapbox.com/styles/v1/aurorahuang/ckp5a6mec228j17nxebx0kcgc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
+            url="https://api.mapbox.com/styles/v1/aurorahuang/ckp54g8f60ll018n0vc38mv2p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
           />
 
           {parks.map((item) => (
@@ -219,9 +219,9 @@ export default function Traffic() {
               position={item.EntrancecoordInfo}
               icon={
                 new L.Icon({
-                  iconUrl: require(`../../Icons/park.png`).default,
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 10],
+                  iconUrl: require(`../../Icons/park.svg`).default,
+                  iconSize: [40, 40],
+                  iconAnchor: [20, 20],
                 })
               }
             ></Marker>

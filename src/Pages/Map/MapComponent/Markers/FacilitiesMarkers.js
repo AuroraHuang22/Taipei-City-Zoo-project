@@ -22,11 +22,14 @@ function FacilitiesMarkers(props) {
             <Marker
               key={`fac${item.Index}`}
               position={[item.Geo[1], item.Geo[0]]}
+              zIndexOffset={900}
               icon={
                 new L.Icon({
-                  iconUrl: require(`../../../../Icons/like-02.svg`).default,
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 10],
+                  iconUrl:
+                    require(`../../../../Icons/Labels/${item.Item}-02.svg`)
+                      .default,
+                  iconSize: [16, 16],
+                  iconAnchor: [8, 8],
                 })
               }
             >

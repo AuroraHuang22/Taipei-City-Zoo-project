@@ -49,14 +49,13 @@ const Container = styled.div`
     margin-left: 20px;
     width: 30vw;
     font-size: 18px;
-
     .level-text {
       font-weight: 600;
       margin-left: 5px;
     }
     .desc {
       color: grey;
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 1.8px;
     }
   }
@@ -221,15 +220,7 @@ function MemberInfo(props) {
                 請問你是?
               </span>
               <br />
-              <span
-                style={{
-                  color: "grey",
-                  fontSize: "12px",
-                  letterSpacing: "1.8px",
-                }}
-              >
-                不登入，怎麼知道你的實力啦～
-              </span>
+              <span className="desc">不登入，怎麼知道你的實力啦～</span>
             </>
           )}
         </div>

@@ -11,12 +11,13 @@ function AnimalsPosition(props) {
         <Marker
           key={item[0]}
           position={[item[0], item[1]]}
+          zIndexOffset={901}
           icon={
             new L.divIcon({
               className: "my-div-icon",
               iconSize: [0, 0],
-              iconAnchor: [0, -3],
-              html: `<span>${center.num[index]}</span>`,
+              iconAnchor: [10, 30],
+              html: `<span style={{color:"black"}}>${center.num[index]}</span>`,
             })
           }
         ></Marker>
@@ -25,11 +26,12 @@ function AnimalsPosition(props) {
         <Marker
           key={item[0]}
           position={[item[0], item[1]]}
+          zIndexOffset={900}
           icon={
             new L.Icon({
-              iconUrl: require(`../../../../Icons/star.svg`).default,
-              iconSize: [10, 10],
-              iconAnchor: [5, 5],
+              iconUrl: require(`../../../../Icons/position-02.svg`).default,
+              iconSize: [20, 20],
+              iconAnchor: [10, 10],
             })
           }
         ></Marker>

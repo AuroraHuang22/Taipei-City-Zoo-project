@@ -102,6 +102,7 @@ const Container = styled.div`
       flex-direction: column;
       .goto,
       .remove {
+        background-color: white;
         position: relative;
         font-size: 16px;
         margin: 0px 10px;

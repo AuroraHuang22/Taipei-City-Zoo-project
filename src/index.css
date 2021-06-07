@@ -35,35 +35,24 @@ body {
   z-index: 850;
 }
 .leaflet-marker-icon.my-div-icon {
-  color: rgb(211, 100, 27);
+  color: #ea7a60;
+  font-size: 14px;
+  text-align: center;
   white-space: nowrap;
+  font-weight: 500;
+  z-index: 1200;
 }
-
-/* .css-yk16xz-control {
-  border-radius: 15px !important;
-  box-sizing: border-box !important;
-  border: 1px solid #ea7a60 !important;
-  padding: 10px 20px !important;
-  outline: none !important;
-}
-
-.css-1pahdxg-control {
-  border-radius: 15px !important;
-  box-sizing: border-box !important;
-  border: 1px solid #dba99e !important;
-  padding: 10px 20px !important;
-  box-shadow: none !important;
-} */
 
 @media print {
   @page {
-    size: 1200px 1200px;
+    size: 1200px 1000px;
     margin: 10px;
   }
   .leaflet-control-zoom {
     display: none;
   }
   #mapDD {
-    height: 1100px;
+    width: 1200px;
+    height: 1000px;
   }
 }

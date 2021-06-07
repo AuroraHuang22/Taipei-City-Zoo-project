@@ -22,7 +22,7 @@ function App() {
           <Route path="/member" component={Member} />
           <Route path="/entrance" component={Entrance} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </Provider>
   );

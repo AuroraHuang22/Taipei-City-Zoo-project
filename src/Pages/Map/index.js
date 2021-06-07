@@ -12,11 +12,51 @@ import * as firestore from "../../Utils/firebase";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 80px 10px 0px;
+  padding: 80px 1px 0px;
   .animalsDiv {
-    height: 80vh;
-    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    width: 35%;
+    padding: 0 30px;
+    height: calc(100vh - 80px);
     overflow: scroll;
+    .printMap {
+      display: block;
+      width: 80%;
+      padding: 12px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      position: relative;
+      font-size: 16px;
+      border: 1px solid #acacac;
+      border-radius: 25px;
+      color: #acacac;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 18px;
+      font-weight: 500;
+      ::after {
+        content: "⏍";
+        opacity: 0;
+        font-size: 18px;
+        visibility: hidden;
+        position: absolute;
+        right: 50%;
+        transition: all 0.3s;
+      }
+      :hover {
+        border: 1px solid #ea7a60;
+        background-color: white;
+        color: #ea7a60;
+        padding-right: 20px;
+        ::after {
+          opacity: 1;
+          visibility: visible;
+          right: 10%;
+        }
+      }
+    }
   }
 `;
 
@@ -62,8 +102,12 @@ function MapIndex() {
           route={RouteJson}
           uid={getUid}
         />
-        <button style={{ display: displayDiv }} onClick={handlePrint}>
-          print
+        <button
+          className="printMap"
+          style={{ display: displayDiv }}
+          onClick={handlePrint}
+        >
+          下載地圖至ＰＤＦ
         </button>
       </div>
       <Map ref={componentRef} facilities={FacilitiesJson} />

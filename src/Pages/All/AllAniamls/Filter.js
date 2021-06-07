@@ -111,7 +111,7 @@ export default function Filter() {
   const handleChange = (value) => {
     setSelectPlace(value.value);
     setInput("請輸入關鍵字...");
-    if (value.value !== "動物園裡的") {
+    if (value.value !== "動物園裡") {
       disPatch(action.addFilterPlace(value.value));
       disPatch(action.addFilterSearch(""));
     } else {
@@ -138,9 +138,9 @@ export default function Filter() {
   }, []);
 
   place.forEach((item) => option.push({ value: item, label: item }));
-  option.push({ value: "動物園裡的", label: "全部動物" });
+  option.push({ value: "動物園裡", label: "全部動物" });
 
-  if (selectPlace !== "動物園裡的") {
+  if (selectPlace !== "動物園裡") {
     let arr = AnimalsJson.filter((item) =>
       item.Location.includes(selectPlace)
     ).map((item) => item.Name_Ch);
@@ -246,9 +246,9 @@ export default function Filter() {
         </div>
         <div className="textBlock">
           <span className="h3">我想探索 —</span>
-          <span className="h1 ">{selectPlace}</span>
+          <span className="h1 ">{selectPlace}的...</span>
           {Input !== "請輸入關鍵字..." ? (
-            <span className="h3 grey">的 {Input}</span>
+            <span className="h3 grey">{Input}</span>
           ) : null}
         </div>
       </div>

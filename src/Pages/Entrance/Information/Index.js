@@ -39,6 +39,8 @@ const Container = styled.div`
     font-size: 28px;
     color: #5f5c90;
     font-weight: 500;
+    /* background-color: #acabbe; */
+    /* background-color: #c4c4cf; */
   }
   .header-bg-orange {
     font-size: 30px;

@@ -23,7 +23,7 @@ const HeaderDiv = styled.div`
   width: 100%;
   height: 80px;
   z-index: 800;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 const main = styled.div`
@@ -36,6 +36,7 @@ const main = styled.div`
     display: inline-block;
     color: #f09a8f;
     text-decoration: none;
+    transition: all 0.3s;
   }
 `;
 const Container = styled(main)`
@@ -64,6 +65,10 @@ const Container = styled(main)`
     cursor: pointer;
     padding: 10px;
     margin-right: 20px;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
   .signBox {
     display: flex;
@@ -78,11 +83,22 @@ const Container = styled(main)`
     border: 1px solid #a7a6d1;
     border-radius: 20px;
     margin-right: 8px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+      border: 1px solid #5f5c90;
+    }
   }
   .signin {
     cursor: pointer;
     color: #a7a6d1;
     border-radius: 20px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
   .signout {
     cursor: pointer;
@@ -90,6 +106,11 @@ const Container = styled(main)`
     right: 20px;
     color: #a7a6d1;
     border-radius: 20px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
 `;
 
