@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Visited from "./Visited";
-import img from "../../../Icons/111.jpg";
+import Saved from "../Saved";
 import AnimalsJson from "../../../Utils/animals.json";
 import * as firestore from "../../../Utils/firebase";
 import {
@@ -10,6 +10,9 @@ import {
   Link,
   useRouteMatch,
 } from "react-router-dom";
+const getRandomNumber = (min, max) => {
+  return Math.random() * (max - min) + min;
+};
 
 const Container = styled.div`
   display: flex;
@@ -17,31 +20,69 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  height: 85vh;
-  padding: 20px 30px;
-
-  background-image: url(${img});
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: 100%;
-
-  .visited {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  height: auto;
+  .bg-img {
+    object-fit: cover;
   }
-`;
-
-const Selector = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 25px;
-  align-items: center;
-  border: 1px solid lightgrey;
-  margin: 10px;
-  background-color: #fff;
+  a {
+    text-decoration: none;
+    color: #3a4d48;
+  }
+  .visited {
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    text-align: right;
+    border: 2px solid lightgrey;
+    margin: 10px;
+    background-color: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    ::after {
+      content: "→";
+      margin-left: 3px;
+      margin-right: 10px;
+      transition: all 0.3s;
+    }
+    :hover {
+      background-color: #f2ecea;
+      ::after {
+        margin-left: 13px;
+        margin-right: 0px;
+      }
+    }
+  }
+  .btn {
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    text-align: right;
+    border: 2px solid lightgrey;
+    margin: 10px;
+    background-color: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    ::before {
+      content: "←";
+      margin-right: 3px;
+      margin-left: 10px;
+      transition: all 0.3s;
+    }
+    :hover {
+      background-color: #f2ecea;
+      ::before {
+        margin-right: 13px;
+        margin-left: 0px;
+      }
+    }
+  }
+  .stamp {
+    position: absolute;
+    width: 250px;
+    transform: translate(50%, 50%);
+  }
 `;
 
 const animalsJson = AnimalsJson;
@@ -120,19 +161,36 @@ export default function Explore(props) {
     <Switch>
       <Route exact path={`${match.path}`}>
         <Container className="imgdiv">
-          {/* {catalogs.map((catalogs) =>
-            stampPavilions.map((stamp) =>
-              stamp === catalogs ? <p key={stamp}>{catalogs}</p> : null
-            )
-          )} */}
-          <div className="visited">
+          <div className="button-group">
+            <Link to={`${match.url}/saved`}>
+              <div className="btn">儲存行程</div>
+            </Link>
             <Link to={`${match.url}/visited`}>
-              <Selector>我的足跡</Selector>
+              <div className="visited">我的足跡</div>
             </Link>
           </div>
+          <img
+            className="bg-img"
+            src="/Imgs/passport-bg-29.svg"
+            alt="passport"
+          />
+          {catalogs.map((catalogs) =>
+            stampPavilions.map((stamp) =>
+              stamp === catalogs ? (
+                <img
+                  className="stamp"
+                  style={{
+                    top: `${getRandomNumber(0, 700)}px`,
+                    left: `${getRandomNumber(0, 700)}px`,
+                  }}
+                  src={`/Imgs/${stamp}.png`}
+                  alt={stamp}
+                />
+              ) : null
+            )
+          )}
         </Container>
       </Route>
-
       <Route path={`${match.path}/visited`}>
         <Visited
           catalogs={catalogs}
@@ -140,6 +198,9 @@ export default function Explore(props) {
           getVisited={getVisited}
           stampPavilions={stampPavilions}
         />
+      </Route>
+      <Route path={`${match.url}/saved`}>
+        <Saved uid={uid} />
       </Route>
     </Switch>
   );

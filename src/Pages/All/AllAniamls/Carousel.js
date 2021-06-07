@@ -10,7 +10,7 @@ const Carouseldiv = styled.div`
     width: 100%;
     padding: 30px 0px 40px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     background-color: #185306;
     .slider-item {
       display: flex;
@@ -75,7 +75,7 @@ export default function CarouselDiv(props) {
       >
         {item.Diet ? (
           <div className="slider-item">
-            <img className="slider-img" src="/Icons/popup-08.svg" alt="diet" />
+            <img className="slider-img" src="/Icons/diet-14.svg" alt="diet" />
             <div className="slider-item-title">"飲食</div>
             <div className="slider-item-content">{item.Diet}</div>
           </div>
@@ -84,7 +84,7 @@ export default function CarouselDiv(props) {
           <div className="slider-item">
             <img
               className="slider-img"
-              src="/Icons/popup-09.svg"
+              src="/Icons/funfact-14.svg"
               alt="funfact"
             />
             <div className="slider-item-title">"趣事</div>
@@ -95,7 +95,7 @@ export default function CarouselDiv(props) {
           <div className="slider-item">
             <img
               className="slider-img"
-              src="/Icons/popup-10.svg"
+              src="/Icons/habitat-14.svg"
               alt="habitat"
             />
             <div className="slider-item-title">"棲息地</div>
@@ -106,7 +106,7 @@ export default function CarouselDiv(props) {
           <div className="slider-item">
             <img
               className="slider-img"
-              src="/Icons/popup-11.svg"
+              src="/Icons/feature-14.svg"
               alt="feature"
             />
             <div className="slider-item-title">"特徵</div>
@@ -117,7 +117,7 @@ export default function CarouselDiv(props) {
           <div className="slider-item">
             <img
               className="slider-img"
-              src="/Icons/popup-12.svg"
+              src="/Icons/threat-14.svg"
               alt="threat"
             />
             <div className="slider-item-title">"威脅</div>

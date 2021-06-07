@@ -52,6 +52,9 @@ const Container = styled.div`
       font-size: 16px;
     }
   }
+  .pd-30 {
+    padding-left: 30px;
+  }
 `;
 
 const InfoDiv = styled.div`
@@ -166,7 +169,7 @@ export default function Traffic() {
   return (
     <Container>
       <div className="traffic-block">
-        <div className="header">停車資訊</div>
+        <div className="header pd-30">停車資訊</div>
         <div className="header-md-orange">周邊停車資訊</div>
         <span>河川地停車場</span>
         <span>動物園站地下停車場</span>

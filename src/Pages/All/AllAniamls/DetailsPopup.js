@@ -26,7 +26,7 @@ export default function DetailsPopup(props) {
       open={open}
       closeOnDocumentClick
       onClose={closeModal}
-      overlayStyle={{ background: "rgba(0, 0, 0, 0.8)" }}
+      overlayStyle={{ background: "rgba(0, 0, 0, 0.8)", zIndex: 1200 }}
       contentStyle={{
         position: "relative",
         margin: "auto",
@@ -90,7 +90,7 @@ export default function DetailsPopup(props) {
                     <div
                       className="defaultFavorite"
                       style={{
-                        backgroundImage: "url(/Icons/disFavorite.svg)",
+                        backgroundImage: "url(/Icons/buyton-05.svg)",
                       }}
                       key={item.Name_Latin}
                       onClick={(e) => {
@@ -111,7 +111,7 @@ export default function DetailsPopup(props) {
                               className="defaultFavorite"
                               key={`ya-${item.Name_Latin}`}
                               style={{
-                                backgroundImage: "url(/Icons/favorite.svg)",
+                                backgroundImage: "url(/Icons/buyton-04.svg)",
                               }}
                               onClick={(e) => {
                                 e.target.style.backgroundImage =
@@ -137,7 +137,7 @@ export default function DetailsPopup(props) {
                     <div
                       className="defaultFavorite"
                       style={{
-                        backgroundImage: "url(/Icons/notVisited.svg)",
+                        backgroundImage: "url(/Icons/buyton-06.svg)",
                       }}
                       key={item.Name_Latin}
                       onClick={(e) => {
@@ -158,7 +158,7 @@ export default function DetailsPopup(props) {
                               className="defaultFavorite"
                               key={`ya-${item.Name_Latin}`}
                               style={{
-                                backgroundImage: "url(/Icons/vistied.svg)",
+                                backgroundImage: "url(/Icons/buyton-07.svg)",
                               }}
                               onClick={(e) => {
                                 e.target.style.backgroundImage =

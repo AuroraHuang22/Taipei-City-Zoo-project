@@ -84,36 +84,22 @@ firebase.auth().onAuthStateChanged((user) => {
 export default function ReaderAnimals() {
   const [popupAnimal, setPopupAnimal] = useState(null);
   const { search } = useSelector((state) => state.FilterAnimals);
-  const { type } = useSelector((state) => state.FilterAnimals);
   const { place } = useSelector((state) => state.FilterAnimals);
 
   const disPatch = useDispatch();
   const animalsJson = AnimalsJson;
   let showAnimals = [];
 
-  if (!search && !type && !place) {
+  if (!search && !place) {
     showAnimals = animalsJson;
-  } else if (search && !type && !place) {
+  } else if (search && !place) {
     showAnimals = animalsJson.filter((item) => item.Name_Ch.includes(search));
-  } else if (search && type && !place) {
+  } else if (search && place) {
     showAnimals = animalsJson.filter(
-      (item) => item.Name_Ch.includes(search) && item.Class.includes(type)
+      (item) => item.Name_Ch.includes(search) && item.Location.includes(place)
     );
-  } else if (search && type && place) {
-    showAnimals = animalsJson.filter(
-      (item) =>
-        item.Name_Ch.includes(search) &&
-        item.Class.includes(type) &&
-        item.Location.includes(place)
-    );
-  } else if (!search && type && !place) {
-    showAnimals = animalsJson.filter((item) => item.Class.includes(type));
-  } else if (!search && !type && place) {
+  } else if (!search && place) {
     showAnimals = animalsJson.filter((item) => item.Location.includes(place));
-  } else if (!search && type && place) {
-    showAnimals = animalsJson.filter(
-      (item) => item.Class.includes(type) && item.Location.includes(place)
-    );
   }
 
   return (

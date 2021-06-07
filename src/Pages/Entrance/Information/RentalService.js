@@ -63,12 +63,15 @@ const Container = styled.div`
       padding-top: 80%;
     }
   }
+  .pd-30 {
+    padding-left: 30px;
+  }
 `;
 
 export default function RentalService() {
   return (
     <Container>
-      <div className="header">租借服務</div>
+      <div className="header pd-30">租借服務</div>
       <section>
         <div className="block">
           <div className="header-md-orange">輪椅(手推)租借</div>

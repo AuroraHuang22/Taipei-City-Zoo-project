@@ -120,7 +120,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         width: 50px;
-        padding-top: 70px;
+        padding-top: 75px;
         .defaultFavorite,
         .defaultVisited {
           cursor: pointer;
@@ -129,8 +129,8 @@ const Container = styled.div`
           top: 50%;
           right: 50%;
           transform: translate(50%, -50%);
-          width: 30px;
-          height: 30px;
+          width: 50px;
+          height: 50px;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -160,15 +160,21 @@ const Container = styled.div`
         content: "造訪過？搜集探索足跡囉！";
       }
 
-      .farvrite:hover::after {
-        opacity: 1;
-        visibility: visible;
-        left: 0;
+      .farvrite:hover {
+        filter: grayscale(30%);
+        ::after {
+          opacity: 1;
+          visibility: visible;
+          left: 0;
+        }
       }
-      .visited:hover::after {
-        opacity: 1;
-        visibility: visible;
-        left: 0;
+      .visited:hover {
+        filter: grayscale(30%);
+        ::after {
+          opacity: 1;
+          visibility: visible;
+          left: 0;
+        }
       }
 
       .text-sm {

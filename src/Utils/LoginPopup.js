@@ -12,71 +12,107 @@ const RenderContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /* width: 30%;
-  margin: auto;
-  height: 60%;
-  border: 1px solid grey;
-  border-radius: 25px; */
-
-  .inputDiv {
+  align-items: center;
+  z-index: 1200;
+  .logo {
+    max-width: 100px;
+  }
+  .nav {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    margin-bottom: 12px;
-    label {
-      width: 100px;
+    width: 300px;
+    margin-top: 50px;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    .header {
+      font-size: 30px;
+      color: #929292;
+      font-weight: 500;
     }
-    input {
-      width: 60%;
-      height: 15px;
+  }
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    .inputDiv {
+      width: 100%;
+      position: relative;
+      height: 28px;
+      margin-bottom: 50px;
+      .lable {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        color: #acacac;
+        font-weight: 400;
+        transform: translate(15px, 8px);
+        pointer-events: none;
+        transition: all 0.3s;
+      }
+      .is-active {
+        transform: translate(0px, -18px);
+        font-size: 14px;
+        color: #ea7a60;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-bottom: 2px solid #acacac;
+        outline: none;
+        background-color: none;
+      }
     }
-    .faild {
-      color: red;
-    }
-    .success {
-      color: grey;
-    }
+  }
+  .success {
+    font-size: 12px;
+    color: #6b6b6b;
+    font-weight: 400;
   }
   button {
-    height: 30px;
     margin: 50px auto;
-    width: 60%;
-  }
-  h2 {
-    margin-bottom: 80px;
-  }
-  p {
-    align-self: flex-end;
-    font-size: 8px;
-    color: grey;
-  }
-  span {
-    align-self: flex-end;
-    font-size: 8px;
-    color: blue;
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background-color: #c0bdd2;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s;
     cursor: pointer;
+    :hover {
+      background-color: #847eb1;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
   }
 `;
+const SignIn = styled.div`
+  font-size: 30px;
+  color: ${(props) => (props.orange ? "#ea7a60" : "#929292")};
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: pointer;
+  :hover {
+    color: #ea7a60;
+  }
+`;
+const SignUp = styled(SignIn)``;
 
 export default function DetailsPopup() {
   const disPatch = useDispatch();
+
   const { open } = useSelector((state) => state.Login);
   const { login } = useSelector((state) => state.Login);
   const closeModal = () => disPatch(action.setLoginClose());
 
   const [title, setTitle] = useState("Sign In");
-  //   const [status, setStatus] = useState("");
-  const [text, setText] = useState("Don't have account?");
-  const [state, setState] = useState("Sign Up");
+
   const [message, setMessage] = useState("");
-  //   const [errMessage, setErrMessage] = useState("");
 
   let inputEmail = "";
   let inputPassword = "";
-
-  useEffect(() => {
-    setMessage("");
-  }, [state]);
 
   useEffect(() => {
     setMessage("");
@@ -85,22 +121,81 @@ export default function DetailsPopup() {
   const RenderDiv = () => {
     return (
       <RenderContainer>
-        <h2>{title}</h2>
-        <div className="inputDiv">
-          <label htmlFor="email"> Email</label>
-          <input
-            id="email"
-            type="email"
-            onChange={(e) => (inputEmail = e.target.value)}
-          ></input>
+        <img className="logo" src="/logo.svg" alt="logo" />
+        <div className="nav">
+          {title === "Sign In" ? (
+            <>
+              <SignIn
+                orange
+                onClick={() => {
+                  setTitle("Sign In");
+                }}
+              >
+                登入
+              </SignIn>
+              <span className="header">|</span>
+              <SignUp
+                onClick={() => {
+                  setTitle("Sign Up");
+                }}
+              >
+                註冊
+              </SignUp>
+            </>
+          ) : (
+            <>
+              <SignIn
+                onClick={() => {
+                  setTitle("Sign In");
+                }}
+              >
+                登入
+              </SignIn>
+              <span className="header">|</span>
+              <SignUp
+                orange
+                onClick={() => {
+                  setTitle("Sign Up");
+                }}
+              >
+                註冊
+              </SignUp>
+            </>
+          )}
         </div>
-        <div className="inputDiv">
-          <label htmlFor="password"> Password</label>
-          <input
-            id="password"
-            type="password"
-            onChange={(e) => (inputPassword = e.target.value)}
-          ></input>
+        <div className="inputBlock">
+          <div className="inputDiv">
+            <div className="lable">Email</div>
+            <input
+              id="email"
+              type="email"
+              onFocus={(e) => {
+                e.target.parentNode.firstChild.classList.add("is-active");
+              }}
+              onBlur={(e) => {
+                if (inputEmail.length === 0) {
+                  e.target.parentNode.firstChild.classList.remove("is-active");
+                }
+              }}
+              onChange={(e) => (inputEmail = e.target.value)}
+            ></input>
+          </div>
+          <div className="inputDiv">
+            <div className="lable">Password</div>
+            <input
+              id="password"
+              type="password"
+              onFocus={(e) => {
+                e.target.parentNode.firstChild.classList.add("is-active");
+              }}
+              onBlur={(e) => {
+                if (inputEmail.length === 0) {
+                  e.target.parentNode.firstChild.classList.remove("is-active");
+                }
+              }}
+              onChange={(e) => (inputPassword = e.target.value)}
+            ></input>
+          </div>
         </div>
         <div className="inputDiv">
           <span className="success">{message}</span>
@@ -116,24 +211,8 @@ export default function DetailsPopup() {
             }
           }}
         >
-          submit
+          {title}
         </button>
-        <p>{text}</p>
-        <span
-          onClick={() => {
-            if (title === "Sign In") {
-              setTitle("Sign Up");
-              setText("Already have account?");
-              setState("Sign In");
-            } else {
-              setTitle("Sign In");
-              setText("Don't have account?");
-              setState("Sign Up");
-            }
-          }}
-        >
-          {state}
-        </span>
       </RenderContainer>
     );
   };
@@ -183,17 +262,18 @@ export default function DetailsPopup() {
       open={open}
       closeOnDocumentClick
       onClose={closeModal}
-      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)" }}
+      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)", zIndex: 1200 }}
       contentStyle={{
         margin: "auto",
         boxSizing: "border-box",
         background: "#fff",
-        width: "50%",
+        width: "80%",
+        maxWidth: "600px",
         padding: "60px 20px",
         borderRadius: "25px",
       }}
     >
-      {login === "login" ? <RenderDiv /> : <h2>你已成功登出</h2>}
+      {login === "login" ? <RenderDiv /> : null}
     </Popup>
   );
 }

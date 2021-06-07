@@ -6,7 +6,7 @@ import AllAnimalas from "./AllAniamls";
 const Background = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 80px auto 0;
+  margin: 0 auto 0;
   width: 100%;
   justify-content: center;
   align-items: center;

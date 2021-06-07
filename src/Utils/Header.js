@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import * as action from "../Redux/Action";
 import * as firestore from "../Utils/firebase";
 import LoginPopup from "../Utils/LoginPopup";
+import * as toast from "../Utils/toast";
+import { ToastContainer } from "react-toastify";
+
 import {
   BrowserRouter as Switch,
   Route,
@@ -12,15 +15,15 @@ import {
 } from "react-router-dom";
 
 const HeaderDiv = styled.div`
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
-  z-index: 220;
-  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 800;
+  background-color: rgba(255, 255, 255, 0.9);
 `;
 
 const main = styled.div`
@@ -46,7 +49,7 @@ const Container = styled(main)`
   .logo {
     width: 35px;
     height: 35px;
-    background-image: url(/Imgs/logo-09.svg);
+    background-image: url(/logo.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -125,9 +128,12 @@ export default function Header() {
           <div
             className="signout"
             onClick={() => {
-              firestore.signOut();
+              toast.remove("你已成功登出");
               disPatch(action.setLogout());
-              disPatch(action.setLoginOpen());
+              firestore.signOut();
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
             }}
           >
             登出
@@ -154,6 +160,7 @@ export default function Header() {
             </div>
           </div>
         )}
+        <ToastContainer />
       </Container>
     </HeaderDiv>
   );

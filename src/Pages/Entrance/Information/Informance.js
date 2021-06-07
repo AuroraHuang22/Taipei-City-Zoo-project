@@ -12,7 +12,6 @@ const Container = styled.div`
 
   .imgBox {
     position: absolute;
-    width: 35%;
     height: 408px;
     top: 0;
     border-right: 2px solid #fce7e0;
@@ -54,7 +53,7 @@ export default function Informance() {
   return (
     <Container>
       <div className="imgBox">
-        <img className="img" src="/Imgs/duck.jpeg" alt="informance" />
+        <img className="img" src="/Imgs/ducks-15.svg" alt="informance" />
       </div>
       <div className="info">
         <div className="header">遊園須知</div>

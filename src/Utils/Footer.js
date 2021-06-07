@@ -6,7 +6,7 @@ const FooterDiv = styled.div`
   width: 100%;
   height: 80px;
   background-color: white;
-  border-top: 1px solid lightslategrey;
+  /* border-top: 1px solid lightslategrey; */
 `;
 
 const Container = styled.div`

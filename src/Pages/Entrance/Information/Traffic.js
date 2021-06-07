@@ -42,6 +42,9 @@ const Container = styled.div`
       border-radius: 50%;
     }
   }
+  .pd-30 {
+    padding-left: 30px;
+  }
 `;
 
 export default function Traffic() {

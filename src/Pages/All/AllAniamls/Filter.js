@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import * as action from "../../../Redux/Action";
+import Select from "react-select";
 
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
@@ -8,89 +9,78 @@ import AnimalsJson from "../../../Utils/animals.json";
 const FilterContainer = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
-  .filterBg {
-    width: 100%;
-  }
   .container {
-    box-sizing: border-box;
-    position: absolute;
-    display: flex;
+    position: relative;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    max-width: 1480px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    z-index: 300;
-  }
-
-  .drawBox {
-    width: 30%;
-    display: flex;
-    box-sizing: border-box;
-    padding: 10px 10px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    .draw {
+    .filterBg {
       width: 100%;
-      margin-left: -30px;
     }
-  }
-
-  .filterBlock {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .flex {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin: 8px 0px;
-      align-items: center;
-    }
-    .first::before {
-      content: "New!";
+    .header {
       position: absolute;
       top: 50%;
-      left: -40px;
-      transform: translateY(-50%);
-      font-size: 14px;
-      font-weight: 600;
-      color: yellow;
+      left: 50%;
+      font-size: 48px;
+      color: white;
+    }
+    .sub-header {
+      margin-top: 70px;
+      margin-left: 40px;
+      font-size: 28px;
     }
   }
-  select {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    padding: 6px 18px;
-    min-width: 130px;
-    outline: none;
-    border: none;
-    border-radius: 25px;
-    background-color: #f2f2f2;
-    color: #a5a4a3;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 500;
+  .flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1480px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: baseline;
+    .filterBlock {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .searchBox {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .searchimg {
+        width: 20px;
+        align-self: flex-end;
+        padding-bottom: 10px;
+      }
+    }
+    .textBlock {
+      margin-left: 40px;
+      display: flex;
+      width: 30%;
+      flex-direction: column;
+      justify-content: center;
+      color: #5f5c90;
+      letter-spacing: 2px;
+
+      .h1 {
+        font-size: 28px;
+      }
+      .pl-30 {
+        padding-left: 50px;
+      }
+      .grey {
+        color: #c2c2c2;
+      }
+
+      .h3 {
+        font-size: 20px;
+      }
+    }
   }
-  .place {
-    padding: 3px;
-    border: 1px solid #f8f8c2;
-    border-radius: 25px;
-    margin-right: 15px;
-  }
-  option {
-    border: none;
-    outline: none;
-    box-shadow: none;
-  }
+
   input {
     padding: 6px 18px;
     min-width: 320px;
@@ -102,126 +92,164 @@ const FilterContainer = styled.div`
     border: 2px solid #f2f2f2;
     color: #f2f2f2;
     letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
-  }
-  input::placeholder {
-    color: #f2f2f2;
-  }
-  button {
-    padding: 4px 18px;
-    outline: none;
-    border: none;
-    border-radius: 25px;
-    margin-right: 15px;
-    background-color: #f2f2f2;
-    color: #fb7d62;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 500;
-  }
-  .clear {
-    background-color: #f09a8f;
-    color: #f2f2f2;
   }
 `;
 
 export default function Filter() {
   const disPatch = useDispatch();
-  let searchValue = "";
-
+  const [selectPlace, setSelectPlace] = useState("熱帶雨林室內館(穿山甲館)");
+  const [Input, setInput] = useState("請輸入關鍵字...");
+  const option = [];
+  let showAnimals = [];
   const set = new Set();
   const place = AnimalsJson.filter((item) =>
     !set.has(item.Location) ? set.add(item.Location) : false
   ).map((item) => item.Location);
 
-  const conservation = AnimalsJson.filter((item) =>
-    !set.has(item.Conservation) ? set.add(item.Conservation) : false
-  ).map((item) => item.Conservation);
+  const handleChange = (value) => {
+    setSelectPlace(value.value);
+    setInput("請輸入關鍵字...");
+    if (value.value !== "動物園裡的") {
+      disPatch(action.addFilterPlace(value.value));
+      disPatch(action.addFilterSearch(""));
+    } else {
+      disPatch(action.addFilterPlace(""));
+      disPatch(action.addFilterSearch(""));
+    }
+  };
 
-  console.log(conservation);
+  const handleInputChange = (value) => {
+    disPatch(action.addFilterSearch(value.value));
+    setInput(value.value);
+  };
 
-  const type = AnimalsJson.filter((item) =>
-    !set.has(item.Class) ? set.add(item.Class) : false
-  ).map((item) => item.Class);
+  const search = () => {
+    return (
+      <>
+        <img className="searchimg" src="/Imgs/loupe.svg" alt="search" />
+      </>
+    );
+  };
+
   useEffect(() => {
     disPatch(action.addFilterPlace("熱帶雨林室內館(穿山甲館)"));
   }, []);
 
+  place.forEach((item) => option.push({ value: item, label: item }));
+  option.push({ value: "動物園裡的", label: "全部動物" });
+
+  if (selectPlace !== "動物園裡的") {
+    let arr = AnimalsJson.filter((item) =>
+      item.Location.includes(selectPlace)
+    ).map((item) => item.Name_Ch);
+    arr.forEach((item) => showAnimals.push({ value: item, label: item }));
+  } else {
+    AnimalsJson.forEach((item) =>
+      showAnimals.push({ value: item.Name_Ch, label: item.Name_Ch })
+    );
+  }
+
   return (
     <FilterContainer>
-      <img className="filterBg" src="/Imgs/filter-bg-07.svg" alt="filterBg" />
       <div className="container">
-        <div className="drawBox">
-          <img className="draw" src="Imgs/hippo-08.svg" alt="draw" />
-        </div>
+        <img className="filterBg" src="/Imgs/select-bg-22.svg" alt="hippo" />
+        <div className="header">動物總覽</div>
+        <div className="header sub-header">你喜歡的動物都在這！</div>
+      </div>
+      <div className="flex">
         <div className="filterBlock">
-          <div className="flex first">
-            <div className="place">
-              <select
-                onChange={(e) => {
-                  if (e.target.value !== "全部動物") {
-                    disPatch(action.addFilterPlace(e.target.value));
-                  } else {
-                    disPatch(action.addFilterPlace(""));
-                  }
-                }}
-              >
-                <option defaultValue="熱帶雨林室內館(穿山甲館)">
-                  熱帶雨林室內館(穿山甲館)
-                </option>
-                {place.map((item) =>
-                  item !== "熱帶雨林室內館(穿山甲館)" ? (
-                    <option key={item} value={item}>
-                      {item}
-                    </option>
-                  ) : null
-                )}
-                <option value="全部動物">全部動物</option>
-              </select>
-            </div>
-            <select
-              onChange={(e) => {
-                if (e.target.value !== "以綱搜尋") {
-                  disPatch(action.addFilterType(e.target.value));
-                } else {
-                  disPatch(action.addFilterType(""));
-                }
+          <Select
+            defaultValue={option[4]}
+            options={option}
+            onChange={handleChange}
+            width="100%"
+            styles={{
+              option: (provided, state) => ({
+                ...provided,
+                borderBottom: "1px solid #ffeae4",
+                color: "#6b6b6b",
+                padding: 20,
+                backgroundColor: state.isSelected ? "#f5c2b4" : "white",
+                "&:hover": {
+                  backgroundColor: "#f7e2dc",
+                },
+              }),
+              indicatorSeparator: (provided, state) => ({
+                ...provided,
+                opacity: 0,
+              }),
+              control: (provided, state) => ({
+                ...provided,
+                padding: "10px 20px 10px 10px",
+                border: state.isFocused
+                  ? "1px solid #dba99e"
+                  : "1px solid #dba99e",
+                boxShadow: "none",
+                borderRadius: "15px",
+
+                "&:hover": {
+                  backgroundColor: "#f7e2dc",
+                },
+              }),
+            }}
+          />
+          <div className="searchBox">
+            <img className="searchimg" src="/Imgs/loupe.svg" alt="search" />
+            <Select
+              id="search"
+              value={Input}
+              placeholder={Input}
+              options={showAnimals}
+              onChange={handleInputChange}
+              components={{ search }}
+              width="80%"
+              styles={{
+                option: (provided, state) => ({
+                  ...provided,
+                  borderBottom: "1px solid #ffeae4",
+                  color: "#6b6b6b",
+                  padding: 20,
+                  backgroundColor: state.isSelected ? "#f5c2b4" : "white",
+                  "&:hover": {
+                    backgroundColor: "#f7e2dc",
+                  },
+                }),
+                control: (provided, state) => ({
+                  ...provided,
+                  position: "relative",
+                  border: "none",
+                  borderBottom: "2px solid #f7e2dc",
+                  boxShadow: "none",
+                  "&:hover": {
+                    backgroundColor: "white",
+                  },
+                  marginTop: "30px",
+                }),
+                dropdownIndicator: (provided, state) => ({
+                  ...provided,
+                  opacity: 0,
+                }),
+                indicatorSeparator: (provided, state) => ({
+                  ...provided,
+                  opacity: 0,
+                }),
+                menu: (provided, state) => ({
+                  ...provided,
+                  marginTop: "5px",
+                }),
               }}
-            >
-              <option defaultValue="">以綱搜尋</option>
-              {type.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
+            />
           </div>
-          <div className="flex">
-            <input
-              type="text"
-              placeholder="輸入關鍵字：ex.熊"
-              onChange={(e) => {
-                searchValue = e.target.value;
-              }}
-            ></input>
-            <button
-              onClick={() => {
-                disPatch(action.addFilterSearch(searchValue));
-              }}
-            >
-              送出
-            </button>
-            <button
-              className="clear"
-              onClick={() => {
-                disPatch(action.removeFilter());
-                window.location.reload();
-              }}
-            >
-              清除條件
-            </button>
-          </div>
+          <div />
+        </div>
+        <div className="textBlock">
+          <span className="h3">我想探索 —</span>
+          <span className="h1 ">{selectPlace}</span>
+          {Input !== "請輸入關鍵字..." ? (
+            <span className="h3 grey">的 {Input}</span>
+          ) : null}
         </div>
       </div>
     </FilterContainer>

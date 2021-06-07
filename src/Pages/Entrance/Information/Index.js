@@ -37,7 +37,7 @@ const Container = styled.div`
   }
   .header {
     font-size: 28px;
-    color: #5f73bd;
+    color: #5f5c90;
     font-weight: 500;
   }
   .header-bg-orange {
