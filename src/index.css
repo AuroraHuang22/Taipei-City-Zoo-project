@@ -42,6 +42,11 @@ body {
   font-weight: 500;
   z-index: 1200;
 }
+.toast > a {
+  font-weight: 600;
+  color: #4f6e59;
+  margin: 0 5px;
+}
 
 @media print {
   @page {

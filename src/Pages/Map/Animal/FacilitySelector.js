@@ -5,6 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
 import * as toast from "../../../Utils/toast";
 import "react-toastify/dist/ReactToastify.css";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
 
 const Container = styled.div`
   .header {
@@ -131,7 +137,12 @@ const Selector = (props) => {
       numarray.push(element);
     });
     firestore.firebaseAddSaved(uid, geoarray, numarray);
-    toast.success("已將行程儲存至探索護照");
+    toast.success(({ closeToast }) => (
+      <div className="toast">
+        已將行程儲存至
+        <Link to="/member/saved">我的行程</Link>
+      </div>
+    ));
   };
 
   useEffect(() => {

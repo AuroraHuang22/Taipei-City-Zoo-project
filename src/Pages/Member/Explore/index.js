@@ -183,7 +183,7 @@ export default function Explore(props) {
                     top: `${getRandomNumber(0, 700)}px`,
                     left: `${getRandomNumber(0, 700)}px`,
                   }}
-                  src={`/Imgs/${stamp}.png`}
+                  src={`/Imgs/stamp/${stamp}.png`}
                   alt={stamp}
                 />
               ) : null

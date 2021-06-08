@@ -1,11 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
   BrowserRouter as Switch,
   Route,
   Link,
   useRouteMatch,
 } from "react-router-dom";
+
+const float = keyframes`
+  0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+`;
 
 const Container = styled.div`
   display: flex;
@@ -47,6 +59,7 @@ const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    animation: ${float} 4s ease-in-out infinite;
   }
   .text {
     align-self: flex-start;
@@ -66,9 +79,9 @@ const Container = styled.div`
   }
   .btn {
     position: relative;
-    font-size: 26px;
-    color: #62628b;
-    margin-top: 8px;
+    font-size: 24px;
+    color: #ea7a60;
+    margin-top: 10px;
     font-weight: 400;
     letter-spacing: 7px;
     transition: all 0.3s;

@@ -6,6 +6,13 @@ import * as firestore from "../../../Utils/firebase";
 import React, { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import * as Toast from "../../../Utils/toast";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
 import CarouselDiv from "./Carousel";
 import { Container } from "./Popup-style";
 
@@ -98,7 +105,12 @@ export default function DetailsPopup(props) {
                           favoritiesMember.push(item.Name_Ch);
                           firestore.firebaseAddFavoriate(uid, favoritiesMember);
                           setAddfavorite(`加${item.Name_Ch}`);
-                          Toast.success(`收藏成功！可至路線規劃頁面查看`);
+                          Toast.success(({ closeToast }) => (
+                            <div className="toast">
+                              收藏成功！可至
+                              <Link to="/map">路線規劃頁面</Link>查看
+                            </div>
+                          ));
                         } else {
                           Toast.alertMes("請先登入會員呦");
                         }
@@ -145,7 +157,12 @@ export default function DetailsPopup(props) {
                           visitedMember.push(item.Name_Ch);
                           firestore.firebaseAddVisited(uid, visitedMember);
                           setAddvisited(`add-${item.Name_Latin}`);
-                          Toast.success(`加入成功！可至探索護照查看`);
+                          Toast.success(({ closeToast }) => (
+                            <div className="toast">
+                              加入成功！可至
+                              <Link to="/member/visited">我的足跡</Link>查看
+                            </div>
+                          ));
                         } else {
                           Toast.alertMes("請先登入會員呦");
                         }

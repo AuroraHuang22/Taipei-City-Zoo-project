@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const alertMes = (message) =>
   toast(message, {
-    autoClose: 3000,
+    autoClose: 1500,
     position: toast.POSITION.TOP_CENTER,
     hideProgressBar: true,
     style: {
@@ -17,7 +17,7 @@ const alertMes = (message) =>
 
 const success = (message) =>
   toast.success(message, {
-    autoClose: 3000,
+    autoClose: 2000,
     position: toast.POSITION.TOP_CENTER,
     hideProgressBar: true,
     style: {
