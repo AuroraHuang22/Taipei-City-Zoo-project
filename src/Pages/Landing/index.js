@@ -1,5 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
+const float = keyframes`
+  0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+`;
 
 const Container = styled.div`
   display: flex;
@@ -8,42 +26,92 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
   max-width: 1480px;
-  padding: 160px 0px 300px;
+  height: 100vh;
   justify-content: center;
-
+  margin: 0 auto;
+  .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+  }
+  .bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
   .hero {
+    margin-top: 80px;
     box-sizing: border-box;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     height: 200px;
+    margin-left: 180px;
+    align-self: flex-start;
     background-image: url(/Imgs/hero-02.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    animation: ${float} 4s ease-in-out infinite;
   }
-  .getStart {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin-top: 50px;
-    input {
-      padding: 3px 5px;
-      width: 100%;
-      max-width: 250px;
-      color: #fbba8f;
-      outline: none;
-      border: 2px solid #fb7d62;
+  .text {
+    align-self: flex-start;
+    margin-left: 330px;
+    font-size: 26px;
+    color: #8f8fb6;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-top: 20px;
+  }
+  .bold {
+    font-weight: 600;
+    color: #62628b;
+  }
+  a {
+    text-decoration: none;
+  }
+  .btn {
+    position: relative;
+    font-size: 24px;
+    color: #ea7a60;
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 7px;
+    transition: all 0.3s;
+    cursor: pointer;
+    ::after {
+      content: "⇢";
+      margin-left: 3px;
+      margin-right: 10px;
+      transition: all 0.3s;
     }
-    button {
-      white-space: nowrap;
-      background-color: #fb7d62;
-      outline: none;
-      border: none;
-      color: white;
-      font-weight: 600;
-      padding: 12px 20px;
-      border-radius: 0;
+    ::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1%;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s;
+    }
+    :hover {
+      font-weight: 500;
+      ::after {
+        margin-left: 13px;
+        margin-right: 0px;
+      }
+      ::before {
+        width: 100%;
+        background-color: #62628b;
+      }
     }
   }
 `;
@@ -51,11 +119,16 @@ const Container = styled.div`
 export default function Landing() {
   return (
     <Container>
+      <img className="head" src="/Imgs/land-38.svg" alt="head" />
       <div className="hero" />
-      <div className="getStart">
-        <input placeholder="" />
-        <button>get started</button>
+      <div className="text">
+        去<span className="bold">動物園</span>...你準備好了嗎？
       </div>
+      <Link to="/all">
+        <div className="btn">開始探索</div>
+      </Link>
+      <img className="bottom-left" src="/Imgs/land-35.svg" alt="img" />
+      <img className="bottom-right" src="/Imgs/land-01-34.svg" alt="img" />
     </Container>
   );
 }

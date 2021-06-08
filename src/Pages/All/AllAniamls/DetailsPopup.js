@@ -3,11 +3,18 @@ import { useSelector, useDispatch } from "react-redux";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import * as firestore from "../../../Utils/firebase";
-import { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import * as Toast from "../../../Utils/toast";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
 
-const Start = styled.div``;
-const Visited = styled.div``;
+import CarouselDiv from "./Carousel";
+import { Container } from "./Popup-style";
 
 export default function DetailsPopup(props) {
   const [addfavorite, setAddfavorite] = useState("");
@@ -19,187 +26,182 @@ export default function DetailsPopup(props) {
   let uid = props.uid;
   let favoritiesMember = props.favoritiesMember;
   let visitedMember = props.visitedMember;
+  let popupAnimal = props.popupAnimal;
 
   return (
     <Popup
       open={open}
       closeOnDocumentClick
       onClose={closeModal}
-      overlayStyle={{ background: "rgba(0, 0, 0, 0.7)" }}
+      overlayStyle={{ background: "rgba(0, 0, 0, 0.8)", zIndex: 1200 }}
       contentStyle={{
+        position: "relative",
         margin: "auto",
         boxSizing: "border-box",
         background: "#fff",
-        width: "50%",
-        padding: "60px 20px",
-        borderRadius: "25px",
+        width: "680px",
+        maxWidth: "95vw",
+        padding: 0,
+        borderRadius: "10px",
+        border: "none",
       }}
     >
-      <div className="modal">
-        <span
-          className="close"
-          onClick={closeModal}
-          style={{
-            display: "block",
-            position: "absolute",
-            top: "-30px",
-            right: "-30px",
-            fontSize: "40px",
-            color: "white",
-            cursor: "pointer",
-          }}
-        >
-          &times;
-        </span>
+      <Container>
         {props.showAnimals.map((item) =>
-          item.Name_Ch === props.popupAnimal ? (
-            <div key={item.Name_En} className="content">
-              {item.Name_Ch}
-              <br />
-              <br />
-              英文學名：{item.Name_Latin}
-              <br />
-              園區位置：{item.Location}
-              <br />
-              分類：{item.Phylum} -&gt; {item.Class} -&gt; {item.Order}
-              -&gt; {item.Family}
-              <br />
-              保育等級：{item.Conservation}
-              <br />
-              主要分佈：{item.Distribution}
-              <br />
-              生活習性：{item.Habitat}
-              <br />
-              外部特徵：{item.Feature}
-              <br />
-              行為：{item.Behavior}
-              <br />
-              飲食：{item.Diet}
-              <br />
-              <Start>
-                <div
-                  key={item.Name_Latin}
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    color: "grey",
-                    fontSize: "40px",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
-                  }}
-                  onClick={(e) => {
-                    if (uid) {
-                      if (e.target.style.color !== "orange") {
-                        favoritiesMember.push(item.Name_Ch);
-                        firestore.firebaseAddFavoriate(uid, favoritiesMember);
-                        setAddfavorite(`加${item.Name_Ch}`);
-                      }
-                    } else {
-                      alert("欲使用加入收藏功能,請先登入會員呦");
-                    }
-                  }}
-                >
-                  ★
+          item.Name_Ch === popupAnimal ? (
+            <>
+              <section className="main" key={item.Name_Latin}>
+                <div className="imgBox">
+                  <img className="img" src={item.Pic01_URL} alt="img" />
                 </div>
-                {favoritiesMember.length
-                  ? favoritiesMember.map((name) =>
-                      name === props.popupAnimal ? (
-                        <div
-                          key={`ya-${item.Name_Latin}`}
-                          style={{
-                            position: "absolute",
-                            bottom: 0,
-                            left: 0,
-                            color: "orange",
-                            fontSize: "40px",
-                            cursor: "pointer",
-                            transition: "all 0.2s",
-                          }}
-                          onClick={(e) => {
-                            if (e.target.style.color === "orange") {
-                              e.target.style.color = "grey";
-                              let index = favoritiesMember.indexOf(
-                                item.Name_Ch
-                              );
-                              favoritiesMember.splice(index, 1);
-                              firestore.firebaseAddFavoriate(
-                                uid,
-                                favoritiesMember
-                              );
-                              setAddfavorite(`${item.Name_Latin}`);
-                            }
-                          }}
-                        >
-                          ★
-                        </div>
-                      ) : null
-                    )
-                  : null}
-              </Start>
-              <Visited>
-                <div
-                  key={item.Name_Latin}
-                  style={{
-                    marginTop: "60px",
-                    position: "absolute",
-                    bottom: 0,
-                    right: 0,
+                <img className="bg-svg-01" src="/Icons/popup.svg" alt="img" />
+                <img
+                  className="bg-svg-03"
+                  src="/Icons/popup-03.svg"
+                  alt="img"
+                />
+                <img
+                  className="bg-svg-02"
+                  src="/Icons/popup-02.svg"
+                  alt="img"
+                />
 
-                    color: "grey",
-                    fontSize: "40px",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
-                  }}
-                  onClick={(e) => {
-                    if (uid) {
-                      if (e.target.style.color !== "orange") {
-                        visitedMember.push(item.Name_Ch);
-                        firestore.firebaseAddVisited(uid, visitedMember);
-                        setAddvisited(`add-${item.Name_Latin}`);
-                      }
-                    } else {
-                      alert("欲使用加入收藏功能,請先登入會員呦");
-                    }
-                  }}
-                >
-                  ✓
+                <div className="title">
+                  <span className="title-ch">{item.Name_Ch}</span>
+                  <span className="title-en">{item.Name_En}</span>
                 </div>
-                {visitedMember.length
-                  ? visitedMember.map((name) =>
-                      name === props.popupAnimal ? (
-                        <div
-                          key={`ya-${item.Name_Latin}`}
-                          style={{
-                            marginTop: "60px",
-                            position: "absolute",
-                            bottom: 0,
-                            right: 0,
-                            color: "orange",
-                            fontSize: "40px",
-                            cursor: "pointer",
-                            transition: "all 0.2s",
-                          }}
-                          onClick={(e) => {
-                            if (e.target.style.color === "orange") {
-                              e.target.style.color = "grey";
-                              let index = visitedMember.indexOf(item.Name_Ch);
-                              visitedMember.splice(index, 1);
-                              firestore.firebaseAddVisited(uid, visitedMember);
-                              setAddvisited(`remo-${item.Name_Latin}`);
-                            }
-                          }}
-                        >
-                          ✓
-                        </div>
-                      ) : null
-                    )
-                  : null}
-              </Visited>
-            </div>
+                <span className="location">{item.Location}</span>
+                <section className="info">
+                  <div className="info-class">
+                    <span>{item.Class}</span>
+                    <span>{item.Order}</span>
+                    <span>{item.Family}</span>
+                  </div>
+                  <div className="info-redlist">
+                    <span>保育分級：{item.Conservation}</span>
+                    {item.Taiwan ? (
+                      <span className="taiwan">{`(${item.Taiwan})`}</span>
+                    ) : null}
+                    <img
+                      className="redlist"
+                      src={`/Imgs/${item.Conservation}.png`}
+                      alt={item.Name_Ch}
+                    />
+                  </div>
+                </section>
+                <CarouselDiv item={item} />
+              </section>
+              <section className="clickBar">
+                <div className="visitedBox">
+                  <section className="farvrite">
+                    <div
+                      className="defaultFavorite"
+                      style={{
+                        backgroundImage: "url(/Icons/buyton-05.svg)",
+                      }}
+                      key={item.Name_Latin}
+                      onClick={(e) => {
+                        if (uid) {
+                          favoritiesMember.push(item.Name_Ch);
+                          firestore.firebaseAddFavoriate(uid, favoritiesMember);
+                          setAddfavorite(`加${item.Name_Ch}`);
+                          Toast.success(({ closeToast }) => (
+                            <div className="toast">
+                              收藏成功！可至
+                              <Link to="/map">路線規劃頁面</Link>查看
+                            </div>
+                          ));
+                        } else {
+                          Toast.alertMes("請先登入會員呦");
+                        }
+                      }}
+                    />
+                    {favoritiesMember.length
+                      ? favoritiesMember.map((name) =>
+                          name === popupAnimal ? (
+                            <div
+                              className="defaultFavorite"
+                              key={`ya-${item.Name_Latin}`}
+                              style={{
+                                backgroundImage: "url(/Icons/buyton-04.svg)",
+                              }}
+                              onClick={(e) => {
+                                e.target.style.backgroundImage =
+                                  "url(/Icons/like-02.svg)";
+                                let index = favoritiesMember.indexOf(
+                                  item.Name_Ch
+                                );
+                                favoritiesMember.splice(index, 1);
+                                firestore.firebaseAddFavoriate(
+                                  uid,
+                                  favoritiesMember
+                                );
+                                setAddfavorite(`${item.Name_Latin}`);
+                                Toast.remove("已移除造訪點");
+                              }}
+                            />
+                          ) : null
+                        )
+                      : null}
+                    <div className="text-sm">造訪點</div>
+                  </section>
+                  <section className="visited">
+                    <div
+                      className="defaultFavorite"
+                      style={{
+                        backgroundImage: "url(/Icons/buyton-06.svg)",
+                      }}
+                      key={item.Name_Latin}
+                      onClick={(e) => {
+                        if (uid) {
+                          visitedMember.push(item.Name_Ch);
+                          firestore.firebaseAddVisited(uid, visitedMember);
+                          setAddvisited(`add-${item.Name_Latin}`);
+                          Toast.success(({ closeToast }) => (
+                            <div className="toast">
+                              加入成功！可至
+                              <Link to="/member/visited">我的足跡</Link>查看
+                            </div>
+                          ));
+                        } else {
+                          Toast.alertMes("請先登入會員呦");
+                        }
+                      }}
+                    />
+                    {visitedMember.length
+                      ? visitedMember.map((name) =>
+                          name === popupAnimal ? (
+                            <div
+                              className="defaultFavorite"
+                              key={`ya-${item.Name_Latin}`}
+                              style={{
+                                backgroundImage: "url(/Icons/buyton-07.svg)",
+                              }}
+                              onClick={(e) => {
+                                e.target.style.backgroundImage =
+                                  "url(/Icons/like-02.svg)";
+                                let index = visitedMember.indexOf(item.Name_Ch);
+                                visitedMember.splice(index, 1);
+                                firestore.firebaseAddVisited(
+                                  uid,
+                                  visitedMember
+                                );
+                                setAddvisited(`remo-${item.Name_Latin}`);
+                                Toast.remove("已抹除足跡");
+                              }}
+                            />
+                          ) : null
+                        )
+                      : null}
+                    <div className="text-sm">探索足跡</div>
+                  </section>
+                </div>
+              </section>
+            </>
           ) : null
         )}
-      </div>
+        <ToastContainer />
+      </Container>
     </Popup>
   );
 }

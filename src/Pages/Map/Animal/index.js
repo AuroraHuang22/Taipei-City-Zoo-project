@@ -14,7 +14,7 @@ const AnimalsDiv = styled.div`
     background-size: 95%;
 
     width: 100%;
-    height: 80%;
+    height: 700px;
   }
 `;
 
@@ -23,7 +23,11 @@ const Animals = (prop) => {
     <AnimalsDiv id="animalDiv">
       {/* <div className="imgdiv"></div> */}
       <AnimalsData animal={prop.animal} route={prop.route} uid={prop.uid} />
-      <FacilitySelector facilities={prop.facilities} />
+      <FacilitySelector
+        facilities={prop.facilities}
+        uid={prop.uid}
+        animal={prop.animal}
+      />
     </AnimalsDiv>
   );
 };

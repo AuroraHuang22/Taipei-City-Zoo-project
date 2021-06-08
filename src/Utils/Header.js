@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import * as action from "../Redux/Action";
 import * as firestore from "../Utils/firebase";
 import LoginPopup from "../Utils/LoginPopup";
+import * as toast from "../Utils/toast";
+import { ToastContainer } from "react-toastify";
+
 import {
   BrowserRouter as Switch,
   Route,
@@ -12,14 +15,14 @@ import {
 } from "react-router-dom";
 
 const HeaderDiv = styled.div`
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
-  z-index: 220;
+  z-index: 800;
   background-color: rgba(255, 255, 255, 0.8);
 `;
 
@@ -33,6 +36,7 @@ const main = styled.div`
     display: inline-block;
     color: #f09a8f;
     text-decoration: none;
+    transition: all 0.3s;
   }
 `;
 const Container = styled(main)`
@@ -46,7 +50,7 @@ const Container = styled(main)`
   .logo {
     width: 35px;
     height: 35px;
-    background-image: url(/Imgs/logo-09.svg);
+    background-image: url(/logo.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -61,6 +65,10 @@ const Container = styled(main)`
     cursor: pointer;
     padding: 10px;
     margin-right: 20px;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
   .signBox {
     display: flex;
@@ -75,11 +83,22 @@ const Container = styled(main)`
     border: 1px solid #a7a6d1;
     border-radius: 20px;
     margin-right: 8px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+      border: 1px solid #5f5c90;
+    }
   }
   .signin {
     cursor: pointer;
     color: #a7a6d1;
     border-radius: 20px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
   .signout {
     cursor: pointer;
@@ -87,6 +106,11 @@ const Container = styled(main)`
     right: 20px;
     color: #a7a6d1;
     border-radius: 20px;
+    transition: all 0.3s;
+
+    :hover {
+      color: #5f5c90;
+    }
   }
 `;
 
@@ -106,7 +130,7 @@ export default function Header() {
     <HeaderDiv id="header">
       <Container>
         <div className="nav-bar">
-          <Link to="/" className="select">
+          <Link to="/all" className="select">
             動物總覽
           </Link>
           <a href="/map" className="select">
@@ -125,9 +149,12 @@ export default function Header() {
           <div
             className="signout"
             onClick={() => {
-              firestore.signOut();
+              toast.remove("你已成功登出");
               disPatch(action.setLogout());
-              disPatch(action.setLoginOpen());
+              firestore.signOut();
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
             }}
           >
             登出
@@ -154,6 +181,7 @@ export default function Header() {
             </div>
           </div>
         )}
+        <ToastContainer />
       </Container>
     </HeaderDiv>
   );

@@ -27,8 +27,8 @@ function PavilionsMarkers() {
         icon={
           new L.Icon({
             iconUrl: require(`../../../../Icons/${item.Name}.svg`).default,
-            iconSize: [150, 90],
-            iconAnchor: [75, 45],
+            iconSize: [167, 100],
+            iconAnchor: [83.5, 60],
           })
         }
       ></Marker>

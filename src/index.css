@@ -10,9 +10,18 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.react-multi-carousel-dot button:hover:active {
+  background: lightgray !important;
+}
+.react-multi-carousel-dot--active button {
+  background: grey !important;
+}
+.react-multi-carousel-dot button {
+  width: 10px !important;
+  height: 10px !important;
+  border: none !important;
+  opacity: 1 !important;
+  margin-right: 10px !important;
 }
 
 .leaflet-routing-container {
@@ -22,21 +31,33 @@ code {
 .leaflet-container {
   border-radius: 40px;
 }
-
+.leaflet-top {
+  z-index: 850;
+}
 .leaflet-marker-icon.my-div-icon {
-  color: rgb(211, 100, 27);
+  color: #ea7a60;
+  font-size: 14px;
+  text-align: center;
   white-space: nowrap;
+  font-weight: 500;
+  z-index: 1200;
+}
+.toast > a {
+  font-weight: 600;
+  color: #4f6e59;
+  margin: 0 5px;
 }
 
 @media print {
   @page {
-    size: 1200px 1200px;
+    size: 1200px 1000px;
     margin: 10px;
   }
   .leaflet-control-zoom {
     display: none;
   }
   #mapDD {
-    height: 1100px;
+    width: 1200px;
+    height: 1000px;
   }
 }

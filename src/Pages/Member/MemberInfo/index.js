@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
 import * as firestore from "../../../Utils/firebase";
+import {
+  BrowserRouter as Route,
+  Switch,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -13,22 +19,56 @@ const Container = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+  .bar-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 12px;
+    .bar-bottom {
+      width: 100%;
+      background-color: lightgrey;
+      height: 12px;
+      border-radius: 10px;
+    }
+    .bar-top {
+      background-color: grey;
+      height: 12px;
+      border-radius: 10px;
+    }
+    .text {
+      font-size: 16px;
+      margin-left: 8px;
+      color: grey;
+    }
+  }
+  .level {
+    margin-left: 20px;
+    width: 30vw;
+    font-size: 18px;
+    .level-text {
+      font-weight: 600;
+      margin-left: 5px;
+    }
+    .desc {
+      color: grey;
+      font-size: 16px;
+      letter-spacing: 1.8px;
+    }
+  }
 `;
 const Photo = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 2px solid lightpink;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/88ab56107374179.5fa563267cac4.gif");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-`;
-const Level = styled.div`
-  width: 30vw;
-`;
-const LevelText = styled.div`
-  padding: 10px 10px 10px 0px;
+  background-size: cover;
 `;
 
 const animalsJson = AnimalsJson;
@@ -41,36 +81,20 @@ function MemberInfo(props) {
   const [getVisited, setGetVisited] = useState("none");
   let uid = props.uid;
   let bar = 0;
+  let match = useRouteMatch();
 
   const LevelBar = () => {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            backgroundColor: "lightgrey",
-            height: "8px",
-            borderRadius: "10px",
-          }}
-        >
+      <div className="bar-block">
+        <div className="bar-bottom">
           <div
+            className="bar-top"
             style={{
               width: `${bar}%`,
-              backgroundColor: "grey",
-              height: "8px",
-              borderRadius: "10px",
             }}
           ></div>
         </div>
-        <span style={{ fontSize: "8px", marginLeft: "8px", color: "grey" }}>
-          {bar}%
-        </span>
+        <span className="text">{bar}%</span>
       </div>
     );
   };
@@ -147,60 +171,61 @@ function MemberInfo(props) {
   return (
     <Container>
       <Photo />
-      <Level
-        style={{
-          marginLeft: "20px",
-          width: "30vw",
-        }}
-      >
-        <LevelText>
+      <div className="level">
+        <div>
           等級：
-          <span
-            style={{
-              fontWeight: "bold",
-              marginRight: "15px",
-              marginLeft: "5px",
-            }}
-          >
-            {bar <= 20 ? (
-              <>探索菜鳥</>
-            ) : bar > 20 && bar < 40 ? (
-              <>探索里民</>
-            ) : bar > 41 && bar < 60 ? (
-              <>探索里長</>
-            ) : bar > 61 && bar < 80 ? (
-              <>探索村長</>
-            ) : bar > 81 && bar < 90 ? (
-              <>探索嚮導</>
-            ) : bar === 100 ? (
-              <>動物園達人</>
-            ) : null}
-          </span>
-          <br />
-          <span
-            style={{
-              color: "grey",
-              fontSize: "12px",
-              letterSpacing: "1.8px",
-            }}
-          >
-            {bar <= 20 ? (
-              <>哪尼？快起身規劃探索旅程吧！</>
-            ) : bar > 20 && bar < 40 ? (
-              <>還不太知道,非洲象在哪裡</>
-            ) : bar > 41 && bar < 60 ? (
-              <>去過幾次動物園,身邊朋友偶爾會相信你的方向感</>
-            ) : bar > 61 && bar < 80 ? (
-              <>有一定的地理知識,專門解救在動物園找不到長頸鹿的民眾</>
-            ) : bar > 81 && bar < 90 ? (
-              <>已經將動物園地圖熟背在腦海,可以幫著急的家長找到走丟的小孩</>
-            ) : bar === 100 ? (
-              <>傳說中的動物園達人,只有你可以召喚雲豹的出現</>
-            ) : null}
-          </span>
-        </LevelText>
+          {uid ? (
+            <>
+              <span className="level-text">
+                {bar <= 20 ? (
+                  <>探索菜鳥</>
+                ) : bar > 20 && bar < 40 ? (
+                  <>探索里民</>
+                ) : bar > 41 && bar < 60 ? (
+                  <>探索里長</>
+                ) : bar > 61 && bar < 80 ? (
+                  <>探索村長</>
+                ) : bar > 81 && bar < 90 ? (
+                  <>探索嚮導</>
+                ) : bar === 100 ? (
+                  <>動物園達人</>
+                ) : null}
+              </span>
+              <br />
+              <span className="desc">
+                {bar <= 20 ? (
+                  <>甘願只當菜鳥？快起身規劃探索旅程吧！</>
+                ) : bar > 20 && bar < 40 ? (
+                  <>還不太知道,非洲象在哪裡</>
+                ) : bar > 41 && bar < 60 ? (
+                  <>去過幾次動物園,身邊朋友偶爾會相信你的方向感</>
+                ) : bar > 61 && bar < 80 ? (
+                  <>有一定的地理知識,專門解救在動物園找不到長頸鹿的民眾</>
+                ) : bar > 81 && bar < 90 ? (
+                  <>已經將動物園地圖熟背在腦海,偶爾會去動物園兼差當領隊</>
+                ) : bar === 100 ? (
+                  <>傳說中的動物園達人,只有你可以召喚雲豹的出現</>
+                ) : null}
+              </span>
+            </>
+          ) : (
+            <>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  marginRight: "15px",
+                  marginLeft: "5px",
+                }}
+              >
+                請問你是?
+              </span>
+              <br />
+              <span className="desc">不登入，怎麼知道你的實力啦～</span>
+            </>
+          )}
+        </div>
         <LevelBar />
-      </Level>
+      </div>
     </Container>
   );
 }

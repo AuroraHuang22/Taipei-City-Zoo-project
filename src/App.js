@@ -6,9 +6,9 @@ import store from "./Redux/Store";
 import Header from "./Utils/Header";
 import Footer from "./Utils/Footer";
 import Member from "./Pages/Member";
-import Register from "./Pages/Member/Register";
 import All from "./Pages/All";
 import Entrance from "./Pages/Entrance";
+import Landing from "./Pages/Landing";
 
 function App() {
   return (
@@ -16,13 +16,13 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={All} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/all" component={All} />
           <Route exact path="/map" component={Map} />
-          <Route exact path="/member" component={Member} />
-          <Route path="/register" component={Register} />
+          <Route path="/member" component={Member} />
           <Route path="/entrance" component={Entrance} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </Provider>
   );

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MemberInfo from "./MemberInfo";
 import Explore from "./Explore";
 import Saved from "./Saved";
+import Visited from "./Explore/Visited";
 import * as firestore from "../../Utils/firebase";
 
 import {
@@ -15,39 +16,37 @@ import {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 80px 10px 0px;
+  padding: 150px 10px 30px;
   justify-content: center;
 `;
 const Main = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   height: 100%;
-  max-height: 70vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   margin: 0 auto;
+  margin-top: 24px;
   width: 100%;
-  max-width: 1480px;
+  max-width: 1280px;
   padding: 30px;
   justify-content: center;
-  border-radius: 25px;
-  border: 1px solid lightgrey;
-`;
-const Selector = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  padding: 160px 120px;
-  border-radius: 25px;
   align-items: center;
-  border: 1px solid lightgrey;
-  margin: 10px;
+  border-radius: 25px;
+  a {
+    text-decoration: none;
+    color: #3a4d48;
+  }
+  .button-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 export default function MapIndex() {
   const [getUid, setGetUid] = useState("none");
-
-  let match = useRouteMatch();
 
   useEffect(() => {
     const unsubscribe = firestore.getUserId((uid) => {
@@ -63,28 +62,7 @@ export default function MapIndex() {
   return (
     <Container>
       <MemberInfo uid={getUid} />
-      <Main>
-        {getUid ? (
-          <Switch>
-            <Route exact path={`${match.path}`}>
-              <Link to={`${match.url}/saved`}>
-                <Selector>儲存行程</Selector>
-              </Link>
-              <Link to={`${match.url}/explore`}>
-                <Selector>探險護照</Selector>
-              </Link>
-            </Route>
-            <Route path={`${match.path}/explore`}>
-              <Explore uid={getUid} />
-            </Route>
-            <Route path={`${match.path}/saved`}>
-              <Saved uid={getUid} />
-            </Route>
-          </Switch>
-        ) : (
-          <div>請登入會員</div>
-        )}
-      </Main>
+      <Main>{getUid ? <Explore uid={getUid} /> : <div>請登入會員</div>}</Main>
     </Container>
   );
 }

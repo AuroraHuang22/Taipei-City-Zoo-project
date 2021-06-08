@@ -6,13 +6,55 @@ import L from "leaflet";
 import { MapContainer, TileLayer, useMapEvents, Marker } from "react-leaflet";
 
 const Container = styled.div`
+  box-sizing: border-box;
   display: flex;
   position: relative;
-  flex-direction: column;
-  margin-top: 80px;
+  flex-direction: row;
   width: 100%;
+  padding: 0px 30px 0 0;
+  margin: 20px auto;
+  max-width: 1280px;
   justify-content: center;
-  border-radius: 40px;
+
+  .map-container {
+    box-sizing: border-box;
+    width: 70%;
+  }
+  .traffic-block {
+    padding-top: 50px;
+    box-sizing: border-box;
+    width: 30%;
+
+    .header {
+      font-size: 28px;
+      color: #5f73bd;
+      font-weight: 500;
+    }
+    .header-md-orange {
+      padding-left: 30px;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #ea7a60;
+      font-weight: 500;
+    }
+    span {
+      position: relative;
+      padding-left: 30px;
+      display: block;
+      font-size: 20px;
+      color: #6b6b6b;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    .text {
+      padding: 30px 20px;
+      font-size: 16px;
+    }
+  }
+  .pd-30 {
+    padding-left: 30px;
+  }
 `;
 
 const InfoDiv = styled.div`
@@ -20,7 +62,7 @@ const InfoDiv = styled.div`
   padding: 50px 20px;
   max-width: 300px;
   background-color: #fff;
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 25px;
   position: absolute;
   top: 20px;
@@ -37,7 +79,7 @@ export default function Traffic() {
     [25.003615970747212, 121.5642151547959],
     [24.991279127890376, 121.5948277740565],
   ];
-  const position = [24.998319465978327, 121.57944917678834];
+  const position = [24.99773326108165, 121.5834263898432];
   const parksId = ["115", "046", "101", "202"];
   const parks = Parks.data.park;
   let status = [];
@@ -126,58 +168,68 @@ export default function Traffic() {
 
   return (
     <Container>
-      <MapContainer
-        center={position}
-        zoom={17.2}
-        setBounds={
-          ([25.003615970747212, 121.5642151547959],
-          [24.991279127890376, 121.5948277740565])
-        }
-        // minZoom={15.13}
-        scrollWheelZoom={true}
-        style={{
-          height: "80vh",
-          width: "100%",
-          position: "absolute",
-          top: "0",
-          left: 0,
-        }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> , Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-          url="https://api.mapbox.com/styles/v1/aurorahuang/ckp5a6mec228j17nxebx0kcgc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
-        />
+      <div className="traffic-block">
+        <div className="header pd-30">停車資訊</div>
+        <div className="header-md-orange">周邊停車資訊</div>
+        <span>河川地停車場</span>
+        <span>動物園站地下停車場</span>
+        <span>捷運木柵機廠停車場</span>
+        <span>木柵站轉乘停車場</span>
+        <span className="text">
+          以上停車場的即時資訊顯示於右側地圖，
+          將滑鼠移向該停車場，查看停車位資訊。
+        </span>
+      </div>
+      <div className="map-container">
+        <MapContainer
+          center={position}
+          zoom={15.2}
+          setBounds={
+            ([25.003615970747212, 121.5642151547959],
+            [24.991279127890376, 121.5948277740565])
+          }
+          scrollWheelZoom={true}
+          style={{
+            height: "60vh",
+            width: "100%",
+          }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> , Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+            url="https://api.mapbox.com/styles/v1/aurorahuang/ckp54g8f60ll018n0vc38mv2p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
+          />
 
-        {parks.map((item) => (
-          <Marker
-            eventHandlers={{
-              click: (e) => {
-                setParkId(item.id);
-                setParkName(item.name);
-              },
-              mouseover: (e) => {
-                setParkId(item.id);
-                setParkName(item.name);
-              },
-              mouseout: (e) => {
-                setParkId(null);
-                setParkName(null);
-              },
-            }}
-            key={item.id}
-            position={item.EntrancecoordInfo}
-            icon={
-              new L.Icon({
-                iconUrl: require(`../../Icons/like-02.svg`).default,
-                iconSize: [10, 10],
-                iconAnchor: [5, 5],
-              })
-            }
-          ></Marker>
-        ))}
-        <ClickEvent />
-        <Infomation />
-      </MapContainer>
+          {parks.map((item) => (
+            <Marker
+              eventHandlers={{
+                click: (e) => {
+                  setParkId(item.id);
+                  setParkName(item.name);
+                },
+                mouseover: (e) => {
+                  setParkId(item.id);
+                  setParkName(item.name);
+                },
+                mouseout: (e) => {
+                  setParkId(null);
+                  setParkName(null);
+                },
+              }}
+              key={item.id}
+              position={item.EntrancecoordInfo}
+              icon={
+                new L.Icon({
+                  iconUrl: require(`../../Icons/park.svg`).default,
+                  iconSize: [40, 40],
+                  iconAnchor: [20, 20],
+                })
+              }
+            ></Marker>
+          ))}
+          <ClickEvent />
+          <Infomation />
+        </MapContainer>
+      </div>
     </Container>
   );
 }

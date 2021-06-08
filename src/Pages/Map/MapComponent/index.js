@@ -10,16 +10,18 @@ const setBounds = [
   [25.000263, 121.57700905],
   [24.99028, 121.5936458],
 ];
-const position = [24.995737380116395, 121.58388671931453];
+const position = [24.995737380116395, 121.58511339231346];
 
 const Container = styled.div`
   display: flex;
   overflow: "hidden";
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 
-  width: 1260px;
-  height: 900px;
+  width: 65%;
+  max-width: 1260px;
+  height: calc(100vh - 80px);
   position: relative;
 `;
 
@@ -48,7 +50,7 @@ const Map = React.forwardRef((props, ref) => {
         16.8
       );
     } else if (route.length && center.geo.length) {
-      map.setView([24.995457487742257, 121.58546700607988], 16.5);
+      map.setView([24.99618104901287, 121.58475738017984], 16.5);
     }
 
     return null;
@@ -64,7 +66,7 @@ const Map = React.forwardRef((props, ref) => {
         scrollWheelZoom={true}
         style={{
           fontSize: "5px",
-          height: "90%",
+          height: "100%",
           width: "100%",
         }}
       >

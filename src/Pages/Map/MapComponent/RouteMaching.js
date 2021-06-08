@@ -20,7 +20,7 @@ const newIconEnd = new L.Icon({
 });
 
 const leafletElement = L.Routing.control({
-  router: L.Routing.graphHopper("10db9b1c-434a-45d2-8dab-4cad12acc647", {
+  router: L.Routing.graphHopper("a048158f-3815-45b5-9228-1241ae5c9e29", {
     urlParameters: {
       vehicle: "foot",
     },
