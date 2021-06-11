@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import firebase from "firebase";
 import * as firestore from "../Utils/firebase";
+import * as toase from "../Utils/toast";
 
 const RenderContainer = styled.div`
   box-sizing: border-box;
@@ -232,9 +233,8 @@ export default function DetailsPopup() {
             uid = user.uid;
           }
           firestore.firebaseCreateNewMemberStore(uid);
-          setTimeout(() => {
-            closeModal();
-          }, 1500);
+          toase.success("成功加入會員");
+          closeModal();
         })
       )
       .catch((error) => {
@@ -248,9 +248,8 @@ export default function DetailsPopup() {
       .signInWithEmailAndPassword(inputEmail, inputPassword)
       .then((userCredential) => {
         setMessage("登入成功");
-        setTimeout(() => {
-          closeModal();
-        }, 1500);
+        toase.success("登入成功");
+        closeModal();
       })
       .catch((error) => {
         setMessage(error.message);

@@ -46,6 +46,7 @@ const Container = styled.div`
     top: 400px;
     right: 0px;
     width: 100%;
+    opacity: 0.5;
   }
   .bg-svg-03 {
     top: 380px;
@@ -154,7 +155,7 @@ const Container = styled.div`
         transition: all 0.2s ease;
       }
       .farvrite::after {
-        content: "想造訪？收藏進路線規劃頁";
+        content: "想造訪？加入進收藏清單";
       }
       .visited::after {
         content: "造訪過？搜集探索足跡囉！";

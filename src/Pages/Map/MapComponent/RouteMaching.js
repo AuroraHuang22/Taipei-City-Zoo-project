@@ -39,8 +39,8 @@ const leafletElement = L.Routing.control({
   lineOptions: {
     styles: [
       {
-        color: "orange",
-        opacity: 0.5,
+        color: "#777786",
+        opacity: 0.8,
         weight: 2,
         dashArray: "5.3",
       },

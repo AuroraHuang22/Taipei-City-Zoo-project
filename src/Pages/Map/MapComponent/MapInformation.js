@@ -87,6 +87,24 @@ export default function MapComformation() {
     0
   )}小時`;
 
+  let arr = [];
+  let animalSort = [];
+  animalsJson.forEach((item) => {
+    chooseAnimal.forEach((num) => {
+      if (item.CID === num) {
+        arr.push({ num: num, name: item.Name_Ch, index: item.Index });
+      }
+    });
+  });
+  animalSort = arr.sort(function (a, b) {
+    return a.index - b.index;
+  });
+  animalSort[0].index >= 10
+    ? animalSort.sort((a, b) => b.index - a.index)
+    : animalSort.sort((a, b) => a.index - b.index);
+
+  console.log(animalSort);
+
   return (
     <Container id="map-info">
       <div className="recommend">
@@ -98,16 +116,12 @@ export default function MapComformation() {
       <div className="recommend wrap">
         <span className="title">要造訪的動物</span>
         <div className="content">
-          {animalsJson.map((item) =>
-            chooseAnimal.map((num) =>
-              item.CID === Number(num) ? (
-                <div key={num}>
-                  <span className="num">{num}</span>
-                  <span className="content">{item.Name_Ch}</span>
-                </div>
-              ) : null
-            )
-          )}
+          {animalSort.map((item) => (
+            <div key={item.name}>
+              <span className="num">{item.num}</span>
+              <span className="content">{item.name}</span>
+            </div>
+          ))}
         </div>
       </div>
       {facilitiesStore.length ? (

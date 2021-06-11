@@ -149,6 +149,12 @@ const Container = styled.div`
       }
     }
   }
+  .desc {
+    color: grey;
+    font-size: 16px;
+    letter-spacing: 1.8px;
+    text-align: center;
+  }
 `;
 const animalsjson = AnimalsJson;
 
@@ -217,9 +223,9 @@ export default function Saved(prop) {
             </div>
           ))
         ) : (
-          <h4>
-            還沒有儲存行程的紀錄喔,只要在路線規劃印出地圖,地圖資料就會自動儲存到這裡囉！
-          </h4>
+          <div className="desc">
+            到 <a href="/map">路線規劃</a> 儲存你的第一個行程吧！
+          </div>
         )}
       </Container>
     </>

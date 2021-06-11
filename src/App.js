@@ -9,6 +9,7 @@ import Member from "./Pages/Member";
 import All from "./Pages/All";
 import Entrance from "./Pages/Entrance";
 import Landing from "./Pages/Landing";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (

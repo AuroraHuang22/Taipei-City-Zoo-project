@@ -34,12 +34,11 @@ export default function AnimalsReducer(state = initState, action) {
         visitRoute: [...state.visitRoute, ...action.route],
       };
     case REMOVE_ANIMAL:
-      let geos = state.showAnimals.geo.map((fac) => fac);
-      let index = geos.indexOf(action.geo);
-      geos.splice(index, 1);
       let nums = state.showAnimals.num.map((fac) => fac);
-      let index1 = nums.indexOf(action.geo);
+      let index1 = nums.indexOf(action.num);
       nums.splice(index1, 1);
+      let geos = state.showAnimals.geo.map((fac) => fac);
+      geos.splice(index1, 1);
       return {
         ...state,
         showAnimals: {

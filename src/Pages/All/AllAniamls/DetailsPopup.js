@@ -52,7 +52,11 @@ export default function DetailsPopup(props) {
             <>
               <section className="main" key={item.Name_Latin}>
                 <div className="imgBox">
-                  <img className="img" src={item.Pic01_URL} alt="img" />
+                  <img
+                    className="img"
+                    src={`/animals/${item.Name_Ch}.jpeg`}
+                    alt="img"
+                  />
                 </div>
                 <img className="bg-svg-01" src="/Icons/popup.svg" alt="img" />
                 <img
@@ -70,7 +74,9 @@ export default function DetailsPopup(props) {
                   <span className="title-ch">{item.Name_Ch}</span>
                   <span className="title-en">{item.Name_En}</span>
                 </div>
-                <span className="location">{item.Location}</span>
+                <div className="location">
+                  <span>{item.Location}</span>
+                </div>
                 <section className="info">
                   <div className="info-class">
                     <span>{item.Class}</span>
@@ -108,7 +114,10 @@ export default function DetailsPopup(props) {
                           Toast.success(({ closeToast }) => (
                             <div className="toast">
                               收藏成功！可至
-                              <Link to="/map">路線規劃頁面</Link>查看
+                              <Link className="alink" to="/map">
+                                路線規劃頁面
+                              </Link>
+                              查看
                             </div>
                           ));
                         } else {
@@ -143,7 +152,7 @@ export default function DetailsPopup(props) {
                           ) : null
                         )
                       : null}
-                    <div className="text-sm">造訪點</div>
+                    <div className="text-sm">加入收藏</div>
                   </section>
                   <section className="visited">
                     <div

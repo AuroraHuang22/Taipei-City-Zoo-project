@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import * as action from "../../../Redux/Action";
-import Select from "react-select";
+import Select, { components } from "react-select";
 
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
@@ -99,10 +99,12 @@ const FilterContainer = styled.div`
 
 export default function Filter() {
   const disPatch = useDispatch();
-  const [selectPlace, setSelectPlace] = useState("熱帶雨林室內館(穿山甲館)");
+  const [selectPlace, setSelectPlace] = useState("動物園裡");
   const [Input, setInput] = useState("請輸入關鍵字...");
   const option = [];
+  const { Option } = components;
   let showAnimals = [];
+
   const set = new Set();
   const place = AnimalsJson.filter((item) =>
     !set.has(item.Location) ? set.add(item.Location) : false
@@ -110,11 +112,13 @@ export default function Filter() {
 
   const handleChange = (value) => {
     setSelectPlace(value.value);
-    setInput("請輸入關鍵字...");
+    let recom = AnimalsJson.filter((item) => item.Location === value.value);
     if (value.value !== "動物園裡") {
+      setInput(`也許你想認識：${recom[0].Name_Ch}`);
       disPatch(action.addFilterPlace(value.value));
       disPatch(action.addFilterSearch(""));
     } else {
+      setInput("請輸入關鍵字...");
       disPatch(action.addFilterPlace(""));
       disPatch(action.addFilterSearch(""));
     }
@@ -134,11 +138,19 @@ export default function Filter() {
   };
 
   useEffect(() => {
-    disPatch(action.addFilterPlace("熱帶雨林室內館(穿山甲館)"));
+    disPatch(action.addFilterPlace(""));
   }, []);
 
-  place.forEach((item) => option.push({ value: item, label: item }));
-  option.push({ value: "動物園裡", label: "全部動物" });
+  place.forEach((item) => {
+    let arr5 = [];
+    AnimalsJson.forEach((animal) => {
+      if (item === animal.Location) {
+        arr5.push(animal.Name_Ch);
+      }
+    });
+    option.push({ value: item, label: item, num: arr5.length });
+  });
+  option.push({ value: "動物園裡", label: "全部動物", num: 270 });
 
   if (selectPlace !== "動物園裡") {
     let arr = AnimalsJson.filter((item) =>
@@ -151,6 +163,24 @@ export default function Filter() {
     );
   }
 
+  const spanOption = (props) => (
+    <Option {...props}>
+      <span style={{ display: "inline-block" }}>{props.data.label}</span>
+      <span
+        style={{
+          display: "inline-block",
+          backgroundColor: "#f2f2f2",
+          padding: "1px 10px",
+          borderRadius: "25px",
+          position: "absolute",
+          right: "15px",
+        }}
+      >
+        {props.data.num}
+      </span>
+    </Option>
+  );
+
   return (
     <FilterContainer>
       <div className="container">
@@ -161,9 +191,10 @@ export default function Filter() {
       <div className="flex">
         <div className="filterBlock">
           <Select
-            defaultValue={option[4]}
+            defaultValue={option[14]}
             options={option}
             onChange={handleChange}
+            components={{ Option: spanOption }}
             width="100%"
             styles={{
               option: (provided, state) => ({
@@ -247,9 +278,6 @@ export default function Filter() {
         <div className="textBlock">
           <span className="h3">我想探索 —</span>
           <span className="h1 ">{selectPlace}的...</span>
-          {Input !== "請輸入關鍵字..." ? (
-            <span className="h3 grey">{Input}</span>
-          ) : null}
         </div>
       </div>
     </FilterContainer>
