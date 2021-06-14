@@ -21,8 +21,8 @@ const HeaderDiv = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  z-index: 800;
+  height: 60px;
+  z-index: 1300;
   background-color: rgba(255, 255, 255, 1);
   border-top: 0.5px solid #f2f2f2;
   @media (max-width: 576px) {
@@ -68,8 +68,9 @@ const Container = styled(main)`
       display: block;
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
-      height: 28px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 24px;
       object-fit: cover;
       object-position: center;
     }
@@ -91,20 +92,25 @@ export default function Header() {
     <HeaderDiv id="header-web">
       <Container>
         <div className="nav-bar">
+          <Link to="/" className="select logo">
+            <img className="logo" src="/Icons/nav-home-s-06.svg" alt="logo" />
+          </Link>
           <Link to="/all" className="select all">
-            <img className="logo" src="/elephant.svg" alt="logo" />
+            <img className="logo" src="/Icons/nav-all-06.svg" alt="logo" />
           </Link>
           <a href="/map" className="select">
-            <img className="map" src="/map.png" alt="map" />
+            <img className="map" src="/Icons/nav-map-06.svg" alt="map" />
           </a>
-          <Link to="/" className="select logo">
-            <img className="logo" src="/logo.svg" alt="logo" />
-          </Link>
+
           <a href="/member" className="select">
-            <img className="member" src="/user-profile.svg" alt="member" />
+            <img
+              className="member"
+              src="/Icons/nav-member-06.svg"
+              alt="member"
+            />
           </a>
           <Link to="/entrance" className="select info">
-            <img className="logo" src="/information.svg" alt="logo" />
+            <img className="logo" src="/Icons/nav-info-06.svg" alt="logo" />
           </Link>
           <LoginPopup />
         </div>

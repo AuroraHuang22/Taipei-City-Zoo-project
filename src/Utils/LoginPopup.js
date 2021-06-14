@@ -109,7 +109,6 @@ export default function DetailsPopup() {
   const closeModal = () => disPatch(action.setLoginClose());
 
   const [title, setTitle] = useState("Sign In");
-
   const [message, setMessage] = useState("");
 
   let inputEmail = "";
@@ -260,8 +259,8 @@ export default function DetailsPopup() {
     <Popup
       open={open}
       closeOnDocumentClick
-      onClose={closeModal}
-      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)", zIndex: 1200 }}
+      onClose={() => disPatch(action.setLoginClose())}
+      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)", zIndex: 5000 }}
       contentStyle={{
         margin: "auto",
         boxSizing: "border-box",

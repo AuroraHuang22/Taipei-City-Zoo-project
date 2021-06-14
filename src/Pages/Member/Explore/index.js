@@ -1,135 +1,77 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
-import Visited from "./Visited";
-import Saved from "../Saved";
-import AnimalsJson from "../../../Utils/animals.json";
-import * as firestore from "../../../Utils/firebase";
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
-const getRandomNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
+
+const ratio = 780 / 1639;
+const ratioImg = 180 / 1440;
 
 const Container = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
   width: 100%;
-  justify-content: center;
-  height: auto;
-  .bg-img {
-    object-fit: cover;
-  }
-  a {
-    text-decoration: none;
-    color: #3a4d48;
-  }
-  .visited {
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 5px 20px;
-    border-radius: 25px;
-    text-align: right;
-    border: 2px solid lightgrey;
-    margin: 10px;
-    background-color: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    ::after {
-      content: "→";
-      margin-left: 3px;
-      margin-right: 10px;
-      transition: all 0.3s;
-    }
-    :hover {
-      background-color: #f2ecea;
-      ::after {
-        margin-left: 13px;
-        margin-right: 0px;
-      }
-    }
-  }
-  .btn {
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 5px 20px;
-    border-radius: 25px;
-    text-align: right;
-    border: 2px solid lightgrey;
-    margin: 10px;
-    background-color: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    ::before {
-      content: "←";
-      margin-right: 3px;
-      margin-left: 10px;
-      transition: all 0.3s;
-    }
-    :hover {
-      background-color: #f2ecea;
-      ::before {
-        margin-right: 13px;
-        margin-left: 0px;
-      }
-    }
-  }
+  height: ${(props) => {
+    return `${props.width * ratio}px`;
+  }};
+  background-image: url("/Imgs/passport-bg-29.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: relative;
   .stamp {
     position: absolute;
-    width: 250px;
-    transform: translate(50%, 50%);
+    width: ${(props) => {
+      return `${props.width * ratioImg}px`;
+    }};
+    height: ${(props) => {
+      return `${props.width * ratioImg}px`;
+    }};
+    object-fit: contain;
+  }
+  @media (max-width: 996px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    max-height: 40vh;
+    background-image: none;
+    background-color: #fff;
+    .stamp {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 120px;
+      min-height: 120px;
+      border: 2px dashed grey;
+      border-radius: 50%;
+    }
   }
 `;
 
-const animalsJson = AnimalsJson;
-const set = new Set();
-const catalogs = animalsJson
-  .filter((item) => (!set.has(item.Location) ? set.add(item.Location) : false))
-  .map((item) => item.Location);
-
 export default function Explore(props) {
-  let match = useRouteMatch();
-  const [getVisited, setGetVisited] = useState("none");
-  let uid = props.uid;
+  const [stamps, setStamps] = useState("none");
+  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [size, setSize] = useState([0, 0]);
+  const isRowPad = window.matchMedia("(max-width: 996px)").matches;
+  const position = [
+    [56, 69],
+    [85, 31],
+    [27, 69],
+    [27, 11],
+    [56, 11],
+    [85, 50],
+    [27, 50],
+    [85, 89],
+    [86, 69],
+    [56, 31],
+    [56, 50],
+    [27, 89],
+    [85, 11],
+    [56, 89],
+  ];
 
-  useEffect(() => {
-    if (uid) {
-      firestore
-        .firebaseGetMemberData(uid)
-        .then((data) => setGetVisited(data.isVisited));
-    } else {
-      setGetVisited(false);
-    }
-  }, []);
-
-  if (getVisited === "none") {
-    return null;
-  }
-
-  let blocksFilter = [];
-  catalogs.forEach((catalogs1) =>
-    animalsJson.forEach((animalsJson1) =>
-      getVisited.forEach((getVisited1) => {
-        if (
-          animalsJson1.Name_Ch === getVisited1 &&
-          animalsJson1.Location === catalogs1
-        ) {
-          blocksFilter.push([
-            animalsJson1.Name_Ch,
-            animalsJson1.Location,
-            animalsJson1.Pic01_URL,
-          ]);
-        }
-      })
-    )
-  );
-
+  let { blocksFilter, catalogs } = props;
   let arr = [];
   let arr1 = [];
+  let arr2 = [];
   let stampPavilions = [];
   catalogs.forEach((catalogs) =>
     blocksFilter.forEach((blocksFilters) => {
@@ -138,6 +80,7 @@ export default function Explore(props) {
       }
     })
   );
+
   catalogs.forEach((catalogs) => {
     if (catalogs === "新光特展館(大貓熊館)" || catalogs === "無尾熊館") {
       arr1 = arr.filter((arrs) => arrs === catalogs).length;
@@ -157,51 +100,55 @@ export default function Explore(props) {
     }
   });
 
+  catalogs.forEach((catalogs) => {
+    stampPavilions.forEach((stamp) => {
+      if (catalogs === stamp) {
+        arr2.push(stamp);
+      }
+    });
+  });
+
+  useEffect(() => {
+    setStamps(arr2);
+    setTimeout(() => {
+      setHeight(document.body.offsetHeight);
+      setWidth(document.body.offsetWidth);
+    }, 0);
+  }, []);
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  if (stamps === "none") {
+    return null;
+  }
+  // console.log(size);
   return (
-    <Switch>
-      <Route exact path={`${match.path}`}>
-        <Container className="imgdiv">
-          <div className="button-group">
-            <Link to={`${match.url}/saved`}>
-              <div className="btn">儲存行程</div>
-            </Link>
-            <Link to={`${match.url}/visited`}>
-              <div className="visited">我的足跡</div>
-            </Link>
-          </div>
-          <img
-            className="bg-img"
-            src="/Imgs/passport-bg-29.svg"
-            alt="passport"
-          />
-          {catalogs.map((catalogs) =>
-            stampPavilions.map((stamp) =>
-              stamp === catalogs ? (
-                <img
-                  className="stamp"
-                  style={{
-                    top: `${getRandomNumber(0, 700)}px`,
-                    left: `${getRandomNumber(0, 700)}px`,
-                  }}
-                  src={`/Imgs/stamp/${stamp}.png`}
-                  alt={stamp}
-                />
-              ) : null
-            )
-          )}
-        </Container>
-      </Route>
-      <Route path={`${match.path}/visited`}>
-        <Visited
-          catalogs={catalogs}
-          blocksFilter={blocksFilter}
-          getVisited={getVisited}
-          stampPavilions={stampPavilions}
-        />
-      </Route>
-      <Route path={`${match.url}/saved`}>
-        <Saved uid={uid} />
-      </Route>
-    </Switch>
+    <>
+      <Container id="passport" width={size[0]} height={height}>
+        {catalogs.map((catalogs) =>
+          stampPavilions.map((stamp, index) =>
+            stamp === catalogs ? (
+              <img
+                className="stamp"
+                style={{
+                  top: isRowPad ? null : `${position[index][0]}%`,
+                  left: isRowPad ? null : `${position[index][1]}%`,
+                  transform: isRowPad ? "translate(0)" : "translate(-50%,-50%)",
+                }}
+                src={`/Imgs/stamp/${stamp}.png`}
+                alt={stamp}
+              />
+            ) : undefined
+          )
+        )}
+      </Container>
+    </>
   );
 }

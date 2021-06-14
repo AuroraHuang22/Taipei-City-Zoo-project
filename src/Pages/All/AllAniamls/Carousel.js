@@ -37,6 +37,11 @@ const Carouseldiv = styled.div`
         max-height: 120px;
         overflow-y: scroll;
         white-space: pre-wrap;
+
+        @media (max-width: 576px) {
+          max-height: 300px;
+          /* overflow-y: auto; */
+        }
       }
     }
   }
@@ -47,11 +52,11 @@ const responsive = {
     items: 2,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 576 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 576, min: 0 },
     items: 1,
   },
 };

@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Container = styled.div`
   box-sizing: border-box;
   display: flex;
-  /* align-items: center; */
   flex-direction: row;
   position: relative;
   padding: 50px 30px 0px;
@@ -44,6 +43,39 @@ const Container = styled.div`
   }
   .pd-30 {
     padding-left: 30px;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 576px) {
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 40px 60px;
+    .block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 10px;
+      span {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        color: #6b6b6b;
+        margin-bottom: 12px;
+        line-height: 28px;
+        width: 100%;
+      }
+      span::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #e2e2e2;
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        border-radius: 50%;
+      }
+    }
   }
 `;
 

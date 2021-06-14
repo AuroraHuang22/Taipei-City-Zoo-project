@@ -53,6 +53,39 @@ const Container = styled.div`
     background-size: contain;
     margin-right: 10px;
   }
+  @media (max-width: 576px) {
+    background-color: rgba(255, 255, 255, 1);
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #ea7a60;
+      margin-top: 10px;
+      margin-bottom: 3px;
+    }
+  }
+  @media print {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    position: absolute;
+    padding: 20px 20px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    z-index: 500;
+    color: #554d4b;
+    justify-content: center;
+  }
 `;
 
 const animalsJson = AnimalsJson;

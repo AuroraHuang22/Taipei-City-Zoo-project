@@ -10,13 +10,12 @@ const Background = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  /* background-color: pink; */
+  overflow: hidden;
 `;
 
 function All() {
   return (
     <Background>
-      {/* <Conservation /> */}
       <AllAnimalas />
     </Background>
   );

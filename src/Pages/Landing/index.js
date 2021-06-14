@@ -111,7 +111,7 @@ const Container = styled.div`
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .hero {
       margin: 20px auto 0;
       box-sizing: border-box;
@@ -132,6 +132,19 @@ const Container = styled.div`
       position: relative;
       font-size: 16px;
       border-bottom: 1px solid #ea7a60;
+    }
+  }
+  @media (max-width: 576px) {
+    .head {
+      content: url("/Imgs/land-sm-39.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .bottom-left,
+    .bottom-right {
+      bottom: 60px;
     }
   }
 `;

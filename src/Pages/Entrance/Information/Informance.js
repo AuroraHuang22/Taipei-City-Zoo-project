@@ -9,7 +9,6 @@ const Container = styled.div`
   flex-direction: row;
   padding: 70px 0px 20px;
   width: 100%;
-
   .imgBox {
     position: absolute;
     height: 408px;
@@ -23,7 +22,7 @@ const Container = styled.div`
     }
   }
   .info {
-    padding-left: 40%;
+    padding-left: 360px;
     .content {
       margin-top: 24px;
       padding-left: 20px;
@@ -44,6 +43,48 @@ const Container = styled.div`
         left: -30px;
         transform: translateY(-50%);
         border-radius: 50%;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    padding-top: 40px;
+    height: 370px;
+    .imgBox {
+      height: 370px;
+    }
+    .info {
+      padding-left: 50%;
+      .content {
+        margin-top: 24px;
+        padding-left: 20px;
+        span {
+          font-size: 14px;
+        }
+        span::before {
+          left: -20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 576px) {
+    padding: 40px 30px;
+    height: 420px;
+    .imgBox {
+      display: none;
+    }
+    .info {
+      padding-left: 0;
+      .content {
+        margin-top: 24px;
+        padding-left: 30px;
+        span {
+          font-size: 16px;
+        }
+        span::before {
+          left: -20px;
+        }
       }
     }
   }

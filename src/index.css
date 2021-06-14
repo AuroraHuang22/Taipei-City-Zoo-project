@@ -54,7 +54,7 @@ body {
 
 @media print {
   @page {
-    size: 1200px 1000px;
+    size: 1200px 1050px;
     margin: 10px;
   }
   .leaflet-control-zoom {

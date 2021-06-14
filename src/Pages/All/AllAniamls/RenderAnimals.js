@@ -23,7 +23,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 200px;
     height: 200px;
     padding-bottom: 30px;
@@ -56,9 +56,9 @@ const Container = styled.div`
   }
   .text {
     position: absolute;
-    min-width: 120px;
+    width: 70%;
     text-align: center;
-    bottom: 0;
+    top: 85%;
     white-space: nowrap;
     background-color: #f2f2f2;
     padding: 3px 20px;
@@ -108,6 +108,74 @@ const Container = styled.div`
   }
   .next {
     margin-left: 12px;
+  }
+  @media (max-width: 768px) {
+    padding: 80px 30px;
+    .background {
+      width: 150px;
+      height: 150px;
+      padding-bottom: 40px;
+    }
+    .text {
+      width: 60%;
+      top: 80%;
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+  @media (max-width: 576px) {
+    padding: 50px 10px;
+    .background {
+      width: 100px;
+      height: 100px;
+      padding-bottom: 40px;
+      margin: 10px 5px;
+    }
+    .text {
+      width: 60%;
+      font-size: 12px;
+      white-space: normal;
+    }
+    .contain {
+      margin: 20px auto 60px;
+      padding: 0;
+    }
+    .pages {
+      display: block;
+      color: #acabbe;
+      font-size: 14px;
+      padding: 0 10px;
+      cursor: pointer;
+      transition: color 0.2s;
+      :hover {
+        color: #c4c4cf;
+      }
+    }
+    .active,
+    .previous,
+    .next {
+      color: #f09a8f;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .previous,
+    .next {
+      color: grey;
+      font-size: 14px;
+      margin-right: 8px;
+      white-space: nowrap;
+      padding: 2px 4px;
+      border: 1px solid #f2f2f2;
+      border-radius: 20px;
+      cursor: pointer;
+      :hover {
+        background-color: #f2f2f2;
+        border: 1px solid #f2f2f2;
+      }
+    }
+    .next {
+      margin-left: 8px;
+    }
   }
 `;
 

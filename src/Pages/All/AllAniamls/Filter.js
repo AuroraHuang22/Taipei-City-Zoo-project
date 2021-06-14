@@ -50,6 +50,7 @@ const FilterContainer = styled.div`
       width: 100%;
       display: flex;
       align-items: center;
+      white-space: nowrap;
       .searchimg {
         width: 20px;
         align-self: flex-end;
@@ -80,20 +81,126 @@ const FilterContainer = styled.div`
       }
     }
   }
-
-  input {
-    padding: 6px 18px;
-    min-width: 320px;
-    outline: none;
-    border: none;
-    border-radius: 25px;
-    margin-right: 15px;
-    background-color: inherit;
-    border: 2px solid #f2f2f2;
-    color: #f2f2f2;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 500;
+  @media (max-width: 768px) {
+    .container {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+      .filterBg {
+        width: 100%;
+        object-position: center;
+      }
+      .header {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        font-size: 36px;
+        color: white;
+      }
+      .sub-header {
+        margin-top: 50px;
+        margin-left: 40px;
+        font-size: 18px;
+      }
+    }
+    .flex {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0 auto;
+      padding: 0 30px;
+      justify-content: center;
+      align-items: flex-start;
+      .filterBlock {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        .searchBox {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          .searchimg {
+            width: 20px;
+            align-self: flex-end;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      .textBlock {
+        box-sizing: border-box;
+        margin-top: 10px;
+        .h1 {
+          font-size: 28px;
+          white-space: nowrap;
+        }
+        .h3 {
+          font-size: 20px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .container {
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+      .filterBg {
+        width: 120%;
+        object-position: center;
+      }
+      .header {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 28px;
+        color: white;
+      }
+      .sub-header {
+        margin-top: 40px;
+        margin-left: 0px;
+        font-size: 16px;
+      }
+    }
+    .flex {
+      padding: 20px 20px 0;
+      .filterBlock {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .searchBox {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        .searchimg {
+          width: 20px;
+          align-self: flex-end;
+          padding-bottom: 10px;
+          margin-right: 10px;
+        }
+      }
+      .textBlock {
+        margin-left: 0px;
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        color: #5f5c90;
+        letter-spacing: 2px;
+        .h1 {
+          font-size: 24px;
+        }
+        .h3 {
+          font-size: 16px;
+        }
+      }
+    }
   }
 `;
 
@@ -219,6 +326,7 @@ export default function Filter() {
                   : "1px solid #dba99e",
                 boxShadow: "none",
                 borderRadius: "15px",
+                width: "100%",
 
                 "&:hover": {
                   backgroundColor: "#f7e2dc",
@@ -229,19 +337,20 @@ export default function Filter() {
           <div className="searchBox">
             <img className="searchimg" src="/Imgs/loupe.svg" alt="search" />
             <Select
-              id="search"
+              className="searchInput"
               value={Input}
               placeholder={Input}
               options={showAnimals}
               onChange={handleInputChange}
               components={{ search }}
-              width="80%"
+              width="100%"
+              noOptionsMessage={() => "試試別的關鍵字吧！"}
               styles={{
                 option: (provided, state) => ({
                   ...provided,
                   borderBottom: "1px solid #ffeae4",
                   color: "#6b6b6b",
-                  padding: 20,
+                  padding: "20px",
                   backgroundColor: state.isSelected ? "#f5c2b4" : "white",
                   "&:hover": {
                     backgroundColor: "#f7e2dc",
@@ -249,6 +358,7 @@ export default function Filter() {
                 }),
                 control: (provided, state) => ({
                   ...provided,
+                  boxSizing: "border-box",
                   position: "relative",
                   border: "none",
                   borderBottom: "2px solid #f7e2dc",
@@ -256,7 +366,8 @@ export default function Filter() {
                   "&:hover": {
                     backgroundColor: "white",
                   },
-                  marginTop: "30px",
+                  marginTop: "10px",
+                  width: "50vw",
                 }),
                 dropdownIndicator: (provided, state) => ({
                   ...provided,
@@ -269,6 +380,10 @@ export default function Filter() {
                 menu: (provided, state) => ({
                   ...provided,
                   marginTop: "5px",
+                }),
+                input: (provided, state) => ({
+                  ...provided,
+                  width: "100%",
                 }),
               }}
             />

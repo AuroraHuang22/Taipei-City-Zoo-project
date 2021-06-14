@@ -22,6 +22,7 @@ export default function DetailsPopup(props) {
   const disPatch = useDispatch();
   const { open } = useSelector((state) => state.FilterAnimals);
   const closeModal = () => disPatch(action.setClose());
+  const isRowBased = window.matchMedia("(max-width: 800px)");
 
   let uid = props.uid;
   let favoritiesMember = props.favoritiesMember;
@@ -40,7 +41,7 @@ export default function DetailsPopup(props) {
         boxSizing: "border-box",
         background: "#fff",
         width: "680px",
-        maxWidth: "95vw",
+        maxWidth: isRowBased ? "80vw" : "95vw",
         padding: 0,
         borderRadius: "10px",
         border: "none",
@@ -98,6 +99,10 @@ export default function DetailsPopup(props) {
                 <CarouselDiv item={item} />
               </section>
               <section className="clickBar">
+                <div className="title-md">
+                  <span className="title-ch">{item.Name_Ch}</span>
+                  <span className="title-en">{item.Name_En}</span>
+                </div>
                 <div className="visitedBox">
                   <section className="farvrite">
                     <div
@@ -169,7 +174,10 @@ export default function DetailsPopup(props) {
                           Toast.success(({ closeToast }) => (
                             <div className="toast">
                               加入成功！可至
-                              <Link to="/member/visited">我的足跡</Link>查看
+                              <Link to="/member/visited" className="alink">
+                                我的足跡
+                              </Link>
+                              查看
                             </div>
                           ));
                         } else {

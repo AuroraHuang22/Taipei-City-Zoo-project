@@ -13,6 +13,7 @@ import {
   Route,
   Link,
   useRouteMatch,
+  useLocation,
 } from "react-router-dom";
 
 const HeaderDiv = styled.div`
@@ -62,19 +63,22 @@ const Container = styled(main)`
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
   }
   .select {
     cursor: pointer;
     padding: 10px;
-    margin-right: 20px;
+    margin: 0 10px;
     display: inline-block;
     color: #f09a8f;
     text-decoration: none;
     transition: all 0.3s;
-
     :hover {
-      color: #5f5c90;
+      color: #7f7da7;
     }
+  }
+  .select.active {
+    color: #7f7da7;
   }
   .signBox {
     display: flex;
@@ -101,7 +105,6 @@ const Container = styled(main)`
     color: #a7a6d1;
     border-radius: 20px;
     transition: all 0.3s;
-
     :hover {
       color: #5f5c90;
     }
@@ -145,6 +148,7 @@ const Container = styled(main)`
 export default function Header() {
   const [getUid, setUid] = useState("none");
   const disPatch = useDispatch();
+  const id = useLocation().pathname;
 
   useEffect(() => {
     firestore.getUserId((data) => setUid(data));
@@ -159,20 +163,40 @@ export default function Header() {
       <HeaderDiv id="header-web">
         <Container>
           <div className="nav-bar">
-            <Link to="/all" className="select">
+            <Link
+              to="/all"
+              className={id === "/all" ? "select active" : "select"}
+            >
               動物總覽
             </Link>
-            <a href="/map" className="select">
+            <a
+              href="/map"
+              className={id === "/map" ? "select active" : "select"}
+            >
               遊園路線規劃
             </a>
-            <Link to="/" className="select logo" />
-            <a href="/member" className="select">
+            <Link
+              to="/"
+              className={id === "/" ? "select active logo" : "select logo"}
+            />
+            <a
+              href="/member"
+              className={
+                id === "/member" ||
+                id === "/member/saved" ||
+                id === "/member/visited"
+                  ? "select active"
+                  : "select"
+              }
+            >
               探索護照
             </a>
-            <Link to="/entrance" className="select">
+            <Link
+              to="/entrance"
+              className={id === "/entrance" ? "select active" : "select"}
+            >
               入園資訊
             </Link>
-            <LoginPopup />
           </div>
           {getUid ? (
             <div
@@ -193,7 +217,6 @@ export default function Header() {
               <div
                 className="signup"
                 onClick={() => {
-                  disPatch(action.setLogin());
                   disPatch(action.setLoginOpen());
                 }}
               >
@@ -202,7 +225,6 @@ export default function Header() {
               <div
                 className="signin"
                 onClick={() => {
-                  disPatch(action.setLogin());
                   disPatch(action.setLoginOpen());
                 }}
               >

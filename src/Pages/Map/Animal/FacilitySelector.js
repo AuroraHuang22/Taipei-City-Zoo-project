@@ -71,12 +71,14 @@ const Container = styled.div`
     }
   }
 `;
-
 const SelectorDiv = styled.div`
   display: flex;
   margin: 30px 0;
   flex-direction: row;
   flex-wrap: wrap;
+  @media (max-width: 576px) {
+    margin: 10px 0 10px;
+  }
 `;
 const InputDivs = styled.div`
   border: 1px solid lightgray;
@@ -140,7 +142,9 @@ const Selector = (props) => {
     toast.success(({ closeToast }) => (
       <div className="toast">
         已將行程儲存至
-        <Link to="/member/saved">我的行程</Link>
+        <Link className="alink" to="/member/saved">
+          我的行程
+        </Link>
       </div>
     ));
   };

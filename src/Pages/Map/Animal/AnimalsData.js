@@ -26,8 +26,6 @@ const ContainerDiv = styled.div`
     border-radius: 10px;
     color: #acabbe;
     font-size: 14px;
-    /* background-color: #acabbe; */
-    /* background-color: #c4c4cf; */
   }
   .header {
     font-size: 24px;
@@ -43,6 +41,13 @@ const ContainerDiv = styled.div`
     text-align: left;
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+  .draw {
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
+    object-fit: contain;
+    opacity: 0.1;
   }
   .btn {
     display: block;
@@ -94,6 +99,56 @@ const ContainerDiv = styled.div`
     letter-spacing: 2px;
     font-size: 12px;
     font-weight: 500;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+    .sub-block {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+    .favorite {
+      margin: 0px 5px 0px;
+      padding: 10px 12px;
+    }
+    .btn {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+    .sub-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .favorite {
+      margin: 0px 5px 0px;
+      padding: 10px 12px;
+    }
+    .btn {
+      position: fixed;
+      bottom: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
   }
 `;
 
@@ -179,7 +234,6 @@ const AnimalsData = (prop) => {
   const handleInputChange = (inputValue, { action }) => {
     switch (action) {
       case "select-option":
-        // setOpen(false);
         let index = inputValue.length - 1;
         animalsData.forEach((item) => {
           if (item.Name_Ch === inputValue[index].value) {
@@ -198,8 +252,6 @@ const AnimalsData = (prop) => {
         nowAnimals = inputValue;
         animalsData.forEach((item) => {
           if (item.Name_Ch === removedAnimals[0].value) {
-            console.log(item.Name_Ch);
-            console.log([item.Geo[1], item.Geo[0]], item.CID);
             disPatch(
               reduxAction.removeAnimal([item.Geo[1], item.Geo[0]], item.CID)
             );
@@ -386,7 +438,7 @@ const AnimalsData = (prop) => {
         <ContainerDiv>
           <div className="header">想造訪哪些動物呢？</div>
           {favorities.length ? (
-            <>
+            <div className="sub-block">
               <div className="sub-header">
                 從收藏清單將動物加入地圖!...或者...
               </div>
@@ -412,9 +464,9 @@ const AnimalsData = (prop) => {
                   )}
                 </AnimalsItemBlock>
               </div>
-            </>
+            </div>
           ) : null}
-          <>
+          <div className="sub-block">
             <div className="sub-header">用關鍵字來搜尋想造訪的動物吧！</div>
             <div>
               <Select
@@ -523,12 +575,14 @@ const AnimalsData = (prop) => {
                     menu: (provided, state) => ({
                       ...provided,
                       marginTop: "5px",
+                      zIndex: 1200,
                     }),
                   }}
                 />
               </div>
             </div>
-          </>
+          </div>
+          <img className="draw" src="/Imgs/draw-11.svg" alt="find" />
           <button className="btn" onClick={submit}>
             下一步 選擇顯示設施
           </button>
