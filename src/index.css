@@ -42,15 +42,19 @@ body {
   font-weight: 500;
   z-index: 1200;
 }
-.toast > a {
-  font-weight: 600;
-  color: #4f6e59;
-  margin: 0 5px;
+.toast {
+  letter-spacing: 0;
+}
+.alink {
+  font-weight: 600 !important;
+  color: #4f6e59 !important;
+  margin: 0 5px !important;
+  font-size: 16px !important;
 }
 
 @media print {
   @page {
-    size: 1200px 1000px;
+    size: 1200px 1050px;
     margin: 10px;
   }
   .leaflet-control-zoom {

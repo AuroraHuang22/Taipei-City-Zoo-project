@@ -5,6 +5,7 @@ import * as action from "../Redux/Action";
 import * as firestore from "../Utils/firebase";
 import LoginPopup from "../Utils/LoginPopup";
 import * as toast from "../Utils/toast";
+import HeaderSm from "./Header-sm";
 import { ToastContainer } from "react-toastify";
 
 import {
@@ -12,6 +13,7 @@ import {
   Route,
   Link,
   useRouteMatch,
+  useLocation,
 } from "react-router-dom";
 
 const HeaderDiv = styled.div`
@@ -24,26 +26,27 @@ const HeaderDiv = styled.div`
   height: 80px;
   z-index: 800;
   background-color: rgba(255, 255, 255, 0.8);
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
-
 const main = styled.div`
   text-decoration: none;
   color: #f09a8f;
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 18px;
-  a {
-    display: inline-block;
-    color: #f09a8f;
-    text-decoration: none;
-    transition: all 0.3s;
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `;
 const Container = styled(main)`
   position: relative;
   display: flex;
   width: 100%;
-  max-width: 1400px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -60,15 +63,22 @@ const Container = styled(main)`
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
   }
   .select {
     cursor: pointer;
     padding: 10px;
-    margin-right: 20px;
-
+    margin: 0 10px;
+    display: inline-block;
+    color: #f09a8f;
+    text-decoration: none;
+    transition: all 0.3s;
     :hover {
-      color: #5f5c90;
+      color: #7f7da7;
     }
+  }
+  .select.active {
+    color: #7f7da7;
   }
   .signBox {
     display: flex;
@@ -95,7 +105,6 @@ const Container = styled(main)`
     color: #a7a6d1;
     border-radius: 20px;
     transition: all 0.3s;
-
     :hover {
       color: #5f5c90;
     }
@@ -112,11 +121,34 @@ const Container = styled(main)`
       color: #5f5c90;
     }
   }
+  @media (max-width: 768px) {
+    .logo {
+      width: 25px;
+      height: 25px;
+      background-image: url(/logo.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .select {
+      cursor: pointer;
+      padding: 10px;
+      margin-right: 10px;
+      display: inline-block;
+      color: #f09a8f;
+      text-decoration: none;
+      transition: all 0.3s;
+      :hover {
+        color: #5f5c90;
+      }
+    }
+  }
 `;
 
 export default function Header() {
   const [getUid, setUid] = useState("none");
   const disPatch = useDispatch();
+  const id = useLocation().pathname;
 
   useEffect(() => {
     firestore.getUserId((data) => setUid(data));
@@ -127,62 +159,83 @@ export default function Header() {
   }
 
   return (
-    <HeaderDiv id="header">
-      <Container>
-        <div className="nav-bar">
-          <Link to="/all" className="select">
-            動物總覽
-          </Link>
-          <a href="/map" className="select">
-            遊園路線規劃
-          </a>
-          <Link to="/" className="select logo" />
-          <a href="/member" className="select">
-            探索護照
-          </a>
-          <Link to="/entrance" className="select">
-            入園資訊
-          </Link>
-          <LoginPopup />
-        </div>
-        {getUid ? (
-          <div
-            className="signout"
-            onClick={() => {
-              toast.remove("你已成功登出");
-              disPatch(action.setLogout());
-              firestore.signOut();
-              setTimeout(() => {
-                window.location.reload();
-              }, 1000);
-            }}
-          >
-            登出
+    <>
+      <HeaderDiv id="header-web">
+        <Container>
+          <div className="nav-bar">
+            <Link
+              to="/all"
+              className={id === "/all" ? "select active" : "select"}
+            >
+              動物總覽
+            </Link>
+            <a
+              href="/map"
+              className={id === "/map" ? "select active" : "select"}
+            >
+              遊園路線規劃
+            </a>
+            <Link
+              to="/"
+              className={id === "/" ? "select active logo" : "select logo"}
+            />
+            <a
+              href="/member"
+              className={
+                id === "/member" ||
+                id === "/member/saved" ||
+                id === "/member/visited"
+                  ? "select active"
+                  : "select"
+              }
+            >
+              探索護照
+            </a>
+            <Link
+              to="/entrance"
+              className={id === "/entrance" ? "select active" : "select"}
+            >
+              入園資訊
+            </Link>
           </div>
-        ) : (
-          <div className="signBox">
+          {getUid ? (
             <div
-              className="signup"
+              className="signout"
               onClick={() => {
-                disPatch(action.setLogin());
-                disPatch(action.setLoginOpen());
+                toast.remove("你已成功登出");
+                disPatch(action.setLogout());
+                firestore.signOut();
+                setTimeout(() => {
+                  window.location.reload();
+                }, 1000);
               }}
             >
-              註冊
+              登出
             </div>
-            <div
-              className="signin"
-              onClick={() => {
-                disPatch(action.setLogin());
-                disPatch(action.setLoginOpen());
-              }}
-            >
-              登入
+          ) : (
+            <div className="signBox">
+              <div
+                className="signup"
+                onClick={() => {
+                  disPatch(action.setLoginOpen());
+                }}
+              >
+                註冊
+              </div>
+              <div
+                className="signin"
+                onClick={() => {
+                  disPatch(action.setLoginOpen());
+                }}
+              >
+                登入
+              </div>
             </div>
-          </div>
-        )}
-        <ToastContainer />
-      </Container>
-    </HeaderDiv>
+          )}
+          <ToastContainer />
+        </Container>
+      </HeaderDiv>
+      <HeaderSm />
+    </>
   );
 }

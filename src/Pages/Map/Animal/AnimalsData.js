@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import * as action from "../../../Redux/Action";
+import * as reduxAction from "../../../Redux/Action";
 import * as firestore from "../../../Utils/firebase";
-import { ToastContainer, toast, Flip, Bounce } from "react-toastify";
+import * as Toast from "../../../Utils/toast";
 import "react-toastify/dist/ReactToastify.css";
-import Popup from "reactjs-popup";
+import Select, { components } from "react-select";
 
 const ContainerDiv = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: calc(100vh - 160px);
+  .searchBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .favorite {
     font-size: 10px;
     font-weight: bold;
@@ -21,8 +26,6 @@ const ContainerDiv = styled.div`
     border-radius: 10px;
     color: #acabbe;
     font-size: 14px;
-    /* background-color: #acabbe; */
-    /* background-color: #c4c4cf; */
   }
   .header {
     font-size: 24px;
@@ -39,12 +42,19 @@ const ContainerDiv = styled.div`
     margin-top: 20px;
     margin-bottom: 10px;
   }
+  .draw {
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
+    object-fit: contain;
+    opacity: 0.1;
+  }
   .btn {
     display: block;
+    bottom: 0;
     width: 80%;
     padding: 12px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: auto;
     background-color: white;
     position: relative;
     font-size: 16px;
@@ -76,19 +86,69 @@ const ContainerDiv = styled.div`
       }
     }
   }
-`;
-
-const ItemBlock = styled.div`
-  font-size: 10px;
-  font-weight: bold;
-  margin: 12px 5px;
-  padding: 3px 5px;
-  border-radius: 10px;
-  :hover {
-    background-color: #fcfcfc;
+  input {
+    padding: 6px 18px;
+    min-width: 320px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    margin-right: 15px;
+    background-color: inherit;
+    border: 2px solid #f2f2f2;
+    color: #f2f2f2;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 500;
   }
-  .title {
-    height: 35px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+    .sub-block {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+    .favorite {
+      margin: 0px 5px 0px;
+      padding: 10px 12px;
+    }
+    .btn {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+    .sub-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .favorite {
+      margin: 0px 5px 0px;
+      padding: 10px 12px;
+    }
+    .btn {
+      position: fixed;
+      bottom: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
   }
 `;
 
@@ -128,23 +188,21 @@ const AnimalContent = styled.div`
   }
 `;
 
-const MoreAnimals = styled(AnimalContent)`
-  padding: 3px 5px;
-  border-radius: 10px;
-`;
-
 let flag = false;
+
+let nowAnimals = [];
 
 const AnimalsData = (prop) => {
   const [open, setOpen] = useState(false);
-  const [showItem, setShowItem] = useState(null);
   const [animalsData, setAnimalsData] = useState(null);
   const [favorities, setFavorities] = useState("none");
   const [savedData, setSaveData] = useState("none");
-  const [dispaly, setdisplay] = useState("none");
+  const [selectPlace, setSelectPlace] = useState("全部動物");
+  const [Input, setInput] = useState("今天我想看...");
+  const [foucs, setFoucs] = useState(false);
+
   const [dispalyContainer, setDispalyContainer] = useState("block");
   const disPatch = useDispatch();
-  const closeModal = () => setOpen(false);
 
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.displayforAnimalSelect
@@ -158,40 +216,77 @@ const AnimalsData = (prop) => {
 
   let routeData = prop.route;
   let uid = prop.uid;
+  let showAnimals = [];
+  let option = [];
+  const { Option } = components;
 
-  let alertMes = (message) =>
-    toast(message, {
-      autoClose: 2500,
-      position: toast.POSITION.TOP_CENTER,
-      hideProgressBar: true,
-      style: {
-        opacity: 0.9,
-        backgroundColor: "#faf9d7",
-        color: "#827b60",
-        fontWeight: 400,
-      },
-      transition: Bounce,
-    });
+  const handleChange = (value, { action }) => {
+    switch (action) {
+      case "select-option":
+        setSelectPlace(value.value);
+        setOpen(true);
+        return;
+      default:
+        return;
+    }
+  };
+
+  const handleInputChange = (inputValue, { action }) => {
+    switch (action) {
+      case "select-option":
+        let index = inputValue.length - 1;
+        animalsData.forEach((item) => {
+          if (item.Name_Ch === inputValue[index].value) {
+            disPatch(
+              reduxAction.addAnimal([item.Geo[1], item.Geo[0]], item.CID)
+            );
+          }
+        });
+
+        nowAnimals = inputValue;
+        return;
+      case "remove-value":
+        let removedAnimals = nowAnimals.filter(
+          (i) => inputValue.findIndex((j) => j.value === i.value) === -1
+        );
+        nowAnimals = inputValue;
+        animalsData.forEach((item) => {
+          if (item.Name_Ch === removedAnimals[0].value) {
+            disPatch(
+              reduxAction.removeAnimal([item.Geo[1], item.Geo[0]], item.CID)
+            );
+          }
+        });
+
+        return;
+      case "clear":
+        window.location.reload();
+        return;
+      default:
+        return;
+    }
+  };
 
   const showMyGeo = (e) => {
     if (e.target.style.backgroundColor !== "lightgrey") {
       e.target.style.backgroundColor = "lightgrey";
       disPatch(
-        action.addAnimal(
+        reduxAction.addAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
-          e.target.dataset.num
+          Number(e.target.dataset.num)
         )
       );
     } else {
       e.target.style.backgroundColor = "white";
       disPatch(
-        action.removeAnimal(
+        reduxAction.removeAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
-          e.target.dataset.num
+          Number(e.target.dataset.num)
         )
       );
     }
   };
+
   const submit = () => {
     let pavilionsArray = [];
     animalsData.forEach((item) => {
@@ -225,18 +320,13 @@ const AnimalsData = (prop) => {
           item.Location === pav[0] ? result.push(...item.Route) : null
         )
       );
-      disPatch(action.addRecommend(pavilionsSort));
-      disPatch(action.addRoute(result));
-      disPatch(action.gotoNextStep());
+      disPatch(reduxAction.addRecommend(pavilionsSort));
+      disPatch(reduxAction.addRoute(result));
+      disPatch(reduxAction.gotoNextStep());
       setDispalyContainer("none");
     } else {
-      alertMes("請先選擇至少一種想看的動物喔！");
+      Toast.alertMes("請先選擇至少一種想看的動物喔！");
     }
-  };
-  const showMoreAnimals = (e) => {
-    // setdisplay("block");
-    setShowItem(e);
-    return null;
   };
 
   useEffect(() => {
@@ -258,19 +348,9 @@ const AnimalsData = (prop) => {
 
   useEffect(() => {
     if (displayStore) {
-      console.log("block");
       setDispalyContainer("block");
     }
   }, [displayStore]);
-
-  useEffect(() => {
-    window.addEventListener("click", (e) => {
-      if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
-    });
-    return window.removeEventListener("click", (e) => {
-      if (e.target.dataset.classname !== "animalBtn") setdisplay("none");
-    });
-  }, []);
 
   useEffect(() => {
     if (idValue) {
@@ -287,9 +367,9 @@ const AnimalsData = (prop) => {
         numArray.push(Number(item));
       });
 
-      disPatch(action.removeAllAnimal());
+      disPatch(reduxAction.removeAllAnimal());
       geoArray.forEach((item, index) =>
-        disPatch(action.addAnimal(item, numArray[index]))
+        disPatch(reduxAction.addAnimal(item, numArray[index]))
       );
       flag = true;
     }
@@ -312,13 +392,53 @@ const AnimalsData = (prop) => {
     )
     .map((item) => item.Location);
 
+  catalogs.forEach((item) => {
+    let arr5 = [];
+    animalsData.forEach((animal) => {
+      if (item === animal.Location) {
+        arr5.push(animal.Name_Ch);
+      }
+    });
+    option.push({ value: item, label: item, num: arr5.length });
+  });
+  option.push({ value: "全部動物", label: "全部動物", num: 270 });
+
+  if (selectPlace !== "全部動物") {
+    let arr = animalsData
+      .filter((item) => item.Location.includes(selectPlace))
+      .map((item) => item.Name_Ch);
+    arr.forEach((item) => showAnimals.push({ value: item, label: item }));
+  } else {
+    animalsData.forEach((item) =>
+      showAnimals.push({ value: item.Name_Ch, label: item.Name_Ch })
+    );
+  }
+
+  const spanOption = (props) => (
+    <Option {...props}>
+      <span style={{ display: "inline-block" }}>{props.data.label}</span>
+      <span
+        style={{
+          display: "inline-block",
+          backgroundColor: "#f2f2f2",
+          padding: "1px 10px",
+          borderRadius: "25px",
+          position: "absolute",
+          right: "15px",
+        }}
+      >
+        {props.data.num}
+      </span>
+    </Option>
+  );
+
   return (
     <>
       <div style={{ display: dispalyContainer }}>
         <ContainerDiv>
           <div className="header">想造訪哪些動物呢？</div>
-          {favorities ? (
-            <>
+          {favorities.length ? (
+            <div className="sub-block">
               <div className="sub-header">
                 從收藏清單將動物加入地圖!...或者...
               </div>
@@ -344,97 +464,130 @@ const AnimalsData = (prop) => {
                   )}
                 </AnimalsItemBlock>
               </div>
-            </>
+            </div>
           ) : null}
-          <>
-            <div className="sub-header">從館區挑選你想造訪的動物吧！</div>
-            {catalogs.map((item, index) => (
-              <ItemBlock key={`${index}858`}>
-                <img
-                  className="title"
-                  src={`/Icons/label/${item}-33.svg`}
-                  alt={item}
+          <div className="sub-block">
+            <div className="sub-header">用關鍵字來搜尋想造訪的動物吧！</div>
+            <div>
+              <Select
+                defaultValue={option[14]}
+                zi
+                options={option}
+                onChange={handleChange}
+                components={{ Option: spanOption }}
+                width="100%"
+                styles={{
+                  option: (provided, state) => ({
+                    ...provided,
+                    borderBottom: "1px solid #ffeae4",
+                    color: "#6b6b6b",
+                    padding: 10,
+                    backgroundColor: state.isSelected ? "#f5c2b4" : "white",
+                    "&:hover": {
+                      backgroundColor: "#f7e2dc",
+                    },
+                  }),
+                  indicatorSeparator: (provided, state) => ({
+                    ...provided,
+                    opacity: 0,
+                  }),
+                  menu: (provided, state) => ({
+                    ...provided,
+                    zIndex: 980,
+                  }),
+                  control: (provided, state) => ({
+                    ...provided,
+                    padding: "10px 20px 10px 10px",
+                    border: state.isFocused
+                      ? "1px solid #dba99e"
+                      : "1px solid #dba99e",
+                    boxShadow: "none",
+                    borderRadius: "15px",
+                    "&:hover": {
+                      backgroundColor: "#f7e2dc",
+                    },
+                  }),
+                }}
+              />
+              <div>
+                <Select
+                  closeMenuOnSelect={true}
+                  isMulti
+                  isClearable
+                  isSearchable
+                  placeholder={Input}
+                  options={showAnimals}
+                  onChange={handleInputChange}
+                  backspaceRemovesValue={false}
+                  onFocus={() => {
+                    setOpen(true);
+                  }}
+                  onBlur={() => {
+                    setOpen(false);
+                  }}
+                  menuIsOpen={open}
+                  width="80%"
+                  styles={{
+                    multiValue: (styles, { data }) => ({
+                      ...styles,
+                      padding: "2px 4px",
+                      backgroundColor: "#f0ebea",
+                      borderRadius: "20px",
+                    }),
+                    multiValueRemove: (styles, { data }) => ({
+                      ...styles,
+                      color: "8f8886",
+                      ":hover": {
+                        backgroundColor: "#d4cac8",
+                        borderRadius: "10px",
+                        color: "8f8886",
+                      },
+                    }),
+                    option: (provided, state) => ({
+                      ...provided,
+                      borderBottom: "1px solid #ffeae4",
+                      color: "#6b6b6b",
+                      padding: 10,
+                      backgroundColor: state.isSelected ? "#f5c2b4" : "white",
+                      "&:hover": {
+                        backgroundColor: "#f7e2dc",
+                      },
+                    }),
+                    control: (provided, state) => ({
+                      ...provided,
+                      position: "relative",
+                      border: "none",
+                      borderBottom: "2px solid #f7e2dc",
+                      boxShadow: "none",
+                      "&:hover": {
+                        backgroundColor: "white",
+                      },
+                      marginTop: "10px",
+                    }),
+                    dropdownIndicator: (provided, state) => ({
+                      ...provided,
+                      opacity: 0,
+                    }),
+                    indicatorSeparator: (provided, state) => ({
+                      ...provided,
+                      opacity: 0,
+                    }),
+                    menu: (provided, state) => ({
+                      ...provided,
+                      marginTop: "5px",
+                      zIndex: 1200,
+                    }),
+                  }}
                 />
-                <AnimalsItemBlock key={`${index}88`}>
-                  {animalsData.map((animal) =>
-                    item === animal.Location ? (
-                      animal.Favorite ? (
-                        <AnimalContent
-                          data-classname="animalBtn"
-                          key={animal.Name_Ch}
-                          onClick={showMyGeo}
-                          data-num={animal.CID}
-                          data-lat={animal.Geo[1]}
-                          data-lng={animal.Geo[0]}
-                          data-pavilion={animal.Location}
-                          data-index={animal.Index}
-                        >
-                          {animal.Name_Ch}
-                        </AnimalContent>
-                      ) : null
-                    ) : null
-                  )}
-                  {}
-                  <MoreAnimals
-                    data-classname="animalBtn"
-                    onClick={() => {
-                      setOpen(true);
-                      showMoreAnimals(item);
-                    }}
-                  >
-                    更多
-                  </MoreAnimals>
-                </AnimalsItemBlock>
-              </ItemBlock>
-            ))}
-          </>
+              </div>
+            </div>
+          </div>
+          <img className="draw" src="/Imgs/draw-11.svg" alt="find" />
           <button className="btn" onClick={submit}>
             下一步 選擇顯示設施
           </button>
         </ContainerDiv>
       </div>
-      <Popup
-        open={open}
-        closeOnDocumentClick
-        onClose={closeModal}
-        overlayStyle={{ background: "rgba(0, 0, 0, 0.2)", zIndex: 1200 }}
-        contentStyle={{
-          margin: "auto",
-          boxSizing: "border-box",
-          background: "rgba(255, 255, 255, 0.8)",
-          width: "80%",
-          maxWidth: "600px",
-          padding: "20px",
-          borderRadius: "25px",
-          position: "relative",
-        }}
-      >
-        <AnimalsItemBlock>
-          {showItem === "新光特展館(大貓熊館)" ||
-          showItem === "企鵝館" ||
-          showItem === "無尾熊館" ? (
-            <div className="sub-header mt-0 ">這個館區沒有更多動物囉</div>
-          ) : (
-            animalsData.map((animal) =>
-              showItem === animal.Location && !animal.Favorite ? (
-                <AnimalContent
-                  data-classname="animalBtn"
-                  key={animal.Name_Ch}
-                  onClick={showMyGeo}
-                  data-num={animal.CID}
-                  data-lat={animal.Geo[1]}
-                  data-lng={animal.Geo[0]}
-                  data-pavilion={animal.Location}
-                  data-index={animal.Index}
-                >
-                  {animal.Name_Ch}
-                </AnimalContent>
-              ) : null
-            )
-          )}
-        </AnimalsItemBlock>
-      </Popup>
-      <ToastContainer />
     </>
   );
 };

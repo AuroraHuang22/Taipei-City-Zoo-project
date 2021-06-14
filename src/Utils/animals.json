@@ -138,7 +138,7 @@
     "Location": "沙漠動物區",
     "Index": 10,
     "Favorite": true,
-    "Name_En": "Dromedary Camel或One-humped Camel",
+    "Name_En": "Dromedary Camel",
     "Name_Latin": "Camelus dromedarius",
     "Phylum": "脊索動物門",
     "Class": "哺乳綱",
@@ -334,7 +334,7 @@
     "Diet": "肉食性：小至中型有蹄類動物。",
     "Crisis": "棲地喪失、獵物減少、棲地破碎化、違法獵捕",
     "Code": "Leopard",
-    "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Leopard/Leopard_Pic01.jpg",
+    "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4065870/4d9a27d5-18da-4816-a1ae-b000b3d99aa0.jpg",
     "CID": 12
   },
   {
@@ -3744,7 +3744,7 @@
     "CID": 144
   },
   {
-    "Name_Ch": "苧麻珍蝶(細蝶)",
+    "Name_Ch": "苧麻珍蝶",
     "AlsoKnown": "細蛺蝶,苧麻斑蛺蝶,苧麻蝶,細蝶",
     "Geo/0": 121.5807004,
     "Geo/1": 24.9967436,

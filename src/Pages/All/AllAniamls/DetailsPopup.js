@@ -22,6 +22,7 @@ export default function DetailsPopup(props) {
   const disPatch = useDispatch();
   const { open } = useSelector((state) => state.FilterAnimals);
   const closeModal = () => disPatch(action.setClose());
+  const isRowBased = window.matchMedia("(max-width: 800px)");
 
   let uid = props.uid;
   let favoritiesMember = props.favoritiesMember;
@@ -40,7 +41,7 @@ export default function DetailsPopup(props) {
         boxSizing: "border-box",
         background: "#fff",
         width: "680px",
-        maxWidth: "95vw",
+        maxWidth: isRowBased ? "80vw" : "95vw",
         padding: 0,
         borderRadius: "10px",
         border: "none",
@@ -52,7 +53,11 @@ export default function DetailsPopup(props) {
             <>
               <section className="main" key={item.Name_Latin}>
                 <div className="imgBox">
-                  <img className="img" src={item.Pic01_URL} alt="img" />
+                  <img
+                    className="img"
+                    src={`/animals/${item.Name_Ch}.jpeg`}
+                    alt="img"
+                  />
                 </div>
                 <img className="bg-svg-01" src="/Icons/popup.svg" alt="img" />
                 <img
@@ -70,7 +75,9 @@ export default function DetailsPopup(props) {
                   <span className="title-ch">{item.Name_Ch}</span>
                   <span className="title-en">{item.Name_En}</span>
                 </div>
-                <span className="location">{item.Location}</span>
+                <div className="location">
+                  <span>{item.Location}</span>
+                </div>
                 <section className="info">
                   <div className="info-class">
                     <span>{item.Class}</span>
@@ -92,6 +99,10 @@ export default function DetailsPopup(props) {
                 <CarouselDiv item={item} />
               </section>
               <section className="clickBar">
+                <div className="title-md">
+                  <span className="title-ch">{item.Name_Ch}</span>
+                  <span className="title-en">{item.Name_En}</span>
+                </div>
                 <div className="visitedBox">
                   <section className="farvrite">
                     <div
@@ -108,7 +119,10 @@ export default function DetailsPopup(props) {
                           Toast.success(({ closeToast }) => (
                             <div className="toast">
                               收藏成功！可至
-                              <Link to="/map">路線規劃頁面</Link>查看
+                              <Link className="alink" to="/map">
+                                路線規劃頁面
+                              </Link>
+                              查看
                             </div>
                           ));
                         } else {
@@ -143,7 +157,7 @@ export default function DetailsPopup(props) {
                           ) : null
                         )
                       : null}
-                    <div className="text-sm">造訪點</div>
+                    <div className="text-sm">加入收藏</div>
                   </section>
                   <section className="visited">
                     <div
@@ -160,7 +174,10 @@ export default function DetailsPopup(props) {
                           Toast.success(({ closeToast }) => (
                             <div className="toast">
                               加入成功！可至
-                              <Link to="/member/visited">我的足跡</Link>查看
+                              <Link to="/member/visited" className="alink">
+                                我的足跡
+                              </Link>
+                              查看
                             </div>
                           ));
                         } else {

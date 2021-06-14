@@ -2,75 +2,48 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BrowserRouter as Switch, Link, useRouteMatch } from "react-router-dom";
 
-const Button = styled.span`
-  box-sizing: border-box;
-  font-size: 16px;
-  padding: 5px 20px;
-  border-radius: 25px;
-  text-align: right;
-  border: 2px solid lightgrey;
-  margin: 10px;
-  background-color: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  ::before {
-    content: "←";
-    margin-right: 3px;
-    margin-left: 10px;
-    transition: all 0.3s;
-  }
-  :hover {
-    background-color: #f2ecea;
-    ::before {
-      margin-right: 13px;
-      margin-left: 0px;
-    }
-  }
-  a {
-    text-decoration: none;
-    color: #3a4d48;
-  }
-`;
 const Container = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
-  height: 100%;
-  border-radius: 25px;
-  padding: 15px;
-  border: 1px solid lightgrey;
-  box-sizing: border-box;
-  margin-top: 18px;
+  justify-content: flex-start;
 `;
 const Render = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  height: 80vh;
+  overflow: scroll;
+  border-radius: 25px;
+  border: 1px solid lightgrey;
+  @media (max-width: 996px) {
+    height: auto;
+    overflow: auto;
+  }
 `;
 
 const ItemBlock = styled.div`
   box-sizing: border-box;
-  width: 48%;
+  width: 40%;
   position: relative;
   font-size: 10px;
   font-weight: bold;
   min-height: 160px;
   margin: 5px 5px;
-  padding: 3px 5px;
+  padding: 20px 10px;
   border-radius: 10px;
-
   .title-bg {
-    height: 40px;
+    height: 34px;
     object-fit: cover;
   }
   .greyGround {
     display: flex;
     flex-direction: row;
+    position: relative;
     flex-wrap: wrap;
     box-sizing: border-box;
-    position: absolute;
     .grey-bg {
       box-sizing: border-box;
       display: inline-block;
@@ -78,7 +51,7 @@ const ItemBlock = styled.div`
       height: 80px;
       width: 80px;
       border-radius: 50%;
-      margin: 15px;
+      margin: 15px 8px;
       border: 2px dashed lightgrey;
     }
     .greyGround-p {
@@ -90,9 +63,13 @@ const ItemBlock = styled.div`
   }
   .animalsBlock {
     display: flex;
+    position: absolute;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
+    top: 0px;
+    padding-top: 56px;
+    z-index: 1000;
     .inner-animal {
       display: inline-block;
       text-align: center;
@@ -100,7 +77,7 @@ const ItemBlock = styled.div`
       position: relative;
       height: 80px;
       border-radius: 50%;
-      margin: 15px;
+      margin: 15px 8px;
       box-sizing: border-box;
     }
     .blocksFilter-p {
@@ -133,9 +110,65 @@ const ItemBlock = styled.div`
       filter: grayscale(60%);
       border: 4px solid pink;
       transition: all 0.2s;
-      cursor: pointer;
       :hover {
         opacity: 0.3;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 576px) {
+    .greyGround {
+      .grey-bg {
+        height: 60px;
+        width: 60px;
+        margin: 15px 8px;
+      }
+      .greyGround-p {
+        font-size: 10px;
+      }
+    }
+    .animalsBlock {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      position: absolute;
+      padding-top: 57px;
+      z-index: 1000;
+
+      .inner-animal {
+        display: inline-block;
+        text-align: center;
+        width: 60px;
+        position: relative;
+        height: 60px;
+        border-radius: 50%;
+        margin: 15px 8px;
+        box-sizing: border-box;
+      }
+      .animal-img {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(60%);
+        border: 4px solid pink;
+        transition: all 0.2s;
+        cursor: pointer;
+        :hover {
+          opacity: 0.3;
+        }
       }
     }
   }
@@ -148,11 +181,6 @@ export default function Visited(props) {
 
   return (
     <>
-      <div className="button-group">
-        <Link to={`/member`}>
-          <Button>回護照</Button>
-        </Link>
-      </div>
       <Container>
         <Render>
           {getVisited.length ? (
@@ -197,7 +225,7 @@ export default function Visited(props) {
                         <div
                           className="animal-img"
                           style={{
-                            backgroundImage: `url(${ele[2]})`,
+                            backgroundImage: `url("/animals/${ele[0]}.jpeg")`,
                           }}
                         ></div>
                       </div>

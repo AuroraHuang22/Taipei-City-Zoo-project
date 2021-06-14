@@ -66,6 +66,71 @@ const Container = styled.div`
   .pd-30 {
     padding-left: 30px;
   }
+  @media (max-width: 1024px) {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #fce7e0;
+    padding: 40px 0;
+    section {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 576px) {
+    .block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      border: 2px solid #fce7e0;
+      border-radius: 10px;
+      padding: 10px 30px;
+      width: 60%;
+      transition: padding 0.3s;
+      overflow: hidden;
+      .hide {
+        position: absolute;
+        bottom: 15px;
+        .text {
+          opacity: 0;
+          visibility: hidden;
+          font-size: 14px;
+          color: #929292;
+          transition: opacity 0.35s;
+        }
+      }
+    }
+    .block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      width: 5%;
+      padding-top: 5%;
+      border-radius: 50%;
+      background-color: #fce7e0;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+    .block:hover {
+      padding: 10px 30px 60px;
+      .text {
+        opacity: 1;
+        visibility: visible;
+      }
+      ::before {
+        width: 80%;
+        padding-top: 80%;
+      }
+    }
+  }
 `;
 
 export default function RentalService() {

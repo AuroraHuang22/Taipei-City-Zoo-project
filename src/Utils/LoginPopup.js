@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import firebase from "firebase";
 import * as firestore from "../Utils/firebase";
+import * as toase from "../Utils/toast";
 
 const RenderContainer = styled.div`
   box-sizing: border-box;
@@ -108,7 +109,6 @@ export default function DetailsPopup() {
   const closeModal = () => disPatch(action.setLoginClose());
 
   const [title, setTitle] = useState("Sign In");
-
   const [message, setMessage] = useState("");
 
   let inputEmail = "";
@@ -232,9 +232,8 @@ export default function DetailsPopup() {
             uid = user.uid;
           }
           firestore.firebaseCreateNewMemberStore(uid);
-          setTimeout(() => {
-            closeModal();
-          }, 1500);
+          toase.success("成功加入會員");
+          closeModal();
         })
       )
       .catch((error) => {
@@ -248,9 +247,8 @@ export default function DetailsPopup() {
       .signInWithEmailAndPassword(inputEmail, inputPassword)
       .then((userCredential) => {
         setMessage("登入成功");
-        setTimeout(() => {
-          closeModal();
-        }, 1500);
+        toase.success("登入成功");
+        closeModal();
       })
       .catch((error) => {
         setMessage(error.message);
@@ -261,8 +259,8 @@ export default function DetailsPopup() {
     <Popup
       open={open}
       closeOnDocumentClick
-      onClose={closeModal}
-      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)", zIndex: 1200 }}
+      onClose={() => disPatch(action.setLoginClose())}
+      overlayStyle={{ background: "rgba(0, 0, 0, 0.4)", zIndex: 5000 }}
       contentStyle={{
         margin: "auto",
         boxSizing: "border-box",

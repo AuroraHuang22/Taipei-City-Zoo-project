@@ -55,10 +55,6 @@ const Container = styled.div`
     height: 200px;
     margin-left: 180px;
     align-self: flex-start;
-    background-image: url(/Imgs/hero-02.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     animation: ${float} 4s ease-in-out infinite;
   }
   .text {
@@ -86,6 +82,7 @@ const Container = styled.div`
     letter-spacing: 7px;
     transition: all 0.3s;
     cursor: pointer;
+    z-index: 902;
     ::after {
       content: "⇢";
       margin-left: 3px;
@@ -114,13 +111,49 @@ const Container = styled.div`
       }
     }
   }
+  @media (max-width: 850px) {
+    .hero {
+      margin: 20px auto 0;
+      box-sizing: border-box;
+      width: 80%;
+      height: 200px;
+      align-self: flex-start;
+      animation: ${float} 4s ease-in-out infinite;
+    }
+    .text {
+      align-self: flex-start;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #8f8fb6;
+      font-weight: 400;
+      letter-spacing: 6px;
+    }
+    .btn {
+      position: relative;
+      font-size: 16px;
+      border-bottom: 1px solid #ea7a60;
+    }
+  }
+  @media (max-width: 576px) {
+    .head {
+      content: url("/Imgs/land-sm-39.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .bottom-left,
+    .bottom-right {
+      bottom: 60px;
+    }
+  }
 `;
 
 export default function Landing() {
   return (
     <Container>
       <img className="head" src="/Imgs/land-38.svg" alt="head" />
-      <div className="hero" />
+      <img className="hero" src="/Imgs/hero-02.svg" alt="hero" />
       <div className="text">
         去<span className="bold">動物園</span>...你準備好了嗎？
       </div>

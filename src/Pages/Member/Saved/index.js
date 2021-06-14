@@ -4,149 +4,168 @@ import * as firestore from "../../../Utils/firebase";
 import AnimalsJson from "../../../Utils/animals.json";
 import { BrowserRouter as Switch, Link, useRouteMatch } from "react-router-dom";
 
-const Button = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  .btn {
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 5px 20px;
-    border-radius: 25px;
-    text-align: right;
-    border: 2px solid lightgrey;
-    margin: 10px;
-    margin-left: auto;
-    background-color: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    ::after {
-      content: "→";
-      margin-left: 3px;
-      margin-right: 10px;
-      transition: all 0.3s;
-    }
-    :hover {
-      background-color: #f2ecea;
-      ::after {
-        margin-left: 13px;
-        margin-right: 0px;
-      }
-    }
-  }
-
-  a {
-    text-decoration: none;
-    color: #3a4d48;
-  }
-`;
-
 const Container = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
-  height: 100%;
-  border-radius: 25px;
-  padding: 15px;
-  border: 1px solid lightgrey;
-  box-sizing: border-box;
-  .title {
-    font-size: 24px;
-    color: #5f5c90;
-    font-weight: 500;
-  }
-
-  .itemBlock {
+  justify-content: flex-start;
+  .render {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 120px;
-    border-bottom: 1px solid #f2f2f2;
-    transition: all 0.2s;
-    color: #acacac;
-    .flex-left {
-      /* width: 60%; */
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 30vh;
+    max-height: 80vh;
+    overflow: scroll;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+    .title {
+      font-size: 24px;
+      color: #5f5c90;
+      font-weight: 500;
+    }
+    .itemBlock {
+      box-sizing: border-box;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      .header {
-        width: 100px;
-        height: 40px;
-        background-image: url(/Imgs/passport-titlebg-30.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        text-align: center;
-        line-height: 40px;
-        color: grey;
-        margin-bottom: 20px;
-      }
-      .contentBlock {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 120px;
+      border-bottom: 1px solid #f2f2f2;
+      transition: all 0.2s;
+      color: #acacac;
+      width: 100%;
+      .flex-left {
         display: flex;
-        align-items: center;
-        justify-content: start;
-        margin-right: auto;
-        .content {
+        width: 65%;
+        flex-direction: column;
+        align-items: flex-start;
+        .header {
+          width: 100px;
+          height: 40px;
+          background-image: url(/Imgs/passport-titlebg-30.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100%;
+          text-align: center;
+          line-height: 40px;
+          color: grey;
+          margin-bottom: 20px;
+        }
+        .contentBlock {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          flex-wrap: wrap;
+          .content {
+            margin: 10px;
+            border: 1px solid #acacac;
+            padding: 3px 12px;
+            border-radius: 12px;
+            white-space: nowrap;
+          }
+        }
+      }
+      .flex-right {
+        display: flex;
+        width: 35%;
+        flex-direction: column;
+        margin-top: 30px;
+        .goto,
+        .remove {
+          background-color: white;
+          white-space: nowrap;
+          position: relative;
+          font-size: 16px;
           margin: 0px 10px;
           border: 1px solid #acacac;
-          padding: 3px 12px;
-          border-radius: 12px;
+          padding: 4px 24px;
+          border-radius: 25px;
+          color: #acacac;
+          margin-bottom: 12px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .goto::after {
+          content: "→";
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          right: 50%;
+          transition: all 0.3s;
+        }
+      }
+      :hover {
+        background-color: #fcfcfc;
+        color: black;
+        .goto {
+          border: 1px solid #ea7a60;
+          background-color: white;
+          color: #ea7a60;
+          padding-right: 32px;
+          :hover {
+            box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+          }
+          ::after {
+            opacity: 1;
+            visibility: visible;
+            right: 6%;
+          }
+        }
+        .remove {
+          background-color: grey;
+          color: white;
+          :hover {
+            box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }
-    .flex-right {
-      display: flex;
-      margin-left: auto;
-      flex-direction: column;
-      .goto,
-      .remove {
-        background-color: white;
-        position: relative;
-        font-size: 16px;
-        margin: 0px 10px;
-        border: 1px solid #acacac;
-        padding: 4px 24px;
-        border-radius: 25px;
-        color: #acacac;
-        margin-bottom: 12px;
-        cursor: pointer;
+    .desc {
+      color: grey;
+      font-size: 16px;
+      letter-spacing: 1.8px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 996px) {
+    .render {
+      height: auto;
+      min-height: none;
+      max-height: none;
+      overflow: auto;
+      .desc {
+        padding: 50px 0;
+      }
+      .itemBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+        border-bottom: 1px solid #f2f2f2;
         transition: all 0.2s;
-      }
-      .goto::after {
-        content: "→";
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        right: 50%;
-        transition: all 0.3s;
+        color: #acacac;
+        .flex-left {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .flex-right {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          .goto,
+          .remove {
+            font-size: 14px;
+          }
+        }
       }
     }
-    :hover {
-      background-color: #fcfcfc;
-      color: black;
-      .goto {
-        border: 1px solid #ea7a60;
-        background-color: white;
-        color: #ea7a60;
-        padding-right: 32px;
-        :hover {
-          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
-        }
-        ::after {
-          opacity: 1;
-          visibility: visible;
-          right: 6%;
-        }
-      }
-      .remove {
-        background-color: grey;
-        color: white;
-        :hover {
-          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
-        }
-      }
+  }
+  @media (max-width: 576px) {
+    .render {
     }
   }
 `;
@@ -171,56 +190,53 @@ export default function Saved(prop) {
   }
   return (
     <>
-      <Button>
-        <Link to={`/member`}>
-          <div className="btn">回護照</div>
-        </Link>
-      </Button>
       <Container>
-        {savedData.length ? (
-          savedData.map((item, index) => (
-            <div className="itemBlock" key={`item${index}`}>
-              <div className="flex-left">
-                <span className="header">儲存行程 {index + 1}</span>
-                <div className="contentBlock">
-                  {animalsjson.map((ele) =>
-                    item.num.map((na) =>
-                      ele.CID === Number(na) ? (
-                        <div className="content" key={`span${index}`}>
-                          {ele.Name_Ch}
-                        </div>
-                      ) : null
-                    )
-                  )}
+        <div className="render">
+          {savedData.length ? (
+            savedData.map((item, index) => (
+              <div className="itemBlock" key={`item${index}`}>
+                <div className="flex-left">
+                  <span className="header">儲存行程 {index + 1}</span>
+                  <div className="contentBlock">
+                    {animalsjson.map((ele) =>
+                      item.num.map((na) =>
+                        ele.CID === Number(na) ? (
+                          <div className="content" key={`span${index}`}>
+                            {ele.Name_Ch}
+                          </div>
+                        ) : null
+                      )
+                    )}
+                  </div>
+                </div>
+                <div className="flex-right">
+                  <button
+                    data-index={index}
+                    className="goto"
+                    onClick={(e) => {
+                      window.location.href = `/map?id=${index + 1}`;
+                    }}
+                  >
+                    前往地圖
+                  </button>
+                  <button
+                    className="remove"
+                    onClick={(e) => {
+                      firestore.firebaseDeleteDoc(uid, savedId[index]);
+                      setRemove(savedId[index]);
+                    }}
+                  >
+                    刪除行程
+                  </button>
                 </div>
               </div>
-              <div className="flex-right">
-                <button
-                  data-index={index}
-                  className="goto"
-                  onClick={(e) => {
-                    window.location.href = `/map?id=${index + 1}`;
-                  }}
-                >
-                  前往地圖
-                </button>
-                <button
-                  className="remove"
-                  onClick={(e) => {
-                    firestore.firebaseDeleteDoc(uid, savedId[index]);
-                    setRemove(savedId[index]);
-                  }}
-                >
-                  刪除行程
-                </button>
-              </div>
+            ))
+          ) : (
+            <div className="desc">
+              到 <a href="/map">路線規劃</a> 儲存你的第一個行程吧！
             </div>
-          ))
-        ) : (
-          <h4>
-            還沒有儲存行程的紀錄喔,只要在路線規劃印出地圖,地圖資料就會自動儲存到這裡囉！
-          </h4>
-        )}
+          )}
+        </div>
       </Container>
     </>
   );

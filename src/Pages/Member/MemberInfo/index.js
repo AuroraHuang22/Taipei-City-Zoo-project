@@ -7,21 +7,46 @@ import {
   Switch,
   Link,
   useRouteMatch,
+  useLocation,
 } from "react-router-dom";
 
 const Container = styled.div`
-  width: 100%;
-  height: 150px;
-  max-width: 1280px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  position: relative;
   justify-content: center;
   align-items: center;
-  .button {
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 20%;
+  margin-left: auto;
+  max-width: 380px;
+  padding: 30px 20px;
+  height: 100%;
+  .draw {
+    position: absolute;
+    z-index: -1;
+    width: 140px;
+    object-fit: contain;
+  }
+  .draw-1 {
+    top: 5%;
+    right: -20%;
+  }
+  .draw-2 {
+    bottom: 5%;
+    left: -20%;
+  }
+  a {
+    text-decoration: none;
+    color: #3a4d48;
+  }
+  .inner-container {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
   .bar-block {
     display: flex;
@@ -46,29 +71,94 @@ const Container = styled.div`
     }
   }
   .level {
-    margin-left: 20px;
-    width: 30vw;
+    width: 100%;
     font-size: 18px;
+    margin-top: 30px;
     .level-text {
       font-weight: 600;
-      margin-left: 5px;
     }
     .desc {
+      display: block;
+      margin-top: 10px;
       color: grey;
       font-size: 16px;
       letter-spacing: 1.8px;
     }
   }
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 10px auto;
+    .btn {
+      box-sizing: border-box;
+      font-size: 14px;
+      padding: 5px 20px;
+      border-radius: 25px;
+      text-align: center;
+      border: 2px solid lightgrey;
+      margin: 5px;
+      background-color: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      :hover {
+        background-color: #efe7e4;
+      }
+    }
+    .btn.active {
+      background-color: #efe6e3;
+      :hover {
+        background-color: #ccc2bf;
+      }
+    }
+  }
+  @media (max-width: 996px) {
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 20px;
+    height: 100%;
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .button-group {
+      padding: 20px 0px 10px;
+      flex-direction: row;
+      max-width: 100%;
+    }
+    .level {
+      margin-top: 0px;
+      padding-left: 30px;
+    }
+    .draw {
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+    .inner-container {
+      /* display: flex; */
+      flex-direction: column;
+      /* width: 80%;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      align-items: center; */
+    }
+  }
 `;
-const Photo = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid lightpink;
-  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/88ab56107374179.5fa563267cac4.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+const Photo = styled.img`
+  content: url("/Imgs/explore-09.svg");
+  width: 100%;
+  object-fit: contain;
+  @media (max-width: 996px) {
+    width: 55%;
+  }
 `;
 
 const animalsJson = AnimalsJson;
@@ -79,9 +169,10 @@ const catalogs = animalsJson
 
 function MemberInfo(props) {
   const [getVisited, setGetVisited] = useState("none");
+  const page = useLocation().pathname;
+
   let uid = props.uid;
   let bar = 0;
-  let match = useRouteMatch();
 
   const LevelBar = () => {
     return (
@@ -170,10 +261,11 @@ function MemberInfo(props) {
 
   return (
     <Container>
-      <Photo />
-      <div className="level">
-        <div>
-          等級：
+      <img className="draw-1 draw" src="/Imgs/draw-13.svg" alt="draw" />
+      <img className="draw-2 draw" src="/Imgs/draw-13.svg" alt="draw" />
+      <div className="inner-container">
+        <Photo />
+        <div className="level">
           {uid ? (
             <>
               <span className="level-text">
@@ -223,8 +315,26 @@ function MemberInfo(props) {
               <span className="desc">不登入，怎麼知道你的實力啦～</span>
             </>
           )}
+          <LevelBar />
         </div>
-        <LevelBar />
+      </div>
+
+      <div className="button-group">
+        <Link to="/member">
+          <div className={page === "/member" ? "btn active" : "btn"}>
+            我的探索護照
+          </div>
+        </Link>
+        <Link to="/member/saved">
+          <div className={page === "/member/saved" ? "btn active" : "btn"}>
+            我的行程
+          </div>
+        </Link>
+        <Link to="/member/visited">
+          <div className={page === "/member/visited" ? "btn active" : "btn"}>
+            我的足跡
+          </div>
+        </Link>
       </div>
     </Container>
   );

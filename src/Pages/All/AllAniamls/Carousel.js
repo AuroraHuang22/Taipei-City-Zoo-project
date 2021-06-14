@@ -37,6 +37,11 @@ const Carouseldiv = styled.div`
         max-height: 120px;
         overflow-y: scroll;
         white-space: pre-wrap;
+
+        @media (max-width: 576px) {
+          max-height: 300px;
+          /* overflow-y: auto; */
+        }
       }
     }
   }
@@ -47,11 +52,11 @@ const responsive = {
     items: 2,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 576 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 576, min: 0 },
     items: 1,
   },
 };
@@ -68,9 +73,9 @@ export default function CarouselDiv(props) {
         arrows={true}
         showDots={false}
         ssr={false}
-        infinite={false}
+        infinite={true}
         containerClass="slider"
-        focusOnSelect={true}
+        focusOnSelect={false}
         itemClass="carousel-item-padding-40-px"
       >
         {item.Diet ? (
@@ -79,7 +84,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"飲食</div>
             <div className="slider-item-content">{item.Diet}</div>
           </div>
-        ) : null}
+        ) : undefined}
         {item.Behavior ? (
           <div className="slider-item">
             <img
@@ -90,7 +95,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"趣事</div>
             <div className="slider-item-content">{item.Behavior}</div>
           </div>
-        ) : null}
+        ) : undefined}
         {item.Habitat ? (
           <div className="slider-item">
             <img
@@ -101,7 +106,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"棲息地</div>
             <div className="slider-item-content">{item.Habitat}</div>
           </div>
-        ) : null}
+        ) : undefined}
         {item.Feature ? (
           <div className="slider-item">
             <img
@@ -112,7 +117,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"特徵</div>
             <div className="slider-item-content">{item.Feature}</div>
           </div>
-        ) : null}
+        ) : undefined}
         {item.Crisis ? (
           <div className="slider-item">
             <img
@@ -123,7 +128,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"威脅</div>
             <div className="slider-item-content">{item.Crisis}</div>
           </div>
-        ) : null}
+        ) : undefined}
       </Carousel>
     </Carouseldiv>
   );

@@ -11,17 +11,18 @@ import * as firestore from "../../Utils/firebase";
 
 const Container = styled.div`
   display: flex;
+  box-sizing: border-box;
+
   flex-direction: row;
   padding: 80px 1px 0px;
+  height: calc(100vh - 80px);
   .animalsDiv {
     height: 100%;
     box-sizing: border-box;
     width: 35%;
     padding: 0 30px;
-    height: calc(100vh - 80px);
-    overflow: scroll;
+    height: calc(100vh - 160px);
     .printMap {
-      display: block;
       width: 80%;
       padding: 12px;
       margin-top: 20px;
@@ -58,12 +59,32 @@ const Container = styled.div`
       }
     }
   }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding-bottom: 60px;
+    .animalsDiv {
+      width: 100%;
+      padding: 10px 30px;
+      height: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 10px;
+    padding-bottom: 100px;
+    .animalsDiv {
+      padding: 0 10px;
+    }
+  }
 `;
 
 function MapIndex() {
   const componentRef = useRef();
   const [displayDiv, setDisplayDiv] = useState("none");
   const [getUid, setGetUid] = useState("none");
+  const isRowBased = window.matchMedia("(max-width: 1020px)").matches;
 
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
@@ -104,7 +125,7 @@ function MapIndex() {
         />
         <button
           className="printMap"
-          style={{ display: displayDiv }}
+          style={{ display: isRowBased ? "none" : displayDiv }}
           onClick={handlePrint}
         >
           下載地圖至ＰＤＦ
