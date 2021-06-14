@@ -1,0 +1,15 @@
+<svg width="303" height="321" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+ <desc>Created with Fabric.js 4.2.0</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="323" width="305" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="20813817-4245-41cf-a78e-fcd6c54b90e4" transform="matrix(1,0,0,1,540,540) "/>
+  <g id="ab3be29a-df02-41ec-b41e-41d3c0608ece">
+   <polygon fill="#ada298" id="svg_2" stroke="#ada298" points="300.7754021923206,158.27324361159503 203.4825977308597,206.54385194426163 187.74035049645187,313.9835376618034 111.74340967978645,236.27454598222673 4.55425322762062,254.56391508268243 54.87095675332296,158.27324361159503 4.55425322762062,61.982556211637814 111.74340967978645,80.0213960467176 187.74035049645187,2.5629654902566017 203.4825977308597,110.00265120779835 " vector-effect="non-scaling-stroke"/>
+  </g>
+ </g>
+</svg>

@@ -1,13 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Noto Sans TC", "Poppins", sans-serif, Arial, Helvetica,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.react-multi-carousel-dot button:hover:active {
+  background: lightgray !important;
+}
+.react-multi-carousel-dot--active button {
+  background: grey !important;
+}
+.react-multi-carousel-dot button {
+  width: 10px !important;
+  height: 10px !important;
+  border: none !important;
+  opacity: 1 !important;
+  margin-right: 10px !important;
+}
+
+.leaflet-routing-container {
+  display: none;
+}
+
+.leaflet-container {
+  border-radius: 40px;
+}
+.leaflet-top {
+  z-index: 850;
+}
+.leaflet-marker-icon.my-div-icon {
+  color: #ea7a60;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500;
+  z-index: 1200;
+}
+.toast {
+  letter-spacing: 0;
+}
+.alink {
+  font-weight: 600 !important;
+  color: #4f6e59 !important;
+  margin: 0 5px !important;
+  font-size: 16px !important;
+}
+
+@media print {
+  @page {
+    size: 1200px 1050px;
+    margin: 10px;
+  }
+  .leaflet-control-zoom {
+    display: none;
+  }
+  #mapDD {
+    width: 1200px;
+    height: 1000px;
+  }
 }

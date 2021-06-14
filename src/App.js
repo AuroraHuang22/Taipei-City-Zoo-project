@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Map from "./Pages/Map";
+import store from "./Redux/Store";
+import Header from "./Utils/Header";
+import Footer from "./Utils/Footer";
+import Member from "./Pages/Member";
+import All from "./Pages/All";
+import Entrance from "./Pages/Entrance";
+import Landing from "./Pages/Landing";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/all" component={All} />
+          <Route exact path="/map" component={Map} />
+          <Route path="/member" component={Member} />
+          <Route path="/entrance" component={Entrance} />
+        </Switch>
+        {/* <Footer /> */}
+      </Router>
+    </Provider>
   );
 }
 
