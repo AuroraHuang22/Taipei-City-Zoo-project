@@ -5,7 +5,7 @@ import * as reduxAction from "../../../Redux/Action";
 import * as firestore from "../../../Utils/firebase";
 import * as Toast from "../../../Utils/toast";
 import "react-toastify/dist/ReactToastify.css";
-import Select, { components } from "react-select";
+// import Select, { components } from "react-select";
 
 const ContainerDiv = styled.div`
   width: 100%;
@@ -189,20 +189,16 @@ const AnimalContent = styled.div`
 `;
 
 let flag = false;
-
-let nowAnimals = [];
+// let nowAnimals = [];
 
 const AnimalsData = (prop) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [animalsData, setAnimalsData] = useState(null);
   const [favorities, setFavorities] = useState("none");
   const [savedData, setSaveData] = useState("none");
-  const [selectPlace, setSelectPlace] = useState("全部動物");
-  const [Input, setInput] = useState("今天我想看...");
-  const [foucs, setFoucs] = useState(false);
-
+  // const [selectPlace, setSelectPlace] = useState("全部動物");
   const [dispalyContainer, setDispalyContainer] = useState("block");
-  const disPatch = useDispatch();
+  const dispatch = useDispatch();
 
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.displayforAnimalSelect
@@ -216,61 +212,59 @@ const AnimalsData = (prop) => {
 
   let routeData = prop.route;
   let uid = prop.uid;
-  let showAnimals = [];
-  let option = [];
-  const { Option } = components;
+  // const { Option } = components;
 
-  const handleChange = (value, { action }) => {
-    switch (action) {
-      case "select-option":
-        setSelectPlace(value.value);
-        setOpen(true);
-        return;
-      default:
-        return;
-    }
-  };
+  // const handleChange = (value, { action }) => {
+  //   switch (action) {
+  //     case "select-option":
+  //       setSelectPlace(value.value);
+  //       setOpen(true);
+  //       return;
+  //     default:
+  //       return;
+  //   }
+  // };
 
-  const handleInputChange = (inputValue, { action }) => {
-    switch (action) {
-      case "select-option":
-        let index = inputValue.length - 1;
-        animalsData.forEach((item) => {
-          if (item.Name_Ch === inputValue[index].value) {
-            disPatch(
-              reduxAction.addAnimal([item.Geo[1], item.Geo[0]], item.CID)
-            );
-          }
-        });
+  // const handleInputChange = (inputValue, { action }) => {
+  //   switch (action) {
+  //     case "select-option":
+  //       let index = inputValue.length - 1;
+  //       animalsData.forEach((item) => {
+  //         if (item.Name_Ch === inputValue[index].value) {
+  //           dispatch(
+  //             reduxAction.addAnimal([item.Geo[1], item.Geo[0]], item.CID)
+  //           );
+  //         }
+  //       });
 
-        nowAnimals = inputValue;
-        return;
-      case "remove-value":
-        let removedAnimals = nowAnimals.filter(
-          (i) => inputValue.findIndex((j) => j.value === i.value) === -1
-        );
-        nowAnimals = inputValue;
-        animalsData.forEach((item) => {
-          if (item.Name_Ch === removedAnimals[0].value) {
-            disPatch(
-              reduxAction.removeAnimal([item.Geo[1], item.Geo[0]], item.CID)
-            );
-          }
-        });
+  //       nowAnimals = inputValue;
+  //       return;
+  //     case "remove-value":
+  //       let removedAnimals = nowAnimals.filter(
+  //         (i) => inputValue.findIndex((j) => j.value === i.value) === -1
+  //       );
+  //       nowAnimals = inputValue;
+  //       animalsData.forEach((item) => {
+  //         if (item.Name_Ch === removedAnimals[0].value) {
+  //           dispatch(
+  //             reduxAction.removeAnimal([item.Geo[1], item.Geo[0]], item.CID)
+  //           );
+  //         }
+  //       });
 
-        return;
-      case "clear":
-        window.location.reload();
-        return;
-      default:
-        return;
-    }
-  };
+  //       return;
+  //     case "clear":
+  //       window.location.reload();
+  //       return;
+  //     default:
+  //       return;
+  //   }
+  // };
 
   const showMyGeo = (e) => {
     if (e.target.style.backgroundColor !== "lightgrey") {
       e.target.style.backgroundColor = "lightgrey";
-      disPatch(
+      dispatch(
         reduxAction.addAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
           Number(e.target.dataset.num)
@@ -278,7 +272,7 @@ const AnimalsData = (prop) => {
       );
     } else {
       e.target.style.backgroundColor = "white";
-      disPatch(
+      dispatch(
         reduxAction.removeAnimal(
           [Number(e.target.dataset.lat), Number(e.target.dataset.lng)],
           Number(e.target.dataset.num)
@@ -320,9 +314,9 @@ const AnimalsData = (prop) => {
           item.Location === pav[0] ? result.push(...item.Route) : null
         )
       );
-      disPatch(reduxAction.addRecommend(pavilionsSort));
-      disPatch(reduxAction.addRoute(result));
-      disPatch(reduxAction.gotoNextStep());
+      dispatch(reduxAction.addRecommend(pavilionsSort));
+      dispatch(reduxAction.addRoute(result));
+      dispatch(reduxAction.gotoNextStep());
       setDispalyContainer("none");
     } else {
       Toast.alertMes("請先選擇至少一種想看的動物喔！");
@@ -338,13 +332,13 @@ const AnimalsData = (prop) => {
     } else {
       setFavorities(false);
     }
-  }, []);
+  }, [prop.animal, uid]);
 
   useEffect(() => {
     if (uid) {
       return firestore.firebaseGetSavedData(uid, (data) => setSaveData(data));
     }
-  }, []);
+  }, [uid]);
 
   useEffect(() => {
     if (displayStore) {
@@ -367,70 +361,42 @@ const AnimalsData = (prop) => {
         numArray.push(Number(item));
       });
 
-      disPatch(reduxAction.removeAllAnimal());
+      dispatch(reduxAction.removeAllAnimal());
       geoArray.forEach((item, index) =>
-        disPatch(reduxAction.addAnimal(item, numArray[index]))
+        dispatch(reduxAction.addAnimal(item, numArray[index]))
       );
       flag = true;
     }
-  }, [savedData]);
+  }, [dispatch, idValue, savedData]);
 
-  useEffect(() => {
-    if (flag) {
-      submit();
-    }
-  }, [flag]);
+  if (flag) {
+    submit();
+  }
 
   if (!animalsData || favorities === undefined || favorities === "none") {
     return null;
   }
 
-  const set = new Set();
-  const catalogs = animalsData
-    .filter((item) =>
-      !set.has(item.Location) ? set.add(item.Location) : false
-    )
-    .map((item) => item.Location);
+  // const option = FilterAnimals.getAllLabel();
+  // const showAnimals = FilterAnimals.filterAnimalsOfPlace(selectPlace);
 
-  catalogs.forEach((item) => {
-    let arr5 = [];
-    animalsData.forEach((animal) => {
-      if (item === animal.Location) {
-        arr5.push(animal.Name_Ch);
-      }
-    });
-    option.push({ value: item, label: item, num: arr5.length });
-  });
-  option.push({ value: "全部動物", label: "全部動物", num: 270 });
-
-  if (selectPlace !== "全部動物") {
-    let arr = animalsData
-      .filter((item) => item.Location.includes(selectPlace))
-      .map((item) => item.Name_Ch);
-    arr.forEach((item) => showAnimals.push({ value: item, label: item }));
-  } else {
-    animalsData.forEach((item) =>
-      showAnimals.push({ value: item.Name_Ch, label: item.Name_Ch })
-    );
-  }
-
-  const spanOption = (props) => (
-    <Option {...props}>
-      <span style={{ display: "inline-block" }}>{props.data.label}</span>
-      <span
-        style={{
-          display: "inline-block",
-          backgroundColor: "#f2f2f2",
-          padding: "1px 10px",
-          borderRadius: "25px",
-          position: "absolute",
-          right: "15px",
-        }}
-      >
-        {props.data.num}
-      </span>
-    </Option>
-  );
+  // const groupLabel = (props) => (
+  //   <Option {...props}>
+  //     <span style={{ display: "inline-block" }}>{props.data.label}</span>
+  //     <span
+  //       style={{
+  //         display: "inline-block",
+  //         backgroundColor: "#f2f2f2",
+  //         padding: "1px 10px",
+  //         borderRadius: "25px",
+  //         position: "absolute",
+  //         right: "15px",
+  //       }}
+  //     >
+  //       {props.data.num}
+  //     </span>
+  //   </Option>
+  // );
 
   return (
     <>
@@ -468,13 +434,13 @@ const AnimalsData = (prop) => {
           ) : null}
           <div className="sub-block">
             <div className="sub-header">用關鍵字來搜尋想造訪的動物吧！</div>
-            <div>
+            {/* <div>
               <Select
                 defaultValue={option[14]}
                 zi
                 options={option}
                 onChange={handleChange}
-                components={{ Option: spanOption }}
+                components={{ Option: groupLabel }}
                 width="100%"
                 styles={{
                   option: (provided, state) => ({
@@ -515,7 +481,7 @@ const AnimalsData = (prop) => {
                   isMulti
                   isClearable
                   isSearchable
-                  placeholder={Input}
+                  placeholder={"今天我想看..."}
                   options={showAnimals}
                   onChange={handleInputChange}
                   backspaceRemovesValue={false}
@@ -580,7 +546,7 @@ const AnimalsData = (prop) => {
                   }}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
           <img className="draw" src="/Imgs/draw-11.svg" alt="find" />
           <button className="btn" onClick={submit}>

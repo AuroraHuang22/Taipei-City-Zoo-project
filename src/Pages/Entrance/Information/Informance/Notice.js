@@ -13,6 +13,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 900;
   .notice {
     width: 100%;
     position: relative;

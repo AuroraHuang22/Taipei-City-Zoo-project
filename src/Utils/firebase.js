@@ -1,7 +1,7 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCI3Hmv_gjjmFzRO-t0BngdDIKCcaSlyeM",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "zooproject-taipei.firebaseapp.com",
   projectId: "zooproject-taipei",
   storageBucket: "zooproject-taipei.appspot.com",

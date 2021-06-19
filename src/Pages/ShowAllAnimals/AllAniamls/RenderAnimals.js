@@ -4,8 +4,6 @@ import * as action from "../../../Redux/Action";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
 import DetailsPopup from "./DetailsPopup";
-import * as firestore from "../../../Utils/firebase";
-import firebase from "firebase";
 import ReactPaginate from "react-paginate";
 
 const Container = styled.div`
@@ -179,27 +177,12 @@ const Container = styled.div`
   }
 `;
 
-let uid = undefined;
-let firebaseFavoriateArray = [];
-let favoritiesMember = [];
-let visitedMember = [];
-
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    uid = user.uid;
-    firestore
-      .firebaseGetMemberData(uid)
-      .then((data) => (firebaseFavoriateArray = { ...data }))
-      .then((data) => (favoritiesMember = firebaseFavoriateArray.favorities))
-      .then((data) => (visitedMember = firebaseFavoriateArray.isVisited));
-  }
-});
-
-export default function ReaderAnimals() {
+export default function ReaderAnimals(props) {
   const [popupAnimal, setPopupAnimal] = useState(null);
   const [selectedPage, setSelectedPage] = useState(1);
   const { search } = useSelector((state) => state.FilterAnimals);
   const { place } = useSelector((state) => state.FilterAnimals);
+  const uid = props.uid;
 
   const disPatch = useDispatch();
   const animalsJson = AnimalsJson;
@@ -227,6 +210,11 @@ export default function ReaderAnimals() {
     (selectedPage - 1) * 20 + 20
   );
 
+  const handleAnimalClick = (name) => {
+    setPopupAnimal(name);
+    disPatch(action.setOpen());
+  };
+
   useEffect(() => {
     setSelectedPage(1);
   }, [place]);
@@ -241,8 +229,7 @@ export default function ReaderAnimals() {
             className="background"
             key={item.Name_Ch}
             onClick={() => {
-              setPopupAnimal(item.Name_Ch);
-              disPatch(action.setOpen());
+              handleAnimalClick(item.Name_Ch);
             }}
           >
             <div className="imgBox">
@@ -280,8 +267,6 @@ export default function ReaderAnimals() {
         uid={uid}
         showAnimals={showAnimals}
         popupAnimal={popupAnimal}
-        favoritiesMember={favoritiesMember}
-        visitedMember={visitedMember}
       />
     </Container>
   );

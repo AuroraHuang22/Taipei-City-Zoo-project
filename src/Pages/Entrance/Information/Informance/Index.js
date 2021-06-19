@@ -154,9 +154,7 @@ export default function Infomation() {
           <EnteranceFee />
           <Open />
         </div>
-        <div>
-          <Notice />
-        </div>
+        <Notice />
         <div className="container-2">
           <RentalService />
           <div className="inner-container">

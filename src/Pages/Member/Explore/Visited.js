@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Switch, Link, useRouteMatch } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;

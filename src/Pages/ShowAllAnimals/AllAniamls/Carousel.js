@@ -78,14 +78,14 @@ export default function CarouselDiv(props) {
         focusOnSelect={false}
         itemClass="carousel-item-padding-40-px"
       >
-        {item.Diet ? (
+        {item.Diet && (
           <div className="slider-item">
             <img className="slider-img" src="/Icons/diet-14.svg" alt="diet" />
             <div className="slider-item-title">"飲食</div>
             <div className="slider-item-content">{item.Diet}</div>
           </div>
-        ) : undefined}
-        {item.Behavior ? (
+        )}
+        {item.Behavior && (
           <div className="slider-item">
             <img
               className="slider-img"
@@ -95,8 +95,8 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"趣事</div>
             <div className="slider-item-content">{item.Behavior}</div>
           </div>
-        ) : undefined}
-        {item.Habitat ? (
+        )}
+        {item.Habitat && (
           <div className="slider-item">
             <img
               className="slider-img"
@@ -106,8 +106,8 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"棲息地</div>
             <div className="slider-item-content">{item.Habitat}</div>
           </div>
-        ) : undefined}
-        {item.Feature ? (
+        )}
+        {item.Feature && (
           <div className="slider-item">
             <img
               className="slider-img"
@@ -117,8 +117,8 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"特徵</div>
             <div className="slider-item-content">{item.Feature}</div>
           </div>
-        ) : undefined}
-        {item.Crisis ? (
+        )}
+        {item.Crisis && (
           <div className="slider-item">
             <img
               className="slider-img"
@@ -128,7 +128,7 @@ export default function CarouselDiv(props) {
             <div className="slider-item-title">"威脅</div>
             <div className="slider-item-content">{item.Crisis}</div>
           </div>
-        ) : undefined}
+        )}
       </Carousel>
     </Carouseldiv>
   );

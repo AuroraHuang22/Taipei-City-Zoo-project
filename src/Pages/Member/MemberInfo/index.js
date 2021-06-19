@@ -2,13 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
 import * as firestore from "../../../Utils/firebase";
-import {
-  BrowserRouter as Route,
-  Switch,
-  Link,
-  useRouteMatch,
-  useLocation,
-} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;

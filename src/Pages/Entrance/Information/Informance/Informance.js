@@ -11,13 +11,13 @@ const Container = styled.div`
   width: 100%;
   .imgBox {
     position: absolute;
-    height: 408px;
+    height: 100%;
     top: 0;
     border-right: 2px solid #fce7e0;
     .img {
       max-width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: left;
     }
   }

@@ -5,12 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as action from "../../../Redux/Action";
 import * as toast from "../../../Utils/toast";
 import "react-toastify/dist/ReactToastify.css";
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   .header {
@@ -157,7 +152,7 @@ const Selector = (props) => {
 
   useEffect(() => {
     setGetAllFacilities(props.facilities);
-  }, []);
+  }, [props.facilities]);
 
   if (!getAllFacilities.length) {
     return null;

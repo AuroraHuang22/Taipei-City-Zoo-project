@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
@@ -88,8 +88,8 @@ const Container = styled.div`
   }
 `;
 
-const animalsJson = AnimalsJson;
 export default function MapComformation() {
+  const animalsJson = AnimalsJson;
   const confoStore = useSelector((state) => state.AnimalsReducer.conformation);
   const recommendStore = useSelector((state) => state.AnimalsReducer.recommend);
   const chooseAnimal = useSelector(
@@ -135,8 +135,6 @@ export default function MapComformation() {
   animalSort[0].index >= 10
     ? animalSort.sort((a, b) => b.index - a.index)
     : animalSort.sort((a, b) => a.index - b.index);
-
-  console.log(animalSort);
 
   return (
     <Container id="map-info">

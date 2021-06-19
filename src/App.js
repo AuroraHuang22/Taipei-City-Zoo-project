@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Map from "./Pages/Map";
 import store from "./Redux/Store";
 import Header from "./Utils/Header";
-import Footer from "./Utils/Footer";
+// import Footer from "./Utils/Footer";
 import Member from "./Pages/Member";
-import All from "./Pages/All";
+import ShowAllAnimals from "./Pages/ShowAllAnimals";
 import Entrance from "./Pages/Entrance";
 import Landing from "./Pages/Landing";
-import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/all" component={All} />
+          <Route exact path="/all" component={ShowAllAnimals} />
           <Route exact path="/map" component={Map} />
           <Route path="/member" component={Member} />
           <Route path="/entrance" component={Entrance} />

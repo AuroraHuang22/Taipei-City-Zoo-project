@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import * as action from "../../../Redux/Action";
+import * as FilterAnimals from "../../../Utils/FilterAnimals";
 import Select, { components } from "react-select";
-
 import styled from "styled-components";
 import AnimalsJson from "../../../Utils/animals.json";
 
@@ -203,36 +203,28 @@ const FilterContainer = styled.div`
     }
   }
 `;
-
 export default function Filter() {
-  const disPatch = useDispatch();
+  const dispatch = useDispatch();
   const [selectPlace, setSelectPlace] = useState("動物園裡");
   const [Input, setInput] = useState("請輸入關鍵字...");
-  const option = [];
   const { Option } = components;
-  let showAnimals = [];
-
-  const set = new Set();
-  const place = AnimalsJson.filter((item) =>
-    !set.has(item.Location) ? set.add(item.Location) : false
-  ).map((item) => item.Location);
 
   const handleChange = (value) => {
     setSelectPlace(value.value);
     let recom = AnimalsJson.filter((item) => item.Location === value.value);
     if (value.value !== "動物園裡") {
       setInput(`也許你想認識：${recom[0].Name_Ch}`);
-      disPatch(action.addFilterPlace(value.value));
-      disPatch(action.addFilterSearch(""));
+      dispatch(action.addFilterPlace(value.value));
+      dispatch(action.addFilterSearch(""));
     } else {
       setInput("請輸入關鍵字...");
-      disPatch(action.addFilterPlace(""));
-      disPatch(action.addFilterSearch(""));
+      dispatch(action.addFilterPlace(""));
+      dispatch(action.addFilterSearch(""));
     }
   };
 
   const handleInputChange = (value) => {
-    disPatch(action.addFilterSearch(value.value));
+    dispatch(action.addFilterSearch(value.value));
     setInput(value.value);
   };
 
@@ -245,30 +237,11 @@ export default function Filter() {
   };
 
   useEffect(() => {
-    disPatch(action.addFilterPlace(""));
-  }, []);
+    dispatch(action.addFilterPlace(""));
+  }, [dispatch]);
 
-  place.forEach((item) => {
-    let arr5 = [];
-    AnimalsJson.forEach((animal) => {
-      if (item === animal.Location) {
-        arr5.push(animal.Name_Ch);
-      }
-    });
-    option.push({ value: item, label: item, num: arr5.length });
-  });
-  option.push({ value: "動物園裡", label: "全部動物", num: 270 });
-
-  if (selectPlace !== "動物園裡") {
-    let arr = AnimalsJson.filter((item) =>
-      item.Location.includes(selectPlace)
-    ).map((item) => item.Name_Ch);
-    arr.forEach((item) => showAnimals.push({ value: item, label: item }));
-  } else {
-    AnimalsJson.forEach((item) =>
-      showAnimals.push({ value: item.Name_Ch, label: item.Name_Ch })
-    );
-  }
+  const option = FilterAnimals.getAllLabel();
+  const showAnimals = FilterAnimals.filterAnimalsOfPlace(selectPlace);
 
   const spanOption = (props) => (
     <Option {...props}>

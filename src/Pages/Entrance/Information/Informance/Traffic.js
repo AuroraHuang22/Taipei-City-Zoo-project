@@ -90,7 +90,6 @@ export default function Traffic() {
           請搭乘板南線，在市政府站下車，再轉乘綠 1、棕 18 或棕 21 公車
         </span>
       </div>
-
       <div className="block">
         <div className="header-md-orange mg-top-0">公車</div>
         <span>

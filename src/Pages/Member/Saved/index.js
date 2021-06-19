@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import * as firestore from "../../../Utils/firebase";
 import AnimalsJson from "../../../Utils/animals.json";
-import { BrowserRouter as Switch, Link, useRouteMatch } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -180,10 +179,10 @@ export default function Saved(prop) {
 
   useEffect(() => {
     return firestore.firebaseGetSavedData(uid, (data) => setSaveData(data));
-  }, [remove]);
+  }, [remove, uid]);
   useEffect(() => {
     return firestore.firebaseGetSavedId(uid, (data) => setSaveId(data));
-  }, [remove]);
+  }, [remove, uid]);
 
   if (savedData === "none") {
     return null;

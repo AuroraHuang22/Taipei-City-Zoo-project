@@ -20,11 +20,14 @@ const newIconEnd = new L.Icon({
 });
 
 const leafletElement = L.Routing.control({
-  router: L.Routing.graphHopper("a048158f-3815-45b5-9228-1241ae5c9e29", {
-    urlParameters: {
-      vehicle: "foot",
-    },
-  }),
+  router: L.Routing.graphHopper(
+    process.env.REACT_APP_ROUTING_GRAPHOPPER_ACCESSTOKEN,
+    {
+      urlParameters: {
+        vehicle: "foot",
+      },
+    }
+  ),
   createMarker: (iconindex, maps, total) => {
     if (iconindex === 0) {
       return L.marker(maps.latLng, {
@@ -75,7 +78,7 @@ function Routing() {
     return () => {
       leafletElement.off("routesfound", callback);
     };
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (routeStore.length) {
@@ -88,7 +91,7 @@ function Routing() {
 
       leafletElement.setWaypoints(wayPoints);
     }
-  }, [routeStore.length]);
+  }, [routeStore]);
 
   if (!routeStore.length) {
     return null;

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Conservation from "./Conservation";
 import AllAnimalas from "./AllAniamls";
 
 const Background = styled.div`

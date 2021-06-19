@@ -9,13 +9,7 @@ import Visited from "./Explore/Visited";
 import * as firestore from "../../Utils/firebase";
 import AnimalsJson from "../../Utils/animals.json";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  useRouteMatch,
-  Switch,
-} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -116,7 +110,7 @@ const catalogs = animalsJson
 
 export default function MemberIndex() {
   const [getUid, setGetUid] = useState("none");
-  const [getVisited, setGetVisited] = useState("none");
+  const [getVisited, setGetVisited] = useState([]);
 
   const disPatch = useDispatch();
 
@@ -128,7 +122,6 @@ export default function MemberIndex() {
   }, []);
 
   useEffect(() => {
-    console.log(getUid);
     if (getUid && getUid !== "none") {
       firestore
         .firebaseGetMemberData(getUid)
@@ -136,7 +129,7 @@ export default function MemberIndex() {
     }
   }, [getUid]);
 
-  if (getUid === "none" || getVisited === "none") {
+  if (getUid === "none") {
     return null;
   }
 

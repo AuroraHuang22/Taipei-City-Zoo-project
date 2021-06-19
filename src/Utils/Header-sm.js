@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import * as action from "../Redux/Action";
 import * as firestore from "../Utils/firebase";
 import LoginPopup from "../Utils/LoginPopup";
-import * as toast from "../Utils/toast";
 import { ToastContainer } from "react-toastify";
 
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeaderDiv = styled.div`
   position: fixed;

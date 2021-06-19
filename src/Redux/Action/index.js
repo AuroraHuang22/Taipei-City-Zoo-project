@@ -8,8 +8,8 @@ const ADD_CONFORMATION = "ADD_CONFORMATION";
 const ADD_RECOMMEND = "ADD_RECOMMEND";
 const ADD_VISITED = "ADD_VISITED";
 const ADD_FILTERSEARCH = "ADD_FILTERSEARCH";
-const ADD_FILTERTYPE = "ADD_FILTERTYPE";
 const ADD_FILTERPLACE = "ADD_FILTERPLACE";
+const SET_SELECT_PLACE = "SET_SELECT_PLACE";
 const REMOVE_FILTER = "REMOVE_FILTER";
 const SET_POEN = "SET_POEN";
 const SET_CLOSE = "SET_CLOSE";
@@ -28,13 +28,11 @@ export function setLoginOpen() {
     type: SET_LOGIN_POEN,
   };
 }
-
 export function setLoginClose() {
   return {
     type: SET_LOGIN_CLOSE,
   };
 }
-
 export function setLogin() {
   return {
     type: SET_LOGIN,
@@ -46,22 +44,18 @@ export function setLogout() {
     type: SET_LOGOUT,
   };
 }
-
 export function addFacility(name) {
   return {
     type: ADD_FACILITY,
     name: name,
   };
 }
-
 export function removeFacility(name) {
   return {
     type: REMOVE_FACILITY,
     name: name,
   };
 }
-// 加動物錨點＆區域
-
 export function addAnimal(geo, num) {
   return {
     type: ADD_ANIMAL,
@@ -69,14 +63,12 @@ export function addAnimal(geo, num) {
     num: num,
   };
 }
-
 export function addRoute(arr) {
   return {
     type: ADD_ROUTE,
     route: arr,
   };
 }
-
 export function removeAnimal(geo, num) {
   return {
     type: REMOVE_ANIMAL,
@@ -84,34 +76,29 @@ export function removeAnimal(geo, num) {
     num: num,
   };
 }
-
 export function removeAllAnimal() {
   return {
     type: REMOVE_ALL_ANIMALS,
   };
 }
-
 export function addConformation(text) {
   return {
     type: ADD_CONFORMATION,
     text: text,
   };
 }
-
 export function addRecommend(text) {
   return {
     type: ADD_RECOMMEND,
     text: text,
   };
 }
-
 export function addVisited(name) {
   return {
     type: ADD_VISITED,
     name: name,
   };
 }
-
 export function addFilterSearch(name) {
   return {
     type: ADD_FILTERSEARCH,
@@ -119,10 +106,10 @@ export function addFilterSearch(name) {
   };
 }
 
-export function addFilterType(name) {
+export function setSelectPlace(place) {
   return {
-    type: ADD_FILTERTYPE,
-    name: name,
+    type: SET_SELECT_PLACE,
+    name: place,
   };
 }
 
@@ -132,51 +119,43 @@ export function addFilterPlace(name) {
     name: name,
   };
 }
-
 export function removeFilter() {
   return {
     type: REMOVE_FILTER,
   };
 }
-
 export function setOpen() {
   return {
     type: SET_POEN,
   };
 }
-
 export function setClose() {
   return {
     type: SET_CLOSE,
   };
 }
-
 export function addFavoriate(name) {
   return {
     type: ADD_FAVORIATE,
     name: name,
   };
 }
-
 export function removeFavoriate(name) {
   return {
     type: REMOVE_FAVORIATE,
     name: name,
   };
 }
-
 export function backToSelectAnimal() {
   return {
     type: BACK_TO_SELECT_ANIMAL,
   };
 }
-
 export function gotoNextStep() {
   return {
     type: GO_TO_NEXTSTEP,
   };
 }
-
 export function removeRoute() {
   return {
     type: REMOVE_ROUTE,
