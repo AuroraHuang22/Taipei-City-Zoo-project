@@ -63,7 +63,7 @@ const leafletElement = L.Routing.control({
   draggableWaypoints: false,
 });
 
-function Routing() {
+export default function Routing() {
   const routeStore = useSelector((state) => state.AnimalsReducer.visitRoute);
   const dispatch = useDispatch();
 
@@ -111,5 +111,3 @@ function Routing() {
     </>
   );
 }
-
-export default Routing;

@@ -5,10 +5,9 @@ import Explore from "./Explore";
 import { useDispatch } from "react-redux";
 import * as action from "../../Redux/Action";
 import Saved from "./Saved";
-import Visited from "./Explore/Visited";
+import Visited from "./Visited";
 import * as firestore from "../../Utils/firebase";
-import AnimalsJson from "../../Utils/animals.json";
-
+import animalsJson from "../../Utils/animals.json";
 import { Route, Switch } from "react-router-dom";
 
 const Container = styled.div`
@@ -102,7 +101,6 @@ const Main = styled.div`
   }
 `;
 
-const animalsJson = AnimalsJson;
 const set = new Set();
 const catalogs = animalsJson
   .filter((item) => (!set.has(item.Location) ? set.add(item.Location) : false))
@@ -111,8 +109,13 @@ const catalogs = animalsJson
 export default function MemberIndex() {
   const [getUid, setGetUid] = useState("none");
   const [getVisited, setGetVisited] = useState([]);
-
   const disPatch = useDispatch();
+  const getAllVisitedAnimalsData = () => {
+    const allVisitedAnimalsData = animalsJson
+      .filter((animals) => getVisited.includes(animals.Name_Ch))
+      .map((result) => [result.Name_Ch, result.Location]);
+    return allVisitedAnimalsData;
+  };
 
   useEffect(() => {
     const unsubscribe = firestore.getUserId((uid) => {
@@ -120,7 +123,6 @@ export default function MemberIndex() {
     });
     return unsubscribe;
   }, []);
-
   useEffect(() => {
     if (getUid && getUid !== "none") {
       firestore
@@ -133,37 +135,22 @@ export default function MemberIndex() {
     return null;
   }
 
-  let blocksFilter = [];
-  catalogs.forEach((catalogs1) =>
-    animalsJson.forEach((animalsJson1) =>
-      getVisited.forEach((getVisited1) => {
-        if (
-          animalsJson1.Name_Ch === getVisited1 &&
-          animalsJson1.Location === catalogs1
-        ) {
-          blocksFilter.push([
-            animalsJson1.Name_Ch,
-            animalsJson1.Location,
-            animalsJson1.Pic01_URL,
-          ]);
-        }
-      })
-    )
-  );
-
+  const allVisitedAnimalsData = getAllVisitedAnimalsData();
   return (
     <Container>
-      <MemberInfo uid={getUid} />
+      <MemberInfo
+        uid={getUid}
+        catalogs={catalogs}
+        allVisitedAnimalsData={allVisitedAnimalsData}
+      />
       <Switch>
         <Main>
           {getUid ? (
             <>
               <Route exact path="/member">
                 <Explore
-                  uid={getUid}
-                  getVisited={getVisited}
                   catalogs={catalogs}
-                  blocksFilter={blocksFilter}
+                  allVisitedAnimalsData={allVisitedAnimalsData}
                 />
               </Route>
               <Route path="/member/saved">
@@ -174,7 +161,7 @@ export default function MemberIndex() {
                   uid={getUid}
                   getVisited={getVisited}
                   catalogs={catalogs}
-                  blocksFilter={blocksFilter}
+                  allVisitedAnimalsData={allVisitedAnimalsData}
                 />
               </Route>
             </>
@@ -196,11 +183,6 @@ export default function MemberIndex() {
         </Main>
       </Switch>
       <img className="draw-left index-draw" src="Imgs/land-35.svg" alt="img" />
-      {/* <img
-        className="draw-right index-draw"
-        src="Imgs/land-01-34.svg"
-        alt="img"
-      /> */}
     </Container>
   );
 }

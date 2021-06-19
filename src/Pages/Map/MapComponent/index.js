@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   MapContainer,
   TileLayer,
-  useMapEvents,
   useMapEvent,
   useMap,
   Marker,
@@ -103,14 +102,6 @@ const Map = React.forwardRef((props, ref) => {
   const SET_ZOOM_L = 16.5;
   const SET_ZOOM_M = 16;
 
-  const ClickEvent = () => {
-    useMapEvents({
-      click: (e) => {
-        console.log(e.latlng);
-      },
-    });
-    return null;
-  };
   const LocationMarker = () => {
     const map = useMap();
     map.locate();
@@ -165,7 +156,6 @@ const Map = React.forwardRef((props, ref) => {
           width: "100%",
         }}
       >
-        <ClickEvent />
         {findMe ? (
           <>
             <LocationMarker />

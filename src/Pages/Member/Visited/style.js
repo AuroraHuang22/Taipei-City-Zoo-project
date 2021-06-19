@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -13,10 +12,17 @@ const Render = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 80vh;
+  min-height: 30vh;
+  max-height: 80vh;
   overflow: scroll;
   border-radius: 25px;
   border: 1px solid lightgrey;
+  .desc {
+    color: grey;
+    font-size: 16px;
+    letter-spacing: 1.8px;
+    text-align: center;
+  }
   @media (max-width: 996px) {
     height: auto;
     overflow: auto;
@@ -173,74 +179,4 @@ const ItemBlock = styled.div`
   }
 `;
 
-export default function Visited(props) {
-  let { catalogs } = props;
-  let { blocksFilter } = props;
-  let { getVisited } = props;
-
-  return (
-    <>
-      <Container>
-        <Render>
-          {getVisited.length ? (
-            catalogs.map((item, index) => (
-              <ItemBlock key={`${index}858`}>
-                <span className="title">
-                  <img
-                    className="title-bg"
-                    src={`/Icons/${item}-32.svg`}
-                    alt="outline"
-                  />
-                </span>
-                <div className="greyGround">
-                  {catalogs.map((pav, pavIndex) =>
-                    item === "新光特展館(大貓熊館)" && pavIndex === 1 ? (
-                      <div key={pav} className="grey-bg">
-                        <p className="greyGround-p">🈳</p>
-                      </div>
-                    ) : item === "企鵝館" && pavIndex < 2 ? (
-                      <div key={pav} className="grey-bg">
-                        <p className="greyGround-p">🈳</p>
-                      </div>
-                    ) : item === "無尾熊館" && pavIndex === 1 ? (
-                      <div key={pav} className="grey-bg">
-                        <p className="greyGround-p">🈳</p>
-                      </div>
-                    ) : item !== "無尾熊館" &&
-                      item !== "企鵝館" &&
-                      item !== "新光特展館(大貓熊館)" &&
-                      pavIndex < 5 ? (
-                      <div key={pav} className="grey-bg">
-                        <p className="greyGround-p">🈳</p>
-                      </div>
-                    ) : null
-                  )}
-                </div>
-                <div className="animalsBlock">
-                  {blocksFilter.map((ele) =>
-                    ele[1] === item ? (
-                      <div key={ele[0]} className="inner-animal">
-                        <div className="blocksFilter-p">{ele[0]}</div>
-                        <div
-                          className="animal-img"
-                          style={{
-                            backgroundImage: `url("/animals/${ele[0]}.jpeg")`,
-                          }}
-                        ></div>
-                      </div>
-                    ) : null
-                  )}
-                </div>
-              </ItemBlock>
-            ))
-          ) : (
-            <div>
-              糟糕 護照還沒有任何紀錄！
-              快到總覽去新增看過的動物,或是現在起身規劃探索旅程吧！
-            </div>
-          )}
-        </Render>
-      </Container>
-    </>
-  );
-}
+export { Container, ItemBlock, Render };

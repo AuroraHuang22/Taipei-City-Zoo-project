@@ -142,59 +142,49 @@ const firebaseAddSaved = (uid, geo, num) => {
     });
 };
 
-const firebaseGetData = (collection) => {
-  return db
+const firebaseGetData = (collection) =>
+  db
     .collection(collection)
     .get()
     .then((querySnapshot) => {
-      let firebaseData = [];
-      querySnapshot.forEach((doc) => {
-        firebaseData.push(doc.data());
-      });
+      const firebaseData = querySnapshot.docs.map((doc) => doc.data());
       return firebaseData;
     });
-};
 
-const firebaseGetMemberData = (uid) => {
-  return db
+const firebaseGetMemberData = (uid) =>
+  db
     .collection("Users")
     .doc(uid)
     .get()
     .then((doc) => {
       if (doc.exists) {
         return doc.data();
+      } else {
+        return null;
       }
     });
-};
 
-const firebaseGetSavedData = (uid, callback) => {
-  let arr = [];
-  return db
+const firebaseGetSavedData = (uid, callback) =>
+  db
     .collection("Users")
     .doc(uid)
     .collection("saved")
     .get()
     .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        arr.push(doc.data());
-      });
+      const arr = querySnapshot.docs.map((doc) => doc.data());
       callback(arr);
     });
-};
-const firebaseGetSavedId = (uid, callback) => {
-  let arr = [];
-  return db
+
+const firebaseGetSavedId = (uid, callback) =>
+  db
     .collection("Users")
     .doc(uid)
     .collection("saved")
     .get()
     .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        arr.push(doc.id);
-      });
+      const arr = querySnapshot.docs.map((doc) => doc.id);
       callback(arr);
     });
-};
 
 const getUserId = (callback) => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -206,8 +196,9 @@ const getUserId = (callback) => {
   });
 };
 
-const firebaseDeleteDoc = (uid, doc) => {
-  db.collection("Users")
+const firebaseDeleteDoc = (uid, doc) =>
+  db
+    .collection("Users")
     .doc(uid)
     .collection("saved")
     .doc(doc)
@@ -218,11 +209,8 @@ const firebaseDeleteDoc = (uid, doc) => {
     .catch((error) => {
       console.error("Error removing document: ", error);
     });
-};
 
-const signOut = () => {
-  return firebase.auth().signOut();
-};
+const signOut = () => firebase.auth().signOut();
 
 export {
   firebaseCreateNewMemberStore,

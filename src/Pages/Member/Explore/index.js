@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const ratio = 780 / 1639;
 const ratioImg = 180 / 1440;
-
 const Container = styled.div`
   width: 100%;
   height: ${(props) => {
@@ -44,7 +43,6 @@ const Container = styled.div`
     }
   }
 `;
-
 export default function Explore(props) {
   const [size, setSize] = useState([0, 0]);
   const isRowPad = window.matchMedia("(max-width: 996px)").matches;
@@ -64,45 +62,32 @@ export default function Explore(props) {
     [85, 11],
     [56, 89],
   ];
-
-  let { blocksFilter, catalogs } = props;
-  let arr = [];
-  let arr1 = [];
-  let stampPavilions = [];
-
-  const findQualifiedPavilions = () => {
-    catalogs.forEach((catalogs) =>
-      blocksFilter.forEach((blocksFilters) => {
-        if (blocksFilters[1] === catalogs) {
-          arr.push(blocksFilters[1]);
-        }
-      })
-    );
-  };
-
-  const filterPavilionsStamps = () => {
+  const { catalogs, allVisitedAnimalsData } = props;
+  const setStamps = () => {
+    let numbers = [];
+    let stampPavilions = [];
+    const allVisitedAnimals = allVisitedAnimalsData.map((e) => e[1]);
     catalogs.forEach((catalogs) => {
       if (catalogs === "新光特展館(大貓熊館)" || catalogs === "無尾熊館") {
-        arr1 = arr.filter((arrs) => arrs === catalogs).length;
-        if (arr1 >= 1) {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 1) {
           stampPavilions.push(catalogs);
         }
       } else if (catalogs === "企鵝館") {
-        arr1 = arr.filter((arrs) => arrs === catalogs).length;
-        if (arr1 >= 2) {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 2) {
           stampPavilions.push(catalogs);
         }
       } else {
-        arr1 = arr.filter((arrs) => arrs === catalogs).length;
-        if (arr1 >= 5) {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 5) {
           stampPavilions.push(catalogs);
         }
       }
     });
-  };
 
-  findQualifiedPavilions();
-  filterPavilionsStamps();
+    return stampPavilions;
+  };
 
   useLayoutEffect(() => {
     function updateSize() {
@@ -112,6 +97,8 @@ export default function Explore(props) {
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  const stampPavilions = setStamps();
 
   return (
     <>

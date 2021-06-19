@@ -62,7 +62,7 @@ const responsive = {
 };
 
 export default function CarouselDiv(props) {
-  const item = props.item;
+  const { item } = props;
   return (
     <Carouseldiv>
       <Carousel

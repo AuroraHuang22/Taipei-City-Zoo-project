@@ -66,13 +66,11 @@ export default function ClickBar(props) {
   useEffect(() => {
     if (uid) {
       firestore.firebaseGetMemberData(uid).then((data) => {
-        console.log(data);
         setFavoritiesMember(data.favorities);
         setVisitedMember(data.isVisited);
       });
     }
   }, [uid]);
-
   return (
     <section className="clickBar">
       <div className="title-md">

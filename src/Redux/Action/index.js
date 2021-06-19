@@ -4,6 +4,7 @@ const ADD_ANIMAL = "ADD_ANIMAL";
 const REMOVE_ANIMAL = "REMOVE_ANIMAL";
 const REMOVE_ALL_ANIMALS = "REMOVE_ALL_ANIMALS";
 const ADD_ROUTE = "ADD_ROUTE";
+const SET_SUBMIT = "SET_SUBMIT";
 const ADD_CONFORMATION = "ADD_CONFORMATION";
 const ADD_RECOMMEND = "ADD_RECOMMEND";
 const ADD_VISITED = "ADD_VISITED";
@@ -67,6 +68,11 @@ export function addRoute(arr) {
   return {
     type: ADD_ROUTE,
     route: arr,
+  };
+}
+export function setSubmit() {
+  return {
+    type: SET_SUBMIT,
   };
 }
 export function removeAnimal(geo, num) {

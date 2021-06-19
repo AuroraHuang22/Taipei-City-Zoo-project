@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Select, { components } from "react-select";
-import * as FilterAnimals from "../../../Utils/FilterAnimals";
-import * as reduxAction from "../../../Redux/Action";
-import { useDispatch, useSelector } from "react-redux";
+import * as FilterAnimals from "../../../../Utils/FilterAnimals";
+import * as reduxAction from "../../../../Redux/Action";
+import { useDispatch } from "react-redux";
 
 let nowAnimals = [];
-export default Select = (props) => {
+export default function SelectGroup(props) {
   const { animalsData } = props;
   const [open, setOpen] = useState(false);
   const [selectPlace, setSelectPlace] = useState("全部動物");
@@ -14,24 +14,6 @@ export default Select = (props) => {
 
   const option = FilterAnimals.getAllLabel();
   const showAnimals = FilterAnimals.filterAnimalsOfPlace(selectPlace);
-
-  const groupLabel = (props) => (
-    <Option {...props}>
-      <span style={{ display: "inline-block" }}>{props.data.label}</span>
-      <span
-        style={{
-          display: "inline-block",
-          backgroundColor: "#f2f2f2",
-          padding: "1px 10px",
-          borderRadius: "25px",
-          position: "absolute",
-          right: "15px",
-        }}
-      >
-        {props.data.num}
-      </span>
-    </Option>
-  );
 
   const handleChange = (value, { action }) => {
     switch (action) {
@@ -43,7 +25,6 @@ export default Select = (props) => {
         return;
     }
   };
-
   const handleInputChange = (inputValue, { action }) => {
     switch (action) {
       case "select-option":
@@ -51,7 +32,10 @@ export default Select = (props) => {
         animalsData.forEach((item) => {
           if (item.Name_Ch === inputValue[index].value) {
             dispatch(
-              reduxAction.addAnimal([item.Geo[1], item.Geo[0]], item.CID)
+              reduxAction.addAnimal(
+                [item.Geo[1], item.Geo[0]],
+                Number(item.CID)
+              )
             );
           }
         });
@@ -79,12 +63,35 @@ export default Select = (props) => {
         return;
     }
   };
+  const groupLabel = (props) => (
+    <Option {...props}>
+      <span style={{ display: "inline-block" }}>{props.data.label}</span>
+      <span
+        style={{
+          display: "inline-block",
+          backgroundColor: "#f2f2f2",
+          padding: "1px 10px",
+          borderRadius: "25px",
+          position: "absolute",
+          right: "15px",
+        }}
+      >
+        {props.data.num}
+      </span>
+    </Option>
+  );
+  const handleClickEvent = (e) => {
+    if (e.type === "focus") {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  };
 
   return (
     <div>
       <Select
         defaultValue={option[14]}
-        zi
         options={option}
         onChange={handleChange}
         components={{ Option: groupLabel }}
@@ -106,7 +113,7 @@ export default Select = (props) => {
           }),
           menu: (provided, state) => ({
             ...provided,
-            zIndex: 980,
+            zIndex: 1201,
           }),
           control: (provided, state) => ({
             ...provided,
@@ -130,12 +137,8 @@ export default Select = (props) => {
           options={showAnimals}
           onChange={handleInputChange}
           backspaceRemovesValue={false}
-          onFocus={() => {
-            setOpen(true);
-          }}
-          onBlur={() => {
-            setOpen(false);
-          }}
+          onFocus={handleClickEvent}
+          onBlur={handleClickEvent}
           menuIsOpen={open}
           width="80%"
           styles={{
@@ -170,9 +173,7 @@ export default Select = (props) => {
               border: "none",
               borderBottom: "2px solid #f7e2dc",
               boxShadow: "none",
-              "&:hover": {
-                backgroundColor: "white",
-              },
+              backgroundColor: "none",
               marginTop: "10px",
             }),
             dropdownIndicator: (provided, state) => ({
@@ -193,4 +194,4 @@ export default Select = (props) => {
       </div>
     </div>
   );
-};
+}

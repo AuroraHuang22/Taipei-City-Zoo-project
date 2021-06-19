@@ -14,8 +14,8 @@ const initState = {
   conformation: "",
   heightLight: "",
   recommend: "",
-  displayforAnimalSelect: false,
-  disPlayforFacility: false,
+  displayforAnimalSelect: "block",
+  disPlayforFacility: "none",
 };
 
 export default function AnimalsReducer(state = initState, action) {
@@ -25,7 +25,7 @@ export default function AnimalsReducer(state = initState, action) {
         ...state,
         showAnimals: {
           geo: [...state.showAnimals.geo, action.geo],
-          num: [...state.showAnimals.num, action.num],
+          num: [...state.showAnimals.num, Number(action.num)],
         },
       };
     case ADD_ROUTE:
@@ -77,12 +77,13 @@ export default function AnimalsReducer(state = initState, action) {
     case BACK_TO_SELECT_ANIMAL:
       return {
         ...state,
-        displayforAnimalSelect: true,
+        displayforAnimalSelect: "none",
       };
     case GO_TO_NEXTSTEP:
       return {
         ...state,
-        disPlayforFacility: true,
+        displayforAnimalSelect: "none",
+        disPlayforFacility: "block",
       };
     default:
       return state;

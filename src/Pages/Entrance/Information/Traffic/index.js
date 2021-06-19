@@ -16,8 +16,13 @@ export default function Traffic() {
   const position = [24.99773326108165, 121.5834263898432];
   const parksId = ["115", "046", "101", "202"];
   const parks = Parks.data.park;
-  let status = [];
   const isRowBased = window.matchMedia("(max-width: 1020px)").matches;
+  const getParkingData = () => {
+    const stauts = parkStatus.park.filter((parks) =>
+      parksId.includes(parks.id)
+    );
+    return stauts;
+  };
 
   useEffect(() => {
     api.getParksStatus().then((data) => setParkStatus(data.data));
@@ -26,16 +31,8 @@ export default function Traffic() {
   if (!parkStatus) {
     return null;
   }
-  const getParkingData = () => {
-    parkStatus.park.forEach((element) => {
-      parksId.forEach((num) => {
-        if (element.id === num) {
-          status.push(element);
-        }
-      });
-    });
-  };
-  getParkingData();
+
+  const status = getParkingData();
   return (
     <>
       <Container>

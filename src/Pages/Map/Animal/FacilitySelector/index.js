@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import * as firestore from "../../../Utils/firebase";
+import * as firestore from "../../../../Utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
-import * as action from "../../../Redux/Action";
-import * as toast from "../../../Utils/toast";
+import * as action from "../../../../Redux/Action";
+import * as toast from "../../../../Utils/toast";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import Selector from "./Selector";
 
 const Container = styled.div`
   .header {
@@ -66,72 +67,26 @@ const Container = styled.div`
     }
   }
 `;
-const SelectorDiv = styled.div`
-  display: flex;
-  margin: 30px 0;
-  flex-direction: row;
-  flex-wrap: wrap;
-  @media (max-width: 576px) {
-    margin: 10px 0 10px;
-  }
-`;
-const InputDivs = styled.div`
-  border: 1px solid lightgray;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin: 8px 5px;
-  padding: 5px 12px;
-  border-radius: 25px;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  input[type="checkbox"] {
-    margin-right: 8px;
-  }
-  label {
-    cursor: pointer;
-    font-size: 16px;
-  }
-  :hover {
-    background-color: #fcfcfc;
-  }
-`;
-
-const Selector = (props) => {
-  const [getAllFacilities, setGetAllFacilities] = useState([]);
-  const [displayDiv, setDisplayDiv] = useState("none");
+export default function FacilitySelector(props) {
+  const [getAllFacilities, setGetAllFacilities] = useState(undefined);
   const animalsStore = useSelector((state) => state.AnimalsReducer.showAnimals);
   const disPatch = useDispatch();
-  const uid = props.uid;
-
-  const displayStore = useSelector(
+  const { uid } = props;
+  const displayDiv = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
   );
 
-  const handleInputClick = (e) => {
-    if (e.target.checked) {
-      disPatch(action.addFacility(e.target.id));
-    }
-    if (!e.target.checked) {
-      disPatch(action.removeFacility(e.target.id));
-    }
-  };
-
   const backToSelect = () => {
-    setDisplayDiv("none");
     disPatch(action.backToSelectAnimal());
     window.location.href = "/map";
   };
 
   const printMap = () => {
-    let geoarray = [];
-    animalsStore.geo.forEach((element) => {
-      geoarray.push(`${element[0]},${element[1]}`);
+    let geoarray = animalsStore.geo.map((element) => {
+      return `${element[0]},${element[1]}`;
     });
-    let numarray = [];
-    animalsStore.num.forEach((element) => {
-      numarray.push(element);
+    let numarray = animalsStore.num.map((element) => {
+      return element;
     });
     firestore.firebaseAddSaved(uid, geoarray, numarray);
     toast.success(({ closeToast }) => (
@@ -143,42 +98,16 @@ const Selector = (props) => {
       </div>
     ));
   };
-
-  useEffect(() => {
-    if (displayStore) {
-      setDisplayDiv("block");
-    }
-  }, [displayStore]);
-
   useEffect(() => {
     setGetAllFacilities(props.facilities);
   }, [props.facilities]);
-
-  if (!getAllFacilities.length) {
+  if (!getAllFacilities) {
     return null;
   }
-  const set = new Set();
-  const catalogs = getAllFacilities.filter((item) =>
-    !set.has(item.Item) ? set.add(item.Item) : false
-  );
-
   return (
     <Container style={{ display: displayDiv }}>
       <div className="header">地圖上要顯示哪些設施呢？</div>
-      <SelectorDiv>
-        {catalogs.map((item, index) => (
-          <InputDivs key={`${item.Location}${index}`}>
-            <input
-              className="input"
-              id={item.Item}
-              type="checkBox"
-              data-type="checkBox"
-              onChange={handleInputClick}
-            />
-            <label htmlFor={item.Item}>{item.Item}</label>
-          </InputDivs>
-        ))}
-      </SelectorDiv>
+      <Selector getAllFacilities={getAllFacilities} />
       <div className="btn-group">
         <button className="remove" onClick={backToSelect}>
           重新選擇動物
@@ -191,6 +120,4 @@ const Selector = (props) => {
       </div>
     </Container>
   );
-};
-
-export default Selector;
+}

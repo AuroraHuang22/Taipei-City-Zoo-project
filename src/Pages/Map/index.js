@@ -83,11 +83,10 @@ const Container = styled.div`
 
 function MapIndex() {
   const componentRef = useRef();
-  const [displayDiv, setDisplayDiv] = useState("none");
   const [getUid, setGetUid] = useState("none");
   const isRowBased = window.matchMedia("(max-width: 1020px)").matches;
 
-  const displayStore = useSelector(
+  const displayDiv = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
   );
 
@@ -104,12 +103,6 @@ function MapIndex() {
     });
     return unsubscribe;
   }, []);
-
-  useEffect(() => {
-    if (displayStore) {
-      setDisplayDiv("block");
-    }
-  }, [displayStore]);
 
   if (getUid === "none") {
     return null;
