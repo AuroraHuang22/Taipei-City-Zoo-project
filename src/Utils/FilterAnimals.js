@@ -4,7 +4,7 @@ const getAllLabel = () => {
   const option = [];
   const set = new Set();
   const place = AnimalsJson.filter((item) =>
-    !set.has(item.Location) ? set.add(item.Location) : false
+    set.has(item.Location) ? false : set.add(item.Location)
   ).map((item) => item.Location);
 
   place.forEach((item) => {

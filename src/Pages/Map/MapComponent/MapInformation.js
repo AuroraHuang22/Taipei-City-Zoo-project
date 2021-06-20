@@ -103,7 +103,7 @@ export default function MapComformation() {
     const stop = recommendStore.map((item) => item[0]);
     return stop;
   };
-  const setRecommendRoute = () => {
+  const setRecommendRoute = (stops) => {
     let content = `入口廣場 ⇢`;
     stops.forEach((element) => {
       if (element !== "列車站") {
@@ -115,7 +115,7 @@ export default function MapComformation() {
     content += `往出口方向移動 ⇢ 回家囉`;
     return content;
   };
-  const setRecommendDistance = () => {
+  const setRecommendDistance = (stops) => {
     const distance = storedInformation[0];
     const time = (storedInformation[1] * 60 + stops.length * 25 * 60) / 60 / 60;
     const recommendDistance = `行程總距離約為${distance}公里，預計遊園時間約為${time.toFixed(
@@ -146,17 +146,15 @@ export default function MapComformation() {
   }
 
   const stops = getHowManyStop();
-  const recommendRoute = setRecommendRoute();
-  const recommendDistance = setRecommendDistance();
   const animalSort = setAnimalsSort();
 
   return (
     <Container id="map-info">
       <div className="recommend">
         <span className="title">遊園路線規劃</span>
-        <div className="content">{recommendRoute}</div>
+        <div className="content">{setRecommendRoute(stops)}</div>
         <span className="title">路程距離</span>
-        <div className="content">{recommendDistance}</div>
+        <div className="content">{setRecommendDistance(stops)}</div>
       </div>
       <div className="recommend wrap">
         <span className="title">要造訪的動物</span>
