@@ -1,22 +1,14 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const float = keyframes`
-  0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  from {
+    transform: translatey(0px);;
+  }
+  to {
+    transform: translatey(-20px);
+  }
 `;
 
 const Container = styled.div`
@@ -55,7 +47,7 @@ const Container = styled.div`
     height: 200px;
     margin-left: 180px;
     align-self: flex-start;
-    animation: ${float} 4s ease-in-out infinite;
+    animation: ${float} 3s ease-in-out infinite alternate;
   }
   .text {
     align-self: flex-start;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Traffic from "./Traffic";
-import Infomation from "./Information/Index";
+import Traffic from "./Information/Traffic";
+import Imformance from "./Information/Informance/Index.js";
 
 const Container = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
 export default function Entrance() {
   return (
     <Container>
-      <Infomation />
+      <Imformance />
       <Traffic />
     </Container>
   );

@@ -5,7 +5,6 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.6.1",
     "leaflet": "^1.7.1",
@@ -31,7 +30,8 @@
     "start": "BROWSER='microsoft edge' react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.7",
     "redux-devtools": "^3.7.0"
   }
 }

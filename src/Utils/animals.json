@@ -42,11 +42,11 @@
     "Family": "企鵝科",
     "Conservation": "無危",
     "Distribution": "次南極區。涵蓋南美福克蘭群島、喬治亞群島、南非南方海域及紐西蘭南方海域。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 國王企鵝是全世界體型第二大的企鵝(僅次於帝王企鵝)，嘴喙長、耳羽顏色偏橘，有一圈黑邊框，圖案類似水滴形。\n2. 喉嚨至前胸部位為美麗的金黃色。\n3. 體長大約95公分(測量企鵝的體長，是由嘴至尾拉長)。體重大約12～15Kg。在圈養環境下平均壽命約15至20年。",
     "Behavior": "1.國王企鵝在圈養環境下平均壽命約15-20年。\n2.國王企鵝繁殖期會群聚在一起，繁殖期期間會有領域性，每對領域的範圍約1平方公尺。不築巢，每窩下一個蛋，由雌雄輪流孵蛋，孵化期平均約56天。雛鳥孵出時幾乎全裸，帶有一些短絨羽，第一次的絨羽淺灰或褐色，第二次則轉為暗褐色，約40天大加入幼鳥群，約10-13個月羽翼豐滿。約5-7歲達到性成熟。\n3.國王企鵝野外族群估計超過兩百萬隻，呈增加的趨勢(國際自然保育聯盟IUCN於2008年評估)。",
     "Diet": "主要以魚維生，野外的國王企鵝特別喜歡吃小型的燈籠魚科(Myctophidae)的魚類，也會吃頭足類(cephalopods)如魷魚(Moroteuthis)。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "KingPenguin",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PenguinHouse/KingPenguin/KingPenguin_Pic01.jpg",
     "CID": 2
@@ -98,7 +98,7 @@
     "Feature": "1. 身體為米色到淡灰色，腹部、臀部及四肢的顏色較淡，眼睛下方及兩眼之間有明顯的白色斑紋，前額有一叢濃密又整齊的棕色瀏海。\n2.雌、雄頭上均長有螺旋形彎曲的角，雌性的角略細。",
     "Behavior": "1. 弓角羚羊由年長的雄羚領導數隻雌羚及牠們的子女共同生活，一群約5-20隻。\n2如果打架打斷頭上的角，就不會再生長，殘缺的角會影響個體的社會地位。\n3.羚羊群體中的社會地位在進食時最容易分辨，地位低者通常吃其他羚羊吃剩的食物，或是以邊吃邊躲的方式進食。\n4.羚羊小時候的角直直像劍，約六個月大時才會和爸媽的角一樣開始螺旋轉彎。\n5.夏天毛色幾乎純白，因為白色外表在白天較不易吸收太陽輻射的熱能、在夜晚環境溫度降低時，則不易輻射太多熱量而失溫。到冬季即換上灰棕色的毛，並在頭、頸、肩長出棕色毛。",
     "Diet": "草食性。以草、樹葉、樹根和其他灌木為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Addax",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Addax/Addax_Pic01.jpg",
     "CID": 4
@@ -124,7 +124,7 @@
     "Feature": "1. 非洲野驢背部鬃毛直立，頭、背及體側覆蓋著介於淺灰及淺黃色的短毛，吻端、腹部、腳則為白色。\n2. 索馬利亞種的腿上有類似斑馬的黑色水平紋路。",
     "Behavior": "1.群居動物，生活在石礫沙漠環境，活動時間是涼爽的清晨與黃昏，白天天氣太熱時，會躲在山邊陰涼處休息。\n2.成熟的雄驢以堆糞劃定為其活動範圍，發情時雄驢除了會「喔咿喔咿…」高調唱著野驢的專屬情歌外，還會整天追逐雌驢，也會用頭摩擦雌驢的鬃毛，甚至會咬雌驢的脖子，嗅聞雌驢的排尿並做出翻唇的動作。",
     "Diet": "草食性。以草、 樹皮、樹葉為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/WildAss/WildAss_Pic01.jpg",
     "CID": 5
@@ -150,7 +150,7 @@
     "Feature": "體毛短，但頭頂、頸、喉、臀及尾部的毛頗長，四肢比雙峰駱駝細長且行走速度較快。",
     "Behavior": "野生的單峰駱駝在2000年前就已絕跡。\n原產於阿拉伯地區極易馴化，大約在4000-6000年前就被人類馴養當作駝獸，用來載人及搬運貨物，是沙漠居民最有價值的運輸工具。",
     "Diet": "草食性。以沙漠中的植物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Camel-D",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-D/Camel-D_Pic01.jpg",
     "CID": 13
@@ -172,11 +172,11 @@
     "Family": "駱駝科",
     "Conservation": "瀕危",
     "Distribution": "蒙古、新疆的戈壁沙漠",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1.成年駱駝的駝峰重約30公斤，內儲藏脂肪提供身體所需能量。剛出生的小駱駝駝峰扁塌，要等到開始吃食物後會累積脂肪，慢慢形成圓錐形的駝峰。如果駝峰塌陷歪垂，只要讓牠吃飽喝足休息夠，駝峰又可恢復到正常大小。\n2.耳朵小、耳孔不滿密毛、連耳道內的毛也交錯生長，加上濃密的睫毛即幾乎透明的眼皮，都是能防止風砂侵入並在風沙中可以看清道路行進。\n3.腳有二趾，肉墊厚且軟成扁平扇形狀，適合在沙漠中行走不會下陷。",
     "Behavior": "1.單獨或成群活動，成群時以一隻雄駱駝帶領數隻雌駱駝和幼駱駝。有駱駝生下第一天就可以自由移動。\n2.雙峰駱駝生氣時會噴口水或用腳踢，會咬人，由於會反芻，被騷擾時會朝干擾者吐胃含物，具惡臭味。",
     "Diet": "草食性，以沙漠中的植物為食，也會吃一般動物難以下嚥的高鹽分植物；飢餓狀態下會吃肉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Camel-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/DesertAnimal/Camel-B/Camel-B_Pic01.jpg",
     "CID": 6
@@ -436,7 +436,7 @@
     "Feature": "1. 身黑色毛髮較粗糙，頭部小鬍鬚顯著，臉部皮膚為黑色，大姆指退化拿東西不太靈活，四肢修長很適合掛在樹上。\n2. 尾巴可以握東西，常會看到牠用一隻腳和尾巴懸掛在樹枝上，就像第5隻手一樣。",
     "Behavior": "日行性群居動物，牠們屬於「分裂與融合」類型的社會，通常5隻成年雄猴、15隻成年雌猴、未成年猴及幼猴共同組成數個小團體各自活動，但又會為保衛領域聚集在一起。",
     "Diet": "水果、樹葉，花及昆蟲",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "SpiderMonkey-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/SpiderMonkey-B/SpiderMonkey-B_Pic01.jpg",
     "CID": 17
@@ -462,7 +462,7 @@
     "Feature": "1. 毛短而密，非常柔軟，口鼻部為黑色無毛；眼睛周圍、耳朵、喉部、頸部側面為白色；頭頂為深灰黑色，比松鼠猴的頭部黑，背部為棕色，四肢為紅棕色或黃色，腹側為灰白色，尾巴末端為黑色。\n2. 眼睛大，雙眼距離近，耳大，拇指較短，尾長，尾部末端的毛略為蓬鬆。\n3. 體長約30公分，尾長約40公分，體重約1000公克。",
     "Behavior": "1. 日行性的動物；一般都是在樹上活動，偶爾也會到地面上。\n2. 群居的動物。在交配季節中，成年的雄猴會相互打鬥來建立階級制度。\n3. 叫聲變化多的靈長類動物之一，在歡迎、警戒、交配、攻擊或感到痛苦時，都會發出不同的聲音。",
     "Diet": "雜食性，以水果、草莓、堅果、花、花苞、種子、昆蟲及小型脊椎動物為食,沒有食物時也會喝花蜜。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw//iTAP/03_Animals/RainForest/Black-capped%20Squirrel%20Monkey/Black-capped%20Squirrel%20Monkey_1.jpg",
     "CID": 18
@@ -488,7 +488,7 @@
     "Feature": "1. 深黑色毛髮較粗糙，頭部小鬍鬚顯著，臉部皮膚為黑色。\n2. 大姆指退化拿東西不太靈活，四肢修長很適合掛在樹上。\n3. 尾巴末端內側部長毛，能執握且觸覺靈敏，常會看到牠用一隻腳和尾巴懸掛在樹枝上，就像第5隻手一樣。",
     "Behavior": "1. 蜘蛛猴是日行性群居動物，棲息在雨林或山區的森林中，通常在樹冠頂層的樹之間穿梭，非常地靈活。\n2. 交配季節並不明顯，約2-4年生下一胎。",
     "Diet": "以水果為主食，也會吃堅果、種子、花及花苞、樹葉、昆蟲、蜘蛛及鳥蛋。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://blog.xuite.net/hwlib2007/twblog/589169462/cover600.jpg",
     "CID": 19
@@ -540,7 +540,7 @@
     "Feature": "1. 雙臂比腿還長且更有力，尾巴能夠靈巧捲住樹枝，像是第五隻手一般。\n2. 雌性具有膨大的陰蒂，常被誤認為雄性。",
     "Behavior": "1.主要生活在樹冠層，主要覓食時間集中在清晨。\n2.靈巧捲住樹枝的尾巴；牠的拇指退化，但其他手指長而有力，這些特性讓牠們可以適應在雨林的樹枝間擺盪移動。",
     "Diet": "以水果和堅果為主食，也吃樹葉、小昆蟲、鳥蛋和蜂蜜。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "AtelesGeoffroyi",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/AtelesGeoffroyi/AtelesGeoffroyi_Pic01.jpg",
     "CID": 21
@@ -592,7 +592,7 @@
     "Feature": "1. 體長約180至200公分，體重能達到30~60公斤。\n2. 頭部細長，眼睛耳朵都非常小，吻部看似長管狀。\n3. 尾部像掃把般長而華麗，毛長而堅硬，幫助身體平衡。",
     "Behavior": "1. 雖然沒有牙齒，但卻擁有超過60公分長的舌頭，取食螞蟻及小型無脊椎動物。\n2. 睡覺時會用尾巴當被子蓋住身體。",
     "Diet": "螞蟻、白蟻及小型無脊椎動物為主食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Giantanteater",
     "Pic01_URL": "https://img.ltn.com.tw/Upload/news/600/2019/11/29/2993233_2_1.jpg",
     "CID": 23
@@ -618,7 +618,7 @@
     "Feature": "1. 體長30至80公分，尾長40至70公分。\n2. 依地理位置不同有不同變化，毛色有淺黃的亞麻仁色、褐棕色或灰白色。\n3. 擁有小眼睛和大耳朵，鼻端很長並且彎曲，前端有與鉛筆一樣寬的小開口，可以伸出長舌來舔食螞蟻。\n4. 攀爬時尾巴就像第五隻手一樣有抓握能力。",
     "Behavior": "1. 喜歡在傍晚活動，善於爬樹。\n2. 會用粗壯的前肢和長爪搗壞蟻丘。\n3. 視力不佳，主要利用聽覺、嗅覺找白蟻和螞蟻，或者蜜蜂和蜂蜜來吃。\n4. 白天常常在睡覺。",
     "Diet": "以螞蟻和白蟻為主食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "SouthernTamandua",
     "Pic01_URL": "https://uc.udn.com.tw/photo/2020/10/15/realtime/8751097.jpg",
     "CID": 24
@@ -644,7 +644,7 @@
     "Feature": "1. 面部、喉部及胸部為白色，其餘部份為黑色，身體及尾巴部分毛髮濃密。\n2. 尾巴可執握，平常都捲起來。(半執握能力，可做支撐用，不能執握物品)",
     "Behavior": "白面捲尾猴是日行性的動物，生活在樹上，可以適應各種不同的森林，不論是次生林，或是海邊的紅樹林都可以棲息。",
     "Diet": "雜食性，吃水果、漿果、堅果、種子、花及花苞、樹葉、樹皮、昆蟲、蜘蛛、小型脊椎動物及鳥蛋等，棲息在海邊的個體還會吃蟹及貝類。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "CebusCapucinus",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/RainForest/CebusCapucinus/CebusCapucinus_Pic01.jpg",
     "CID": 25
@@ -718,7 +718,7 @@
     "Family": "吸蜜鸚鵡科",
     "Conservation": "瀕危",
     "Distribution": "蘇拉威西島以北的塔勞群島。居住在樹冠層。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "紅藍吸蜜鸚鵡的喙比一般鸚鵡的長，細長舌頭上有刷狀的毛，方便深入花朵中取得花粉和花蜜。",
     "Behavior": "紅藍吸蜜鸚鵡是印尼特有的一種鸚鵡，雄鳥和雌鳥的外型相似。",
     "Diet": "以花蜜和花粉為主食，偶爾會吃些昆蟲和水果來補充養分。",
@@ -748,7 +748,7 @@
     "Feature": "1. 頭部和四肢皮膚為黑色，頭頂、眼睛和耳朵周圍有黃色的斑點。\n2. 成體雄龜約可達50公分，雌龜較小約25公分。",
     "Behavior": "1. 繁殖季為雨季的7~9月，沒有明顯的領域性，但雄性繁殖時會互相競爭。\n2. 每窩僅有4~8顆蛋，150~180天之後孵化。",
     "Diet": "雜食性，會吃水果、花草、腐肉和小型無脊椎動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://img.ltn.com.tw/Upload/news/600/2011/06/08/146.jpg",
     "CID": 29
@@ -774,7 +774,7 @@
     "Feature": "1. 前肢形成二個彎曲的勾爪，後肢有三個勾爪，可懸掛身體於樹枝。\n2. 樹獺有兩層毛，內層較軟、外層較長，質地較粗糙。在乾躁季節呈褐色；在豐沛降雨季節，毛髮表面常有藻類生長，當潮濕季節時皮毛呈綠色。 \n3. 沒有門齒跟犬齒，嘴唇硬化，可以切斷樹葉。",
     "Behavior": "1. 常藉四肢懸掛於樹枝下，以二手交換著而緩慢移行，有時坐於樹椏上，但爪則鉤於樹枝。\n2. 夜間覓食，白晝則將身體懸掛為一團，而行自睡眠，不會冬眠，但代謝率很低。\n3. 善泳，難站立，不能行走，如被置於平坦地面，則試以爪向前，執握目的物，將身體拉向前方。\n4. 防禦時能用長臂及尖爪迅速鞭打，並在對方形成縱深傷，亦能用齒防禦。",
     "Diet": "葉、幼芽與水果。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://img.chinatimes.com/newsphoto/2019-07-23/656/b12a00_p_05_02.jpg",
     "CID": 30
@@ -822,11 +822,11 @@
     "Family": "夜猴科",
     "Conservation": "無危",
     "Distribution": "南美洲的祕魯、玻利維亞和巴西。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "阿氏夜猴有雙漂亮的大眼睛，常在黃昏或夜間活動，極佳的夜視能力，能在漆黑的樹林中精準的獵捕到正在飛行的昆蟲。",
     "Behavior": "1. 阿氏夜猴為小家庭型態，一夫一妻制，父親也會一起照顧幼仔，有時會看到幼仔被背在背上四處活動，畫面溫馨有趣，家庭情感非常緊密。\n2. 牠們常沿著藤蔓，在樹叢中靈敏跳動找食物，經常做出驚人的跳耀動作。",
     "Diet": "雜食性，水果、昆蟲、脊椎動物和蛋等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/AzaraNightMonkey/AzaraNightMonkey_1.jpg",
     "CID": 32
@@ -848,7 +848,7 @@
     "Family": "懶猴科",
     "Conservation": "瀕危",
     "Distribution": "寮國、越南、柬埔寨和中國南部",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 形態與懶猴相似。\n2. 體形小，尾極短，隱於毛被之中。眼大，頭圓。\n3. 口鼻白色，從鼻部向上伸展到兩眼間有一白色條紋至額部終止。耳圓適中。背毛橙紅褐色。腹面灰白色，手足有銀灰色光澤。中國所產個體自頸後沿背脊有一棕黑色的條紋，頸端寬向尾端漸窄，至腰部已不明顯，耳、鼻、手、足皮膚黑色。\n4. 足後第二趾具爪，其餘指(趾)為甲，前肢第二指短於其餘各指。",
     "Behavior": "1. 拇指可以對握，不論手腳抓握能力都很強，使其可以長時間待在樹上。\n2. 野生小懶猴透過攝取的食物，使腋下產生的分泌物具有毒性，小懶猴也會舔食腋下分泌物，讓牙齒獲得毒性，並成為受到威脅時最好的自我防衛武器。在人為照養環境下，因為食物的品項不同，腋下分泌物就不再具有毒性。\n3.動作緩慢。",
     "Diet": "雜食，以果實、昆蟲、鳥蛋和小鳥等為食",
@@ -878,7 +878,7 @@
     "Feature": "1. 粗尾侏儒狐猴是小型哺乳動物，身體長度連尾巴約40到50公分，尾巴就占了20到27公分。\n2. 體重在120克至270克之間變化，會依季節而有所變化。\n3. 他們的皮毛非常柔軟，眼睛大而有光澤，周圍環繞著黑眼圈。",
     "Behavior": "1. 粗尾侏儒狐猴是唯一會休眠的靈長類動物，牠們將養分以脂肪的形式儲存在尾巴，在休眠或食物不足時提供能量來源。\n2. 牠們的休眠狀態可長達6個月，在此期間將身體捲成一個緊密的球，體溫隨環境溫度而變化，慢慢地消耗尾巴的脂肪，等待下個潮濕季節的來臨。",
     "Diet": "雜食性，以水果、種子、樹葉、昆蟲等為食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/FatTailedDwarfLemur/Fat_tailedDwarfLemur_1.jpg",
     "CID": 34
@@ -930,7 +930,7 @@
     "Feature": "1. 黃帶箭毒蛙具有獨特黃底黑色條帶而得名。身上黑色條帶會隨著個體年齡的增加斷裂成斑點。\n 2. 平均體長約30-40毫米。",
     "Behavior": "1. 許多種類的箭毒蛙會將卵產在鳳梨科植物葉液的積水處或積水的樹洞中，另外亦常利用底層落葉堆躲藏，甚至產卵。\n2. 色彩鮮豔的小型蛙類，大部分的箭毒蛙都具有鮮艷的體色，屬於警戒色，對於掠食者有警示作用。南美洲印第安原住民利用其身上的毒素塗抹在箭矢上做成毒箭在去獵捕其他大型動物，因而得名。\n3. 身上的毒性來自於野外捕食的昆蟲或蜘蛛，經生物累積作用，將毒素儲存在皮膚的腺體中，以做為自衛的武器，所以野生個體在人工圈養下因無餵食含毒食物，約在6個月後其毒性即會漸漸消失。",
     "Diet": "昆蟲或蜘蛛",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://images.chinatimes.com/newsphoto/2019-08-05/656/20190805001262.jpg",
     "CID": 36
@@ -956,7 +956,7 @@
     "Feature": "1. 迷彩箭毒蛙具有綠色或淺藍色體色，身上布滿著黑色的帶狀或斑點。\n2. 平均體長約30-40毫米。",
     "Behavior": "1. 許多種類的箭毒蛙會將卵產在鳳梨科植物葉液的積水處或積水的樹洞中，另外亦常利用底層落葉堆躲藏，甚至產卵。\n2. 色彩鮮豔的小型蛙類，大部分的箭毒蛙都具有鮮艷的體色，屬於警戒色，對於掠食者有警示作用。南美洲印第安原住民利用其身上的毒素塗抹在箭矢上做成毒箭在去獵捕其他大型動物，因而得名。\n3. 身上的毒性來自於野外捕食的昆蟲或蜘蛛，經生物累積作用，將毒素儲存在皮膚的腺體中，以做為自衛的武器，所以野生個體在人工圈養下因無餵食含毒食物，約在6個月後其毒性即會漸漸消失。",
     "Diet": "昆蟲或蜘蛛",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BlackAndGreenPoisonDartFrog/BlackAndGreenPoisonDartFrog_Pic01.jpg",
     "CID": 37
@@ -982,7 +982,7 @@
     "Feature": "1. 鈷藍箭毒蛙具有藍色體色，身上布滿著黑色的斑點。\n2. 平均體長約30-40毫米。",
     "Behavior": "1. 許多種類的箭毒蛙會將卵產在鳳梨科植物葉液的積水處或積水的樹洞中，另外亦常利用底層落葉堆躲藏，甚至產卵。\n2. 色彩鮮豔的小型蛙類，大部分的箭毒蛙都具有鮮艷的體色，屬於警戒色，對於掠食者有警示作用。南美洲印第安原住民利用其身上的毒素塗抹在箭矢上做成毒箭在去獵捕其他大型動物，因而得名。\n3. 身上的毒性來自於野外捕食的昆蟲或蜘蛛，經生物累積作用，將毒素儲存在皮膚的腺體中，以做為自衛的武器，所以野生個體在人工圈養下因無餵食含毒食物，約在6個月後其毒性即會漸漸消失。",
     "Diet": "昆蟲或蜘蛛",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/BluePoisonDartFrog/BluePoisonDartFrog%20_Pic01.jpg",
     "CID": 38
@@ -1004,11 +1004,11 @@
     "Family": "巴西骨舌魚科",
     "Conservation": "資料不足",
     "Distribution": "南美洲的巴西、圭亞那、祕魯等地區的亞馬遜流域",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 象魚是南美洲亞馬遜河流域最大的淡水魚。\n2. 壽命可長達60歲。但要30歲才有繁殖能力。\n3. 魚鱗結構特殊，堅韌到能抵禦食人魚攻擊。",
     "Behavior": "1. 象魚用鰓呼吸，但有著和肺相同功能的魚鰾，牠們常緩緩游在水面，仰頭出水面張口呼吸空氣，行為相當特別。\n2. 當水裡的含氧量低時，會浮出水面吞嚥空氣，旱季缺水時也能鑽入泥中存活。",
     "Diet": "雜食偏肉食性，魚、蛙、昆蟲、鳥",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/daddypoppy/1588125953-4270320677.jpg",
     "CID": 39
@@ -1034,7 +1034,7 @@
     "Feature": "1. 體長可達24.5公分。\n2. 青壯年時體色為粉紅色。身體背部為金橄欖綠色，側腹部則呈銀色。\n3. 鱗片大而錯落有致，尤其是在側線上方更為明顯。頭部相當短，嘴的上唇突出。",
     "Behavior": "1. 大鱗脂鯉上層水域水域的掠食者，會捕捉蠕蟲，昆蟲和小魚為食。\n2. 通常生活於含氧量較高的水域中生活。",
     "Diet": "肉食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.itsfun.com.tw/images/30/28/nBnauATYwMmNxgzYzITYiVTYmlTMwQ3Lt92Yuc2cthWcuw2cz5SMw9yL6MHc0RHa.jpg",
     "CID": 40
@@ -1060,7 +1060,7 @@
     "Feature": "身體呈深色，腹部、下巴、胸鰭呈紅色，少部分腹鰭也是紅色。",
     "Behavior": "1. 紅銀板常被誤認為食人魚，但他們其實是以果實主食的雜食性魚類。\n2. 他們會用兩排的扁平牙齒，壓碎種子與堅果。\n3. 在河川氾濫的季節裡，他們會進入被水淹沒的地區，吃掉並散播植物的種子。",
     "Diet": "種子、甲殼類、小魚",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Pacu_shedd.jpg/400px-Pacu_shedd.jpg",
     "CID": 41
@@ -1086,7 +1086,7 @@
     "Feature": "1. 身體呈帶狀。口裂下斜、蓋住上頜的下頜具有類似育兒袋來口孵仔魚。\n2. 頜鬚一對、眼睛大而靈活。鱗片大而明顯、鱗片外緣呈粉橘色而隨成長而淡化。\n3. 臀鰭從肛門後方延續至尾柄，背鰭長度比臀鰭稍短。最大長至120公分。",
     "Behavior": "可跳躍於水上捕食水面上的獵物。",
     "Diet": "魚類、蝦、蟲",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://dvblobcdnjp.azureedge.net//Content/Upload/ThemeImages/2020-10/3559cbb4-5ffe-4112-8264-7d4c1976f143.png",
     "CID": 42
@@ -1108,7 +1108,7 @@
     "Family": "鯉科",
     "Conservation": "極危",
     "Distribution": "",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "長達1.5米及重70公斤",
     "Behavior": "洄游性魚類，乾旱季遷移至上游繁殖，孵化的仔魚雨季進入食物充足的下游洪氾區。",
     "Diet": "雜食性",
@@ -1138,7 +1138,7 @@
     "Feature": "1. 胸鰭跟身體連接成一個盤子的形狀，中幼魚時背部色彩較淺，體長直徑達20~30公分後顏色逐漸轉黑\n2. 背部的金黃色線條及斑點勾勒出似黑色甜甜圈或組合成「8」的斑紋\n3. 身體後半段是細長尾柄，上面有小小的背鰭跟鐮刀狀的尾鰭。尾柄1/2至1/3處有一根棘刺，上面有倒刺，下有分泌毒液的毒腺及儲藏毒液的毒囊，毒性極強。棘刺一年會替換2~3次。",
     "Behavior": "1. 雄魚的尾柄兩側有特化成棒狀的交尾腳，雌魚則張開如扇狀。\n2. 喜歡趴在水中淺灘泥沙上，偶爾會潛入泥中。",
     "Diet": "肉食性，以魚類、甲殼類、底棲無脊椎動物及昆蟲為食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://taiwan.sharelife.tw/tw-feat-store-img/43236/8554250417113913.jpg?133000",
     "CID": 44
@@ -1164,7 +1164,7 @@
     "Feature": "1. 體型略呈側扁，吻端相對尖銳\n2. 成熟個體體側具有金屬光澤之斑點，背鰭、臀鰭及尾鰭上下緣則會有絲狀游離",
     "Behavior": "繁殖前會將底沙清除，並將卵產於底床上。屬半口孵性",
     "Diet": "雜食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Acarichthys_heckeli.JPG/220px-Acarichthys_heckeli.JPG",
     "CID": 45
@@ -1186,11 +1186,11 @@
     "Family": "慈鯛科",
     "Conservation": "資料不足",
     "Distribution": "原產南美洲亞馬遜流域",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 外表跟大口黑鱸相似\n2. 繁殖期期間牠們的前額會形成明顯的駝峰。",
     "Behavior": "1. 雨季是繁殖期\n2. 個性謹慎，喜歡躲在有淹沒樹木作為遮蔽的區域。",
     "Diet": "肉食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://shopstore-manage.shopstore.tw/upload/1947/product/1947_5ff0201b0e071.jpeg.webp",
     "CID": 46
@@ -1212,11 +1212,11 @@
     "Family": "慈鯛科",
     "Conservation": "資料不足",
     "Distribution": "南美洲",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 體呈橢圓形，側扁，尾柄略短。頭較大，尾柄相對較窄，上側位。\n2. 口小開於吻端，後段不達眼前緣。側線在臀鰭起點的上方中段，分為上下二段。\n3. 體色略呈暗棕綠色，有時因環境改變而有不同。",
     "Behavior": "1. 西德藍寶石是廣鹽性的魚類，大多生存於河川下游、或是沿海瀉湖地區，並會因生存區域的不同而有形態上的變化。\n2. 當幼魚孵化後，親魚會繼續照顧仔魚，但鑽石藍星並沒有口孵器供仔魚躲藏。",
     "Diet": "雜食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://shopstore-manage.shopstore.tw/upload/1947/product/1947_5ff07f035faf8.jpeg.webp",
     "CID": 47
@@ -1242,7 +1242,7 @@
     "Feature": "批著翠綠色外衣、拖著藍色尾羽、喉部還點綴著栗紅色的「栗喉蜂虎」，由其吸引人們的眼光，牠們亮麗的身影及響亮的鳴叫聲，是金門夏天空中最美麗的象徵，因此被當地稱為「夏日精靈」。",
     "Behavior": "1. 是金門極具特色的夏候鳥。每年清明節前後，飛向中國東南及海南群到繁殖族群，冬季會向南方遷移過冬。\n2. 擅長直接捕食飛行中的昆蟲\n3. 集體夜棲，黃昏日落將近時，牠們從各地往過夜的地方聚集，在金門地區，金門農試所、金龜山、后沙一帶的樹林，是牠們集體過夜的地方。",
     "Diet": "昆蟲，如:蜜蜂、蝴蝶、蜻蜓等",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://g.udn.com.tw/upfiles/B_AA/AAC3343/PSN_PHOTO/917/f_24983917_1.jpg",
     "CID": 48
@@ -1290,7 +1290,7 @@
     "Family": "雉科",
     "Conservation": "近危",
     "Distribution": "馬來西亞、蘇門答臘及婆羅洲。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 雄鳥體長約200公分，體重約2公斤，雌鳥體長約75公分，體重約1.6公斤。\n2. 臉上雌雄皆有藍色皮膚，公鳥有明顯的羽冠。",
     "Behavior": "1. 喜歡單獨行動，清晨及黃昏在森林底層覓食，具領域性。\n2. 求偶期間雄鳥會展開飛羽，藉由次級飛羽上有許多圓形如眼球般的圖案吸引雌鳥，在雌鳥面前跳起特殊的舞步，並瞬間張開翅膀成扇狀，因此又被稱為「百眼雉雞」。\n3. 一夫一妻制的鳥類。",
     "Diet": "果實、種子、嫩樹葉、無脊椎生物等。",
@@ -1372,7 +1372,7 @@
     "Feature": "1. 深色背甲，甲殼通常是一個細長的橢圓形，兩側平行，但雄性的兩側會內彎。\n2. 四肢及臉頰有紅色斑點，顏色很鮮豔。\n3. 四肢通常是成圓柱形，前肢有5隻爪和後腿有4隻爪，但沒有明顯的腳趾。",
     "Behavior": "1. 日行性。\n2. 野生雌龜每年7至9月為產卵期，圈養環境全年皆可繁殖。\n3. 食性廣泛及遠距離遷徙的行為，是熱帶植物種子的重要傳播者。",
     "Diet": "雜食性，會吃水果、花草、腐肉和小型無脊椎動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Tortoise-Red",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4051530/e5568053-4ef9-4832-962b-d4995d426467.jpg",
     "CID": 53
@@ -1472,11 +1472,11 @@
     "Family": "駱駝科",
     "Conservation": "無危",
     "Distribution": "南美洲，4800公尺高的安地斯山脈，祕魯南部和玻利維亞西部等地被人類飼養。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "成年雄獸肩高約90-100公分，體長約200公分，重70-90公斤。外型像綿羊頸部較長。",
     "Behavior": "1.為了適應高山稀薄空氣，血液裡具有特殊的紅血球可以幫助得到足夠的氧氣。\n 2.群居動物，在野外通常由一隻雄性、多隻雌性及牠們的小羊駝所組成，雄羊駝會負責照顧群體，發現危險時會發出警戒聲，牠們彼此通過身體擺動姿勢及柔和的哼唱聲相互進行交流。圈養也容易飼養和照顧。\n 3.羊駝看似溫馴，其實是很有個性的動物，在爭吵或搶食時會鼓起雙頰吐口水，在受到驚嚇或不喜歡的碰觸時會用後腳側踢。",
     "Diet": "草食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Alpaca",
     "Pic01_URL": "https://pic.pimg.tw/dreamyeh/normal_4a19897b6f1e3.jpg",
     "CID": 57
@@ -1498,11 +1498,11 @@
     "Family": "浣熊科",
     "Conservation": "無危",
     "Distribution": "南美洲熱帶地區，從委內瑞拉、哥倫比亞、厄瓜多到烏拉圭及阿根廷北部。此外，安第斯山脈東西兩側2,500公尺以下山麓也可發現牠們的蹤跡。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 上半身為褐色或灰色，腹部白色。細長的尾巴大約32~69公分，棕黑色並有一圈圈黃色環，具有平衡的功能。腳爪和前肢十分強壯，便於爬樹和挖掘朽木下的食物。\n2. 長鼻浣熊的頭部狹窄，微微上翹的瘦長鼻子十分靈活",
     "Behavior": "1. 會在落葉或碎石堆中翻找食物。擅長爬樹和游泳，可以翻轉關節和踝骨，以頭在前的方式下樹。\n2. 通常雌性會留在出生地附近，而雄性則會移至他處與陌生的雌性組成數量約30隻的團體。\n3. 日行性動物，大多在樹上活動，花大部分的時間尋找食物。牠們偶爾會破壞農作物，但在害蟲數量控制上亦扮演重要的角色，而且有助於傳播某些種子。\n4. 具有特殊的肛門腺氣味，會以頸部或下腹部摩擦固定地點來宣示領域，就像是隨身攜帶的「領土所有權證明」。",
     "Diet": "雜食性，以水果和無脊椎動物為主食，包含棕櫚樹、雞蛋、甲蟲幼蟲、蝎子、蜈蚣、蜘蛛、螞蟻、白蟻、蜥蜴、小型哺乳動物、囓齒動物等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Coati",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Coati/Coati_Pic01.jpg",
     "CID": 58
@@ -1524,11 +1524,11 @@
     "Family": "馬科",
     "Conservation": "無危",
     "Distribution": "野生種分布在非洲的蘇丹南部、衣索比亞、索馬利亞跟阿拉伯半島，馴化驢則全世界都有。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體型比斑馬小，頭部較大耳朵較長，背部毛色一般為灰色，夏季會比較偏紅，腹部為白色，背部有時會有一條較深的條紋，豎立的鬃毛長而細，尾巴末端蓬鬆，蹄長且窄。",
     "Behavior": "1. 野生種及野生家驢的是日行性動物。社會結構與馬類似，有獨居雄驢、生殖群、光棍群或青少年群。\n2. 驢的蹄又長又窄，可以讓牠們在凹凸不平的石礫地上走得更穩。\n3. 驢走的速度雖然比較慢，但是比馬耐旱，對於飲水的需求不大，即使在酷熱或是食物不足的情況下仍可工作，通常也比馬便宜，因此，牠們仍然是非常重要的駝獸。\n4. 家驢有護幼的天性，所以常被訓練用來保護綿羊、山羊等家畜，即使威脅者是大型犬或人類，也會毫不猶豫發動攻擊。",
     "Diet": "草食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Donkey",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Donkey/Donkey_Pic01.jpg",
     "CID": 59
@@ -1550,11 +1550,11 @@
     "Family": "馬科",
     "Conservation": "未評估",
     "Distribution": "歐洲等地",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 迷你馬其實就是所謂的小型馬，體型比一般馬矮小，肩高約100至150公分，肩高矮於86公分。\n2. 迷你馬體色多變化，頭部顯得較大，腿較粗壯，頸部鬃毛下垂，有像瀏海一般的「額髮」。",
     "Behavior": "沒有經過專業訓練的迷你馬，情緒比較難以捉摸，容易踢或咬傷飼主或旁人。不具有反芻行為。",
     "Diet": "植食性。以草為主食，也吃嫩樹葉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pony",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/ChildrenArea/Pony/Pony_Pic01.jpg",
     "CID": 60
@@ -1576,11 +1576,11 @@
     "Family": "絨鼠科",
     "Conservation": "瀕危",
     "Distribution": "智利北方的安地斯山脈3000~5000公尺山區。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "進食時，牠們會用臀部坐著，且以手拿食物。雖然生活環境中的水很少，但草葉上的露水就足夠牠們生活了。",
     "Behavior": "1. 型態看似松鼠，毛囊長約60根的毛，毛質特別柔軟，常利用火山灰堆積成的細砂去除皮脂腺分泌的大量油脂(砂浴)\n2. 常在日落後從藏身的岩縫或岩穴中出來，敏捷地在岩石間跳、爬活動。因人類大量捕殺，取其皮毛，族群數量銳減。\n3. 群居有領域性的夜行性動物，以甘草為食，由於棲息地多為瘠地，任何找得到的植物都是食物。",
     "Diet": "飼養者予五穀雜糧及水果。幾乎可以在岩石貧瘠之處找到的植物牠都吃。植食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Chinchilla",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/432/relpic/10162/8142015/1332d201-dfc0-48b4-941e-c2574ec3e8f7.jpg",
     "CID": 61
@@ -1602,11 +1602,11 @@
     "Family": "獴科",
     "Conservation": "未評估",
     "Distribution": "南非、奈米比亞及安哥拉西南部的喀拉哈里沙漠",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體長約25-35公分，有著細長的尾巴，眼眶有黑色斑塊，像是自備太陽眼鏡，耳朵小且圓，在挖沙時能閉起來避免耳道進沙，及長且彎曲的爪子，利於挖掘地道及獵食",
     "Behavior": "1. 沙漠夜晚非常寒冷，所以當太陽升起時第一件事，便是利用腹部的黑色區域吸收太陽的熱來溫暖身體。\n2. 成群生活，每群大約有三十隻。牠們會挖地洞為巢，共同住在大型的地洞系統中。\n3. 當整群狐獴在洞穴外進食時一定會有一隻負責守衛，並在注意到危險時發出警告叫聲。\n4. 在繁殖期間時雌雄也會分工，由雌性哺乳、雄性守衛。",
     "Diet": "肉食性。以節肢動物、蜥蜴、小型哺乳類動物及蛋為主要食物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw//iTAP/03_Animals/ChildrenArea/meerkat/meerkat_1.jpg",
     "CID": 62
@@ -1628,11 +1628,11 @@
     "Family": "豬科",
     "Conservation": "無危",
     "Distribution": "原產於蘭嶼小體型的小耳豬種，最早起源自達悟族先民馴化之野豬",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 蘭嶼豬的成熟個體體重平均不超過80公斤。\n2. 蘭嶼豬軀幹呈長方形，體型較小，四肢粗短強健，毛色黝黑且具光澤，耳朵小而直立。\n3. 其頸部至背部長有剛毛，背部些許凹背。",
     "Behavior": "1. 是馴化的家豬，脾氣也比野豬溫馴，且體型適合人類遷徙時攜帶。\n2. 適應亞熱帶濕熱氣候。",
     "Diet": "雜食性。野外主要以植物為食，吃嫩葉、塊根、漿果和農作物，有時也會吃昆蟲、蚯蚓等無脊椎動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "data:image/jpeg;base64,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",
     "CID": 63
@@ -1654,11 +1654,11 @@
     "Family": "浣熊科",
     "Conservation": "無危",
     "Distribution": "加拿大南部、美國及南美洲北部。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 全身毛色為灰黑色，尾巴有5-10圈黑色環紋，臉上也有像面罩一樣的黑色斑紋。\n2. 口鼻部尖而突出，趾間無蹼，爪不能縮回，前肢五指分開，其腳印很像人的手印\n3. 雌性有4對乳腺。",
     "Behavior": "1. 棲息在茂密的森林或灌叢中，通常會靠近水源居住；夜行性的動物，擅長爬樹及游泳。\n2. 浣熊並不冬眠，在較溫暖的地區，牠們一年四季都很活躍，在寒冷的地區，牠們會躲在洞穴中過冬，天氣暖的時候就會跑出來活動，即使在冬天，牠們的體溫不會降低，代謝速率也不會減慢，只依賴身體內的脂肪過冬，因此，一個冬季可以消耗牠們將近一半的體重。\n3. 浣熊的嗅覺及手掌感覺非常敏銳，食物通常是由前肢探索並送入口中的，也為牠博得「浣熊」之名(「浣」意思為「洗滌」)。",
     "Diet": "雜食性，吃甲殼類的蝦、蟹等、青蛙、魚、堅果、種子、橡實及漿果。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Raccoon",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4105454/2448ed35-5220-486d-8bf7-07ec9fb07f07.jpg",
     "CID": 64
@@ -1684,7 +1684,7 @@
     "Feature": "1. 重量：1.84~4.6公斤 頭身長：41~57公分，尾長跟體長相似。\n2. 蜜熊是浣熊的同類，但身材像猴子，具有食肉目動物少有的能捲住東西的長尾，有第五隻手之稱。可使用此長尾在樹枝間跳躍，或包住自己的幼熊。",
     "Behavior": "1. 夜行性動物。\n2. 長舌頭用於舔取蜂蜜。\n3. 利用尾巴、腳、爪子翻越樹枝，且擅於爬樹。\n4. 身上無毛的部份，會分泌腺體，在樹上塗味道，以便於同類間的連絡。",
     "Diet": "雜食性，特別愛攝食蜂蜜及水果，這是食肉目中少見的。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/PangolinDome/Kinkajou/Kinkajou%20_Pic01.jpg",
     "CID": 65
@@ -1736,7 +1736,7 @@
     "Feature": "1. 體型修長扁平，背側褶不明顯，皮膚光滑，體側有明顯的疣狀顆粒\n2. 四肢細長，趾端膨大為吸盤。\n3. 上唇由吻端到嘴角有一黃白色縱帶，背部為綠色或黃褐色，偶而夾雜深褐色斑，腹部為白色。",
     "Behavior": "斯文豪氏赤蛙長於溪澗求偶鳴叫，叫聲為單音「啾」，常被誤認為鳥叫聲，",
     "Diet": "以小型節肢動物為主食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.froghome.idv.tw/assets/images/new/os-1.jpg",
     "CID": 67
@@ -1762,7 +1762,7 @@
     "Feature": "腹斑蛙體型短胖，體色褐色，背中央有一條不明顯的背中線。",
     "Behavior": "腹斑蛙為都市常見的蛙類之一，常於春夏季出沒在人工水域鳴叫，叫聲為連續「給、給、給」，非常容易辨識。",
     "Diet": "以小型節肢動物為主食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://live.staticflickr.com/2614/3678438553_af0f5d6911_z.jpg",
     "CID": 68
@@ -1788,7 +1788,7 @@
     "Feature": "黑眶蟾蜍皮膚粗糙，眼周圍至吻端的黑色花紋為其主要特徵。",
     "Behavior": "1. 黑眶蟾蜍為低海拔至平地的常見物種，近年族群呈現適應都市化營生\n2. 春夏繁殖季常出沒於公園水池或雨水溝中，發出連續「咯咯咯咯咯咯咯」的鳴叫聲。",
     "Diet": "以小型節肢動物為主食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://sites.google.com/site/roxanneteatea/_/rsrc/1468890369247/home/shui-cai/hua-hui/%E9%BB%91%E7%9C%B6%E8%9F%BE%E8%9C%8D.jpg",
     "CID": 69
@@ -1918,7 +1918,7 @@
     "Feature": "韃靼沙蚺體型嬌小，身體短粗，吻鱗發達，眼極小。",
     "Behavior": "韃靼沙蚺發達的吻鱗有助於鑽沙潛行，能在沙質環境迅速滑行，為夜行性生物。",
     "Diet": "蜥蜴、小型哺乳動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/kelly80710/1550304318-3903496033_n.jpg",
     "CID": 74
@@ -1942,7 +1942,7 @@
     "Distribution": "越南中部。",
     "Habitat": "1. 低海拔河流與湖泊。\n2. 曾是越南廣佈的物種，在野外的天然威脅並不多。",
     "Feature": "安南龜體色與背甲呈深褐色，臉部有黃色橫紋。",
-    "Behavior": "",
+    "Behavior": null,
     "Diet": "雜食性偏植食性。",
     "Crisis": "因人類大量捕捉造成一度判定為野外滅絕，近年才又發現野生小族群，但仍面臨嚴重的盜獵壓力。",
     "Code": "",
@@ -1996,7 +1996,7 @@
     "Feature": "1. 體型粗壯扁平，頭部大呈三角形，外耳孔明顯，頭部後面、頸部背面和喉部有大型棘刺狀鱗片，體側有一列規則排列的圓錐狀的棘刺狀突起。\n2. 身體背部為黃褐色、黃色或紅褐色，上有兩列深褐色不規則的斑紋。",
     "Behavior": "鬍鬚蜥為日行性的地棲性蜥蜴，遭天敵時，會鼓脹頭部與身體進行威嚇。",
     "Diet": "為雜食性，以昆蟲、葉菜為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Dragon-CB",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Dragon-CB/Dragon-CB_Pic01.jpg",
     "CID": 77
@@ -2022,7 +2022,7 @@
     "Feature": "體長1-1.5 m，體型細長，鱗片光滑，體色花紋變化大，由黑色或棕褐色的暗帶與白色或黃色的明帶成環狀相間，有些個體成縱帶相間，腹部為白色上有許多黑色斑紋。",
     "Behavior": "加州王蛇屬於王蛇屬的家族成員，在野外常捕食有毒蛇類為食，而獲得王蛇的稱號。",
     "Diet": "哺乳動物、爬蟲類、兩棲類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Snake-CK",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-CK/Snake-CK_Pic01.jpg",
     "CID": 78
@@ -2074,7 +2074,7 @@
     "Feature": "體型短橢圓形，背甲黃色，盾片上有大塊黑色同心斑紋。腹甲土黃色，盾片上有大塊黑色斑紋。四肢粗壯，趾均具4爪。",
     "Behavior": "四爪陸龜是分布緯度最高的陸龜，冬季會有冬眠的行為，於春初開始活動時進入繁殖季，公龜於繁殖期具有明顯的打鬥行為，會將頭部縮於殼內並以龜殼前端撞擊對方。",
     "Diet": "植食性。許多植物的莖、肉質的葉、花、果實都是牠的食物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Tortoise-CA",
     "Pic01_URL": "data:image/jpeg;base64,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",
     "CID": 80
@@ -2100,7 +2100,7 @@
     "Feature": "1. 體色為黑色帶黃色斑點。牠的身體上方表面是黃棕色而腹部通常是黑褐色，下巴和喉頭為黃色或淡黃色。\n2. 身體呈圓柱型，短頭大眼，尾巴通常為體長的兩倍，雖然強壯但是小腿卻比鬣蜥更小。頭部有堅硬的鱗片，體側較低的地方有深溝穿過整個身體。\n3. 深溝的功能為替雌性攜帶所生的蛋或是吃完飯之後身體膨脹所需的空間。",
     "Behavior": "1. 晝行性，被認為是一種害羞的動物，雖然雄性有時會為了勢力範圍互相攻擊。\n2. 當他受到威脅通常不會用咬的，寧可用板狀的尾巴進行防禦，作為一種逃命的戰術。\n3. 巨板蜥會奔跑一段距離後突然停止不動，同時揚起牠的尾巴來混淆追捕者。並且將自己擠入空隙中逃脫",
     "Diet": "雜食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lizard-SP",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-SP/Lizard-SP_Pic01.jpg",
     "CID": 81
@@ -2178,7 +2178,7 @@
     "Feature": "1. 體長：40-90 cm，體型粗短，吻端尖短上翹，尾巴很短，身體鱗片粗糙具有稜脊。\n2. 身體背部為淡褐色、黃褐色或紅褐色，沿背中央線和體側，各有一列深褐色或黑褐色的斑紋，腹部為黑色，上有許多土黃色小斑紋。",
     "Behavior": "豬鼻蛇屬於地棲蛇類，擅長鑽沙將身體藏於沙地內，遇到天敵時會發出嘶嘶威嚇聲，若無法嚇退敵人則會腹面朝上假死，讓天敵對牠失去興趣。",
     "Diet": "善於鑽土捕食藏在地下的蟾蜍類，也會捕食其他爬蟲類，偶爾也會捕食小型哺乳類或鳥類。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Snake-WH",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-WH/Snake-WH_Pic01.jpg",
     "CID": 84
@@ -2204,7 +2204,7 @@
     "Feature": "亞洲最大的陸龜，背甲寬而扁平，背甲前後緣盾呈鋸齒狀，前腳前面及後腳後面有大型鱗片，尤其後腳鱗片特別發達而突出，所以又有六腳龜之稱。背甲為黃褐色或黑褐色，腹甲為黃色，盾板邊緣為深褐色。",
     "Behavior": "亞洲棕龜為森林性陸龜，攀爬能力強，因森林底層缺乏陽光照射，繁殖時會蒐集枯落物築巢產蛋，並利用枯落物發酵產生的溫度孵育龜蛋。",
     "Diet": "雜食性偏植食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Tortoise-AB",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Tortoise-AB/Tortoise-AB_Pic01.jpg",
     "CID": 85
@@ -2256,7 +2256,7 @@
     "Feature": "1. 體型粗壯，頭部寬大呈三角形，眼睛小，瞳孔垂直，身體鱗片平滑具有光澤。\n2. 眼後有黑褐色條紋，身體花紋和顏色變異多，身體背部通常為淡褐色或灰色，上有大型黑褐色或紅褐色鞍形的斑紋，尾巴較為深紅。",
     "Behavior": "紅尾蚺身形粗壯，幼年時期多為樹棲生活，成體後則多於地面活動，擅長伏擊捕食獵物。",
     "Diet": "哺乳類、鳥類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Boa constrictor",
     "Pic01_URL": "data:image/jpeg;base64,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",
     "CID": 87
@@ -2334,7 +2334,7 @@
     "Feature": "中大型蛇類，體型粗壯有力，頭部尖細，與頸部區分容易，唇鱗具有感熱的唇窩。全身鱗片光滑，具有虹彩般的光澤，身體背部為褐色、橘褐色或橘紅色，上有許多暗褐色圓圈狀斑紋，頭部有五條黑褐色細條紋。",
     "Behavior": "彩虹蚺偏夜行性物種，和所有的蚺科成員一樣為胎生蛇類，每次可產下10-20條仔蛇。",
     "Diet": "爬蟲類、鳥類、哺乳類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Boa-R",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Boa-R/Boa-R_Pic01.jpg",
     "CID": 90
@@ -2360,7 +2360,7 @@
     "Feature": "體長約0.8-1.4公尺。蛇蜥類有外耳孔和可閉合的眼瞼，蛇類不具有。",
     "Behavior": "歐洲蛇蜥為日行性，常對環境充滿好奇心而四處探索，因具有眼瞼於休息時會閉眼，是與蛇類區別的重要特徵。",
     "Diet": "肉食性，以節肢動物、軟體動物、爬蟲類、鳥類、蛋和小型哺乳動物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zhifure.com/upload/images/2018/7/20211324642.jpg",
     "CID": 91
@@ -2386,7 +2386,7 @@
     "Feature": "1. 體型粗短，頭部小而細長，尾巴短小，全身鱗片細小平滑有光澤。身體背部為黑色，上有不規則的淺褐色斑紋。\n2. 吻端到眼後有一條黑色寬橫紋。",
     "Behavior": "球蟒受到干擾驚嚇時，身體會捲曲成球狀，將頭部藏在裡面，因而得名。",
     "Diet": "小型哺乳類。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Python-Bal",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-Bal/Python-Bal_Pic01.jpg",
     "CID": 92
@@ -2412,7 +2412,7 @@
     "Feature": "中小型蜥蜴，體型細長略成圓筒形，四肢短，均具有五趾，尾巴約為身長的一半。頭部扁平，吻端尖扁，具有眼瞼，全身鱗片為圓鱗，光滑具有光澤。身體背部為褐色，上有許多黑色斑點，腹部為黃白色。",
     "Behavior": "眼斑銅蜥",
     "Diet": "節肢動物、環節動物、軟體動物",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Skink-O",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-O/Skink-O_Pic01.jpg",
     "CID": 93
@@ -2464,7 +2464,7 @@
     "Feature": "臺灣特有種體型最大者，背部以褐色為主，口腔外緣呈白色或乳白色，頸背有突起的脊鱗，雄性的下顎有明顯的白斑，有明顯之鬣鱗與喉垂，體側有明顯黃綠色縱帶，雄蜥具有強烈的領域性。",
     "Behavior": "斯文豪氏攀蜥為日行性物種，雄蜥領域性強烈，長停棲於樹幹高鼓脹喉部並做出如伏地挺身的動作，向其他個體威嚇。",
     "Diet": "無脊椎動物",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lizard-ST",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Lizard-ST/Lizard-ST_Pic01.jpg",
     "CID": 95
@@ -2490,7 +2490,7 @@
     "Feature": "身體粗壯，世界上最大的石龍子，頭部很大略成三角形，吻端鈍圓，上、下顎強而有力，四肢有長而利的爪子，尾長強壯可捲曲纏繞。身體為橄欖綠色或褐色，上有不明顯的深褐色斑紋，腹部為淡綠褐色。",
     "Behavior": "猴尾蜥為夜行性物種，擅長攀爬於樹冠層覓食。為胎生物種，懷孕期為6-8個月，每胎產1-2仔。",
     "Diet": "植食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Skink-M",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Skink-M/Skink-M_Pic01.jpg",
     "CID": 96
@@ -2516,7 +2516,7 @@
     "Feature": "鈍尾毒蜥體型粗胖，頭部寬大，吻端圓鈍，眼睛小，身體圓胖，尾巴粗短，身體背部和四肢覆滿圓珠狀鱗片。吻部到嘴角和四肢為黑色，頭頂、身體和尾巴為粉紅色、黃色或橘紅色，上有不規則暗褐色或黑色的斑紋。",
     "Behavior": "鈍尾毒蜥為日行性，移動的速度緩慢，常躲藏於岩洞中，對棲息的洞穴依賴性高。鈍尾毒蜥雖然行動遲緩，但咬合能力強，其分泌的毒液雖不易致死，但會讓傷口有持續的灼燒感。",
     "Diet": "節肢動物、爬蟲類、鳥類、鳥蛋、哺乳類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Gila",
     "Pic01_URL": "https://farm8.staticflickr.com/7136/13738556584_7a89b16a5a_b.jpg",
     "CID": 97
@@ -2594,7 +2594,7 @@
     "Feature": "體型修長，眼前後皮褶明顯，背部皮膚略粗糙有細顆粒突起，趾末端吸盤發達。眼前後皮褶和虹彩為金黃色，體色為翠綠色或黃綠色，體側由吻端到股間有一條白線，體側和後腿有黑色斑紋，腹部為白色。",
     "Behavior": "翡翠樹蛙為夜行性物種，近年呈現適應人為干擾的環境，繁殖季常於屯墾的果園、菜園出沒，並利用農夫澆灌的儲水桶產卵泡繁殖。",
     "Diet": "以小型節肢動物為主食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Frog-ET",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Frog-ET/Frog-ET_Pic01.jpg",
     "CID": 100
@@ -2620,7 +2620,7 @@
     "Feature": "體型粗長強壯，尾巴細長，眼到嘴角上方有一條黑色縱紋，全身為黃褐色或橄欖褐色，頸部至背部中段有四列黑色菱形斑紋，逐漸連成黑褐色縱帶至尾端，後段有二條黃色縱紋，腹部黃白色或灰白色。",
     "Behavior": "日行性。卵生。喜歡在樹林、草原、農地或住家附近出沒，屬於日、夜時段都會活動的蛇類。個性溫馴且較為穩定。",
     "Diet": "食性很廣，蛙類、鳥類、各種小型哺乳動物及鳥蛋等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Snake-TB",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Snake-TB/Snake-TB_Pic01.jpg",
     "CID": 101
@@ -2724,7 +2724,7 @@
     "Feature": "體型略側扁，尾巴很長，成體雄蜥的頭部、背部與尾中央有冠狀突起，雌蜥則無此冠狀突起。眼睛虹彩為橙黃色，身體為翠綠色或藍綠色，上有許多淺藍色或黃色斑點，腹部為黃綠色，尾部有黑褐色橫帶。",
     "Behavior": "雙冠鬣蜥遭遇危險時擅長以後腳站立快速疾走，並且短時間內可於水面上奔馳，因此又有耶穌蜥的稱號。",
     "Diet": "節肢動物、軟體動物、魚類、兩棲類、爬蟲類、植物",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Basilisk",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Basilisk/Basilisk_Pic01.jpg",
     "CID": 105
@@ -2776,7 +2776,7 @@
     "Feature": "體型細長，是世界上最大型蛇類之一，上唇鱗有凹陷的唇窩。頭部有三條黑細紋，一條在頭部正中，另兩條由兩眼延伸到嘴角，身體背部為灰褐色或黃褐色，有複雜的鑽石型黑褐色網狀斑紋。",
     "Behavior": "成年網紋蟒常與水域活動，並隱身於水面下，伏擊前來飲水的哺乳動物。",
     "Diet": "鳥類、哺乳類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Python-R",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Python-R/Python-R_Pic01.jpg",
     "CID": 107
@@ -2802,7 +2802,7 @@
     "Feature": "體型壯碩，是世界上體型第三大的陸龜，背甲寬廣而高，前、後緣為鋸齒狀，前肢鱗片大而重疊，後腿有明顯的二或三個刺狀突起。",
     "Behavior": "蘇卡達象龜擅長掘洞，會挖掘洞穴居住，以躲避沙漠白天炎熱與夜晚低溫氣候，主要活動時間則在晨昏。",
     "Diet": "植食性。會從食物中攝取所需水分。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Totoise-AP",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Totoise-AP/Totoise-AP_Pic01.jpg",
     "CID": 108
@@ -2854,7 +2854,7 @@
     "Feature": "頭部為乳黃色或黃綠色，背甲為黃褐色或橄欖綠色，上有不規則的黑色斑塊或斑點，背甲高聳呈長橢圓形，前腳有大型突起的鱗片。",
     "Behavior": "黃頭陸龜於森林底層活動為機會主義者，除了植物、菌菇外，也會覓食蝸牛、小型無脊椎動物等為食，偏好棲息在潮濕的環境。",
     "Diet": "雜食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201807/27/201807271436480799.JPG",
     "CID": 110
@@ -2880,7 +2880,7 @@
     "Feature": "體長可達5公分，體色深褐色；體型扁平形似枯葉，前腳特化成鐮刀狀，腹部末端有一細長的呼吸管，可伸出水面呼吸。",
     "Behavior": "1. 是水域中兇猛的捕食者。\n2. 捕食時，成蟲會附著於水生植物上，將腹部末端的呼吸管貼於水面上，身體靜止不動，一發現獵物，頭部先定位，前腳立刻加以攻擊。",
     "Diet": "1.肉食性，吸食水生小動物的體液。\n 2.成蟲與若蟲皆會捕食水生昆蟲、蝌蚪、大肚魚及水域中其它小型動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://lh3.googleusercontent.com/proxy/9JxwUWxc9y04mcbK5foHeJ7jQe_DCkzASbhcrCxRGYNRJo8afh0IsJ4ZsDX8DoyqLBvUda_uShTep1vDktgL_A",
     "CID": 111
@@ -2906,7 +2906,7 @@
     "Feature": "體長可達20公分，頭胸部、腹部第一節和腳均呈紅色；每一體節有1對步足，身體第一體節的一對附肢特化為巨大鉤狀的顎肢，顎肢內具有毒腺，為夜行肉食動物。",
     "Behavior": "蜈蚣為夜行肉食性動物，獵食的時候以頭部腹面特化的顎肢毒鉤將毒液注入獵物體內，殺死獵物。蜈蚣毒液的性質類似蜂毒。小型蜈蚣的毒液量少，並不會對人類的安全造成威脅。",
     "Diet": "肉食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4093243/36ecb592-2564-492e-b1a6-d7e44f673f07.jpg",
     "CID": 112
@@ -2932,7 +2932,7 @@
     "Feature": "1. 世界上體型最大的蠍子之一，全長約20公分。\n2. 外殼又黑又硬。螯肢呈半圓形，表面十分粗糙，有很多凸出的圓點。\n3. 尾端呈暗紅色。\n4. 具有4對步足，在後腹部最末一節為帶有毒刺的尾節，製造毒液，由毒針釋放毒液",
     "Behavior": "夜行性、肉食動物；生活在非洲西部熱帶雨林底層和草原邊緣，夜間捕食其他節肢動物和小型兩棲爬蟲類。",
     "Diet": "肉食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4093243/b048d7a0-7c2f-4ba7-a91b-0f7378423b6b.jpg",
     "CID": 113
@@ -2958,7 +2958,7 @@
     "Feature": "1. 具有4對步足，1對螯肢螯肢特化成毒牙。\n2. 體長可達16公分，體色呈現黑棕色，頭胸部外圍部分呈現淡黃色。腳三節的最上面一節為紅橘色。",
     "Behavior": "1.屬於夜行性地棲型的毛蜘蛛，通常會在岩石或仙人掌下挖掘穴棲息，不吐絲結網築巢。\n2.以昆蟲、其他蜘蛛、蜥蜴和鳥類為食",
     "Diet": "肉食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/jacobking/1395737158-949513377.jpg",
     "CID": 114
@@ -2980,11 +2980,11 @@
     "Family": "晏蜓科",
     "Conservation": "資料不足",
     "Distribution": "臺灣全島",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 體色一般是暗褐色或暗綠色，腳和觸角比蜻蜓長一些。\n2. 眼睛較小，頭部無法自由轉動。腹部具有鰓組織，可以直接從水中吸取氧氣。",
     "Behavior": "晏蜓幼期的稚蟲，通常棲息於河流緩流、水潭之水草或枯木、落葉下。",
     "Diet": "肉食性；以小型水生昆蟲及其幼蟲為食，體型大的也可以捕食小魚和蝌蚪。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070938350984.jpg",
     "CID": 115
@@ -3010,7 +3010,7 @@
     "Feature": "體長1.4-1.7cm，體型扁橢圓；前足為鐮刀狀捕捉足，後足為具細毛之游泳足",
     "Behavior": "1.水棲型蝽象。\n2.雌雄蟲交尾後，雌蟲會將卵產在雄蟲背上，一次產下的卵約有數十顆之多，待若蟲孵化後卵殼才會脫落，降低卵被天敵吃掉的風險，故稱負子蟲。\n3.隨著負子蟲爸爸進出水面時，卵便能夠換氣呼吸並且保持濕潤，大約1-2週若蟲可孵化便自行活動。",
     "Diet": "肉食性，以捕食小型水生動物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/324/relpic/10162/7143191/7849592662.jpg",
     "CID": 116
@@ -3036,7 +3036,7 @@
     "Feature": "1. 成蟲體長可達6公分，雌蟲型較雄蟲大，身形也較寬厚。\n2. 成蟲有一對金黃色的翅膀，但不具飛行能力，且雄蟲翅較雌蟲長。\n3. 若蟲為深褐色，體側有四至六個黃斑，故又稱為四點或六點金翼蟑螂。",
     "Behavior": "棲息在森林底層，喜好居住於洞穴中，會取食鳥類或蝙蝠的糞便，生態習性與家中一般會看到的蟑螂截然不同，在自然環境中扮演著清道夫的重要角色。",
     "Diet": "雜食性",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/7570356/712229204967.jpg",
     "CID": 117
@@ -3062,7 +3062,7 @@
     "Feature": "常見的水棲甲蟲，翅鞘表面光滑，或僅有不顯著的點刻列，翅鞘兩側有橙黃色的條紋，體長不到3cm。雄蟲的前足跗節膨大為吸盤，可藉以與雌蟲區別",
     "Behavior": "1.成蟲大部分時間生活在水中，但是當環境不適會離水域另覓棲地，常見於沼澤、池塘。\n 2.成蟲在臺灣全年可見，室內飼養壽命可達2年以上。\n 3.交配後，雌蟲會先用口器將水生植物的莖的表面咬出一個缺口，再把卵產於其中。幼蟲有三個齡期，約3個月可上陸化蛹。\n 4.一般以蛹越冬。成蟲羽化後大約要經過一個星期才性成熟，方會交配。\n 5.完成生活史大約2.5~3個月。\n 6.成蟲遇到天敵捕捉時，會從前胸背板側面分泌出白色的腥臭液體驅退敵人",
     "Diet": "肉食性，獵食水中的小型動物為食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "data:image/jpeg;base64,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",
     "CID": 118
@@ -3088,7 +3088,7 @@
     "Feature": "1.大型鍬形蟲，長角大鍬形蟲大顎為大鍬形蟲屬中最修長者。\n2.體色黑，體長雄蟲29-90mm、雌蟲32-50mm。\n3.雄蟲大顎長且45mm以上之中至大型個體，大顎中央稍前處有一微幅隆起的明顯內齒突，未達45mm之小型個體，大顎短且幾乎無內齒突。\n4.雌蟲，眼緣突起小，翅鞘外側微細顆點呈縱淺溝況排列。",
     "Behavior": "1. 成蟲主要發生期為5~7月，但族群數量較稀少；\n2. 白天喜歡在青剛栗、栓皮栗等殼斗科大樹上吸食樹液，甚至久棲於這些大樹的樹洞中。\n3. 具趨光性，其雌蟲常直接停棲於路燈電線桿上或地上，而雄蟲雖也趨光，但通常都會躲在離路燈較遠之陰暗角落。\n4. 遇到危險時會裝死",
     "Diet": "幼蟲取食腐木組織，成蟲取食樹汁及腐熟水果，成蟲喜歡在殼斗科樹上吸食樹汁",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://p1-news.yamedia.tw/MzkyNDI5bmV3cw==/0024ff07d07898a4.jpg",
     "CID": 119
@@ -3114,7 +3114,7 @@
     "Feature": "1. 全身布滿水青色的圓形或橢圓形斑點，翅鞘上的斑點橫跨左右兩翅鞘。\n2. 大家最熟悉的象鼻蟲就是家中的米蟲，而大圓斑球背象鼻蟲則是一種短喙的象鼻蟲，與印象中有著長長嘴巴的象鼻蟲截然不同，全身黑色，上面還有夢幻的蒂芙尼藍圓斑",
     "Behavior": "1.大圓斑球背象鼻蟲的翅鞘已經癒合，完全沒有飛行能力，僅能以爬行的方式移動，因此活動範圍不外乎就是食草或附近區域。\n2.完全變態的昆蟲，幼蟲住在火筒樹的莖部，成蟲則在灌木或喬木上活動",
     "Diet": "植食性，主要取食火筒樹",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://farm6.staticflickr.com/5532/10372733745_7f34dbbc37_o.jpg",
     "CID": 120
@@ -3140,7 +3140,7 @@
     "Feature": "1. 雄蟲體長7.6～8.8公釐；體壁布滿細毛；頭部黑色，觸角黑色，絲狀；前胸背板橙黃色；前翅黑色，表面佈滿微小圓形點刻與黃色細毛，翅緣有黃色細紋；足部腿節橙黃色，其餘部分黑色；腹部黑色，有2枚乳白色長橢圓型發光器。\n2. 雌蟲體型略較雄蟲大，外型與顏色與雄蟲相似，僅有1枚發光器。",
     "Behavior": "1. 生活於低海拔環境，幼蟲水生，在水中以氣管鰓呼吸。\n2. 成蟲於入夜後僅活動約30~40分鐘，飛行時多環繞水域周邊，發光頻率緩慢，軌跡於光點間帶有光絲。",
     "Diet": "肉食性，取食水中螺貝類",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.travel.taipei/image/51350/480x360",
     "CID": 121
@@ -3162,11 +3162,11 @@
     "Family": "竹節蟲科",
     "Conservation": "無危",
     "Distribution": "馬來半島、新加坡、泰國、蘇門答臘",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "大型竹節蟲，雌蟲體型較為寬扁，身上具有許多小刺，在遭遇危險時會將具有棘刺的後腿舉高夾擊騷擾者，並且露出具有警戒色的後翅，同時發出警戒聲。雌蟲產卵於土中，卵粒相當大顆。",
-    "Behavior": "",
-    "Diet": "",
-    "Crisis": "",
+    "Behavior": null,
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/7570356/71222921139.jpg",
     "CID": 122
@@ -3188,11 +3188,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "新幾內亞、所羅門",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "雄蟲後腿較雌蟲粗壯許多，腿上棘刺也較大，除了禦敵外也可以幫助雄蟲彼此競爭雌蟲。",
     "Behavior": "白天會群體聚集在樹皮下或樹洞內藏匿，夜間才出來覓食。雖然行動緩慢，但全身布滿棘刺而成為絕佳的保護。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.hop888.com/PSG-23/images/work_4.jpg",
     "CID": 123
@@ -3214,11 +3214,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "泰國",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "成蟲具有短小的翅膀，遇驚擾時會打開紅色的翅膀，驚嚇敵人，休息時身軀及肢體伸直像樹枝。",
     "Behavior": "圈養族群幾乎為雌蟲個體，以孤雌生殖方式繁殖。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://accpark.org/ck/f3ca9ff3e1b5d52b15a3732e010f3de7.jpg",
     "CID": 124
@@ -3240,11 +3240,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "馬來半島、新加坡、蘇門答臘",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 大型竹節蟲，足部有尖刺。\n2. 雌蟲一般體長可達27.8公分，包含前後足全長達55.5公分，雄蟲比雌蟲略小。\n3. 雌蟲翅膀完全退化，雄蟲雖然有翅但無法飛翔。",
     "Behavior": "1. 成蟲可同時行有性生殖及孤雌生殖，每日約可產2-10顆的卵，卵期約 4~5個月。\n2. 卵拋棄式，刪孵出來的若蟲體型就非常細長。",
     "Diet": "以刺藤、橡樹、芒果及薔薇科的植物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.newton.com.tw/img/0/36d/cGcq5iY4YjMyMWNhRTO3gjZzkDZwYmZlJTO0EzMwMmZkZ2MjV2YzM2YmlzYv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg",
     "CID": 125
@@ -3266,11 +3266,11 @@
     "Family": "葉竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "馬來半島、蘇門答臘、婆羅洲",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "目發現最大型的葉䗛，外型與植物葉片非常相似，加上夜晚活動的習性，難以被掠食者發現",
     "Behavior": "夜晚活動；以孤雌生殖方式繁殖，卵為拋棄式。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://img.ltn.com.tw/Upload/news/600/2019/03/22/2735488_1.jpg",
     "CID": 126
@@ -3292,11 +3292,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "台灣",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "胸部背面有許多黑點，若蟲時胸部黃色，成蟲時則轉為紅色或褐色。雌雄都有翅膀，具良好飛行能力。",
     "Behavior": "蟲體遇到騷擾時，頭部與前胸交接觸會伸長露出紅色警戒色。卵為黏附式。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/432/relpic/10162/7998747/c04d4899-2b27-46ea-a3ca-89a9ec526f28.jpg",
     "CID": 127
@@ -3318,11 +3318,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "菲律賓、馬來西亞等地",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1. 剛孵出的若蟲，很像根乾柴。\n2. 若蟲期經常有綠色與褐色的斑紋，形成像迷彩般的外表，極適合匿蹤於樹叢中。\n3. 成蟲雄蟲身長約70-75 mm 雌蟲身長約 110-125 mm， 體色為土色或黑褐色。",
-    "Behavior": "",
+    "Behavior": null,
     "Diet": "植食性昆蟲,喜歡吃芭樂葉、芒果葉",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/gacsliu/1479881901-3263439365_wn.jpg",
     "CID": 128
@@ -3344,11 +3344,11 @@
     "Family": "竹節蟲科",
     "Conservation": "資料不足",
     "Distribution": "台灣",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "雌蟲體型較雄蟲大，且中胸肥澎大。",
     "Behavior": "台灣特有種昆蟲，受驚嚇時會翹尾恫嚇，警告敵人不可靠近，或因無法恫嚇對方而逃之夭夭，以免成為敵人的美食。",
     "Diet": "植食性，主要以茄苳及木麻黃等植物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070951188760.jpg",
     "CID": 129
@@ -3374,7 +3374,7 @@
     "Feature": "1. 雌蟲全身呈油綠色，胸部背板具許多顆粒狀小突起；尾毛粗短。\n2. 前翅明顯，後翅到腹部第3-4節，候翅臀區白色帶淡綠或淡玫瑰色。",
     "Behavior": "1.屬臺灣特有種，分布範圍狹窄；棲地破壞，捕捉壓力大。\n 2.採孤雌生殖，一隻雌蟲可以產下50-70粒卵；卵的孵化期為90-150天；全年都會有幼蟲的發生，但是成蟲的發生在3-12月，其中尤以5-10月為大發生季。\n 3.屬於不完全變態的昆蟲，從若蟲長到成蟲通常要經過六次蛻皮，翅膀短不會飛，因此族群分布相當侷限。\n 4.體型比一般竹節蟲粗壯，體色近似林投葉，白天休息時肢體收攏並貼服於葉鞘，所以很不容易發現其蹤跡；夜間是主要活動時段，並以林投葉為食。\n 5.遭遇敵人威脅時有一套很有效的禦敵機制，牠們會從前胸背板兩側腺體噴出汁液，而且噴射的方向可隨著天敵的位置而轉變，乳白色的汁液含有獼猴桃鹼（actinidine），聞起來像薄荷味，也有人覺得像牛奶腐敗的氣味。",
     "Diet": "植食性，以露兜樹科植物為食",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201808/22/201808221629407794.JPG",
     "CID": 130
@@ -3396,11 +3396,11 @@
     "Family": "竹節蟲科",
     "Conservation": "無危",
     "Distribution": "台灣",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體型細長，體色從棕黃到黑色，變異很大。雄蟲體長較短，觸角較雌蟲長。",
     "Behavior": "1. 遇到驚嚇時會大幅搖動身體，或從停棲處快速掉落，甚至自斷肢體以擺脫天敵掠食。\n2. 雌蟲產卵時會將腹部捲曲高繞過頭部，將肛片插在物體表面產卵，使卵附著其上。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://kite.biodiv.tw/files/kite/imagecache/w1024/images/7/img_9340_1024x683_2.jpg",
     "CID": 131
@@ -3422,11 +3422,11 @@
     "Family": "螽蟴科",
     "Conservation": "未評估",
     "Distribution": "僅分佈於蘭嶼。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體色綠色；前胸背板佈滿極細的顆粒狀突起；體背發達拱起，外緣呈菱形外突，並有較明顯的顆粒瘤突，雌蟲產卵管長刀狀。",
     "Behavior": "成蟲出現於春至秋。",
     "Diet": "取食旋花科的植物葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://p1-news.yamedia.tw/MzUxMjExbmV3cw==/f304fceaeda9efbe.jpg",
     "CID": 132
@@ -3452,7 +3452,7 @@
     "Feature": "成蟲體長可達3公分；體色黑色；翅棕色至黑色，翅基部具黃斑。頭圓形，稍短，比前胸背板稍窄或等寬。",
     "Behavior": "1.雄蟲可用前後翅摩擦發音，白天不發音，蟄伏在草叢隱蔽處不易被發現；夜晚鳴聲宏亮，有求偶、警示、領土宣稱等作用。\n 2.本種即民間用來鬥蟋蟀的主角。",
     "Diet": "雜食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201808/22/201808221631088103.JPG",
     "CID": 133
@@ -3474,11 +3474,11 @@
     "Family": "螽蟴科",
     "Conservation": "未評估",
     "Distribution": "生活在低海拔樹林旁灌叢或草叢。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體色綠色或褐色；最大的特徵是頭部後方兩側有大塊黑斑。",
     "Behavior": "1.成蟲在夏、秋二季均可發現。\n \n 2.夜間雄蟲的鳴聲非常響亮，白天不發音時酷似樹葉，不容易被發現。",
     "Diet": "取食植物葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.merit-times.com/news_pic/20141214/227431_156938.jpg",
     "CID": 134
@@ -3504,7 +3504,7 @@
     "Feature": "1. 中型鳳蝶。\n2. 軀體背面黑褐色，散佈有黃色鱗; 側、腹面奶黃色，上有四條黑褐色粗縱線。\n3. 後翅外緣波狀，無明顯尾突。翅背面底色黑褐色，翅面密佈黃白色斑紋及斑點。\n4. 後翅前緣Sc + R1室內有一藍色環紋，臀區有一前方冠藍紋的紅斑。\n5. 翅腹面有鑲藍邊的橙色紋。\n6. 雌蝶翅面的黃白色斑紋泛橙色。",
     "Behavior": "1. 一年多代，成蝶飛翔速度很快。\n2. 以蛹態度冬。",
     "Diet": "植食性，幼蟲取食各種芸香科植物，成蝶喜訪花。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.prospect-bearing.com.tw/blog/wp-content/uploads/yimg/38/l/M4h0orx.gQfuLELnLG2v1w.jpg",
     "CID": 135
@@ -3530,7 +3530,7 @@
     "Feature": "1. 卵為底部扁平的白色球形，具光澤。\n2. 幼蟲1齡為暗黃褐色，頭部黑色有黃色臭角；2-4 齡蟲為綠褐色，頭部為黑褐色，前胸有對黃色肉質突起；第5齡幼蟲具為綠色散生斑紋，頭部為淺綠色，後胸兩側有黑眼紋\n3. 蛹為帶蛹，為綠色並具黃色背線。\n4. 成蟲翅為黑色，並在前後翅表散佈金綠色鱗片，後翅則前緣散佈金藍色鱗片，後緣有藍色弦月紋。\n5. 中型鳳蝶。\n6. 雄蝶前翅後側有一片明顯的褐色絨毛狀性標。",
     "Behavior": "1. 烏鴉鳳蝶的外型具藍綠色金屬般的光澤，是很受歡迎的鳳蝶。\n2. 幼蟲具保護色，遇到危險或刺激時會伸出黃色臭角。其幼蟲生長受溫度影響很大。\n3. 成蟲喜訪花，雄蝶喜歡在溪邊濕地吸水。\n4. 一年多代，冬季通常以蛹態越冬。",
     "Diet": "植食性，幼蟲取食賊仔樹、食茱萸、柑橘等芸香科植物的葉片。成蟲喜歡訪花。其寄主植物為芸香科之飛龍掌血、食茱萸、賊仔樹、雙面刺，及漆樹科之山漆。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://farm8.staticflickr.com/7314/9738445405_fe31929088_b.jpg",
     "CID": 136
@@ -3556,7 +3556,7 @@
     "Feature": "1. 中型鳳蝶。\n2. 軀體黑褐色，散布有綠色亮鱗，前翅近直線狀，後翅外緣波狀M3脈末端有一明顯葉狀尾突，翅背面底色黑褐色，密布亮鱗，後翅前側有一藍綠色亮斑，與後翅中央的綠色亮線連接。後翅臀區有一紫紅色圈紋。翅腹面底色褐色，於前翅外側有灰白色斑帶，後翅內側有一片黃褐色鱗，延外緣則有一列紫紅色弦月紋。\n3. 雄蝶前赤背面後側有褐色絨毛狀性標。",
     "Behavior": "1. 一年多代，冬季以蛹態越冬。\n2. 成蝶有訪花習性。\n3. 雄蝶有濕地吸水習性。",
     "Diet": "植食性，幼蟲取食山刈葉、三腳虌、柑橘等芸香科植物的葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://live.staticflickr.com/8306/7940516852_d686414daf_n.jpg",
     "CID": 137
@@ -3582,7 +3582,7 @@
     "Feature": "1. 卵為淺黃色球形。\n2. 幼蟲1-4齡為深褐色鳥糞狀，5齡為綠色，胸部有擬態假眼。\n3. 蛹為帶蛹，有黑褐色與綠色的腹面綠色，背面為黃綠色。\n4. 雄蝶只有一型為黑色無尾型，前後翅背面散佈藍灰色鱗片，翅腹面基部具紅色斑，下翅腹面靠近肛角處具橙紅色斑。\n5. 雌蝶有三型，無尾白斑型與有尾橙斑型，有尾型右下分長斑及短斑兩種。\n6. 展翅約 100 -120 mm。",
     "Behavior": "1. 幼蟲具保護色，遇到危險或刺激時其臭角會發出刺激性的氣味。\n2. 成蟲喜訪花，雄蝶會在溪邊濕地吸水。\n3. 成蟲飛行緩慢，喜愛陽光，常見於公園、學校、人工生態園及路邊的野花上空飛行。\n4. 一年多世代，以蛹態度冬。",
     "Diet": "植食性，幼蟲取食各種芸香科植物，如:枸橘，烏柑仔，食茱萸，賊仔樹，雙面刺，柑橘屬。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201811/15/201811150930500548.JPG",
     "CID": 138
@@ -3608,7 +3608,7 @@
     "Feature": "1. 卵為橙紅色球形。\n2. 幼蟲1齡頭部為黃色，身體為暗紅色具有錐狀突起；2-5齡頭部為黑色，身體為紫黑色，其第三腹節為白色，具橙色臭角。\n3. 蛹為帶蛹，橙褐色，中胸與第4-7腹節各有一對板狀突起。\n4. 成蟲前後翅為黑色，後翅具淡紅色與白色斑，具一對尾突。",
     "Behavior": "1. 紅紋鳳蝶外型鮮艷，為昆蟲館春、夏季主要展示的鳳蝶，在館內的馬兜鈴科植物上可發現其幼蟲取食的痕跡。\n2. 幼蟲具警戒色，遇到刺激時會伸出橙色的柱狀臭角。",
     "Diet": "其寄主植物為馬兜鈴科的異葉馬兜鈴，港口馬兜鈴，瓜葉馬兜鈴，蜂窩馬兜鈴，大葉馬兜鈴。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070946278558.jpg",
     "CID": 139
@@ -3634,7 +3634,7 @@
     "Feature": "1. 大型斑蝶。\n2. 軀體白色，有黑斑點與線紋。\n3. 腹部白色，背側中央有一黑褐色縱帶。\n4. 前翅翅形近三角形，前緣弧形，翅端圓弧狀。後翅扇形或卵形，外緣圓。翅背面底色白色、基部泛黃色。翅面沿外緣有黑紋，各翅室有成對鏤空白色圓形紋；翅中央有黑色紋列，前翅中室端及中室內也有黑色紋，後翅中室內有叉狀黑色線紋。翅腹面斑紋似翅背面。緣毛黑白相間。",
     "Behavior": "多世代性蝶種，成蝶棲息在海岸林間及林緣，常於樹冠上緩慢飛行，喜訪花。",
     "Diet": "成蟲會訪花。幼蟲取食夾竹桃科爬森藤之葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201808/22/201808221615381283.JPG",
     "CID": 140
@@ -3660,7 +3660,7 @@
     "Feature": "1. 大型粉蝶。\n2. 軀體背面黑褐色，覆白色毛及鱗片; 腹面白色。\n3. 雄蝶翅背面底色奶白色，前翅翅頂有大形橙紅色斑紋，其外側鑲黑褐色紋，橙色紋內各室外側有黑褐色狹長小紋，翅脈上覆黑褐色鱗。後翅翅脈末端及各翅室外側有黑褐色小紋。翅腹面底色白色，前翅外半部及後翅翅面上佈滿黑褐色細紋，翅面中央有一暗褐色線紋由翅基伸至外緣。\n4. 雌蝶翅背面底色淡黃色，黑褐色斑紋較雄蝶發達。\n5. 本種是臺灣最大型的粉蝶。",
     "Behavior": "1. 成蝶飛翔快，常於陽光充足處活動，好訪花。\n2. 雄蝶會在濕地吸水。\n3. 一年多代",
     "Diet": "幼蟲食草為白花菜科的銳葉山柑、小刺山柑、多花山柑及魚木。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://g.udn.com.tw/upfiles/B_RO/rosa2010/PSN_PHOTO/142/f_9083142_1.jpg",
     "CID": 141
@@ -3686,7 +3686,7 @@
     "Feature": "1. 中型斑蝶。\n2. 軀體頭、胸、足黑褐色，有白色斑點與線紋。\n3. 腹部背側褐色，腹側白色，有時泛淺褐色。\n4. 前翅翅端突出。翅背面底色暗褐色，翅面佈滿半透明青白色斑紋，翅基處線條狀，外側斑點狀。前翅Sc室內有青白色線紋。翅腹面斑紋似背面，除前翅內側暗褐色以外，其餘翅面深栗色。\n5. 雄蝶後翅於1A+2A脈由翅基至外緣有線形性標，其兩側覆淺灰色特化鱗。緣毛黑白相間。",
     "Behavior": "1. 琉球青斑蝶成蝶與幼蟲受驚嚇亦有假死的行為。\n2. 青斑蝶類的種類有許多，在館內除了琉球青斑蝶外，還可觀察到淡小紋青斑蝶，此類幼蟲與成蟲皆因取食有毒之寄主植物而具警戒色。\n3. 在野外成蟲飛行速度緩慢，喜空曠林叢與花叢。\n4. 成蟲冬季有向南遷徙集體渡冬的習性。\n5. 一年多代。",
     "Diet": "幼蟲以蘿藦科的歐蔓、牛皮消、絨毛芙蓉蘭為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201811/15/201811151025112717.jpg",
     "CID": 142
@@ -3712,7 +3712,7 @@
     "Feature": "1. 中型蛺蝶。\n2. 軀體背側於雄蝶淺黃褐色，腹側黃白色；於雌蝶暗褐色，腹側白色。\n3. 前翅三角形，外緣中央內凹，雄蝶翅端突出。\n4. 後翅三角形。翅背面底色於雄蝶橙黃色，於前、後翅CuA1室內有一黑褐色斑點，前翅翅端、外緣及前緣中央有黑褐色斑紋。後翅外緣有黑褐色紋列。\n5. 翅腹面底色淺、缺乏暗色紋，前、後翅CuA1室內也有一黑褐色斑點，後翅斑點外有一眼狀紋。後翅中央有一褐色線由臀區延伸至前緣中央，其前端向外屈。\n6. 雌蝶翅背面底色暗褐色，中央斑帶白色或黃色，前翅外側也有數個白、黃斑。前、後翅CuA1室內也各有一黑褐色斑點。翅腹面底色橄欖色。中央斑帶內側鑲暗色線。緣毛褐色。",
     "Behavior": "1. 一年多代。\n2. 成蝶飛翔活潑快速，好吸食樹液及腐果。\n3. 雌蝶將卵粒於葉背成卵塊產下。幼蟲有群聚性、停棲於葉背。\n4. 冬季以非休眠性小幼蟲越冬。",
     "Diet": "成蝶飛翔活潑快速，好吸食樹液及腐果。幼蟲取食朴樹科石朴、沙楠子樹及朴樹等植物葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/den531/1381602179-2591277473.jpg",
     "CID": 143
@@ -3738,7 +3738,7 @@
     "Feature": "1. 雌雄斑紋相似。軀體頭、胸 呈黑褐色，上有白色斑點與線紋。 腹部背側橙色，腹側白色。雄蝶前 足被毛，雌蝶則否。\n2. 前翅翅形近三 角形，外緣近翅頂處向外作弧形 突出。後翅甚圓。翅背面底色橙 色，前翅翅端附近黑褐色，內有白斑並約略形成一斜帶。黑褐色部分 後側有一暗褐色區域延伸入中室至 翅基。後翅中室端有三枚黑褐色小 斑點，翅緣有黑褐色邊，內有白 點。後翅翅面偶有白紋。\n3. 雄蝶於後翅 CuA2室內有黑色袋狀構造，其 開口貼近 CuA2脈。袋狀構造內藏 黑褐色特化鱗。\n4. 翅腹面斑紋類似背 面，但白色斑紋較發達，前翅翅頂 多一橙黃色斑。雄蝶後翅袋狀構造 處有一白紋。緣毛黑白相間。",
     "Behavior": "樺斑蝶幼蟲所吃下的生物鹼可以保護它們免受攻擊。它們很多時會低飛，飛得很慢及成直線。這種飛法讓掠食者有足夠時間認清及避開不攻擊它們。身體上的鮮艷色彩正是要讓掠食者警戒。假若受到攻擊時，它們會裝死及分泌難聞的液體。這會迫令掠食者放生它們。",
     "Diet": "幼蟲寄主植物尖尾鳳（馬利筋）、 釘頭果、大花魔星花、毛白前 、 牛皮消 等夾竹桃科（蘿 藦科）植物。取食部位是新芽、 幼葉、葉片、花等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://farm5.static.flickr.com/4902/45022016294_9faa73067a.jpg",
     "CID": 144
@@ -3764,7 +3764,7 @@
     "Feature": "1. 中型蛺蝶。\n2. 前胸有橙紅色紋。軀體背側黑褐色，腹部有成對淺黃褐色點列；腹側黃白色，腹部有一對黑褐色縱線，腹端橙黃色或黃白色。\n3. 前翅狹長，外緣向外突出呈圓弧狀。後翅外緣中段角狀。翅背面底色橙黃色，沿外緣有黑邊，內有黃色點列。前翅中室端及其外側有黑色短紋。\n4. 翅腹面底色橙黃色，後翅色淺，沿外緣有黑褐色波狀線，後翅波狀線內側有橙色帶。緣毛黑褐色。",
     "Behavior": "一年多代。飛行緩慢，會訪花。產卵時聚產於葉背，幼蟲有聚集性。",
     "Diet": "成蟲會訪花；幼蟲取食青苧麻、密花苧麻、水麻、糯米團、水雞油等蕁麻科植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Acraea_issoria_formosana_male_20130817.jpg/220px-Acraea_issoria_formosana_male_20130817.jpg",
     "CID": 145
@@ -3790,7 +3790,7 @@
     "Feature": "1.中型蛺蝶。\n2. 軀體背側黑褐色，胸部前側有白斑點、腹部前側有一白環；腹側白色。雄蝶觸角末端黃褐色。\n3. 複眼疏被毛。前翅直角三角形，外緣中央凹入，尤其是雄蝶。\n4. 後翅扇形。翅背面底色黑褐色，翅面有白色帶紋、條紋及斑點。\n5. 雌蝶前翅中室內有一白條，為黑褐色細帶截為數段。白色中央斑列折線狀排列，亞外緣有彎曲排列之白色短線。後翅內側與外側各有一白色紋列，內側紋列帶狀，外側紋列弧形排列之白斑。翅腹面底色深褐色，翅背面亦有白紋。沿翅外緣有白線。後翅內側與外側帶間有暗色帶。後翅翅基有黑褐色鏤空紋及白條，白條前側鑲黑色眉形紋。\n6. 雄蝶翅背面僅於前、後翅分別有一與外緣平行的白色短帶，前翅白帶前方有三個白色小紋。翅腹面除白色短帶外，於外側有兩道白色線。緣毛黑白相間。",
     "Behavior": "一年多代。成蝶常於林緣活動。",
     "Diet": "成蝶常於林緣活動，有訪花性，也吸食腐敗物與吸水。幼蟲取食茜草科植物，如毛玉葉金花、臺灣鉤藤、水金京、水錦樹等之葉片。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070936007833.jpg",
     "CID": 146
@@ -3816,7 +3816,7 @@
     "Feature": "1. 中型斑蝶。\n2. 軀體頭、胸黑褐色，有白色斑點與線紋。\n3. 腹部橙色，腹部腹面及側面有小白紋及白點。\n4. 翅背面底色橙色，翅脈及其兩側明顯黑化。前翅翅端黑褐色，內有排成斜帶之白斑。後翅翅緣有黑褐色邊，內有白點。雄蝶於後翅CuA2室內有黑色袋狀構造，開口近CuA2脈。袋狀構造內藏黑褐色特化鱗。翅腹面斑紋類似背面，白色斑紋較發達，前翅翅端多一淺褐色斑。\n5. 雄蝶於後翅袋狀構造位置隆起。緣毛黑白相間",
     "Behavior": "多世代性物種。成蝶棲息在陽光充足的開闊地，飛行緩慢，喜訪花。",
     "Diet": "成蟲喜訪花。幼蟲取食臺灣牛皮消、蘭嶼牛皮消夾竹桃科 (蘿藦科)植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://f.share.photo.xuite.net/yycisoyu/1fb1e5e/10435662/481263888_m.jpg",
     "CID": 147
@@ -3842,7 +3842,7 @@
     "Feature": "1. 中型斑蝶。\n2. 軀體頭、胸、足黑褐色，有白色斑點與線紋。\n3. 腹部背側暗褐色，腹側橙色有白紋，左右兩側有縱走白點列。\n4. 前翅翅端略突出。翅背面底色暗褐色，翅面佈滿半透明青白色斑紋，近翅基處線條狀，外半部斑點狀。前翅M3室基部斑紋分為內側紋及外側紋。雄蝶後翅袋狀構造開口位於CuA1室內，使旁邊CuA1脈略彎曲。翅袋狀構造內及開口附近有灰色特化鱗。翅腹面斑紋類似背面，除了前翅內側暗褐色外，其餘翅面淺黃褐色。\n5. 雄蝶後翅袋狀構造半圓形、淺黃褐色，末端暗褐色。緣毛黑白相間。",
     "Behavior": "1. 一年多代。\n2. 飛行緩慢，喜訪花。\n3. 幼蟲取食華他卡藤與夜香花等夾竹桃科(蘿藦科)植物。",
     "Diet": "成蟲喜訪花。幼蟲取食華他卡藤與夜香花等夾竹桃科（蘿藦科）植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/lwc737/1435568757-4055485325_wn.jpg",
     "CID": 148
@@ -3868,7 +3868,7 @@
     "Feature": "1. 卵為暗綠色球形， 1齡幼蟲為黑褐色，其他齡為黑色，各側腹背線有細長棘刺，棘刺基部為紅色。\n2. 蛹為黑褐色間雜白褐色斑，並有小型錐狀突起。\n3. 成蟲翅背面為紫黑色，前翅前緣到外緣中央有橙色粗橫帶，翅膀腹面成枯葉形，並具擬似枯葉之葉脈。\n4. 大型蛺蝶。\n5. 軀體背側暗褐色，腹側淺褐色。\n6. 前翅半橢圓形，前緣弧形，翅端有一尖角，外緣後側向外凸。後翅橢圓形，於1A+2A脈末端有指狀突起。翅背面底色暗褐色，亞外緣有黑褐色波狀線。翅面泛靛藍色金屬光澤。前翅CuA1室有一小眼紋，眼狀紋中央有白色半透明小點。前翅R4室於R4及R5脈交會處時有一黃白色小紋。翅中央有橙黃色寬斜帶。翅腹面斑紋變化顯著，底色黃褐色或褐色，上有濃淡不一、色彩多樣之斑駁花紋。翅面中央由前翅翅端至後緣中央、後翅前緣中央至於1A+2A脈末端指狀突有一暗色線。緣毛暗褐色。",
     "Behavior": "1. 枯葉蝶因外型如枯葉而得名，此成為不易被敵人發現的最佳保護色。\n2. 幼蟲具細長棘刺，遇到危險或刺激時會噴出刺激性液體。在傍晚及清晨時覓食，野外較難觀察。\n3. 枯葉蝶不訪花，反而喜歡停在地上吸吮發酵的水果、尿液或動物體液，受驚時會突然飛起，快速逃到附近的樹叢間。",
     "Diet": "其寄主植物為爵床科的臺灣鱗球花，臺灣馬藍、曲莖蘭、嵌馬藍。成蝶以腐爛的水果與樹汁為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.apatw.org/sites/default/files/imce/user/user42591/01ku_xie_die_you_yi_ding_de_ling_yu_xing_zhi_yao_qi_zhong_yi_zhi_lu_guo_qi_ta_ge_ti_de_ling_yu_jiu_rong_yi_zao_dao_qu_gan_.jpg",
     "CID": 149
@@ -3894,7 +3894,7 @@
     "Feature": "1. 大型螞蟻，職蟻多態型，小工蟻體長7.0– 7.6 mm，大工蟻12.1 –12.5 mm。\n2. 頭型卵圓型。後頭平順，頭蓋著生稀疏短毛。前額葉退化呈片狀傾斜將觸角窩部分蓋住，前額三角區明顯；無明顯觸角窩且觸角溝不明顯。頭楯前緣平順、外突或中間凹陷，具明顯頭楯中毛與成對頭楯側毛著生。\n3. 大顎呈三角型或亞三角型，大顎前緣齒突多於7 個。觸角12 節，無明顯錘節。\n4. 複眼大明顯。\n5. 前中胸背板無明顯隆起。前中胸背板光滑無刻紋，前胸背板與中胸背板上各著生1 對長針狀毛。前中胸癒合完全，無後胸背板溝，後胸背板縫明顯，後胸腺退化，無後胸腺孔。後胸氣孔明顯。前伸腹節光滑無刻紋無毛著生，無前伸腹節刺與前伸腹節葉，前伸腹節氣孔呈長型。\n6. 腹柄節無柄部，瘤部呈三角狀，無腹柄節刺與腹柄節下突起。腹錘背板光滑無刻紋，著生均勻長針狀毛，螫針退化，具酸腺孔，酸腺孔呈圓形開口，無著生長緣毛。體軀雙色，通常為頭部、中軀及腹柄部為暗紅色，腹錘部為黑色具淡褐色斑塊。",
     "Behavior": "以環境中植物花蜜、蜜腺分泌或小型昆蟲屍體為食。覓食方式為單獨、小組工蟻出外覓食，有 工蟻的招募行為。夜行性的覓食律動周期。",
     "Diet": "雜食性的螞蟻，以環境中植物花蜜、蜜腺分泌或小型昆蟲屍體為食。覓食方式為單獨、小組工蟻出外覓食，有 工蟻的招募行為。夜行性的覓食律動周期",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://obs.line-scdn.net/0hQVWqyFOqDnlqCCbvAgFxLlBeDRZZZB16Dj5fZjVmUE0Tb0koUmoVTEYKUEFDPEknBD5EH0sMFUgVOxwmBGsV/w644",
     "CID": 150
@@ -3917,10 +3917,10 @@
     "Conservation": "資料不足",
     "Distribution": "中南台灣中低海拔原始林。",
     "Habitat": "海岸林的朽木中。",
-    "Feature": "",
+    "Feature": null,
     "Behavior": "生性膽小溫和，不會採取防禦性攻擊，主要以脫落、逃跑後靜止不動為避敵方式。移動速度快、通常為夜間出外活動覓食以避開掠食者。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://obs.line-scdn.net/0h-5cgwLzPchpeHlqMNhQNTWRIcXVtcmEZOigjBQFwLC4neTVLZnxoL3IXJSghLDVEMCg4fH4XaSshLWBFMH1o/w1200",
     "CID": 151
@@ -3943,10 +3943,10 @@
     "Conservation": "資料不足",
     "Distribution": "台灣全島低海拔地區。",
     "Habitat": "草地、農地、都市綠地等。",
-    "Feature": "",
+    "Feature": null,
     "Behavior": "生存於開闊性與較乾燥環境，屬雜食性的螞蟻，適應力、繁殖力佳，社會性分工相當明顯團結作戰，例如找到食物時會排列整齊隊伍前進，將食物搬回巢穴，若遇到威脅時則會團結一致抵抗外敵。",
     "Diet": "雜食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://2.bp.blogspot.com/-nodD2YyOY6U/WE6nJ3OPojI/AAAAAAAAeTM/4RNnhxchysgLeTwKSFR2PUajNM0baBZUACLcB/s640/%25E5%25AF%25AC%25E7%25B5%259002.jpg",
     "CID": 152
@@ -3972,7 +3972,7 @@
     "Feature": "1. 大型螞蟻，職蟻單態型，工蟻體長12.5–15.0mm。\n2. 頭型呈矩型。後頭隆線骨化隆起呈Y型項部隆骨。頭部側緣中間凹陷，頭蓋細條紋狀刻紋明顯，前端無刻紋，無毛著生。頭楯前緣凹陷。\n3. 大顎呈線型鐮刀狀，前端明顯分叉，大顎亞前緣齒矩形。\n4. 觸角12節。\n5. 複眼大。\n6. 前中胸背板縫明顯，中胸明顯隆起，前中胸背板細條紋狀刻紋明顯。中胸側溝明顯，中胸上側板細條紋刻紋，中胸下側板光滑無刻紋。後胸背板溝明顯，後胸側板明顯細條紋刻紋。\n7. 前伸腹節氣孔呈圓型且封閉呈遺跡狀，前伸腹節細條紋刻紋明顯，無毛著生。\n8. 中足脛節與後足脛節各具有1根櫛齒狀脛節距。\n9. 腹柄節無柄部，瘤部呈三角形尖端針狀，光滑無刻紋。腹柄節下突起呈針狀突起。腹錘背板著生些許直立針狀毛，螫針明顯。\n10. 體軀單色深褐色，足顏色較淡。",
     "Behavior": "高山鋸針蟻單蟻后型，成熟蟻巢由1隻生殖蟻后與200~250隻的職蟻組成。",
     "Diet": "1. 肉食性\n2. 以環境中可利用的所有土棲性動物資源為主，主要以白蟻為食。\n3. 覓食方式單獨搜尋單獨取回形式覓食，無工蟻的招募行為。\n4. 以夜行性的覓食律動周期為主。\n5. 特殊形式的大顎是鋸針蟻的特色，大顎亦為其攻擊與防禦的特殊方式，鋸針蟻屬捕食性大顎的機制為職蟻在外覓食時，會將大顎張開180°，當大顎內緣的感覺毛觸碰到獵物時，會引起神經衝動，經由神經傳導，在1毫秒內將大顎迅速閉合，藉以捕捉獵物或達到攻擊敵人的功效。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://3.bp.blogspot.com/-_1wpR66s9k0/WGtASPkaFbI/AAAAAAAAfLo/Jh6ab0nG_hcE_D8oNQOxcJ9ENo2qwipsgCLcB/s640/1214.jpg",
     "CID": 153
@@ -3998,7 +3998,7 @@
     "Feature": "1. 中小型螞蟻，職蟻單態型，工蟻體長3.1–3.2mm。\n2. 頭型圓型。觸角窩成圓型，觸角溝明顯長過頭蓋1/2前額隆線明顯。頭蓋上明顯著生濃密長針狀毛，明顯網紋狀刻紋。頭楯前緣具一列明顯齒狀隆起，具明顯頭楯齒與頭楯側齒，成對頭楯齒毛與頭楯前緣毛明顯。\n3. 大顎三角型，大顎前緣4~5齒，前端2齒大而明顯，明顯齒間部，基端具2小齒與1不明顯端齒。\n4. 觸角11節，錘節3節；觸角柄節桿狀。\n5. 複眼大明顯。\n6. 前中胸背板至前伸腹節背板網紋狀刻紋明顯；著生明顯成對針狀毛。中胸側板不規則皺紋狀著生。\n7. 腹柄節呈不規則皺紋狀刻紋，著生2對長針狀毛。腹柄節柄部與瘤部約等長；腹柄節瘤部隆起呈圓型略三角狀。後腹柄節呈筒狀，下側緣略微稜角狀突起，側緣不規則皺紋狀刻紋，著生2對長針狀毛。腹錘第1 節背板光滑無刻紋，短針狀體毛稀疏著生。\n8. 體軀單色灰褐色。",
     "Behavior": "1. 堅硬雙針家蟻為無蟻后工蟻孤雌產雌的螞蟻種類，成熟蟻巢無明顯蟻后，多由約數千隻的職蟻組成。\n2. 以環境中可利用的所有動植物資源，偏好油脂與蛋白質含量高的食物。\n3. 覓食方式大規模蟻道的集團形式覓食，具明顯工蟻的招募行為及兵蟻協助。日行性的覓食律動周期",
     "Diet": "雜食性的螞蟻。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://live.staticflickr.com/743/20556490016_d7d452887e_b.jpg",
     "CID": 154
@@ -4024,7 +4024,7 @@
     "Feature": "1. 腹長63-68 mm，後翅長50-53 mm。\n2. 複眼綠色，額部有一塊工字形黑斑。\n3. 合胸和腹部第1 節綠色，第2、3 節綠色，其餘皆為黑色，腹部兩側具有黃色斑點。\n4. 雌蟲外型和雄蟲相似。",
     "Behavior": "1. 稚蟲棲息於水生植物叢生的池塘或沼澤中。\n2. 成蟲出現於4至11月，雄蟲會在棲地上空巡弋飛行。\n3. 雌蟲通常只有要產卵時才會到水域來活動，把卵產在水生植物的莖內、藻類以及水面上的大型植物葉內。\n4. 全年均有紀錄，經常在水域上空來回飛巡。\n 5. 水蠆在白天或夜晚都會羽化，是臺灣分布最廣、適應力也最強的一種蜻蜓。",
     "Diet": "捕抓空中飛行的小昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://live.staticflickr.com/5727/22009402683_08bdefc38f_b.jpg",
     "CID": 155
@@ -4050,7 +4050,7 @@
     "Feature": "1. 腹長27-33 mm，後翅長32-37mm。\n2. 雄蟲複眼、合胸和腹部全為紅色，腹部背方中央具一條黑線。翅膀透明，翅痣紅色。\n3. 雌蟲則全身為黃色，腹部背方黑線和雄蟲相同。\n4. 雄蟲全身幾乎為鮮艷的朱紅色，腹部背面中央有一微細的黑色線條，翅透明，基部少許面積橙色，翅痣黃色。雌蟲體色為黃褐色或褐色。",
     "Behavior": "1. 稚蟲棲息於溪流、池塘、沼澤、水田等環境。\n2. 成蟲出現於3至11月，成熟的雄蟲常在水域周圍的枝條或草本植物停棲佔據領域。\n3. 雌蟲以蜻蜓點水方式產卵。\n4. 在平地新挖得池塘中最早出現的蜻蜓之一，另一種是杜松蜻蜓，兩種都是非常普遍常見的蜻蜓。",
     "Diet": "為食蟲性，捕抓空中飛行的小昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070944537450.jpg",
     "CID": 156
@@ -4076,7 +4076,7 @@
     "Feature": "1. 善變蜻蜓成蟲體長約3.4~4.2 公分。\n2. 雄蟲複眼為暗紅褐色；腹背端部數節有3 條黑線縱線，左右兩條不明顯；腹部紅褐色，末端為黑色；背部中脊線有黑色條紋，兩側也有細小的黑色斑紋；翅膀自基部起約四分之三的面積為紅褐色，翅端有小面積為透明，翅痣紅色。\n3. 雌蟲體型和體色皆與雄蟲類似，但腹部中央及兩側的黑斑都較粗而明顯，尤其側緣的縱紋較發達；體色有紅色與黃褐色兩型，翅痣黃白色或紅色。",
     "Behavior": "1. 稚蟲棲息於溪流、池塘、沼澤、水田等環境。\n2. 成蟲出現於3至11月，大多在溪流活動，偶爾在靜止水域。\n3. 雌蟲以蜻蜓點水方式產卵。",
     "Diet": "為食蟲性，捕抓空中飛行的小昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105070942526493.jpg",
     "CID": 157
@@ -4101,8 +4101,8 @@
     "Habitat": "乾旱山區。",
     "Feature": "毛色為黃褐色偏紅色，耳內、臉頰、腹側及四肢內側為白色，雄羊脖子下面由喉部一直到前腿有長而柔軟的鬃毛，雌雄均有角，雄性的角先向外長，再向內偏轉。",
     "Behavior": "1. 北非髯羊棲息於貧脊的乾旱地區；動作迅速且適應山區等崎嶇地形，可跳超過2公尺的高度，牠們會快速逃離往山丘上。\n2. 北非髯羊居住的環境相當乾燥，靠吃植物及露水來補充水分。通常成小群活動，由一隻雄羊擔任領導，再加上幾隻雌羊及牠們的子女。\n3. 由於北非髯羊被引進美國的加州、新墨西哥州及德州，牠們會啃食原生植物並與原生種競爭食物及資源，造成影響。",
-    "Diet": "",
-    "Crisis": "",
+    "Diet": null,
+    "Crisis": null,
     "Code": "Sheep-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Sheep-B/Sheep-B_Pic01.jpg",
     "CID": 158
@@ -4128,7 +4128,7 @@
     "Feature": "1. 體色由黃棕色到灰色，耳朵邊緣與尾巴有剛毛，其餘部分則無毛，上唇為方形。\n2. 腳短身體粗壯皮厚又粗糙。",
     "Behavior": "1. 名稱來自於荷蘭文「wijd」，意思為「wide」（寬平），針對牠們寬平的嘴唇而言，後來被人誤稱為「white」（白色），故稱「白犀牛」，又名「方嘴犀」。牠們寬平的唇部，可像割草機般啃食地上的草。\n2. 白犀牛的視力很差，主要依靠聽覺和嗅覺，奔跑時速可達40km。比黑犀牛溫和，較不具攻擊性。\n3. 白犀牛會成群活動，群中通常是母犀牛與小犀牛；成年的雄犀牛則多半是獨居，牠們會撒尿及散佈糞便的方式來標識自己的領域，在爭奪領域時，會互相用角攻擊。\n4. 主要的活動時間為早晨、傍晚及夜間，中午則在陰涼的地方休息或泡水。",
     "Diet": "草食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Rhino-W",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Rhino-W/Rhino-W_Pic01.jpg",
     "CID": 159
@@ -4154,7 +4154,7 @@
     "Feature": "1. 狐猴中體型最大的，兩耳由長而濃密的白色毛髮遮蓋，因而名為\"白頸\"。四個不同毛色的亞種中，黑白相間者，毛色的比例依棲地的地理位置而異。\n2. 皮毛長而柔軟，耳朵被毛髮遮蓋著，毛的顏色變化很大，以黑色為主，四肢、背部及頭部有白色的斑紋，具有三對乳房。",
     "Behavior": "1. 白頸狐猴的活動時間是早晨及黃昏，日行性。尤其下午5-7時是牠們最活躍的時間。\n2. 牠們是樹棲的靈長類動物，在樹枝間穿梭活動，有響亮而特殊的叫聲以宣示領域。但是因為他們的體形比較大，所以在樹上活動時必須比其他種類的狐猴更加小心。\n3. 屬於群居動物。會築巢育兒，一胎通常生1-2隻，與多靈長類不同，剛出生的小狐猴都是由母親用嘴巴叼著移動，並安置在巢中，不會一直抱在身上。",
     "Diet": "種子、樹葉、花粉等，以水果為主食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lemur-R",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-R/Lemur-R_Pic01.jpg",
     "CID": 160
@@ -4180,7 +4180,7 @@
     "Feature": "1. 雄、雌個體差異大，雌羚體色棕褐色帶有垂直白色條紋的外衣，喉部肉垂不明顯；雄羚羊額頭上有一叢深色毛，體色較深帶藍灰色調，年齡越大顏色越灰暗，白色條紋較不明顯，喉部肉垂比雌羚羊明顯。\n2. 雖然雌、雄羚羊頭上都有略成螺旋狀的角，但雄羚羊的角更厚更短。",
     "Behavior": "1. 成群活動，主要棲息於大草原及開闊的林地，逐水草而居沒有領域。通常在晨昏及夜晚覓食、活動，天氣太熱時則躲在陰涼處。\n2. 群體中的雄羚羊有階級制度，位階高的雄羚羊享有交配權利。",
     "Diet": "草食性。喜歡吃樹葉及多汁的果實，也會吃草及樹根。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Eland",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Eland/Eland_Pic01.jpg",
     "CID": 161
@@ -4206,7 +4206,7 @@
     "Feature": "毛色為橄欖色，臉部黑色無毛，雄性的頸部及肩膀的毛較長，也比較強壯，口鼻部延長，有點像狗，尾巴成倒U形。",
     "Behavior": "1. 東非狒狒是日行性的動物，主要棲息於大草原、草地、開闊的林地、石礫山地等區域，夜晚可睡在樹上或峭壁面上，通常在地面活動，也會爬樹。\n2. 東非狒狒是群居的動物，每群的大小通常為30-60隻，雌性數量較多，但是雄性地位較高，雄性的狒狒藉由打架及結盟來決定彼此的階級，只有高階的雄狒狒才能與發情中的雌狒狒交配，公狒狒決定群體的移動方向（群體之領導者為公狒狒）。\n3. 非洲的狒狒數量很多，分佈也很廣泛，因為牠們會吃農作物，所以當地的農民非常厭惡狒狒，常有衝突。",
     "Diet": "雜食性，吃多種植物的各個部份(水果、種子、塊莖、樹根、葉、花)，以及一些無脊椎動物、爬蟲類、鳥、小型哺乳動物等，以取食方便、供應充足為主要的考量因素。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Baboon",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Baboon/Baboon_Pic01.jpg",
     "CID": 162
@@ -4232,7 +4232,7 @@
     "Feature": "1. 臉部沒有毛鬚。\n2. 毛色為灰色到墨黑色，雄性背上為銀白色。\n3. 口鼻部較短，眼睛及耳朵小，鼻孔大。\n4. 前肢下臂比上臂短，手掌大，身軀健壯結實。",
     "Behavior": "1. 大猩猩的雙手非常靈巧，能夠用來收集及處理食物。\n2. 大猩猩於白天活動、覓食；晚上時，雌性及小猩猩會用樹葉及樹枝在樹上作窩睡覺；而體重較重的雄性多於地面築窩，一個窩通常只用一個晚上就不再使用。\n3. 大猩猩是群居的動物，一群約有2-37隻個體，由成年的銀背雄猩猩擔任領導。大猩猩的群體很穩定，成員之間的關係也比黑猩猩來得親密。成年以後的雄猩猩會離開出生的群體，單獨生活或與其他雄猩猩組成單身漢群，直到牠吸引到願與牠共組家庭的雌性；而雌猩猩也會離開原來生長的群體，加入其他的群體，或是與單獨的雄猩猩另組新的家庭。\n4. 大猩猩在遇到威脅的時候，會大聲咆哮，站起來用力捶打胸部，並且四處奔跑、折斷樹枝來威嚇敵人。\n5. 大猩猩壽命最高紀錄為60歲。",
     "Diet": "雜食性，以素食為主，食物中85%為樹葉、莖及嫩芽，此外也有根、花、果實及昆蟲，高地大猩猩會吃肉、鳥蛋及雛鳥。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Gorilla",
     "Pic01_URL": "https://s.newtalk.tw/album/news/324/5dc8d267035f6.jpg",
     "CID": 163
@@ -4258,7 +4258,7 @@
     "Feature": "1. 頭大脖子短，身軀龐大，四肢長呈圓柱狀，腳短而平，腳底有用來支撐身軀重量的彈性組織，尾巴末端有蓬鬆的毛。\n2. 皮膚為黯淡的棕灰色，長著稀疏的黑色剛毛。\n3. 象牙是長得特別長的上門齒。\n4. 象鼻是由肌肉構成，非常靈活有力，末端上下各有一靈巧的指狀突起。",
     "Behavior": "1. 非洲象的適應力很強，可以在各種環境下生存，包括森林、大草原、沼澤、灌木林及乾燥半沙漠型的灌木林中，由海平面一直到海拔5,000m的地區都有他們的蹤跡，他們選擇棲地的條件是要有充份而乾淨的水源及足夠的食物。\n2. 象鼻的功用很多，可以用來撿拾食物、呼吸、喝水，或是把水噴到身上散熱。非洲象的耳朵長得很大，上面分布了許多微血管，可以用來散熱。\n3. 非洲象是群居的動物，象群主要成員為雌象及他們的子女，由優勢母象領導，非常有組織，也很穩定，領導的地位會一直持續到死亡，再由他們的長女繼承領導地位；當雌象發情時，雄象會加入象群。\n4. 非洲象的象牙可以用來打架、挖掘食物、進食以及作記號，雄象的象牙比雌象粗，也比較長；但是並不是體型越大的象象牙就越長，而是那些體型中等，不喜歡打架，也不會去撞樹的雄象，會長得最長。\n5. 非洲象每天都要尋找水源，他們喜歡在水裡洗澡，或是全身泡在水中，只露出一個鼻尖。\n6. 非洲象的懷孕期長達22個月。\n7. 非洲象個體間具有複雜的溝通方式，如：視覺、觸覺、聲音等。\n8. 非洲象群通常很和平，一般來說，單純為了階級的競爭會有仰頭、高舉象鼻、張開雙耳、甩動頭部及踢泥土等動作，也會有互相推擠和輕微的撞擊；而在競爭配偶時，就會用象牙相互拼命了。\n9. 非洲象體型龐大，食量驚人，常常會為了吃樹葉而摧殘樹木，有壓力或是興奮的時候也會把樹推倒，因此有人認為牠們會破壞生態，對於同類或是其他的生物都有負面的影響；其實，在人類尚未開發非洲前，象群對棲地的破壞有助於樹木的更新，使環境更為多樣化，更多種類的植物及動物得以生長於其間。然而，人類開發之後，象群的生存空間受到了限制，只能在國家公園及少部份未開發的地區活動，如此一來，象群對於生態環境的影響就很大了，為了避免非洲象把自己的棲地破壞殆盡，許多非洲國家均採用獵殺的手段來控制象群的數量。\n10. 為了鼓勵當地居民主動保育當地的野生動物及棲息環境，非洲南部的三個國家(辛巴威、波札那及那米比亞)，將他們國家的非洲象群由CITES附錄一調整到附錄二，以產生經濟效益予當地居民分享。",
     "Diet": "草食性，以草、樹芽、樹皮、樹枝、根及果實，因季節變化而不同。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Elephant-AF",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Elephant-AF/Elephant-AF_Pic01.jpg",
     "CID": 164
@@ -4284,7 +4284,7 @@
     "Feature": "1. 公獅體型比母獅大。\n2. 毛色變化大，從淡黃色到暗棕色都有，腹部和四肢內側顏色較淡，尾巴末端為黑色。\n3. 公獅具有鬃毛，鬃毛顏色有黃色、棕色或紅棕色，隨著年齡的增加而逐漸變深，最後會變成黑色。\n4. 幼獅小時身上有斑點，是保護色長大會消失。",
     "Behavior": "1. 獅子是非洲最大的一種貓科動物，主要在晨昏及夜間活動。\n2. 獅子主要在晨昏及夜間活動，若是成群出動圍捕獵物，其捕獲量會是單獨行動的2倍。在成群出擊時，會採取兩頭包抄或排列成扇形的方式圍捕，儘管如此，獅子狩獵的成功率仍然不高，研究顯示：在61次的出擊中，只有10次成功。\n3. 獅子是群居的動物，每群個體約3-30隻，成員為雄獅、一群有血緣關係的雌獅和牠們的兒女。每一個獅群都有自己的領域，並且用糞便、尿液或是抓地的痕跡來標示領域，任何侵入的陌生雄獅或雌獅都會被趕走。\n4. 個體發育成熟後便會被趕出獅群，避免近親繁殖。",
     "Diet": "肉食性，以羚羊、長頸鹿、水牛及斑馬等中大型草食動物為捕食對象，有時也會搶奪其他肉食動物的獵物或是吃腐肉，成獅一餐可吃下40kg的肉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lion",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lion/Lion_Pic01.jpg",
     "CID": 165
@@ -4310,7 +4310,7 @@
     "Feature": "全身都是黑白相間的條紋，但是變異較大，有些黑色條紋較粗，也有些白色條紋較粗，較粗的白色條紋中會有淺色像陰影般的條紋，耳朵較短。",
     "Behavior": "1. 查普曼斑馬通常棲息在大草原、稀疏的林地、開闊的灌木叢或草地上，也曾在海拔4,400m的山區發現過他們的蹤影。\n2. 雄性在夜間移動時經常鳴叫，活動時間主要在清晨及黃昏。\n3. 查普曼斑馬是群居的動物，由一隻雄斑馬領導4-6隻雌性及牠們的子女，領導的雄斑馬負責保衛群體中其他的斑馬；當牠年邁的時候，牠的領導地位會被其他年輕強壯的雄斑馬取代，年邁的斑馬則加入「單身漢」群繼續生活。\n4. 查普曼斑馬一胎通常一隻，剛生下的小斑馬約有32kg，1小時之內就會跑動，1周之後就會開始吃草，16個月大時斷奶，1-3歲時會離開群體獨立生活。\n5. 雄性在夜間移動時經常鳴叫，活動時間主要在清晨及黃昏。",
     "Diet": "以草食為主，也吃嫩葉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Zebra-C",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-C/Zebra-C_Pic01.jpg",
     "CID": 166
@@ -4336,7 +4336,7 @@
     "Feature": "1. 雌猴體型只有雄猴的一半。\n2. 修長的四肢近乎等長，其背及側邊的毛髮略呈紅棕色。\n3. 雄性比較偏紅色，腹部呈灰白色、淡橙色或紅褐色；臉部的毛色可由黑至淺灰色，且具有白色的髭於嘴邊，成年雄性自頸部到肩部的毛比較長，有點兒像馬的鬃毛，幼猴幾乎全身都是紅色；腿部顏色比較淡，尾巴前段色深至後段則漸淺。",
     "Behavior": "1. 紅猴是日行性的動物，通常生活在乾燥的大草原及稀疏的林地，主要在地面活動，是地棲程度最高的靈長類動物；牠們會不時地用後腳站立向四周瞭望，警戒及躲避危險時，會躲到樹上，或快速逃走。\n2. 紅猴是跑得最快的靈長類動物，時速可達55公里。\n3. 紅猴是群居的動物，每一群平均有15隻成員，包括一隻成年雄性的領導者，與2-8隻成年雌猴。雄猴大部分的時間4. 會用樹木或白蟻塚當做瞭望台，擔負起保衛妻小的責任。公猴較不具有領域性，且鮮少加入母猴的爭奪。",
     "Diet": "雜食性動物，食物包括草、野莓、水果、豆類及種子，有時候也會吃蕈類、螞蟻、蚱蜢、蜥蝪及鳥蛋。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Monkey-P",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Monkey-P/Monkey-P_Pic01.jpg",
     "CID": 167
@@ -4362,7 +4362,7 @@
     "Feature": "1. 是最大的野生馬科動物，雄雌體型無顯著差異。\n2. 全身包含四肢都是黑白相間的條紋，非常細密，腹部則為白色。\n3. 與查普曼斑馬相比，他們軀幹的後半部仍為垂直條紋，是最大也是最漂亮的一種斑馬，頭部比較大，身材苗條，腿長、耳大，鬃毛長而直立。",
     "Behavior": "1. 格利威斑馬是日行性動物，通常成群活動，主要棲息於半沙漠的乾燥草原及灌叢草原。\n2. 成熟的雄斑馬具有領域性，牠們會利用糞便來標示自己的領域，斑馬的領域是草食動物中面積最大的，他們為了要吸引雌斑馬來交配，才會維持這麼大的領域。\n3. 格利威斑馬目前數量已經非常稀少，估計僅有2,000隻。",
     "Diet": "以草為主，也吃嫩葉、樹皮及果實，可以吃非常堅韌的草。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Zebra-G",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Zebra-G/Zebra-G_Pic01.jpg",
     "CID": 168
@@ -4388,7 +4388,7 @@
     "Feature": "1. 短毛，由肩部到臀部有豎立的鬃毛，長而蓬鬆的尾巴。\n2. 身體的上半部為鮮豔的栗紅色，腹部為黑色，胸前有一個新月形的斑紋，身體側面有10-16 條白色垂直條紋。\n3. 臉頰、喉部、腿部內側及膝蓋均有白色的斑紋。\n4. 雄羚在年老時體色會逐漸變深，身上的毛色和條紋讓斑哥羚羊在非洲森林中過著「隱士」般的生活，不易被發現。\n5. 雌雄均有螺旋形的角，角的表面光滑。",
     "Behavior": "1. 斑哥羚羊是日行性的動物，主要在晨昏及夜晚活動，通常棲息於平地的森林中，喜歡在濃密的森林裡穿梭。\n2. 斑哥羚羊就像其他吃樹葉的動物一樣，會用後腳站立，將前腳搭在樹幹上取食樹葉，可以搆得到2.5m高的樹葉；有時候會為了獲取鹽分，而去吃被閃電擊中而燒焦的樹幹。\n3. 斑哥羚羊非常害羞，受到驚嚇的話一溜煙就消失了；當牠們跑步時，會把角向後倚靠在背上，避免被藤蔓樹枝糾纏住。所以，比較老的斑哥羚羊的背上還會有角依靠的印子，角的前方則會有與樹枝摩擦的痕跡。\n4. 羚羊的社會中，雄羚會互相比比看誰的角大，或用角頂頂看誰比較有力，希望爭取到高地位。角斷了不會再長，「殘缺的角」對社會地位有不好的影響。",
     "Diet": "草食性，吃嫩芽、樹葉、水果。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Bongo",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4049596/70c562bc-9486-447d-a3a9-deef66cedcd1.jpg",
     "CID": 169
@@ -4414,7 +4414,7 @@
     "Feature": "1. 身形像大型的鬥牛犬，口鼻處大而黑。\n2. 在淺棕色的毛色上有不規則的黑點。",
     "Behavior": "1. 是非洲撒哈拉沙漠以南最常見的掠食動物，牠們雖然常被視為食腐肉的動物，但其實牠們的狩獵本領比獅子還厲害。\n2. 牠們通常群體出獵，利用多種聲音進行溝通，有時會派出一頭鬣狗在獵物前巡邏或刻意擺出一副吃飽了的樣子，分散獵物的注意力，其餘鬣狗則伺機突襲獵物。",
     "Diet": "肉食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Hyena",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4063174/2591babe-150f-4072-804d-4fd670e9d29e.jpg",
     "CID": 170
@@ -4440,7 +4440,7 @@
     "Feature": "1. 雌性體型較雄性略小，臉部為黑色無毛鬚，眉脊隆起。\n2. 頭部有毛髮，成年後會略禿。\n3. 小黑猩猩的鼻子、耳朵、手掌及腳掌為肉色，身體部份的膚色則每一隻不同，由淡棕色一直到暗黑色都有。",
     "Behavior": "1. 晚上睡覺的時候，黑猩猩會在樹上用樹葉及樹枝做窩，通常只睡一個晚上，偶爾會重覆使用。\n2. 黑猩猩雙手靈巧，可以用來取食，也能夠拿東西丟敵人。以前人們總認為自己是惟一會使用工具的動物，後來發現黑猩猩也是使用工具的高手，牠們會用樹枝或草莖伸進白蟻窩裡，當白蟻爬滿了整根樹枝，再把樹枝抽出來，就可以享受一頓白蟻大餐了。此外，牠們會用石頭來敲開堅果；用木棍把水果從樹上打下來，或是拿來打架；也會拿樹葉舀水喝，或是用來擦拭身體。牠們互相學習如何使用工具，生活在不同地區的黑猩猩所使用的工具也各不相同，形成族群的「文化」。\n3. 黑猩猩是群居的動物，每群數量從15到100隻都有可能，由一隻成年的雄性領導。每群就像一個部落一樣，如果擅闖別群的領域，就有可能會被在邊界巡邏的黑猩猩攻擊，甚至於殺害，曾經發現有一整群的黑猩猩，被相鄰的另一群黑猩猩有計劃的殺死。\n4. 黑猩猩的溝通方式很複雜，包括表情、身體姿勢以及各種不同的叫聲，當兩隻黑猩猩碰面的時後，會互相擁抱親嘴表示歡迎，也會招呼同伴一起來分享食物。\n5. 雌性黑猩猩外生殖器及肛門周圍的皮膚，會隨動情周期呈現鮮紅色澤及腫脹變化，發情時臀部性皮呈饅頭狀，以吸引雄性的注目。發情的雌猩猩會被一大群雄猩猩簇擁著，想要一親芳澤，通常年紀較大、較成熟的雌猩猩比較受到歡迎。\n6. 黑猩猩通常一胎生一隻，小猩猩五歲以內都還相當依賴母親的照顧，母子關係會終生維持。\n7. 因為黑猩猩的生理構造和人類很接近，所以常常被用來當作實驗動物，進行醫學方面的研究。",
     "Diet": "雜食性；昆蟲部份以白蟻為主，偶爾會捕食幼小的偶蹄動物、狒狒及猴子。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Chimp",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Chimp/Chimp_Pic01.jpg",
     "CID": 171
@@ -4466,7 +4466,7 @@
     "Feature": "1. 在淡黃的底色上，有棕色的大小形狀不同的斑塊，每一個種或亞種都有不同形狀的斑紋，腹部或小腿的顏色比較淡，沒有斑紋，尾巴蓬鬆，頭部有1對角，舌長，眼睛大，睫毛長，脖子和四肢都很長，雌性有四個乳房。\n2. 長頸鹿初生下來頭上就有角，是由軟骨組織構成，之後逐漸硬化成形。",
     "Behavior": "1. 長頸鹿的英文名稱giraffe源自阿拉伯文，原意為「行動敏捷的人」。\n2. 長頸鹿是最高的陸生動物，牠們的脖子很長，但是脖子裡面的頸椎骨節數並沒有比其他哺乳動物多，一樣只有七塊頸椎，只是每一節都加長了。舌頭可長達45公分，又長又靈活，方便他們取食樹葉。\n3. 長頸鹿的身高也會造成困擾，當牠們在喝水或是由地面取食的時候，必須把雙腿張得很開，或是把前腳彎曲，才能夠把嘴巴接觸到地面；這同時也是一些肉食動物攻擊他們的大好時機。\n4. 個性非常溫馴，嗅覺、視覺與聽覺都很敏銳，再加上牠們的身高，可以看到很遠的地方，視野非常遼闊，遇到危險的時候，會用牠們的長腳去踢敵人。\n5. 雌長頸鹿會與牠們的子女成群活動，小長頸鹿在母親們的共同保護之下，減少被捕食的機會。成年的雄性則會獨居。剛出生的小長頸鹿就有170-200公分高，20分鐘之內就會站立，1小時之內開始吸奶。",
     "Diet": "草食性。每天大部分的時間都在覓食，牠們的食量很大，一天可以吃下34kg的樹葉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Giraffe",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201807/27/201807271024266361.JPG",
     "CID": 172
@@ -4492,7 +4492,7 @@
     "Feature": "背側的毛色為棕灰色，腹側則是灰白色，尾巴的顏色比較深，臉部略黑，眼睛的上方有較淡的斑紋，臉部周圍均有毛鬚。",
     "Behavior": "1. 褐狐猴是樹棲的動物，所有的時間幾乎都在樹上活動，很少會下到地面，活動時間集中在早晨及黃昏。\n2. 褐狐猴是群居的動物，在馬達加斯加島南部的褐狐猴一群平均有9.4隻，群中的成員關係密切，也很和諧，很少會互相攻擊，也沒有明顯的階級區分。\n3. 褐狐猴幼猴出生後會緊抱於母猴腹部，稍長後則會爬至母猴背部。",
     "Diet": "水果、樹葉、花、樹皮、樹枝及昆蟲（多為蜈蚣及節足動物類）。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lemur-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-B/Lemur-B_Pic01.jpg",
     "CID": 173
@@ -4518,7 +4518,7 @@
     "Feature": "1. 大形走禽。頭部、頸部上三分之二無毛，身體兩側及大腿裸露。\n2. 雄性頸部的皮膚為淡粉紅色或淡藍色，羽毛的顏色以黑白色為主。\n3. 雌性及未成年的個體羽毛為棕灰色。腳具2趾。蛋殼顏色為乳白色。",
     "Behavior": "1.鴕鳥是世界上最高、最重、蛋最大、跑得最快、眼睛最大的鳥類，但是鴕鳥蛋與成鳥的大小比例是鳥類中最小的。\n2. 鴕鳥通常單獨活動，棲息於半沙漠或草原地區。\n3. 鴕鳥腳僅具第三、四趾，其餘都退化，內側的腳趾比外側的腳趾長，便於奔跑，時速可達50公里。遇到危險時，腳可強有力的向前踢。當全速奔跑時，會高舉翅膀，就像撐起帆的船可以隨時變換方向。當黑色公鳥向灰色母鳥求偶時，會蹲坐地面賣力地揮舞雙翅，還不停地擺動著脖子。",
     "Diet": "雜食性，以植物的花、葉、種子、草為主。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Ostrich",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Ostrich/Ostrich_Pic01.jpg",
     "CID": 174
@@ -4544,7 +4544,7 @@
     "Feature": "以其醒目的黑白相間長尾聞名，背部的毛色為灰至棕色，腹部為白色，白色的臉部有深棕色三角形區塊於眼睛及白耳，公狐猴在腕處有類似鳥類距的指甲。",
     "Behavior": "1. 環尾狐猴在手腕上有一個能分泌特殊氣味的油脂腺體，雄猴腋下還有一個較小的腺體，繁殖期間雄性環尾狐猴會把分泌出來的油脂塗抹在尾巴上，散播自己的氣味，引誘雌猴。\n2. 環尾狐猴是日行性的動物，主要在地面活動，也常常會爬樹。整群會聚集一起覓食，僅有在中午時稍作休息。\n3. 環尾狐猴是群居的動物，一群通常有12-24隻個體，成員包括幾隻擔任領導中心的雌性，負責維持族群的領域，加上牠們未成年的子女，和幾隻雄性個體。雌性環尾狐猴會終生留在原來的群中，而雄性則游走於許多群之間。雌性狐猴有較高的社會地位，地位較高的雄性狐猴通常與雌性狐猴互動較多。",
     "Diet": "以水果為主食，也會吃樹葉等，偶爾會吃昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Lemur-RT",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Lemur-RT/Lemur-RT_Pic01.jpg",
     "CID": 175
@@ -4570,7 +4570,7 @@
     "Feature": "1. 寬吻，大嘴，身體呈短筒狀，腿短而粗，鼻孔在吻部上端，且可以關閉除了嘴唇及尾巴有少許的剛毛之外，全身無毛，體色為灰黑色，略帶綠色，腹部為灰白色到黃綠色。\n2. 頭部比河馬圓，眼睛在頭部兩側，皮膚的分泌物是透明無色的。",
     "Behavior": "1. 侏儒河馬活動範圍不像河馬那麼依靠水，牠們可以生存在較乾燥的地方。\n2. 侏儒河馬白天睡覺，晚上在森林裡覓食，遇到危險的時候會躲進水中，或是藏在河邊的樹洞或洞穴裡。通常單獨或成對活動，也會成小群活動。\n3. 侏儒河馬通常於陸地上生產，一胎產一隻，初生的小河馬體重約5-7kg。",
     "Diet": "草食性，樹葉、嫩芽及掉落的果實。在本園則餵食粒狀料、草料、乾草、青牧草。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Hippo-P",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo-P/Hippo-P_Pic01.jpg",
     "CID": 176
@@ -4596,7 +4596,7 @@
     "Feature": "體色為灰棕底色，腹部白色，臀部、腿部黑色，身上有明顯的棕色或黑色斑紋；雌雄頭上都長角(雌羚羊角較細)，角長而直由眼後筆直長出。",
     "Behavior": "東非劍羚群居活動，通常一個穩定的群體會有一個主優勢或次優勢的性成熟雄性個體，但較資深的雌性則主導群體的遷徙。",
     "Diet": "草食性，吃草及樹葉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/432/relpic/10162/7939453/fa7edb87-53df-4f29-bf1d-386f6439a409.jpg",
     "CID": 177
@@ -4622,7 +4622,7 @@
     "Feature": "寬吻，大嘴，身體呈短筒狀，腿短而粗，前後隻均為四趾，鼻孔在吻部上端，且可以關閉。體表毛短而稀疏，膚色為灰棕色，腹部略帶粉紅色，眼睛突出，耳朵豎立。",
     "Behavior": "1. 河馬是兩棲性的哺乳動物，擅長潛水，白天牠們通常待在水裡或是河邊的草地及蘆葦叢中活動及休息。晚上即至草地上覓食，為了尋找食物，牠們可遷移數百公尺至數公里之遠。\n2. 河馬在潛水的時候，會把鼻孔和耳朵關閉起來，避免水跑進去，牠們一次通常在水裡待3-5分鐘。\n3. 河馬皮膚上有特殊的腺體，會分泌一種紅色的液體，讓人以為河馬的汗是「血汗」，這些分泌物可保護河馬的皮膚不會過於乾燥。\n4. 成年的雄河馬通常獨居，它們會散佈排泄物，發出巨吼聲，並以相互攻擊的方式建立起自己的領域，以爭取與雌河馬的交配權，牠們的攻擊性很強，主要的武器就是牠們巨大的犬齒，可以造成嚴重的傷害。\n5. 雌河馬通常於陸上或淺水灘生產，一胎大多產一隻，初生的小河馬體重即達22-55kg，還不會走路就先學會如何游泳。盡職的雌河馬會讓小河馬趴在自己的背上曬太陽，並且保護小河馬不受鱷魚的傷害。",
     "Diet": "草食性，食用各種草及植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Hippo",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AfricanArea/Hippo/Hippo_Pic01.jpg",
     "CID": 178
@@ -4648,7 +4648,7 @@
     "Feature": "1.體長33公分。成鳥整體羽色白色。耳羽鮮黃色。翼下飛羽及尾羽有濃黃色調。黃色窄羽冠向前彎曲。裸露的眼圈乳白色。嘴灰黑色。雄鳥瞳孔暗褐色，雌鳥淺褐紅色。腿暗灰色。\n2.亞成鳥：類似成鳥。瞳孔淺灰色。",
     "Behavior": "1.在綠色的樹林襯托下，白色的鳥變得非常明顯，但在乾旱的季節裡，大地轉為淺褐色，牠們就沒有那麼明顯。\n2.通常成對或小群出現，但在覓食時會有較大的群形成。\n3.巢位於樹的中空處。在圈養下，一窩3個蛋，孵化期24天。兩性都孵蛋，雄鳥白天孵蛋。孵化後約10週幼鳥離巢。",
     "Diet": "食物包括種子、堅果、漿果、果實及花朵（可能）。主要在樹頂覓食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/432/relpic/10162/8322746/dcd4c8a7-72e8-4b1c-961e-e8ae3069b015.jpg",
     "CID": 179
@@ -4674,7 +4674,7 @@
     "Feature": "1.體長約50公分，體重約500公克，翼展寬約100公分。\n2.頭、頸、胸及上腹白色，有黑褐色細縱紋，其它部位為栗色。\n3.亞種的差異在羽色及嘴色的不同。澳洲亞種的頭及胸較白；所羅門島的亞種則有黃色的嘴。",
     "Behavior": "1.熱帶的種類在乾季繁殖；亞熱帶的在晚冬及春天繁殖。\n2.巢是由枝條組成的平台40-60公分寬，20公分深，巢內襯樹葉及其它柔軟的材料。巢離地面2-30公尺高的樹上或人造物上。一窩下1-2個蛋。\n3.孵化期35天，由雌鳥孵蛋。雛鳥50-56天羽翼豐滿。2歲大的鳥就開始有繁殖能力。\n4.覓食方式從棲息處滑翔或到地面尋找食物，俯衝捕捉或短途追逐獵物。\n5.幼鳥會在空中練習抓落葉來精進捕捉技術。",
     "Diet": "各類的小型動物及腐屍，包括哺乳類、鳥類、爬蟲類、兩生類、魚類、節肢動物、甲殼類，有時也會吃家禽類。從棲處或在高空滑翔或站在地面找尋食物。俯衝捕捉獵物或短途追逐獵物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-hg6nvuV6jak96p2y1l33geDGAVFVHe6nGCannx5yMrkC15nPxFoP5qMPl5XliQlpm2k&usqp=CAU",
     "CID": 180
@@ -4700,7 +4700,7 @@
     "Feature": "1.大型猛禽，全身為黑褐色；頭頂有黑色的羽冠，其上有白色的斑紋；眼部、喙的基部及腳均為黃色。\n2.肩部及腹部有白色的斑點；尾羽為黑褐色，中段有白色的橫紋；當大冠鷲飛行時，由地面仰望，可以看到牠的翅膀及尾部有明顯的白色條紋。",
     "Behavior": "1.因頭頂後方黑白相間的長冠羽而得名。\n2.為臺灣特有亞種，是相當普遍的留鳥。\n3.飛行時，很少會拍動翅膀，由於體大翼寬，需仰賴熱氣流作緩慢而長時間的盤旋。喜歡鳴叫，聲音呈悠長蒼涼的『忽溜…』。",
     "Diet": "喜食蛇類，亦會捕食小型哺乳動物、鳥類及蜥蜴等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Eagle-CS",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Eagle-CS/Eagle-CS_Pic01.jpg",
     "CID": 181
@@ -4726,7 +4726,7 @@
     "Feature": "1.大紅鶴是最大型的紅鶴。\n2.雌鳥體型及腿較雄鳥小達到20﹪。\n3.幼鳥灰褐色，在身體下面、翼及尾帶有一些粉紅色，嘴、腿及足褐色。",
     "Behavior": "1.覓食時通常頭頸部完全浸入水中。\n2.巢呈火山錐狀，頂端有個淺凹。一窩1個蛋，少數有2個蛋。幼鳥要5-6歲後才可達性成熟。\n3.集體繁殖，常常變成一個壯觀的景象。",
     "Diet": "食物相對複雜，會覓食水生無脊椎動物，也會覓食水生植物的種子、藻類、矽藻及腐葉。有時會吸入泥土，來萃取有機物質。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Flamigo-G",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-G/Flamigo-G_Pic01.jpg",
     "CID": 182
@@ -4804,7 +4804,7 @@
     "Feature": "1.全身雪白，只有次級飛羽內側和三級飛羽是黑色，翅膀收起來時覆蓋在短而白色的尾羽上，所以常被誤認為尾羽是黑色。\n2.前額是黑色，頭頂皮膚裸露呈鮮紅色，似肉冠狀，所以頭頂紅色的部分是沒有羽毛的。",
     "Behavior": "1.晚上睡覺時以一隻腳站立入睡，主要是為了預防遭受攻擊時，可以迅速助跑逃離。\n2.有諸多不同用意的叫聲，當牠們談戀愛時，叫聲尤其扮演著重要的角色。丹頂鶴在鳴叫的過程中會漸漸拉近彼此之間的距離，接著相互在對方面前跳舞，進行重要的求偶儀式，配對後的丹頂鶴堅守一夫一妻制。\n3.丹頂鶴在中國自古以來有著眾多的意涵，牠們一直是世人眼中代表著高雅與清閒，甚至是象徵著幸福、吉祥、長壽和忠貞的「仙鶴」。\n4.居住在日本北海道的原住民愛奴人稱呼美麗的丹頂鶴為「sarurun kamui」，意思是「濕原之神」。",
     "Diet": "雜食，以昆蟲、水生無脊椎動物、魚、兩棲類及囓齒類為食，也會吃蘆葦、草及其他植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Tancho",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Tancho/Tancho_Pic01.jpg",
     "CID": 185
@@ -4830,7 +4830,7 @@
     "Feature": "1.體長45~59公分，體重450~1000公克。\n2.嘴相對長。前額突然從嘴基部隆起。翅膀相對寬，尤其是初級飛羽。尾相對長，尾端有點楔形（僅在遨翔時清楚可見）。整體羽色黑色，一些亞種有相當地光澤。嘴及腿黑色。瞳孔暗褐色。",
     "Behavior": "1.通常成對或小群活動，在有食物供應處如垃圾堆，常會聚集較大群。鳴叫聲粗啞難聽。\n2.停棲時，喜歡棲於展望良好的枝頭上。3.單獨繁殖。巢為不平整的平台巢，由枝條組成，位於枝幹的分叉處。一窩4-6個蛋，僅由雌鳥孵蛋，孵化期18天。兩性都會餵幼雛。繁殖季隨分布範圍的不同而有差異。在阿富汗4-5月間下蛋，在西伯利亞東部5月，在菲律賓3-6月，在馬來西亞2-4月。",
     "Diet": "果實、昆蟲、兩爬類、小型哺乳類、雛鳥及鳥蛋等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/268701311/",
     "CID": 186
@@ -4856,7 +4856,7 @@
     "Feature": "1.體長25公分。身體幾乎是黑色，具有明顯的羽冠。嘴黃色。肛門處及尾端白色。\n2.飛行時可見初級飛羽基部處有一塊明顯的白斑。亞成鳥的羽色偏褐色。",
     "Behavior": "1.常小群在開闊草地的地面覓食。\n2.時常與牛隻在一起活動，覓食受到牛隻干擾飛起的昆蟲。\n3.會與其他的八哥類混群，在垃圾堆附近活動。",
     "Diet": "在樹上及地面吃果實穀類及昆蟲,也常常飛到牛隻身上啄食昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Myna-W",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Myna-W/Myna-W_Pic01.jpg",
     "CID": 187
@@ -4882,7 +4882,7 @@
     "Feature": "1.身體石板灰色有白喉，明顯的垂直白色條紋，從頭冠向下至頸背。瞳孔橘紅色。\n2.幼鳥的頭完全是褐色，有淺色的喉。\n3.叫聲的音頻高，有穿透力。\n4.面頰鮮紅，所以又被稱做「紅面鶴」",
     "Behavior": "1.在春天繁殖。在4月至5月末下蛋。\n2.巢呈塚狀，由濕地內枯乾的莎草及草類組成。通常有2個蛋。孵化期28-32天。\n3.小鶴淺黃褐色帶有暗色斑點。羽翼豐滿期70-75天。2-3年達性成熟。",
     "Diet": "1.以莎草及其他濕地植物的根、塊莖為食物，也會吃昆蟲、小型脊椎動物、種子及稻穗。在非繁殖期，消耗相當多的掉落穀類、種子及塊莖。\n2.在日本冬天的餵食台則提供稻子及其他穀類。靠挖掘吃根及塊莖，也會大量覓食小動物及穀類。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-W",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4054108/b4cea48d-6c09-4b2d-8fbf-ad5bbd39b41d@710x470.jpg",
     "CID": 188
@@ -4908,7 +4908,7 @@
     "Feature": "1.體長約46公分。\n2.成鳥整體羽色白色，包括寬而向後的羽冠。翼下飛羽及尾羽有黃色調。裸露眼圈淺黃白色。嘴灰黑色。雄鳥瞳孔暗褐色，雌鳥淺紅褐色。腿灰色。",
     "Behavior": "1.通常成對或成群飛過樹頂或停棲在樹的最高處樹枝。\n2.白色的羽毛及不和弦尖叫聲使牠們變得容易發現。",
     "Diet": "食物包括種子、果實、堅果、漿果。可能也會吃昆蟲及其幼蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Cockatoo-W",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Cockatoo-W/Cockatoo-W_Pic01.jpg",
     "CID": 189
@@ -4934,7 +4934,7 @@
     "Feature": "1.身體灰色，頭除了在眼上的前額有紅色的皮膚外白色。瞳孔橘紅至紅色。類似白枕鶴，但體型較小，頸部全白。\n2.幼鳥羽色有褐色調，頭冠黑及白色。\n3.叫聲的音頻高。",
     "Behavior": "1.大部分的時間都是成群聚集，但在繁殖期間則成對在一起，這樣的配對關係可維持終生不變。\n2.每年白頭鶴會成群地由北方向南遷徙至日本或中國大陸長江流域度冬，在臺灣為稀有的冬候鳥，偶爾在蘭陽平原可發現牠們的蹤跡。\n3.在春天繁殖。在4月末及5月初下蛋。通常下2個蛋。孵化期27-30天。小鶴身體上面暗褐色，下面色較淡。羽翼豐滿期75天。3-4年達到性成熟。\n4.巢由濕苔、水苔、莎草莖、葉子及枝條組成。巢位於森林中長有水苔的沼澤。",
     "Diet": "水生植物根莖、種子、漿果、昆蟲、青蛙",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-H",
     "Pic01_URL": "https://live.staticflickr.com/8278/29983870676_77352cb3e7_b.jpg",
     "CID": 190
@@ -4960,7 +4960,7 @@
     "Feature": "1.長嘴，腿粉紅色，飛羽從下面看全黑。\n2.在繁殖期，臉部的皮膚在雄鳥是粉紅黃色，在雌鳥是鮮橘紅色。腿轉變成深紅色，前額會向外膨脹形成一個瘤狀物。\n3.非繁殖期，成鳥沒有淺粉紅的羽色及黃胸，裸露的皮膚色較暗淡。",
     "Behavior": "1.習慣上集體繁殖，在地面築巢，巢是由成堆的蘆葦及枝條組成，一窩有1-3個蛋。\n2.幼鳥孵化後20-25天，會離開巢與其他的幼鳥組成一個向心力極強的「托兒所」，親鳥可以靠聲音從「托兒所」內認出並餵食自己的幼鳥。",
     "Diet": "以吃魚維生，平均一天的吃魚量估計在1公斤。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pelican-W",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pelican-W/Pelican-W_Pic01.jpg",
     "CID": 191
@@ -4986,7 +4986,7 @@
     "Feature": "1.體長31-36公分，重330公克。\n2.頭灰色，頸輪奶油色，後頸有黑色鱗斑，身體暗色，尾寬而圓。雌鳥羽色稍微暗色，胸部稍帶有淺紅褐色調。",
     "Behavior": "1.巢位於樹上由枝條不整齊組成。一窩通常下1個蛋，偶爾也有下2個蛋的例子。\n2.冬季常聚集成群，一群常有20-50隻，有時甚至超過百隻。常在樹梢活動，常從樹林頂層傳來低沉難以辨別方向的「呼—呼—呼--」叫聲。起飛時拍翅聲音很大。",
     "Diet": "主要在樹上覓食果實，也會吃種子、漿果及小蝸牛。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pigeon-AW",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-AW/Pigeon-AW_Pic01.jpg",
     "CID": 192
@@ -5038,7 +5038,7 @@
     "Feature": "1.瞳孔淺灰至淺藍色。與黑頸冠鶴同有黃色羽冠，不同處在頸淺灰色及紅色喉部肉垂較大，白色頰斑僅在頂部才紅色。\n2.幼鳥整體灰色，具有褐色的頭冠及頸背，身體灰至褐色，瞳孔褐色。亞種的頰斑較命名亞種有較多的紅色。\n3.叫聲的音頻低，為愉悅的號角聲。",
     "Behavior": "1.取食採快速啄食，可以連根拔起植物。會用腳踏地干擾昆蟲。\n2.常與草食獸在一起，可能可以增加覓食效率。",
     "Diet": "覓食莎草類的種子及草類的嫩芽，會吃昆蟲，包括蝗蟲、蟋蟀等，及其他小型動物如青蛙、蜥蜴等。在草原及農耕地覓食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-GC",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-GC/Crane-GC_Pic01.jpg",
     "CID": 194
@@ -5064,7 +5064,7 @@
     "Feature": "1.身體石板灰色，有黑色初級飛羽，頭暗色有白色條紋從眼後延伸至後頸。頭冠有紅色皮膚斑。瞳孔黃至橘紅色。類似黑頸鶴，但頭上有白色的羽毛延伸。幼鳥的頭冠有羽毛，體羽的羽端有淺黃褐色。\n2.叫聲的頻率高並具有穿透力。",
     "Behavior": "1.在春天繁殖。大多數在5月下蛋。巢呈塚狀約80公分寬，由濕地的植物組成。巢位於水淺的沼澤，時常離樹不遠。通常有2個蛋。孵化期28-31天。\n2.小鶴身體上面暗褐色，下面淺褐色。羽翼豐滿期65-70天。4-6年達到性成熟。",
     "Diet": "1.雜食性。\n2.在非繁殖期，較偏愛吃植物性材料。根、根莖、塊莖、莖、芽鞘、葉子、漿果及濕地中挺水植物的種子、草、作物、堅果、豆類及穀類等都是食物。\n 3.在夏天較常吃動物性物質，主要是無脊椎動物，包括蠕蟲、蝸牛、昆蟲及其他節肢動物，也吃青蛙、蛇、蜥蜴、魚及囓齒類。在陸地及水裡探測及挑起食物吃。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-C",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-C/Crane-C_Pic01.jpg",
     "CID": 195
@@ -5142,7 +5142,7 @@
     "Feature": "1.體長可達150公分，體重約7公斤。 \n2.頭部及頸部沒有羽毛，以避免取食腐肉時屍體的血及其他物質沾黏在羽毛上。\n3.喉部及背部具有粉紅氣囊，用於求偶與散熱的功能。\n4.具有非常大的嘴喙，瞳孔呈暗紅色。",
     "Behavior": "1.集體繁殖，有時會有好幾千在一起繁殖，也會與其他種類混群繁殖。\n2.通常在樹上築巢，也會在崖壁或甚至城市的街道上築巢。巢由枝條組成，內襯細枝及綠葉。",
     "Diet": "主要以死亡動物的屍體為食，也會取食魚類、昆蟲、爬蟲類、小型哺乳類等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Stork-M",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Stork-M/Stork-M_Pic01.jpg",
     "CID": 198
@@ -5168,7 +5168,7 @@
     "Feature": "1.是所有會飛行的鳥類中身高最高的，幾乎和成人一樣高。\n2.頭部至上頸部皆裸露無毛，皮膚粗糙，呈紅色，在繁殖期會更加鮮麗。全身羽毛呈暗灰色或淡灰色。\n3.成年赤頸鶴的身體呈灰色，紅色的頭沒有羽毛，頭上有白冠及尖長的喙。飛行時，牠們會伸直長頸，並且可以看到黑色的翼端，紅色或粉紅色的腳則在其後。雄性及雌性的顏色沒有分別，但雛鳥則較深沉及褐色。一般來說雄鳥都較雌鳥大。印度赤頸鶴可以高達2米，雙翼展開闊2.5米，故牠們是世界上最大的可飛鳥類。牠們平均重7.3公斤，較丹頂鶴輕。",
     "Behavior": "1.牠們的叫聲宏亮，也是鶴類中最具穿透力的。\n2.在繁殖期更會有一連串求偶的動作，與平日的舞姿有明顯的不同。\n3.配對後永不分離，是忠實的夫婦。\n4.配對的赤頸鶴會時常進行如二重唱般的鳴叫，以宣示其領域。\n5.在地上築巢，每次產2-3個蛋。牠們不會遷徙，只有很短距離的分散。雄鳥及雌鳥會輪流留在巢中，主要是由雄鳥負責保護。",
     "Diet": "塊莖、穀類、昆蟲（蝗蟲）、無脊椎動物（蝸牛、甲殼類）、魚、青蛙、蛇。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-S",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-S/Crane-S_Pic02.jpg",
     "CID": 199
@@ -5194,7 +5194,7 @@
     "Feature": "1.體長33-35公分。體重165-274公克。\n2.頸側黑色有白斑。翼羽羽緣紅褐色。",
     "Behavior": "1.繁殖季很長，在分佈區的北部是5-8月，在印度南部是11-2月。\n2.在印度會在灌叢及竹林內築脆弱的枝條組成的巢，巢通常離地面2-4米。一窩通常下2個白色的蛋，偶而僅生1個蛋。孵化期15-16天。羽翼豐滿期15-17天。",
     "Diet": "會偷襲稻田，會覓食穀粒及松子。草本植物、竹子及各種植物的嫩葉也會吃。也會摘取莓類吃。主要在地面上覓食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Dove-OT",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-OT/Dove-OT_Pic01.jpg",
     "CID": 200
@@ -5220,7 +5220,7 @@
     "Feature": "1.雌鳥與銀雞的不同在於腿黃色、眼窩皮膚相對於羽色有金色調、尾羽較尖。\n2.亞成鳥似雌鳥，但羽色較淺及斑駁較不明顯。",
     "Behavior": "1.一窩下5-12個蛋（被圈養的族群），孵化期22天。\n2.小雞的身體上面有黃褐色雛羽，具有淺黃色帶，身體下面淺黃褐白色，但色調較銀雞的偏黃。",
     "Diet": "食物主要是葉子及竹子的嫩芽、葉子及芽鞘和杜鵑的花。也會吃一些蜘蛛及各類昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pheasnat-G",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasnat-G/Pheasnat-G_Pic01.jpg",
     "CID": 201
@@ -5246,7 +5246,7 @@
     "Feature": "1.全身羽毛呈黑色，嘴紅色，嘴先端為黃色，腳為黃綠色，體側有一列白斑。\n2.雛鳥全身烏黑，額頭有鮮明紅點。",
     "Behavior": "1.叫聲清脆，築巢在水邊密集草叢或灌木叢裡，或於水上植物、浮土上或水面蘆葦叢中。\n2.擅游泳及潛水，會在水底下抓著沉水植物行走。\n3.浮游水面時常會翹動尾羽，露出尾部兩塊白色覆羽。",
     "Diet": "水草、魚、蝦、昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Moorhen",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Moorhen/Moorhen_Pic01.jpg",
     "CID": 202
@@ -5272,7 +5272,7 @@
     "Feature": "1.後頸有一黑色頸環，尾深色末梢白色。\n2.雄鳥頭灰色，身體橘褐色。雌鳥類似雄鳥，但背部及翼褐色較濃，腹部羽色較淡。",
     "Behavior": "1.喜停在電線或電線桿上，也常飛落地面覓食。冬天有群聚的現像。較斑頸鳩遠離人類的居所。\n2.巢位於樹的較高處，由枝條及草莖組成的淺盤狀或平台狀。一窩下2個蛋，少數3個蛋。",
     "Diet": "以草本植物的種子為食物，會吃作物的種子如稻子等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Dove-RT",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-RT/Dove-RT_Pic01.jpg",
     "CID": 203
@@ -5298,7 +5298,7 @@
     "Feature": "體長37公分~43公分，體重95~143公克。",
     "Behavior": "1.巢築在離地3-10米高的樹洞處，有時也會在岩壁及倒塌的牆壁內築巢。一窩通常下3-4個蛋，少數會下到6個蛋。孵化期22天。育雛期7周。\n2.在印度被當成農作物害鳥。",
     "Diet": "果實、堅果、種子、花瓣及穀類。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Parakeet-R",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parakeet-R/Parakeet-R_Pic01.jpg",
     "CID": 204
@@ -5324,7 +5324,7 @@
     "Feature": "1.最外側的3根初級飛羽黑色。\n2.非繁殖期的成鳥嘴肉粉紅色或淺紅色，與羽色沒有什麼差異。\n3.亞成鳥的頭及頸有條紋或為褐色及白色的斑駁狀，下部及腰白色，身體上部暗灰褐色，在羽毛的白色部份會有粉紅色調。",
     "Behavior": "1.繁殖季有變異性，但主要在雨季中繁殖，很明顯受到當地的水文條件影響。會形成大至巨大的繁殖群落，可達5000對。會與其他的環類及鷺鷥類一起繁殖。\n2.巢位於離地1-4.5公尺高的樹上，由枝條築成的平台巢。一窩通常生2個蛋，孵化期21-23公分。雛鳥密生黑色絨羽。羽翼豐滿期35-42天。",
     "Diet": "主食為甲殼類，特別愛吃招潮蟹，也會吃螺、雙貝類、昆蟲及小魚。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Ibis-S",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Ibis-S/Ibis-S_Pic01.jpg",
     "CID": 205
@@ -5376,7 +5376,7 @@
     "Feature": "1.體長71-73公分，重1500-2250公克。\n2.臉部的型態及胸部的暗斑，翼上有白斑及綠色的翼鏡。\n3.雌鳥體型較小。幼鳥的眼周及胸部沒有褐色斑。",
     "Behavior": "1.領域性強，陌生人經過時會發出『啊啊』的叫聲。\n2.一夫一妻制且成雙成對活動，在繁殖期非常強悍，共同育雛，小鳥很快就可以走路及自行覓食，雄鳥會負責勘察及監督周圍的動靜。",
     "Diet": "嫩葉、樹葉及昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Goose-E",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Goose-E/Goose-E_Pic01.jpg",
     "CID": 207
@@ -5424,11 +5424,11 @@
     "Family": "椋鳥科",
     "Conservation": "無危",
     "Distribution": "舊蘇聯、伊朗東南部、阿富汗、印度、錫蘭、緬甸、泰國及中南半島。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1.頭、頸及上胸黑色，身體葡萄褐色，眼後有一裸露的黃色皮膚。\n2.飛行時可見雙翼有顯著的白斑。",
     "Behavior": "1.非常適應人類的生活。社會性高，富有侵略性，加上雜食性，使族群變得非常有適應性。時常見到在草地及道路上跳躍及行走。會與其他八哥類混群，在垃圾堆附近活動。\n2.繁殖季3-9月，主要在4-7月。巢由枝條、細根及一些人造物組成，位於樹洞、岩縫、垂直的河岸壁、屋簷下等。一窩4-5個蛋。孵化期13-18天。羽翼豐滿期22-24天。",
     "Diet": "在樹上及地面覓食。常會飛到牛隻身上啄食昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4079203/68941242-dd68-4198-bed5-f20ce0cd60d4.jpg",
     "CID": 209
@@ -5454,7 +5454,7 @@
     "Feature": "1.色淺灰色，在背上帶有淺粉紅色。腿的顏色有相當的變化，從灰色至黃色到橘紅色都有。\n2.在非繁殖期，裸露的皮膚如喉囊色較暗，眼前的黑斑也消失了。",
     "Behavior": "1.在樹上築巢，會集體繁殖。巢由小枝條組成，一窩有1-3個蛋。\n2.幼鳥要3-4年才可以達到性成熟。",
     "Diet": "以吃魚維生。最喜歡吃80-290公克重的魚，但可以吃到重達400公克的魚。每天的吃魚量估計為900-1200公克。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4057471/fb0e7917-832b-48a7-bd23-022c64bcff65.jpg",
     "CID": 210
@@ -5480,7 +5480,7 @@
     "Feature": "1.體長約35公分，體重約300公克。\n2.成年雄鳥及幼鳥虹膜為暗棕色，雌鳥則為紅棕色。",
     "Behavior": "1.喜歡群體活動。\n2.在地上覓食。",
     "Diet": "果實、種子、昆蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/202105/07/202105071026212945.JPG",
     "CID": 211
@@ -5506,7 +5506,7 @@
     "Feature": "1.淺黃灰色的腿帶有明顯的紅色「關節」及足。\n2.嘴端的黑色向下彎曲，其餘嘴的部份非常淺色。亞\n3.成鳥灰色，帶有褐色及粉紅色斑。",
     "Behavior": "1.生活於海岸的泥地、河海交界處、潟湖及從海平面至海拔4500公尺的鹹水湖。\n2.巢是火山錐狀型，由泥堆組成，一窩1個蛋。\n3.智利紅鶴集體繁殖，有時可達6000對。",
     "Diet": "以水生無脊椎動物為食。總是在水與泥地的介面上覓食，時常整個脖子都埋入水中，以穩定而幾乎直線的方式覓食前進。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Flamigo-C",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Flamigo-C/Flamigo-C_Pic01.jpg",
     "CID": 212
@@ -5558,7 +5558,7 @@
     "Feature": "體長50公分。身體深紫黑色，但頭及頸緋紅色。",
     "Behavior": "1.生性膽怯，築巢於植被茂密的樹冠層，由雙親輪流孵蛋。\n2.叫聲是沈穩而不規則的\"hou",
     "Diet": "果實、漿果及種子。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Turaco-V",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Turaco-V/Turaco-V_Pic01.jpg",
     "CID": 214
@@ -5584,7 +5584,7 @@
     "Feature": "1.體長48~55公分，體重1500~2450公克。\n2.全身黃褐色，顏色斑駁；體色較淡，喉嚨白色。",
     "Behavior": "1.為夜行性猛禽，是溪流生態系食物鏈的最上層的消費者，牠們的存在可顯現溪流生態系的結構是否健全。\n2.是台灣貓頭鷹中最大的一種。",
     "Diet": "溪蟹、蛙類、蛇、鼠及蜥蜴。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Owl-TF",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-TF/Owl-TF_Pic01.jpg",
     "CID": 215
@@ -5610,7 +5610,7 @@
     "Feature": "1.體長86公分。成鳥前額及前冠綠色，身體上面其餘部份及尾上鮮藍色。裸露的眼及頰奶油白色。頰上有淺綠黑色的羽毛線狀交錯。\n2.擁有高智商，也比一般鳥類好奇、敏感和聒噪。",
     "Behavior": "1.生活於森林及沼澤中或水道沿岸的高大棕梠樹。通常不會離開濃密的森林，特別是在旱季時，但在雨季時，牠們會移動相當長的距離。在蓋亞那，常會出現在有棕梠樹生長的沼澤，時常移動25公里至覓食區覓食。\n2.通常成對出現，有時候會有好幾對組成一個鳥群，配對的鳥在群中會緊飛在一起。通常在森林樹冠層上空飛行或在高樹的枝幹上覓食時，才較容易被發現。當危險接近時，會飛到空中並發出大聲的尖叫聲。\n3.有固定的過夜處，早晨鳥群就飛離，飛到覓食區覓食，而在日落時，才又反方向飛回過夜處。過夜處及覓食區的來來回回的鳥群飛行是非常壯觀的景像。飛行直線前進，拍翅緩慢，翅膀擺幅淺。",
     "Diet": "主食是果實和果仁，牠們會到河岸吃泥土，幫助排除食用未成熟的種子或果實而累積的毒素",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Macaw-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-B/Macaw-B_Pic01.jpg",
     "CID": 216
@@ -5636,7 +5636,7 @@
     "Feature": "1. 體長約35公分，重約400公克，整體綠色，身體下部偏淺黃色。\n2. 前額及頭冠中央黃色，眼周時常帶有黃色，頰及耳羽鮮綠色，後頭冠至頸背處綠色，羽緣稍微帶有淺黑色。翼角處紅色，羽緣淺黃色。翼鏡紅色。飛羽的羽端暗藍色。尾端黃色，外側尾羽的基部有紅斑。\n3. 亞成鳥的羽色較暗頭，頭及翼較不黃及紅。\n4. 在北方的族群，成鳥隨著年齡的增加而變更黃。亞種間的差異小，但在頭部的黃色區域分布有顯著的不同，在北方的亞種如oratrix及tresmariae頭已全部為黃色。",
     "Behavior": "在樹洞內築巢，時常在枯死的棕梠樹幹上築巢，巢一般離地4-15公尺高。一窩下蛋2-3個。孵化期25-26天。",
     "Diet": "果實、種子及花。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/a780615/1569580563-3290161135.jpg",
     "CID": 217
@@ -5658,11 +5658,11 @@
     "Family": "鸚鵡科",
     "Conservation": "瀕危",
     "Distribution": "墨西哥南部至哥斯大黎加北部太平洋海岸",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "體長約35公分，體重約500公克。",
     "Behavior": "黃頸亞馬遜鸚鵡會定期前往河岸進食泥土，幫助消化。",
     "Diet": "種子、果實",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://pic.pimg.tw/a780615/1569580556-3838526582.jpg",
     "CID": 218
@@ -5688,7 +5688,7 @@
     "Feature": "1.雄鳥非常獨特，在翼上及尾上覆羽有各種不同的白斑。下背及腰深黑色。 雌鳥類似黑頸長尾雉的雌鳥，但羽色較暗且白及淺黑色的斑較明顯。\n2. 亞成鳥類似雌鳥，但頭、頸及喉有黃白褐色斑，雄鳥的尾在初期有黑白斑駁狀。",
     "Behavior": "1.為台灣的特有種鳥類。繁殖季不確定，但3月末至6月中有下蛋的可能。巢由竹葉鞘、樹幹或倒樹的樹枝組成，離地約1米高，通常築在隱密而陡峭的山坡，雌鳥每兩天下一個蛋，蛋大致為乳白色，孵化期約26-28天。在圈養下，一窩5-10個蛋，孵化期28天。\n2.僅由雌鳥孵蛋，孵蛋時雌鳥在巢中不動也不出聲。外出覓食時，會先在洞口停留一會兒，確定附近沒有任何狀況才離開。回巢時也非常小心，通常會在巢的附近迂迴繞行，並偶而低頭覓食，直到確定沒有危險才會回巢孵蛋。",
     "Diet": "會吃蕨類嫩芽、嫩葉、野草莓及昆蟲。曾見過雄鳥吃小蛇。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www.ntu.edu.tw/spotlight/2018/1472_20180709_top.jpg",
     "CID": 219
@@ -5714,7 +5714,7 @@
     "Feature": "1.體長約70公分。\n2. 非繁殖的個體在下頸處缺乏黃色斑及有較短的羽冠。亞成鳥類似非繁殖期的成鳥，但嘴呈現暗淺粉紅灰色及初級飛羽的羽尖黑色。",
     "Behavior": "1.在離岸的小島繁殖。\n2.集體營巢，通常是2-3對小群一起繁殖。巢築在海崖的平台上，由枝條組成平台狀，一窩4-6個蛋。",
     "Diet": "主要是魚、貝、昆蟲、甲殼類。成小群以4-25隻覓食。在淺水處嘴巴來回橫掃取食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4095354/33c9a047-4239-40fc-b45b-e7ac6eb24662.jpg",
     "CID": 220
@@ -5736,11 +5736,11 @@
     "Family": "鳩鴿科",
     "Conservation": "無危",
     "Distribution": "中南半島、東南亞及新幾內亞。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "全身白色帶有些許黃色調，除了初級飛羽、初級覆羽、外側次級飛羽及尾羽為黑色外。",
     "Behavior": "1.有時候會聚集成一大群。叫聲緩慢低沉但柔軟。\n2.在離岸小島的紅樹林上築巢，巢呈不穩固的平台狀。通常一窩下1個蛋，少數會有下2個蛋的例子。",
     "Diet": "在鄰近大陸的低地森林的海岸覓食，吃各類的果實及漿果。幾乎完全在樹上覓食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pigeon-PI",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-PI/Pigeon-PI_Pic01.jpg",
     "CID": 221
@@ -5762,11 +5762,11 @@
     "Family": "雁鴨科",
     "Conservation": "無危",
     "Distribution": "南美巴拉圭、烏拉圭、智利、阿根廷及火地島與福克蘭群島。",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1.體型最小的天鵝，102~104公分，體重3600～6700公克。\n2.黑色長脖子及紅色肉瘤，白色羽毛，雄雌鳥很相似，雌鳥比雄鳥小一些。",
     "Behavior": "1.群聚生活，7~11月繁殖季，小鳥會待在親鳥身邊長達一年，直到下個繁殖季。\n2.一夫一妻制，出雙入對，雌鳥在孵蛋時，雄鳥會在一旁警戒並驅趕。",
     "Diet": "魚卵、水生植物、水生昆蟲及甲殼動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://img.ltn.com.tw/Upload/news/600/2019/04/04/237.jpg",
     "CID": 222
@@ -5792,7 +5792,7 @@
     "Feature": "1.瞳孔淺灰至淺藍色。與灰頸冠鶴的不同在頸部較暗色、肉垂較小及頰斑的下半部紅色。幼鳥整體灰色，有褐色的頭冠及頸背，身體灰至褐色，瞳孔褐色。\n2.ceciliae亞種頰斑的紅色部份往上延伸超過一半以上。叫聲的音頻低，為愉悅的號角聲，與灰頸冠鶴有些微的不同。",
     "Behavior": "孵化期28~30天，每窩3~4顆，是鶴中之最。",
     "Diet": "1.會覓食昆蟲（包括蝗蟲及蒼蠅）及其他的無脊椎動物（軟體動物、馬陸、甲殼類）及魚類、兩生類、爬蟲類等。也會吃種子、草類的嫩芽及作物（小米、玉米及稻子）。通常直接從表面啄取食物，很少用挖掘。有時會用腳踏地驚嚇無脊椎的獵物。\n 2.在乾旱時，常會出現在成群家畜附近覓食，因為該處的無脊椎動物較豐富。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-BC",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-BC/Crane-BC_Pic01.jpg",
     "CID": 223
@@ -5818,7 +5818,7 @@
     "Feature": "1.全身羽毛為白色或淡粉紅色，頰、喉部、尾巴及翅膀的內側為黃色；頭冠為黃色，羽毛向前彎曲；喙為灰色。\n2.雄性蠟膜為深棕色，雌性則為紅棕色；腳為灰黑色。",
     "Behavior": "1.日行性的鳥類，棲息在森林、開闊的林地或是農耕地區，通常不會離水源太遠。一般成對、小家庭或是成群出現，一群最多會有數百隻。\n2.以空樹洞為巢，每一次產2-3顆蛋，雛鳥孵化後，由雌雄共同撫育。",
     "Diet": "以種子、水果、漿果、堅果、花、樹芽、根及昆蟲為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "data:image/jpeg;base64,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",
     "CID": 224
@@ -5844,7 +5844,7 @@
     "Feature": "1.體長67-86公分，重1800-3500公克，翼展寬130-165公分。\n2.大型強壯的猛禽，尾具有等寬度的明暗色帶。頭上具小羽冠。雌雄羽色類似，但雌鳥平均體型大於雄鳥。\n3.幼鳥整體色較淺，身體下面幾乎全為淺白色。",
     "Behavior": "1. 躲藏在森林的內部或林緣處，伺機從棲處襲擊路過的獵物。會在領域上空遨翔及做波浪狀飛行，並發出叫聲。\n2.巢築在大樹上，常築在松樹上。一窩通常下1個蛋，少數生2個蛋。",
     "Diet": "主要以小型至中型的哺乳類如野兔為食物，也會抓雉類、竹雞類、蜥蜴及蛇類，甚至也會抓魚。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Eagle-HH",
     "Pic01_URL": "https://www.zoo.gov.tw/upload/201808/04/201808041400286168.JPG",
     "CID": 225
@@ -5870,7 +5870,7 @@
     "Feature": "1.雄鳥體長65~75公分，體重672~1450公克，雌鳥體長40~46公分，體重485~1050公克。\n2.雄鳥身上暗綠色的羽毛有不同顏色的鱗狀紋，羽冠有相當多種顏色，肉垂相當引人注目。",
     "Behavior": "1.屬於雉科雞屬的鳥類一共有4種，牠們的共同特徵是具有肉質雞冠，其中雄性綠野雞的雞冠和肉垂色彩最是鮮明，帶有青紫色和黃色。\n2.在上百種雉類中，綠野雞是唯一能飛越開放水域的種類，生活在森林或海岸邊的平原。\n3.巢是濃密植叢下的地面上低窪，偶而會樹蕨上築巢。",
     "Diet": "所知非常有限，但一般認為會吃昆虫及雜草的種籽。在圈養下主要吃種子、漿果、樹葉、昆虫及蠕蟲。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "",
     "Pic01_URL": "https://img.ltn.com.tw/Upload/news/600/2009/06/02/167.jpg",
     "CID": 226
@@ -5922,7 +5922,7 @@
     "Feature": "1. 體型粗壯及暗色，在頸部有獨特似雞類的下垂簑羽，身體上部為發亮的暗綠或青銅綠色。身體下面暗綠或暗藍色。\n2. 雌鳥較雄鳥有較小的臘膜，較短的簑羽及身體下部較偏褐色。亞成鳥缺乏頸部的簑羽，整體淺黑褐色。",
     "Behavior": "1. 在晨昏時活動較頻繁。\n2. 在地上覓食。\n3. 砂囊的後壁內襯著角質板，可以磨碎較硬的堅果。",
     "Diet": "種子、果實、無脊椎動物",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pigeon-N",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-N/Pigeon-N_Pic01.jpg",
     "CID": 228
@@ -5948,7 +5948,7 @@
     "Feature": "1.體長35-48公分，體重135-250公克。\n2.頭上黑色，羽冠甚長。背黑綠色有光澤，翼上有白色細羽緣。",
     "Behavior": "1.領域性強，單獨覓食，有「釣魚」的行為出現。\n2.一般而言，傾向於晨昏活動。",
     "Diet": "魚、兩生類、各類昆蟲、蜘蛛、螃蟹、蝦、軟體動物、小型爬蟲類及小鼠。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Heron-S",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Heron-S/Heron-S_Pic01.jpg",
     "CID": 229
@@ -5974,7 +5974,7 @@
     "Feature": "1.體長50-65公分，重750-1575公克。\n2.有非常明顯鑲白邊的藍色翼鏡。雄鳥頭部為閃亮的綠色，頸部有白領圈，不會誤認。雌鳥全身褐色，嘴橙褐色。",
     "Behavior": "1.非常合群，常與其他鴨類混群。在其他地區的族群非常多，而且可以忍受人類的接近，但在台灣數量卻不多。\n2.在地面的草上築巢，內襯羽毛及絨羽。一窩通常9-13個蛋。孵化期27-28天。幼鳥1歲後達性成熟。",
     "Diet": "雜食性，會吃水生植物各部位及種子，在春夏時會吃各類陸生及水生的無脊椎動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Mallard",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Mallard/Mallard_Pic01.jpg",
     "CID": 230
@@ -6000,7 +6000,7 @@
     "Feature": "1.體長70公分。成鳥整體羽色綠色，在背及翼上稍帶橄欖色。頭較身體淺綠。後頸有不明顯的淺藍色調。前額及裸露的眼先紅色。裸露的臉部區白色有粉紅肉色調，並有淺綠色的羽毛線狀交錯。喉橄欖褐色。下背、腰及尾上覆羽藍色。翼下覆羽綠色。\n2.初級飛羽的外羽緣藍色。尾上淺褐紅色，尾端有藍帶。尾下及飛羽下橄欖黃色。嘴灰黑色。瞳孔黃色。腿暗灰色。亞成鳥沒有資料，但可能類似成鳥。\n3.Mexicana亞種類似命名亞種，但體型較大；boliviana亞種類似命名亞種，但喉淺紅褐色，耳羽的基部淺紅色，初級飛羽的外羽面及尾尖的藍色較暗。",
     "Behavior": "1.在早晨可以見到鸚鵡從過夜處飛出至覓食區。傍晚時，會朝著反方向飛回過夜處。\n2.季節性的移動深受食物分布的影響。在鳥群中，配對的鳥維持在一起。當休息時，牠們通常停留在明顯突出高樹（如峽谷的枯松樹）的頂端。\n3.如果接近牠們，牠們會大聲尖叫，然後飛到天空，翼下飛羽的黃色非常明顯。飛行非常快速，拍翅緩慢，拍翅幅度淺。",
     "Diet": "覓食種子、堅果、漿果、果實及樹梢可生產的植物性物質。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Macaw-G",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Macaw-G/Macaw-G_Pic01.jpg",
     "CID": 231
@@ -6026,7 +6026,7 @@
     "Feature": "1.體長66-74公分，重2384公克。有2個亞種。\n2.最顯著特徵為華麗的扇形頭冠，羽冠的末端有白點。牠們是鴿形目中體型最大的種類，整體羽色暗淺灰藍色，胸部暗紫紅色，翼斑淺灰藍色羽端暗紫色。",
     "Behavior": "1.通常以2-10隻的小群活動。\n2.雄冠鴿經常會鼓起胸膛，拍動翅膀，彷彿在準備攻擊的展示行為，來確立統治地位。\n3.但在向雌冠鴿求偶時，則是頻頻點頭、擺動扇形尾羽的方式示好。",
     "Diet": "覓食掉落的果實、漿果及種子。在森林底層覓食，會形成2-10隻的小群活動。以水果、植物種子、軟體動物、無脊椎動物、螃蟹為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pigeon-VC",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-VC/Pigeon-VC_Pic01.jpg",
     "CID": 232
@@ -6052,7 +6052,7 @@
     "Feature": "1.有9個亞種。\n2.背綠色，頸及體下暗紅色，嘴及腳珊瑚紅色。\n3.雄鳥頭頂銀灰色，額及眉白色；雌鳥頭頂褐色，羽色較不鮮明。",
     "Behavior": "1.飛行時拍翅非常快速，常貼近地面急速穿越樹林內部，有時會撞上籬笆的鐵絲網而受傷。\n2.在許多地區整年都可以繁殖。巢由枝條組成一個平台，通常位在樹上。一窩通常下2個蛋。",
     "Diet": "主要以掉落的果實及種子為食物，也會吃一些昆蟲、白蟻及蝸牛。通常單獨或成對在地面覓食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Dove-E",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Dove-E/Dove-E_Pic01.jpg",
     "CID": 233
@@ -6078,7 +6078,7 @@
     "Feature": "臺灣擬啄木舊名五色鳥，為臺灣特有的鳥類。",
     "Behavior": "1.棲息於樹梢叫個不停，叫聲似敲木魚的聲音。\n2.啄樹洞為巢，離地2～10公尺，幼鳥離巢前親鳥會跟隨一段時間，直到他們學會生存技能為止。",
     "Diet": "水果、昆蟲",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Barbet-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Barbet-B/Barbet-B_Pic01.jpg",
     "CID": 234
@@ -6104,7 +6104,7 @@
     "Feature": "1.是臺灣特有種鳥類。\n2.身上對比的色彩極為鮮明，大致為鮮豔的深藍色，頭至前胸墨黑色，嘴及腳血紅色、尾羽藍色；尾羽中央兩枚最長，末端有寬闊的白邊。",
     "Behavior": "當一對藍鵲繁殖時，常有幾隻未繁殖的藍鵲留在巢邊當作幫手，共同餵食幼雛，是極為特殊的育幼行為。",
     "Diet": "果實、兩棲類、小型哺乳動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Magqie",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Magqie/Magqie_Pic01.jpg",
     "CID": 235
@@ -6126,11 +6126,11 @@
     "Family": "鴟鴞科",
     "Conservation": "無危",
     "Distribution": "印度、中南半島、馬來西亞、蘇門答臘、爪哇、臺灣等",
-    "Habitat": "",
+    "Habitat": null,
     "Feature": "1.背面由額、頭、背至局部為深赤褐色，肩羽上有淡色橫斑，腰部、尾上覆羽及尾羽褐色\n2.顏盤之眼眶四周黑色，向外漸淡而至白色，顏盤連線呈深赤褐色，頭下及喉部白色；眼有黑色剛毛，眉斑白。\n3.身體腹面由胸部到腹下呈淡棕色，密布著暗褐色細橫斑。\n5.翼面同為暗褐色，具有褐色橫斑。\n6.嘴喙為鉛灰色，基部較為蒼白，蠟膜鉛色。\n7.腳淡鉛色。",
     "Behavior": "1.是台灣第二大型貓頭鷹，白天常成對在密林裡休息，性極敏銳且易受干擾，即使最輕微的腳步聲都會迫使牠們飛離。\n2.雖是本島夜行性留鳥，但數量十分稀少，在野外不易觀察，習性有待進一步探討。",
     "Diet": "不僅掠食野兔及飛鼠、森鼠等較小型之哺乳類，而且也捕食蜥蜴、蝙蝠、鳥類、魚類、兩生類及昆蟲等。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Owl-BW",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Owl-BW/Owl-BW_Pic01.jpg",
     "CID": 236
@@ -6156,7 +6156,7 @@
     "Feature": "1. 體長31-36公分；150-250公克。\n2. 頭及頸部淺灰色，在後腦處有明顯灰黑色的羽冠，有時豎起或貼平。\n3. 翅膀具有相當獨特的條紋及紋路。兩性類似。",
     "Behavior": "1. 在各類的草原覓食，主要在地上覓食\n2. 通常形成5-6隻的小群。",
     "Diet": "種子及樹葉；也會吃少量的昆蟲及其他無脊椎動物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pegeon-C",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pegeon-C/Pegeon-C_Pic01.jpg",
     "CID": 237
@@ -6182,7 +6182,7 @@
     "Feature": "1. 體長90公分，重2000-3000公克，翼展寬150-170公分。最小型的鶴。\n2. 與羽衣鶴同為現生鶴類在頭部完全長有羽毛及頭上沒有裸露的紅皮膚。除了頭頸及次級飛羽羽端黑色和白色耳羽從眼後延伸至頸背上部外，全身為一致的灰色。前頸的黑色羽毛延伸下垂至胸部下方。\n3. 瞳孔淺紅-橘紅色。幼鳥一般具有較暗的灰色，身體上面淺褐色，身體下面淺灰白色，頭及頸較淺色，耳羽沒有那麼明顯。\n3. 叫聲的音頻低但刺耳。",
     "Behavior": "1. 在春天繁殖，主要在4-5月，但在北方可遲至6月。\n2. 巢沒有怎樣處理，就在地面的開闊草地、農耕地或碎石上。卵石及一些植物性材料有時會用來襯巢，但蛋時常直接就下在地面上。通常一窩有2個蛋。孵化期27-29天。\n3. 小鶴羽翼豐滿期55-65天，是所有鶴中最短的。第二年就可以達到性成熟。",
     "Diet": "1. 主要是草類的種子及其他植物性物質。也會吃昆蟲，特別是在夏天時會吃甲蟲、蠕蟲、蜥蜴及其他脊椎動物。當覓食時，行走緩慢。\n2. 遷移時期間，在中途停留處及渡冬區會聚集形成大量的群，在農耕地覓食，會造成穀類及豆類的損失。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Crane-D",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Crane-D/Crane-D_Pic01.jpg",
     "CID": 238
@@ -6208,7 +6208,7 @@
     "Feature": "1. 鴛鴦比起林鴛鴦毛色偏綠、飛羽較沒有藍色光澤及眼周的白斑較小，此外嘴型也不同。\n2. 幼鳥類似雌鳥，但雌鳥有淺粉紅色的嘴。",
     "Behavior": "1. 求偶展示極為精緻及複雜，含有多種儀式化的搖動、喝水、理羽及帆羽朝著特定的雌鳥展示。\n2. 3~6月為繁殖期，離地8公尺築巢。在樹洞築巢，一窩有9-12個蛋。幼鳥1歲大達到性成熟。",
     "Diet": "食物隨季節及地域有所不同。秋天的食物包括橡樹的果實及栽種的穀類；而春天的食物包括昆蟲、蝸牛、小魚及水生植物。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Duck-M",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Duck-M/Duck-M_Pic01.jpg",
     "CID": 239
@@ -6260,7 +6260,7 @@
     "Feature": "1.  雄鳥體長約200公分，體重約5公斤，雌鳥體長約100公分，體重約3公斤。\n2.  雄鳥有非常明顯的羽冠，而雌鳥有白色的腹部。\n3.  雛鳥身體上面暗褐色及紅褐色，下面淺黃褐色。",
     "Behavior": "1. 繁殖季隨分布區而有所不同，但似乎與溼季節有關。在大部份的印度南部及斯里藍卡，繁殖季1-4月；在喜馬拉雅山的山腳，繁殖季可能在3-4月有，但通常是在6月。\n3. 一夫多妻制。巢通常隱藏在灌叢內，在常會有洪水的地區，會選在有點高處的地方築巢。常一窩3-6個蛋（可達8個）。孵化期28-30天，僅由雌鳥孵蛋。",
     "Diet": "雜食性。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Peafowl",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Peafowl/Peafowl_Pic01.jpg",
     "CID": 241
@@ -6286,7 +6286,7 @@
     "Feature": "1. 體長66-75公分。1800-2400公克。\n2. 整體羽色暗淺灰藍色。羽冠側扁淺藍色較體色偏灰，有銀質色調。\n3. 翼及尾較暗色。上頸背及翼上覆羽暗淺紫紅色。最外側大覆羽白色，羽端紫色形成縮翅時明顯的白斑。\n4. 有黑色的寬過眼線。瞳孔紅色。嘴黑色。腿暗紅色。\n5. 兩性類似。幼鳥類似成鳥，但翼斑奶油色。",
     "Behavior": "性溫馴，但會舉翅威嚇同類。",
     "Diet": "覓食漿果、掉落的果實、蛆及昆蟲。在地面覓食，通常形成2-10隻的小群活動。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pigeon-WC",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pigeon-WC/Pigeon-WC_Pic01.jpg",
     "CID": 242
@@ -6312,7 +6312,7 @@
     "Feature": "1. 為臺灣特有種鳥類。\n2. 最大的特徵就是雄鳥羽冠和背部是鮮明的白色，尾部也有兩根漂亮的白色長羽，為原住民頭上常用的飾羽。",
     "Behavior": "為一夫多妻制，雄鳥的領域性很強，所以一個欄舍中只能圈養一隻雄鳥，否則會搏命鬥毆。",
     "Diet": "漿果、花芽、嫩葉、昆蟲（白蟻）、無脊椎動物（蚯蚓）。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Pheasant-S",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Pheasant-S/Pheasant-S_Pic01.jpg",
     "CID": 243
@@ -6338,7 +6338,7 @@
     "Feature": "1. 體長38-42公分。\n2. 成鳥整體羽色綠色。嘴灰色。前額及眼先前面藍色。瞳孔橘紅色。前冠黃色，有白色調。後冠、眼圈、耳羽、前頰及喉黃色。\n3. 翼角處紅色。初級覆羽暗綠色，羽端紫藍色。顯著的紅色翼鏡橫過外側的五枚次級飛羽。\n4. 大腿綠色，腿灰色。\n5.有不同的黃色調。尾上及尾下覆羽淺黃綠色。側尾羽基部有紅色斑駁，最外側尾羽羽緣藍色。\n6.當晨光照到，牠們的身體會現出各種不同的紅、黃及綠色，但在正中午時，牠們就會變成暗色的剪影。",
     "Behavior": "1. 當飛行時由於牠們持續的尖叫聲，使得人們可以輕易地發現它存在。每天都會在停棲處來來回回地飛行。每天早上從棲息處朝著覓食區飛去，傍晚時，再沿著同樣的路線回家。有兩個過夜處，以防另一條飛行路線被察覺。\n2. 當整群鳥從頭頂飛過，成對的鳥可以很容易分辨出，因為牠們很近飛在一起，偶爾可以見到3隻的鳥群飛過，其中的一隻可能是幼鳥，單隻鳥或三隻以上的鳥群飛行時，很少被看到。",
     "Diet": "1. 食物包括果實、漿果、種子、堅果、花朵及葉芽。有時也會至作物區覓食，造成相當的破壞。\n2. 本種會與橙翅亞馬遜鸚哥成小群在樹頂覓食。常可見到在棕梠樹上覓食種子。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Parrot-B",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/BirdWorld/Parrot-B/Parrot-B_Pic01.jpg",
     "CID": 244
@@ -6364,7 +6364,7 @@
     "Feature": "1. 體重:由北到南遞增，生長在南方的體型較大，昆士蘭雄性無尾熊平均體重約6.5公斤(4.2-9.1)，雌熊則為5.1公斤(4.1-7.3)，維多利亞雄性平均體重12公斤(9.5-14.9)，雌熊則為8.5公斤(7.0-11.0)。\n2. 毛色:由北到南毛色逐漸變深，昆士蘭無尾熊毛色為灰色，維多利亞則為紅褐到灰褐色。\n3. 前掌:第1、2趾與第3、4、趾分別位於對側，鋏形的前掌構造推測與抓握較細小的枝幹有關，前掌所有的趾端都有彎曲程度很大的勾爪以利攀爬，後掌的第2、3趾合併成1趾，後掌前端的爪子也因應梳理身上絨毛的功能，變成梳齒般的形狀，這種併趾(Syndactyly)是鑑別雙門齒目有袋動物的特徵之一。",
     "Behavior": "1. 英文名字Koala是澳洲原住民語「不喝水」的意思，身體所需的水分從尤加利樹葉中取得。\n2. 屬樹棲動物，除非要移居、繁殖、覓食等狀況，其餘時間均在樹上，喜歡獨居。\n3. 屬於夜行性動物，白天大部分的時間是在睡眠和休息，每天花在睡眠及休息的時間約17-20小時。\n4. 每年特定季節會有週期性發情，發情週期約為35日，為誘發性排卵。懷孕期約34至36日，剛出生時只有1.9公分長，0.5公克重，自母獸泄殖腔產出後花費數小時爬到袋內，然後緊咬袋中乳頭不放。",
     "Diet": "1. 無尾熊以尤佳利葉(桉樹葉)為主食，而且通常只採食嫩葉及嫩莖的部位，尤佳利為澳洲的原生樹種，總類繁多。\n2. 偶爾也採食其他植物的嫩葉或花朵，例如:白千層。例如紅膠木屬的黃楊木和木棉樹及紅瓶刷子樹的花。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Koala",
     "Pic01_URL": "https://www-ws.gov.taipei/001/Upload/432/relpic/10162/7889245/58b0fc7f-61fc-4d28-ae06-e9772eca8a14.jpg",
     "CID": 245
@@ -6781,7 +6781,7 @@
     "Feature": "1. 身體毛色為深褐色，背頸中央一帶為黑色，腮、喉部和上頸為淺黃褐色。尾短。\n2. 雌雄皆有一對洞角，呈圓錐狀，頂端尖銳且略向後彎曲，終生不脫落。",
     "Behavior": "1. 是臺灣唯一的野生牛科動物，為臺灣特有種，昔稱長鬃山羊。 \n2. 是爬樹高手，喜單獨活動，清晨與黃昏是活動高峰。具有強烈的領域性，會以其眼前之眶下腺所分泌之腺體塗抹於樹枝或凸出的石塊上作為標記。 \n3. 擁有二公尺高的跳躍能力，每小時20里的飛奔速度，在臺灣所有的哺乳類動物中，堪稱「輕功第一高手」。",
     "Diet": "草食性，喜食嫩葉及嫩芽。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Serow",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Serow/Serow_Pic01.jpg",
     "CID": 261
@@ -6887,7 +6887,7 @@
     "Feature": "1. 眼睛為橙紅色，有一對豎立如耳朵的角羽，\n2. 全身為灰褐色，有不規則的黑色斑紋，顏盤(面部)為灰色，盤緣為黑褐色。",
     "Behavior": "1. 棲息在低海拔的闊葉林中，是臺灣海拔分布最低，且生活環境最接近人類的鴟鴞科鳥類，偶有機會會在公園或住家築巢。\n2. 夜行性動物，白天多半在枝幹上休息。\n3. 敏銳的視覺，搭配頭部270度的旋轉，讓他可以正確測知獵物的位置。",
     "Diet": "獵捕昆蟲、鳥類和小型哺乳動物為食。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Owl-CS",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic01.jpg",
     "CID": 265
@@ -6967,7 +6967,7 @@
     "Feature": "1. 皮毛黃褐，在背部有黑褐色縱帶，尾有黑褐色環帶，頗為醒目。\n2. 外型似貓，具有錐形的吻部和拉長的頸部。\n3. 雌雄均有麝香腺。",
     "Behavior": "1. 夜行性，生性隱密，常單獨於地面活動。\n2. 分泌物具有強烈之臭味，牠們會把腺體所分泌的特殊氣味塗在岩石或樹幹上，作為領域標示的記號",
     "Diet": "雜食性，主要捕食小型哺乳類、爬蟲類及昆蟲類，會吃果實、嫩草。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Civet-SI",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Civet-SI/Civet-SI_Pic01.jpg",
     "CID": 268
@@ -6994,7 +6994,7 @@
     "Feature": "1. 小型鹿科動物，全身黃褐色，有黑色雜毛。\n2. 大部分鹿科動物雄性頭上都長角、角均有分岔、每年都會掉落更新。雌性無角，頭上僅有骨質隆起，雄性有一對簡單叉角，角基前方有小隆起。\n3. 小山羌出生後身上佈滿保護色的斑點，約45天會消失。",
     "Behavior": "1. 晨昏型，一整天都有機會活動，早晨與黃昏為活動高峰。\n2. 生性膽怯，遇到危險會先靜止、躲藏，若遇天敵接近則舉起短尾巴，露出下方白毛迅速逃竄，並發出一連串單音短促高揚如狗叫吠聲。\n3. 雌雄之間的行為模式並不相同。雄山羌有明顯領域區隔，雌山羌間不會過於排斥。通常一隻雄山羌的領域中，會同時住有3-4隻生活重疊的雌山羌。",
     "Diet": "草食性，喜食灌木、蕨類植物的葉子，尤其是嫩葉及嫩芽。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Muntjac",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Muntjac/Muntjac_Pic01.jpg",
     "CID": 269
@@ -7047,7 +7047,7 @@
     "Feature": "1. 大灰袋鼠是袋鼠群中體型最高大、最擅長跳躍的。\n2. 身體為灰色，口鼻部有許多毛鬚，後肢發達，尾長。\n3. 成熟的雌性有一個發達的育兒袋，有四個乳頭。",
     "Behavior": "1. 灰袋鼠通常以後肢站立，平時以跳躍的方式前進，只有在覓食的時候是趴著，以四肢著地的方式前進。\n2. 灰袋鼠是社會組織緊密的一種袋鼠，主要成員為雌袋鼠與牠們的子女，每一隻都有各自的階級，只有當雌袋鼠發情的時候，雄袋鼠才會加入袋鼠群中。\n3. 灰袋鼠全年可繁殖，每胎只產一隻，剛出生的小袋鼠會自己爬到母親的育兒袋中，在袋裡待上九個多月後，才離開育兒袋。",
     "Diet": "草食性，以吃草為主，對水的需求不大。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Kangaroo-G",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Kangaroo-G/Kangaroo-G_Pic01.jpg",
     "CID": 271
@@ -7073,7 +7073,7 @@
     "Feature": "1. 大形走禽，頭頸部無毛，皮膚為紫藍色，頭部有角質的冠\n2. 頸部有2條色彩鮮豔的皮褶，腿長而粗壯，翅短，腳具3趾，趾爪銳利，成鳥羽毛為棕黑色，雌雄型態差異極小，雌性略大，顏色較鮮明，雛鳥為深棕及黃褐色條紋相間。\n3. 卵表面為草綠色，表面略有皺痕。",
     "Behavior": "1. 食火雞通常單獨活動，棲息於原始森林裡，在晨昏及有月光的夜晚活動。具有領域性。鳥巢是在地面的淺坑上鋪樹葉及草所構成，通常築在非常隱密的叢林裡。\n2. 食火雞的羽毛與一般的鳥羽毛不同，疏鬆成扇狀，質地較一般的羽毛硬，所以當牠們在密林中行動的時候，比較不會被樹枝或荊棘刮傷。\n3. 食火雞的頭冠有利於牠們在密林中撥開樹枝前進，或是翻開地面上的落葉及雜草，尋找落在地上的果實或藏在底下的昆蟲。",
     "Diet": "主要吃掉落在地面的水果，也會吃種子、昆蟲、小動物或腐肉。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Cassowary",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Cassowary/Cassowary_Pic01.jpg",
     "CID": 272
@@ -7099,7 +7099,7 @@
     "Feature": "1. 頭部及頸部上端的羽毛為黑色，裸露的皮膚則略帶藍色，成鳥全身覆著灰棕色雜毛。\n2. 羽毛與一般鳥類不同疏鬆成扇狀，翅膀退化非常小不能飛行。",
     "Behavior": "1. 日行性鳥類，能在攝氏四十多度的氣溫下覓食。\n2. 孵蛋中的雄鴯鶓不吃不喝，只有翻蛋時才會站起來。",
     "Diet": "食性，吃水果、種子、花、芽、昆蟲甚至樹皮，會吞小石頭幫助消化。",
-    "Crisis": "",
+    "Crisis": null,
     "Code": "Emu",
     "Pic01_URL": "https://www.zoo.gov.tw/iTAP/03_Animals/AustralianArea/Emu/Emu_Pic01.jpg",
     "CID": 273

@@ -12,7 +12,6 @@ import * as firestore from "../../Utils/firebase";
 const Container = styled.div`
   display: flex;
   box-sizing: border-box;
-
   flex-direction: row;
   padding: 80px 1px 0px;
   height: calc(100vh - 80px);
@@ -62,6 +61,8 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
     padding-bottom: 60px;
+    height: auto;
+
     .animalsDiv {
       width: 100%;
       padding: 10px 30px;
@@ -82,11 +83,10 @@ const Container = styled.div`
 
 function MapIndex() {
   const componentRef = useRef();
-  const [displayDiv, setDisplayDiv] = useState("none");
   const [getUid, setGetUid] = useState("none");
   const isRowBased = window.matchMedia("(max-width: 1020px)").matches;
 
-  const displayStore = useSelector(
+  const displayDiv = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
   );
 
@@ -103,12 +103,6 @@ function MapIndex() {
     });
     return unsubscribe;
   }, []);
-
-  useEffect(() => {
-    if (displayStore) {
-      setDisplayDiv("block");
-    }
-  }, [displayStore]);
 
   if (getUid === "none") {
     return null;

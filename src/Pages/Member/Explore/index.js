@@ -1,9 +1,8 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 
 const ratio = 780 / 1639;
 const ratioImg = 180 / 1440;
-
 const Container = styled.div`
   width: 100%;
   height: ${(props) => {
@@ -44,11 +43,7 @@ const Container = styled.div`
     }
   }
 `;
-
 export default function Explore(props) {
-  const [stamps, setStamps] = useState("none");
-  const [height, setHeight] = useState(0);
-  const [width, setWidth] = useState(0);
   const [size, setSize] = useState([0, 0]);
   const isRowPad = window.matchMedia("(max-width: 996px)").matches;
   const position = [
@@ -67,54 +62,32 @@ export default function Explore(props) {
     [85, 11],
     [56, 89],
   ];
-
-  let { blocksFilter, catalogs } = props;
-  let arr = [];
-  let arr1 = [];
-  let arr2 = [];
-  let stampPavilions = [];
-  catalogs.forEach((catalogs) =>
-    blocksFilter.forEach((blocksFilters) => {
-      if (blocksFilters[1] === catalogs) {
-        arr.push(blocksFilters[1]);
-      }
-    })
-  );
-
-  catalogs.forEach((catalogs) => {
-    if (catalogs === "新光特展館(大貓熊館)" || catalogs === "無尾熊館") {
-      arr1 = arr.filter((arrs) => arrs === catalogs).length;
-      if (arr1 >= 1) {
-        stampPavilions.push(catalogs);
-      }
-    } else if (catalogs === "企鵝館") {
-      arr1 = arr.filter((arrs) => arrs === catalogs).length;
-      if (arr1 >= 2) {
-        stampPavilions.push(catalogs);
-      }
-    } else {
-      arr1 = arr.filter((arrs) => arrs === catalogs).length;
-      if (arr1 >= 5) {
-        stampPavilions.push(catalogs);
-      }
-    }
-  });
-
-  catalogs.forEach((catalogs) => {
-    stampPavilions.forEach((stamp) => {
-      if (catalogs === stamp) {
-        arr2.push(stamp);
+  const { catalogs, allVisitedAnimalsData } = props;
+  const setStamps = () => {
+    let numbers = [];
+    let stampPavilions = [];
+    const allVisitedAnimals = allVisitedAnimalsData.map((e) => e[1]);
+    catalogs.forEach((catalogs) => {
+      if (catalogs === "新光特展館(大貓熊館)" || catalogs === "無尾熊館") {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 1) {
+          stampPavilions.push(catalogs);
+        }
+      } else if (catalogs === "企鵝館") {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 2) {
+          stampPavilions.push(catalogs);
+        }
+      } else {
+        numbers = allVisitedAnimals.filter((arrs) => arrs === catalogs).length;
+        if (numbers >= 5) {
+          stampPavilions.push(catalogs);
+        }
       }
     });
-  });
 
-  useEffect(() => {
-    setStamps(arr2);
-    setTimeout(() => {
-      setHeight(document.body.offsetHeight);
-      setWidth(document.body.offsetWidth);
-    }, 0);
-  }, []);
+    return stampPavilions;
+  };
 
   useLayoutEffect(() => {
     function updateSize() {
@@ -125,17 +98,16 @@ export default function Explore(props) {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  if (stamps === "none") {
-    return null;
-  }
-  // console.log(size);
+  const stampPavilions = setStamps();
+
   return (
     <>
-      <Container id="passport" width={size[0]} height={height}>
+      <Container id="passport" width={size[0]}>
         {catalogs.map((catalogs) =>
           stampPavilions.map((stamp, index) =>
             stamp === catalogs ? (
               <img
+                key={stamp}
                 className="stamp"
                 style={{
                   top: isRowPad ? null : `${position[index][0]}%`,
