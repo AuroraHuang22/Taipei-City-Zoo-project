@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../../../Icons/223.png";
 import AnimalsData from "./AnimalsData";
 import FacilitySelector from "./FacilitySelector";
 

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-import AnimalsJson from "../../../Utils/animals.json";
+import animalsJson from "../../../Utils/animals.json";
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -88,63 +88,73 @@ const Container = styled.div`
   }
 `;
 
-const animalsJson = AnimalsJson;
 export default function MapComformation() {
-  const confoStore = useSelector((state) => state.AnimalsReducer.conformation);
+  const storedInformation = useSelector(
+    (state) => state.AnimalsReducer.conformation
+  );
   const recommendStore = useSelector((state) => state.AnimalsReducer.recommend);
-  const chooseAnimal = useSelector(
+  const selectedAnimals = useSelector(
     (state) => state.AnimalsReducer.showAnimals.num
   );
   const facilitiesStore = useSelector(
     (state) => state.SelectorReducer.showFacilities
   );
-
-  if (!confoStore.length) {
-    return null;
-  }
-  let info = recommendStore.map((item) => item[0]);
-  let recom = `入口廣場 ⇢`;
-  info.forEach((element) => {
-    if (element !== "列車站") {
-      recom += `${element} ⇢ `;
-    } else {
-      recom += ` 搭乘遊園列車於鳥園車站下車後，步行至`;
-    }
-  });
-  recom += `往出口方向移動 ⇢ 回家囉`;
-  let distance = confoStore[0];
-  let time = (confoStore[1] * 60 + info.length * 25 * 60) / 60 / 60;
-
-  let recommendRoute = `${recom}`;
-  let recommendDistance = `行程總距離約為${distance}公里，預計遊園時間約為${time.toFixed(
-    0
-  )}小時`;
-
-  let arr = [];
-  let animalSort = [];
-  animalsJson.forEach((item) => {
-    chooseAnimal.forEach((num) => {
-      if (item.CID === num) {
-        arr.push({ num: num, name: item.Name_Ch, index: item.Index });
+  const getHowManyStop = () => {
+    const stop = recommendStore.map((item) => item[0]);
+    return stop;
+  };
+  const setRecommendRoute = (stops) => {
+    let content = `入口廣場 ⇢`;
+    stops.forEach((element) => {
+      if (element !== "列車站") {
+        content += `${element} ⇢ `;
+      } else {
+        content += ` 搭乘遊園列車於鳥園車站下車後，步行至`;
       }
     });
-  });
-  animalSort = arr.sort(function (a, b) {
-    return a.index - b.index;
-  });
-  animalSort[0].index >= 10
-    ? animalSort.sort((a, b) => b.index - a.index)
-    : animalSort.sort((a, b) => a.index - b.index);
+    content += `往出口方向移動 ⇢ 回家囉`;
+    return content;
+  };
+  const setRecommendDistance = (stops) => {
+    const distance = storedInformation[0];
+    const time = (storedInformation[1] * 60 + stops.length * 25 * 60) / 60 / 60;
+    const recommendDistance = `行程總距離約為${distance}公里，預計遊園時間約為${time.toFixed(
+      0
+    )}小時`;
+    return recommendDistance;
+  };
+  const setAnimalsSort = () => {
+    const selectAnimalsData = animalsJson
+      .filter((animals) => selectedAnimals.includes(animals.CID))
+      .map((result) => ({
+        num: result.CID,
+        name: result.Name_Ch,
+        index: result.Index,
+      }));
 
-  console.log(animalSort);
+    const animalSort = selectAnimalsData.sort(function (a, b) {
+      return a.index - b.index;
+    });
+    animalSort[0].index >= 10
+      ? animalSort.sort((a, b) => b.index - a.index)
+      : animalSort.sort((a, b) => a.index - b.index);
+    return animalSort;
+  };
+
+  if (!storedInformation) {
+    return null;
+  }
+
+  const stops = getHowManyStop();
+  const animalSort = setAnimalsSort();
 
   return (
     <Container id="map-info">
       <div className="recommend">
         <span className="title">遊園路線規劃</span>
-        <div className="content">{recommendRoute}</div>
+        <div className="content">{setRecommendRoute(stops)}</div>
         <span className="title">路程距離</span>
-        <div className="content">{recommendDistance}</div>
+        <div className="content">{setRecommendDistance(stops)}</div>
       </div>
       <div className="recommend wrap">
         <span className="title">要造訪的動物</span>

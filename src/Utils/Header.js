@@ -3,18 +3,11 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as action from "../Redux/Action";
 import * as firestore from "../Utils/firebase";
-import LoginPopup from "../Utils/LoginPopup";
 import * as toast from "../Utils/toast";
 import HeaderSm from "./Header-sm";
 import { ToastContainer } from "react-toastify";
 
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useLocation,
-} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderDiv = styled.div`
   position: absolute;

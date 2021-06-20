@@ -6,14 +6,12 @@ import L from "leaflet";
 function FacilitiesMarkers(props) {
   const [facilitiesData, setFacilitiesData] = useState([]);
   const store = useSelector((state) => state.SelectorReducer.showFacilities);
+  const ICON_SIZE = [16, 16];
+  const ICON_ANCHOR = [8, 8];
 
   useEffect(() => {
     setFacilitiesData(props.facilities);
-  }, []);
-
-  if (!facilitiesData.length) {
-    return null;
-  }
+  }, [props.facilities]);
 
   return facilitiesData.map((item) =>
     store
@@ -28,8 +26,8 @@ function FacilitiesMarkers(props) {
                   iconUrl:
                     require(`../../../../Icons/Labels/${item.Item}-02.svg`)
                       .default,
-                  iconSize: [16, 16],
-                  iconAnchor: [8, 8],
+                  iconSize: ICON_SIZE,
+                  iconAnchor: ICON_ANCHOR,
                 })
               }
             >

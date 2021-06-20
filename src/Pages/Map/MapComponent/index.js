@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   MapContainer,
   TileLayer,
-  useMapEvents,
   useMapEvent,
   useMap,
   Marker,
@@ -13,12 +12,6 @@ import Routing from "./RouteMaching";
 import MapInformation from "./MapInformation";
 import styled from "styled-components";
 import Popup from "reactjs-popup";
-
-const setBounds = [
-  [25.000263, 121.57700905],
-  [24.99028, 121.5936458],
-];
-const position = [24.995737380116395, 121.58511339231346];
 
 const Container = styled.div`
   display: flex;
@@ -101,17 +94,15 @@ const Map = React.forwardRef((props, ref) => {
   const displayStore = useSelector(
     (state) => state.AnimalsReducer.disPlayforFacility
   );
+  const SET_BOUNDS = [
+    [25.000263, 121.57700905],
+    [24.99028, 121.5936458],
+  ];
+  const SET_CENTER = [24.995737380116395, 121.58511339231346];
+  const SET_ZOOM_L = 16.5;
+  const SET_ZOOM_M = 16;
 
-  function ClickEvent() {
-    useMapEvents({
-      click: (e) => {
-        console.log(e.latlng);
-      },
-    });
-    return null;
-  }
-
-  function LocationMarker() {
+  const LocationMarker = () => {
     const map = useMap();
     map.locate();
     useMapEvent("locationfound", (e) => {
@@ -119,11 +110,9 @@ const Map = React.forwardRef((props, ref) => {
       map.flyTo(e.latlng, map.getZoom());
     });
     return null;
-  }
-
+  };
   const FitCenter = (animateRef) => {
     const map = useMap();
-
     if (!route.length && center.geo.length) {
       map.setView(
         [
@@ -133,9 +122,8 @@ const Map = React.forwardRef((props, ref) => {
         16.8
       );
     } else if (route.length && center.geo.length) {
-      map.setView([24.99618104901287, 121.58475738017984], 16.5);
+      map.setView([24.99618104901287, 121.58475738017984], SET_ZOOM_L);
     }
-
     return null;
   };
 
@@ -157,10 +145,10 @@ const Map = React.forwardRef((props, ref) => {
         ⦿
       </button>
       <MapContainer
-        center={position}
-        zoom={isRowMD ? 16.5 : 16}
-        minZoom={isRowMD ? null : 16.5}
-        maxBounds={isRowMD ? null : setBounds}
+        center={SET_CENTER}
+        zoom={isRowMD ? SET_ZOOM_L : SET_ZOOM_M}
+        minZoom={isRowMD ? null : SET_ZOOM_L}
+        maxBounds={isRowMD ? null : SET_BOUNDS}
         scrollWheelZoom={isRowMD ? false : true}
         style={{
           fontSize: "5px",
@@ -168,7 +156,6 @@ const Map = React.forwardRef((props, ref) => {
           width: "100%",
         }}
       >
-        <ClickEvent />
         {findMe ? (
           <>
             <LocationMarker />
@@ -178,7 +165,7 @@ const Map = React.forwardRef((props, ref) => {
         <FitCenter />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> , Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-          url="https://api.mapbox.com/styles/v1/aurorahuang/ckol9o1wg11vf19n1nl0o5x2m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXVyb3JhaHVhbmciLCJhIjoiY2tva3ZmeXVnMDlhMjJ4cm12enM1OXhycCJ9.kyUwDjf4VLFBZPZrN2nijQ"
+          url={`https://api.mapbox.com/styles/v1/aurorahuang/ckol9o1wg11vf19n1nl0o5x2m/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_ACCESSTOKEN}`}
         />
         <Routing />
         {isRowSM ? (
