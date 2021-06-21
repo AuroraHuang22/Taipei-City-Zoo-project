@@ -52,7 +52,7 @@ export default function SubmitButton(props) {
 
   useEffect(() => {
     const initSavedPlan = () => {
-      if (idValue) {
+      if (savedData && idValue) {
         if (savedData === "none" || savedData.length === 0) {
           return null;
         }
