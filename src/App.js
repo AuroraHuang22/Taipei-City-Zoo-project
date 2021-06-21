@@ -9,6 +9,7 @@ import Member from "./Pages/Member";
 import ShowAllAnimals from "./Pages/ShowAllAnimals";
 import Entrance from "./Pages/Entrance";
 import Landing from "./Pages/Landing";
+import PageNotFound from "./Pages/PageNotFound";
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
           <Route exact path="/map" component={Map} />
           <Route path="/member" component={Member} />
           <Route path="/entrance" component={Entrance} />
+          <Route component={PageNotFound} />
         </Switch>
-        {/* <Footer /> */}
       </Router>
+      {/* <Footer /> */}
     </Provider>
   );
 }
