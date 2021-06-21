@@ -10,6 +10,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #f2f2f2;
   .textBlock {
     box-sizing: border-box;
     display: flex;
@@ -74,7 +75,7 @@ export default function PageNotFound() {
       <div className="textBlock">
         <span className="quote">“</span>
         <div className="text">
-          <span className="gray">404...</span> 找不到你輸入的網址
+          <span className="gray">404...</span> 找不到這個頁面
         </div>
         <span className="quote-2">”</span>
         <div className="text small gray">
