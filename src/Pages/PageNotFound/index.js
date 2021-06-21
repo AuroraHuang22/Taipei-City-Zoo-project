@@ -83,7 +83,7 @@ export default function PageNotFound() {
         </div>
       </div>
       <div className="imgBlock">
-        <img className="img" src="/imgs/draw-11.svg" alt="draw" />
+        <img className="img" src="/Imgs/draw-11.svg" alt="draw" />
       </div>
     </Container>
   );
