@@ -73,7 +73,7 @@ You can also use default test account below
 <img src="public/gif/passport.gif" width=100%/><br/>
 </br>
 
-- ### Information about the Zoo's opening and real-time parking space
+- ### Information about the Zoo's opening and realtime parking space
 
 <br/>
   <img src="public/gif/opening information.gif" width=100%/><br/>
