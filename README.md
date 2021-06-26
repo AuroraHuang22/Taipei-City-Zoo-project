@@ -2,7 +2,7 @@
 
 <br/>
 
-- Based on Taipei City Zoo, allows users to explore the animals information and optimize the visiting route.
+- Based on Taipei City Zoo, allow users to explore the animal's information and plan the visiting route.
 
 <br/>
 
