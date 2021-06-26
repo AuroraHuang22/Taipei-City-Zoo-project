@@ -2,7 +2,7 @@
 
 <br/>
 
-- Based on Taipei City Zoo, allow users to explore the animal's information and plan the visiting route.
+- The website based on Taipei City Zoo. Its primary feature is to plan the best route of zoo-touring, letting user well prepared in advance.
 
 <br/>
 
@@ -61,19 +61,19 @@ You can also use default test account below
 <img src="public/allAnimals.png" width=100%/><br/>
 <br/>
 
-- ### Plan your visit by choosing animals you want to see
+- ### Plan the best route of zoo-touring
 
 <br/>
   <img src="public/gif/route planning.gif" width=100%/><br/>
 </br>
 
-- ### Check the collected animals and pavilion stamps on My Passport page
+- ### Check the collected pavilion stamps on My Passport page
 
 <br/>
 <img src="public/gif/passport.gif" width=100%/><br/>
 </br>
 
-- ### All information about the Zoo's opening is included
+- ### Information about the Zoo's opening and real-time parking space
 
 <br/>
   <img src="public/gif/opening information.gif" width=100%/><br/>
