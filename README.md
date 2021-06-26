@@ -1,18 +1,24 @@
-# <img src="public/logo.svg" width=23/> <span  style="color:#ea7a60">安心上 Zoo</span>
+# <img src="public/logo.svg" width=45/> 安心上 Zoo
 
-Based on Taipei City Zoo, allows users to explore the animals information and optimize the visiting route.
+<br/>
+
+- Based on Taipei City Zoo, allows users to explore the animals information and optimize the visiting route.
+
+<br/>
 
 <img src="public/index.jpeg" width=100%/><br/>
 
-## [Website Link](https://zooproject-taipei.web.app/) 🐐🦩🦬
+## [Link](https://zooproject-taipei.web.app/) 🐐🦩🦬
 
-Use email to log in or register a new account.\
-You can also use default test account below.\
+Website Link : [https://zooproject-taipei.web.app](https://zooproject-taipei.web.app/)
 
-- User: 等我設定一下\
-- Password: 等我設定一下
+Use email to log in or register a new account\
+You can also use default test account below
 
-# <span style="color:#6b6b6b">🐘 Techniques</span>
+- User: gozoo@zoo.com
+- Password: gozoo1234
+
+# 🐘 Techniques
 
 - Front-End Fundamental
   - HTML / CSS / JavaScript
@@ -41,32 +47,33 @@ You can also use default test account below.\
   - Version Control : Git / GitHub
   - Unit Test: Jest
 
-# 🦛 <span style="color:#6b6b6b"> Flow Chart </span>
+# 🦛 Flow Chart
 
-# 🦭<span style="color:#6b6b6b">Website Demo</span>
+<br/>
+<img src="public/userflow.png" width=100%/><br/>
+<br/>
 
-- ### Animals OverView and Special introduction
+# 🦭Features Demo
+
+- ### Animals overview and individual introduction
 
 <br/>
 <img src="public/allAnimals.png" width=100%/><br/>
 <br/>
 
-- ### Optimiza the visiting route
+- ### Plan your visit by choosing animals you want to see
 
 <br/>
   <img src="public/gif/route planning.gif" width=100%/><br/>
 </br>
 
-- ### Passport Page
-
-  - The user can check the collected animals on the Footprint page
-  - On the Passport page, users can see the collected pavilion stamps
+- ### Check the collected animals and pavilion stamps on My Passport page
 
 <br/>
 <img src="public/gif/passport.gif" width=100%/><br/>
 </br>
 
-- ### Includes all information about Zoo's opening
+- ### All information about the Zoo's opening is included
 
 <br/>
   <img src="public/gif/opening information.gif" width=100%/><br/>

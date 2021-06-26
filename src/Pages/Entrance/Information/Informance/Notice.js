@@ -127,9 +127,7 @@ export default function Notice() {
         <img className="img-left" src="/Imgs/leaf-left-21.svg" alt="tiger" />
         <img className="img-right" src="/Imgs/leaf-right-20.svg" alt="tiger" />
         <span className="bold">停展訊息</span>
-        <span className="text">
-          疫情期間，台北市立動物園停止對外開放至 6/28 日
-        </span>
+        <span className="text">疫情期間，台北市立動物園目前停止對外開放</span>
       </div>
     </Container>
   );
