@@ -59,7 +59,7 @@ export default function ClickBar(props) {
     let visiteds = [...visitedMember];
     visiteds.splice(index, 1);
     setVisitedMember(visiteds);
-    firestore.firebaseAddVisited(uid, visitedMember);
+    firestore.firebaseAddVisited(uid, visiteds);
     Toast.remove("已抹除足跡");
   };
 
