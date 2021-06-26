@@ -8,7 +8,7 @@ let nowAnimals = [];
 export default function SelectGroup(props) {
   const { animalsData } = props;
   const [open, setOpen] = useState(false);
-  const [selectPlace, setSelectPlace] = useState("全部動物");
+  const [selectPlace, setSelectPlace] = useState("動物園裡");
   const { Option } = components;
   const dispatch = useDispatch();
 

@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# <img src="public/logo.svg" width=23/> <span  style="color:#ea7a60">安心上 Zoo</span>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Based on Taipei City Zoo, allows users to explore the animals information and optimize the visiting route.
 
-## Available Scripts
+<img src="public/index.jpeg" width=100%/><br/>
 
-In the project directory, you can run:
+## [Website Link](https://zooproject-taipei.web.app/) 🐐🦩🦬
 
-### `npm start`
+Use email to log in or register a new account.\
+You can also use default test account below.\
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- User: 等我設定一下\
+- Password: 等我設定一下
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# <span style="color:#6b6b6b">🐘 Techniques</span>
 
-### `npm test`
+- Front-End Fundamental
+  - HTML / CSS / JavaScript
+  - Responsive Web Design (RWD)
+- Frameworks & Library
+  - React (Hooks)
+  - React Router
+  - Redux
+- Firebase
+  - Authentication
+  - Firestore
+  - Hosting
+- Packages
+  - leaflet
+  - react-leaflet
+  - leaflet-routing-machine
+  - Mapbox
+  - graphhopper
+  - OpenstreetMap
+  - react-select
+  - react-toastify
+  - styled-components
+- Other
+  - CI / CD: GitHub Actions
+  - Lint Tool: ESLint / Prettier
+  - Version Control : Git / GitHub
+  - Unit Test: Jest
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🦛 <span style="color:#6b6b6b"> Flow Chart </span>
 
-### `npm run build`
+# 🦭<span style="color:#6b6b6b">Website Demo</span>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ### Animals OverView and Special introduction
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
+<img src="public/allAnimals.png" width=100%/><br/>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ### Optimiza the visiting route
 
-### `npm run eject`
+<br/>
+  <img src="public/gif/route planning.gif" width=100%/><br/>
+</br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- ### Passport Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - The user can check the collected animals on the Footprint page
+  - On the Passport page, users can see the collected pavilion stamps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br/>
+<img src="public/gif/passport.gif" width=100%/><br/>
+</br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ### Includes all information about Zoo's opening
 
-## Learn More
+<br/>
+  <img src="public/gif/opening information.gif" width=100%/><br/>
+</br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Build back-end Sever to integrate more map data into project
+- Add radom visiting route feature
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Author: Aurora Huang
+- E-mail: <aurora90376@gmail.com>
