@@ -82,7 +82,7 @@ You can also use default test account below
 ## Future Features
 
 - Build back-end Sever to integrate more map data into project
-- Add radom visiting route feature
+- Add random visiting route feature
 
 ## Contact
 
